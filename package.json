@@ -1,0 +1,27 @@
+{
+  "name": "jess",
+  "version": "1.0.0",
+  "description": "Stylesheet influenced by Pico CSS and Fluent UI from Microsoft ",
+  "main": "index.js",
+  "scripts": {
+    "build": "node ./node_modules/less/bin/lessc src/jess.less dist/jess.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pennions/JESS.git"
+  },
+  "keywords": [
+    "Fluent",
+    "CSS",
+    "LESS"
+  ],
+  "author": "Jelmer Veen <www.github.com/pennions>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pennions/JESS/issues"
+  },
+  "homepage": "https://github.com/pennions/JESS#readme",
+  "devDependencies": {
+    "less": "^4.1.2"
+  }
+}

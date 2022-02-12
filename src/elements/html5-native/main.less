@@ -1,0 +1,57 @@
+/**
+ *  The <main> HTML element represents the dominant content of the <body> of a document. 
+ *  The main content area consists of content that is directly related to or expands upon the central topic of a document, 
+ *  or the central functionality of an application. ~ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main
+ */
+
+@import "../../utilities/layout.less";
+
+main {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 1rem;
+  margin: 1rem;
+  gap: 1rem;
+
+  & > * {
+    .single();
+  }
+
+  &.two-columns {
+    & > * {
+      .half();
+    }
+  }
+
+  &.three-columns {
+    & > * {
+      .third();
+    }
+  }
+
+  &.four-columns {
+    & > * {
+      .fourth();
+    }
+  }
+
+  &.five-columns {
+    & > * {
+      .fifth();
+    }
+  }
+
+  &.six-columns {
+    & > * {
+      .sixth();
+    }
+  }
+
+  &.twelve-columns {
+    & > * {
+      .twelfth();
+    }
+  }
+}
