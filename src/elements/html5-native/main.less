@@ -18,8 +18,30 @@ main {
     align-items: flex-start;
   }
 
+  // For a modal layout
+  &.center {
+    justify-content: center;
+
+    @media (min-width: @sm) {
+      height: calc(100vh);
+      align-items: center;
+
+      &.with-footer {
+        height: calc(100vh - 4rem);
+      }
+
+      &.with-header {
+        height: calc(100vh - 4rem);
+      }
+
+      &.with-header.with-footer {
+        height: calc(100vh - 8rem);
+      }
+    }
+  }
+
   // When you have a sidebar
-  & > aside {
+  &:not(.center) > aside {
     .single();
 
     @media (min-width: @md) {
@@ -29,7 +51,7 @@ main {
     }
   }
 
-  & > aside + * {
+  &:not(.center) > aside + * {
     .single();
 
     @media (min-width: @md) {
@@ -38,23 +60,6 @@ main {
     }
   }
 
-  &.center {
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh);
-
-    &.with-footer {
-      height: calc(100vh - 4rem);
-    }
-
-    &.with-header {
-      height: calc(100vh - 4rem);
-    }
-
-    &.with-header.with-footer {
-      height: calc(100vh - 8rem);
-    }
-  }
   &:not(.center) > * {
     .single();
   }
