@@ -9,11 +9,14 @@
 
 main {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
   flex-wrap: wrap;
   padding: 1rem;
   gap: 1rem;
+
+  &.dont-stretch {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 
   // When you have a sidebar
   & > aside {
@@ -25,6 +28,7 @@ main {
       min-width: 25%;
     }
   }
+
   & > aside + * {
     .single();
 
@@ -34,7 +38,24 @@ main {
     }
   }
 
-  & > * {
+  &.center {
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh);
+
+    &.with-footer {
+      height: calc(100vh - 4rem);
+    }
+
+    &.with-header {
+      height: calc(100vh - 4rem);
+    }
+
+    &.with-header.with-footer {
+      height: calc(100vh - 8rem);
+    }
+  }
+  &:not(.center) > * {
     .single();
   }
 
@@ -88,13 +109,11 @@ main {
         .third();
       }
     }
-
     @media (min-width: @md) {
       & > * {
         .fourth();
       }
     }
-
     @media (min-width: @lg) {
       & > * {
         .fifth();
@@ -118,13 +137,11 @@ main {
         .fourth();
       }
     }
-
     @media (min-width: @lg) {
       & > * {
         .fifth();
       }
     }
-
     @media (min-width: @xl) {
       & > * {
         .sixth();
@@ -143,25 +160,21 @@ main {
         .third();
       }
     }
-
     @media (min-width: @md) {
       & > * {
         .fourth();
       }
     }
-
     @media (min-width: @lg) {
       & > * {
         .fifth();
       }
     }
-
     @media (min-width: @xl) {
       & > * {
         .sixth();
       }
     }
-
     @media (min-width: @xxl) {
       & > * {
         .twelfth();
