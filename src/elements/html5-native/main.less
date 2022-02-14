@@ -5,6 +5,7 @@
  */
 
 @import "../../utilities/layout.less";
+@import "../../utilities/variables.less";
 
 main {
   display: flex;
@@ -12,7 +13,6 @@ main {
   align-items: flex-start;
   flex-wrap: wrap;
   padding: 1rem;
-  margin: 1rem;
   gap: 1rem;
 
   & > * {
@@ -20,38 +20,133 @@ main {
   }
 
   &.two-columns {
-    & > * {
-      .half();
+    @media (min-width: @xs) {
+      & > * {
+        .half();
+      }
     }
   }
 
   &.three-columns {
-    & > * {
-      .third();
+    @media (min-width: @xs) {
+      & > * {
+        .half();
+      }
+    }
+    @media (min-width: @sm) {
+      & > * {
+        .third();
+      }
     }
   }
 
   &.four-columns {
-    & > * {
-      .fourth();
+    @media (min-width: @xs) {
+      & > * {
+        .half();
+      }
+    }
+    @media (min-width: @sm) {
+      & > * {
+        .third();
+      }
+    }
+    @media (min-width: @md) {
+      & > * {
+        .fourth();
+      }
     }
   }
 
   &.five-columns {
-    & > * {
-      .fifth();
+    @media (min-width: @xs) {
+      & > * {
+        .half();
+      }
+    }
+    @media (min-width: @sm) {
+      & > * {
+        .third();
+      }
+    }
+
+    @media (min-width: @md) {
+      & > * {
+        .fourth();
+      }
+    }
+
+    @media (min-width: @lg) {
+      & > * {
+        .fifth();
+      }
     }
   }
 
   &.six-columns {
-    & > * {
-      .sixth();
+    @media (min-width: @xs) {
+      & > * {
+        .half();
+      }
+    }
+    @media (min-width: @sm) {
+      & > * {
+        .third();
+      }
+    }
+    @media (min-width: @md) {
+      & > * {
+        .fourth();
+      }
+    }
+
+    @media (min-width: @lg) {
+      & > * {
+        .fifth();
+      }
+    }
+
+    @media (min-width: @xl) {
+      & > * {
+        .sixth();
+      }
     }
   }
 
   &.twelve-columns {
-    & > * {
-      .twelfth();
+    @media (min-width: @xs) {
+      & > * {
+        .half();
+      }
+    }
+    @media (min-width: @sm) {
+      & > * {
+        .third();
+      }
+    }
+
+    @media (min-width: @md) {
+      & > * {
+        .fourth();
+      }
+    }
+
+    @media (min-width: @lg) {
+      & > * {
+        .fifth();
+      }
+    }
+
+    @media (min-width: @xl) {
+      & > * {
+        .sixth();
+      }
+    }
+
+    @media (min-width: @xxl) {
+      & > * {
+        .twelfth();
+      }
     }
   }
 }
