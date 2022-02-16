@@ -4,13 +4,13 @@
  *  or the central functionality of an application. ~ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main
  */
 
-@import "../../utilities/layout.less";
-@import "../../utilities/variables.less";
+@import "../utilities/layout-utilities.less";
+@import "../utilities/variables.less";
 
-main {
+main,
+section {
   display: flex;
   flex-wrap: wrap;
-  padding: 1rem;
   gap: 1rem;
 
   &.dont-stretch {
@@ -45,7 +45,6 @@ main {
     .single();
 
     @media (min-width: @md) {
-      margin-left: -1rem; // countering left gap
       width: auto;
       min-width: unset;
     }
@@ -69,7 +68,7 @@ main {
     .single();
     @media (min-width: @sm) {
       & > * {
-        .half();
+        .two();
       }
     }
   }
@@ -78,12 +77,12 @@ main {
     .single();
     @media (min-width: @sm) {
       & > * {
-        .half();
+        .two();
       }
     }
     @media (min-width: @md) {
       & > * {
-        .third();
+        .three();
       }
     }
   }
@@ -92,17 +91,17 @@ main {
     .single();
     @media (min-width: @sm) {
       & > * {
-        .half();
+        .two();
       }
     }
     @media (min-width: @md) {
       & > * {
-        .third();
+        .three();
       }
     }
     @media (min-width: @lg) {
       & > * {
-        .fourth();
+        .four();
       }
     }
   }
@@ -111,22 +110,22 @@ main {
     .single();
     @media (min-width: @sm) {
       & > * {
-        .half();
+        .two();
       }
     }
     @media (min-width: @md) {
       & > * {
-        .third();
+        .three();
       }
     }
     @media (min-width: @lg) {
       & > * {
-        .fourth();
+        .four();
       }
     }
     @media (min-width: @xl) {
       & > * {
-        .fifth();
+        .five();
       }
     }
   }
@@ -135,27 +134,27 @@ main {
     .single();
     @media (min-width: @sm) {
       & > * {
-        .half();
+        .two();
       }
     }
     @media (min-width: @md) {
       & > * {
-        .third();
+        .three();
       }
     }
     @media (min-width: @lg) {
       & > * {
-        .fourth();
+        .four();
       }
     }
     @media (min-width: @xl) {
       & > * {
-        .fifth();
+        .five();
       }
     }
     @media (min-width: @xxl) {
       & > * {
-        .sixth();
+        .six();
       }
     }
   }
@@ -164,27 +163,27 @@ main {
     .single();
     @media (min-width: @sm) {
       & > * {
-        .third();
+        .three();
       }
     }
     @media (min-width: @md) {
       & > * {
-        .fourth();
+        .four();
       }
     }
     @media (min-width: @lg) {
       & > * {
-        .fifth();
+        .five();
       }
     }
     @media (min-width: @xl) {
       & > * {
-        .sixth();
+        .six();
       }
     }
     @media (min-width: @xxl) {
       & > * {
-        .twelfth();
+        .twelve();
       }
     }
   }
