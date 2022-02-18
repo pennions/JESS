@@ -1,6 +1,7 @@
 /* Based on W3 schools example */
 
-article {
+article,
+.card {
   &:not(.flip) {
     box-shadow: 0 6.4px 14.4px 0 rgba(0, 0, 0, 0.132),
       0 1.2px 3.6px 0 rgba(0, 0, 0, 0.108);
@@ -47,10 +48,17 @@ article {
       }
     }
 
-    &.card > [tabindex="0"] {
+    &.rounded > [tabindex="0"] {
       & section {
         border-radius: 2rem;
       }
     }
+  }
+}
+
+div.card {
+  padding: 2rem;
+  &.rounded {
+    border-radius: 1rem;
   }
 }
