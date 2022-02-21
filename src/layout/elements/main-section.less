@@ -4,12 +4,15 @@
  *  or the central functionality of an application. ~ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main
  */
 
+section > section {
+  padding: @default-distance;
+}
+
 main,
 section {
   display: flex;
   flex-wrap: wrap;
   gap: @default-distance;
-  padding: @default-distance;
 
   &.dont-stretch {
     justify-content: flex-start;
@@ -25,15 +28,17 @@ section {
       align-items: center;
 
       &.with-footer {
-        height: calc(100vh - @footer-min-height);
+        height: calc(100vh - @footer-min-height - (2 * @default-distance));
       }
 
       &.with-header {
-        height: calc(100vh - @nav-min-height);
+        height: calc(100vh - @nav-min-height - (2 * @default-distance));
       }
 
       &.with-header.with-footer {
-        height: calc(100vh - @nav-and-footer-height);
+        height: calc(
+          100vh - @nav-and-footer-height - (2 * @default-distance) - 0.5rem
+        );
       }
     }
   }
