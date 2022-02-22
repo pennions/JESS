@@ -1,3 +1,25 @@
+nav {
+  box-shadow: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132),
+    0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108);
+}
+
+footer {
+  box-shadow: 0 -1.6px 3.6px 0 rgba(0, 0, 0, 0.132),
+    0 -0.3px 0.9px 0 rgba(0, 0, 0, 0.108);
+}
+
+dialog {
+  .border();
+}
+
+aside {
+  & > nav {
+    box-shadow: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132),
+      0 2px 2px -1px rgba(0, 0, 0, 0.108), 0 -2px 2px -1px rgba(0, 0, 0, 0.108),
+      2px 0 2px -1px rgba(0, 0, 0, 0.108);
+  }
+}
+
 section > section,
 aside > nav {
   .border();

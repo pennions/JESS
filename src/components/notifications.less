@@ -1,5 +1,14 @@
 /* traditional top or bottom notification*/
 
-// dialog
+dialog {
+  position: absolute;
+  width: 100%;
+  min-height: @nav-min-height;
+  padding: @default-distance;
+  .ms-motion-slideDownIn();
 
-/* toast notification*/
+  &.bottom {
+    .ms-motion-slideUpIn();
+    bottom: @footer-min-height;
+  }
+}
