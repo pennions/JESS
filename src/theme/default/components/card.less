@@ -1,0 +1,26 @@
+article,
+.card {
+  &:not(.flip) {
+    box-shadow: 0 6.4px 14.4px 0 rgba(0, 0, 0, 0.132),
+      0 1.2px 3.6px 0 rgba(0, 0, 0, 0.108);
+  }
+}
+
+article.flip,
+.card.flip {
+  & > [tabindex="0"] section {
+    box-shadow: 0 6.4px 14.4px 0 rgba(0, 0, 0, 0.132),
+      0 1.2px 3.6px 0 rgba(0, 0, 0, 0.108);
+
+    & > header {
+      .border-bottom();
+    }
+
+    & > footer {
+      .border-top();
+    }
+  }
+  section:last-child {
+    background-color: white;
+  }
+}

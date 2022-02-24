@@ -2,14 +2,8 @@
 
 article,
 .card {
-  &:not(.flip) {
-    box-shadow: 0 6.4px 14.4px 0 rgba(0, 0, 0, 0.132),
-      0 1.2px 3.6px 0 rgba(0, 0, 0, 0.108);
-  }
-
   &.flip {
     position: relative;
-    background-color: transparent;
     width: 22rem;
     height: 30rem;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
@@ -34,13 +28,12 @@ article,
         padding: 0rem;
         position: absolute;
         display: flex;
-        flex-direction: column;
         width: 100%;
         height: 100%;
+        overflow: auto;
         -webkit-backface-visibility: hidden; /* Safari */
         backface-visibility: hidden;
-        box-shadow: 0 6.4px 14.4px 0 rgba(0, 0, 0, 0.132),
-          0 1.2px 3.6px 0 rgba(0, 0, 0, 0.108);
+        box-sizing: border-box;
 
         & > header {
           padding: @default-distance;
@@ -50,6 +43,7 @@ article,
           padding: @default-distance;
           word-break: break-word;
           white-space: normal;
+          overflow: auto;
         }
 
         & > footer {
@@ -61,7 +55,6 @@ article,
       }
 
       section:last-child {
-        background-color: white;
         transform: rotateY(180deg);
       }
     }
