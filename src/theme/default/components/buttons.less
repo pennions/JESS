@@ -1,0 +1,74 @@
+button {
+  padding: 0.75rem;
+  background-color: white;
+  .border();
+
+  &.link {
+    border: 0;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: @ms-color-gray40;
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 0 0 1px black;
+  }
+
+  &.disabled {
+    color: @ms-color-gray90;
+    background-color: @ms-color-gray20;
+    border-color: @ms-color-gray20;
+    box-shadow: none;
+    cursor: initial;
+  }
+
+  &.primary {
+    border: 0;
+    color: white;
+    background-color: @ms-color-sharedCyanBlue10;
+
+    &:hover {
+      background-color: @ms-color-sharedCyanBlue10-hover;
+    }
+  }
+
+  &.danger {
+    border: 0;
+    color: white;
+    background-color: @ms-color-sharedRed10;
+
+    &:hover {
+      background-color: @ms-color-sharedRed10-hover;
+    }
+  }
+
+  &.highlight {
+    border: 0;
+    background-color: @ms-color-sharedYellow10;
+
+    &:hover {
+      background-color: @ms-color-sharedYellow10-hover;
+    }
+  }
+  &.primary,
+  &.danger,
+  &.highlight {
+    &:focus,
+    &:active {
+      box-shadow: 0 0 0 2px black;
+    }
+
+    &.disabled {
+      color: @ms-color-gray50;
+      background-color: @ms-color-gray20;
+      border-color: @ms-color-gray20;
+      box-shadow: none;
+      cursor: initial;
+    }
+  }
+}

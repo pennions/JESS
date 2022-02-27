@@ -1,0 +1,87 @@
+a {
+  color: @ms-color-sharedCyanBlue10;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: underline;
+  }
+
+  &.button {
+    color: black;
+    text-decoration: none;
+    padding: 0.75rem;
+    background-color: white;
+    display: inline-block;
+
+    &.normal {
+      .border();
+
+      &.disabled {
+        color: @ms-color-gray90;
+        background-color: @ms-color-gray20;
+        border-color: @ms-color-gray20;
+        box-shadow: none;
+        cursor: default;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: @ms-color-gray40;
+    }
+
+    &:focus,
+    &:active {
+      outline: none;
+      cursor: pointer;
+      box-shadow: 0 0 0 1px black;
+    }
+
+    &.primary {
+      border: 0;
+      color: white;
+      background-color: @ms-color-sharedCyanBlue10;
+
+      &:hover {
+        background-color: @ms-color-sharedCyanBlue10-hover;
+      }
+    }
+
+    &.danger {
+      border: 0;
+      color: white;
+      background-color: @ms-color-sharedRed10;
+
+      &:hover {
+        background-color: @ms-color-sharedRed10-hover;
+      }
+    }
+
+    &.highlight {
+      border: 0;
+      background-color: @ms-color-sharedYellow10;
+
+      &:hover {
+        background-color: @ms-color-sharedYellow10-hover;
+      }
+    }
+    &.primary,
+    &.danger,
+    &.highlight {
+      &:focus,
+      &:active {
+        box-shadow: 0 0 0 2px black;
+      }
+
+      &.disabled {
+        color: @ms-color-gray50;
+        background-color: @ms-color-gray20;
+        border-color: @ms-color-gray20;
+        box-shadow: none;
+        cursor: default;
+      }
+    }
+  }
+}
