@@ -3,23 +3,77 @@ input {
   padding-left: 0.5rem;
   min-height: 3rem;
   outline: currentcolor none 0px;
+  accent-color: @primary; // for checboxes, radiobuttons etc
+
+  &:focus {
+    border-color: @primary;
+    box-shadow: inset 1px 1px 0 @primary, inset -1px -1px 0 @primary;
+  }
+
+  &:invalid {
+    border-color: @danger;
+    &:hover,
+    &:focus {
+      box-shadow: inset 1px 1px 0 @danger, inset -1px -1px 0 @danger;
+    }
+  }
+
+  &:disabled {
+    color: @disabled-button-color;
+    background-color: @disabled-button-background;
+    border-color: @disabled-button-background;
+    box-shadow: none;
+    cursor: initial;
+  }
 
   &[type="color"],
   &[type="file"],
   &[type="image"],
-  &[type="range"] {
+  &[type="range"],
+  &[type="checkbox"],
+  &[type="radio"] {
     border: none;
     min-height: unset;
     padding-left: 0;
   }
 
   &[type="number"] {
-    padding-right: 0.3rem;
+    padding-right: 0.4rem;
   }
 
-  &:focus {
-    border-color: @primary;
-    box-shadow: inset 1px 1px 0 @primary, inset -1px -1px 0 @primary;
+  &[type="radio"],
+  &[type="checkbox"] {
+    &:focus {
+      outline-offset: 0.1rem;
+      outline: @primary solid 0.2rem;
+    }
+  }
+
+  &[type="submit"],
+  &[type="button"],
+  &[type="reset"] {
+    border: 0;
+    padding: 0.75rem;
+
+    &:hover {
+      cursor: pointer;
+      background-color: @default-button-hover;
+    }
+  }
+
+  &[type="reset"] {
+    background-color: white;
+    .border();
+  }
+
+  &[type="button"],
+  &[type="submit"] {
+    color: white;
+    background-color: @primary;
+
+    &:hover {
+      background-color: @primary-hover;
+    }
   }
 
   &[type="color"],
@@ -32,7 +86,7 @@ input {
       box-shadow: none;
     }
   }
-  
+
   &[type="range"] {
     -webkit-appearance: none;
 
@@ -57,6 +111,7 @@ input {
 
     &::-webkit-slider-thumb {
       -webkit-appearance: none;
+      appearance: none;
       width: 1.6rem;
       height: 1.6rem;
       background: #ffffff;
@@ -83,6 +138,10 @@ input {
       }
       &::-moz-range-thumb {
         border: 2px solid @primary;
+      }
+
+      &::-moz-range-track {
+        background-color: @range-track-hover-color;
       }
 
       &::-webkit-slider-runnable-track {
