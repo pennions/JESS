@@ -5,6 +5,14 @@ button {
 
   &.link {
     border: 0;
+    color: @primary;
+
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration: underline;
+      background-color: @default-background;
+    }
   }
 
   &:hover {
@@ -16,14 +24,13 @@ button {
   &:active {
     outline: none;
     cursor: pointer;
-    box-shadow: 0 0 0 1px black;
+    box-shadow: 0 0 0 1px @button-outline-color;
   }
 
   &.disabled {
     color: @disabled-button-color;
     background-color: @disabled-button-background;
     border-color: @disabled-button-background;
-    box-shadow: none;
     cursor: initial;
   }
 
@@ -39,7 +46,7 @@ button {
 
   &.danger {
     border: 0;
-    color: @color-on-primary;
+    color: @color-on-danger;
     background-color: @danger;
 
     &:hover {
@@ -49,10 +56,11 @@ button {
 
   &.accent {
     border: 0;
-    background-color: @ms-color-sharedYellow10;
+    color: @color-on-accent;
+    background-color: @accent;
 
     &:hover {
-      background-color: @ms-color-sharedYellow10-hover;
+      background-color: @accent-hover;
     }
   }
   &.primary,
@@ -60,14 +68,13 @@ button {
   &.accent {
     &:focus,
     &:active {
-      box-shadow: 0 0 0 2px black;
+      box-shadow: 0 0 0 2px @button-outline-color;
     }
 
     &.disabled {
       color: @colored-disabled-button-color;
       background-color: @disabled-button-background;
       border-color: @disabled-button-background;
-      box-shadow: none;
       cursor: initial;
     }
   }

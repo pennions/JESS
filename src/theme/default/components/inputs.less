@@ -59,16 +59,31 @@ input {
       cursor: pointer;
       background-color: @default-button-hover;
     }
+
+    &:focus,
+    &:active {
+      outline: none;
+      cursor: pointer;
+      box-shadow: 0 0 0 2px @button-outline-color;
+    }
+
+    &.disabled {
+      color: @disabled-button-color;
+      background-color: @disabled-button-background;
+      border-color: @disabled-button-background;
+      box-shadow: none;
+      cursor: initial;
+    }
   }
 
   &[type="reset"] {
-    background-color: white;
+    background-color: @default-background;
     .border();
   }
 
   &[type="button"],
   &[type="submit"] {
-    color: white;
+    color: @color-on-primary;
     background-color: @primary;
 
     &:hover {
@@ -93,10 +108,9 @@ input {
     &::-moz-range-thumb {
       width: 1.2rem;
       height: 1.2rem;
-      background: #ffffff;
+      background: @default-background;
       border: 2px solid @range-filled-track-color;
       border-radius: 100px;
-      cursor: pointer;
     }
 
     &::-moz-range-track {
@@ -114,10 +128,9 @@ input {
       appearance: none;
       width: 1.6rem;
       height: 1.6rem;
-      background: #ffffff;
+      background: @default-background;
       border: 2px solid @range-filled-track-color;
       border-radius: 100px;
-      cursor: pointer;
       margin-top: -6px;
     }
 
@@ -130,7 +143,7 @@ input {
 
     &:hover,
     &:focus {
-      background: #ffffff;
+      background: @default-background;
       outline: none;
 
       &::-moz-range-progress {

@@ -1,0 +1,11 @@
+select {
+  border: 0.5px solid @input-border-color;
+  padding: 0.5rem;
+  outline: @primary none 0px;
+  background-color: @default-background;
+
+  &:focus {
+    border-color: @primary;
+    box-shadow: inset 1px 1px 0 @primary, inset -1px -1px 0 @primary;
+  }
+}

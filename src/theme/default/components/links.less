@@ -1,5 +1,5 @@
 a {
-  color: @ms-color-sharedCyanBlue10;
+  color: @primary;
   text-decoration: none;
 
   &:hover,
@@ -9,62 +9,62 @@ a {
   }
 
   &.button {
-    color: black;
+    color: @button-color;
     text-decoration: none;
     padding: 0.75rem;
-    background-color: white;
+    background-color: @default-background;
     display: inline-block;
 
     &.normal {
       .border();
 
       &.disabled {
-        color: @ms-color-gray90;
-        background-color: @ms-color-gray20;
-        border-color: @ms-color-gray20;
-        box-shadow: none;
+        color: @disabled-button-color;
+        background-color: @disabled-button-background;
+        border-color: @disabled-button-background;
         cursor: default;
       }
     }
 
     &:hover {
       cursor: pointer;
-      background-color: @ms-color-gray40;
+      background-color: @default-button-hover;
     }
 
     &:focus,
     &:active {
       outline: none;
       cursor: pointer;
-      box-shadow: 0 0 0 1px black;
+      box-shadow: 0 0 0 1px @button-outline-color;
     }
 
     &.primary {
       border: 0;
-      color: white;
-      background-color: @ms-color-sharedCyanBlue10;
+      color: @color-on-primary;
+      background-color: @primary;
 
       &:hover {
-        background-color: @ms-color-sharedCyanBlue10-hover;
+        background-color: @primary-hover;
       }
     }
 
     &.danger {
       border: 0;
-      color: white;
-      background-color: @ms-color-sharedRed10;
+      color: @color-on-danger;
+      background-color: @danger;
 
       &:hover {
-        background-color: @ms-color-sharedRed10-hover;
+        background-color: @danger-hover;
       }
     }
 
     &.accent {
       border: 0;
-      background-color: @ms-color-sharedYellow10;
+      color: @color-on-accent;
+      background-color: @accent;
 
       &:hover {
-        background-color: @ms-color-sharedYellow10-hover;
+        background-color: @accent-hover;
       }
     }
     &.primary,
@@ -72,14 +72,13 @@ a {
     &.accent {
       &:focus,
       &:active {
-        box-shadow: 0 0 0 2px black;
+        box-shadow: 0 0 0 2px @button-outline-color;
       }
 
       &.disabled {
-        color: @ms-color-gray50;
-        background-color: @ms-color-gray20;
-        border-color: @ms-color-gray20;
-        box-shadow: none;
+        color: @colored-disabled-button-color;
+        background-color: @disabled-button-background;
+        border-color: @disabled-button-background;
         cursor: default;
       }
     }
