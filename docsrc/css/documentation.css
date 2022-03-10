@@ -1,0 +1,14 @@
+.demo-block {
+  background: repeating-linear-gradient(
+    135deg,
+    #0078d4,
+    #0078d4 10px,
+    #0068b8 10px,
+    #0068b8 20px
+  );
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding: 1.5rem;
+  border-radius: 2px;
+}

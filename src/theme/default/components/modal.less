@@ -1,11 +1,11 @@
 dialog.modal[open]:not(dialog.modal[open="false"])  {
-  background-color: rgba(black, 0.5);
+  background-color: rgba(@default-overlay-background, 0.5);
 
   &.transparent {
-    background-color: rgba(white, 0);
+    background-color: rgba(@default-background, 0);
   }
 
   & > * {
-    background-color: white;
+    background-color: @default-background;
   }
 }

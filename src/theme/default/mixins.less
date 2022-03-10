@@ -9,3 +9,78 @@
 .border-top {
   border-top: 0.5px solid @ms-color-gray110;
 }
+
+.background {
+  background-color: @default-background;
+}
+
+.background-contrast {
+  background-color: @contrast-background;
+}
+
+.background-contrast-dark {
+  background-color: @contrast-background-dark;
+}
+
+.margin-top {
+  margin-top: @default-distance;
+}
+.margin-left {
+  margin-left: @default-distance;
+}
+.margin-right {
+  margin-right: @default-distance;
+}
+.margin-bottom {
+  margin-bottom: @default-distance;
+}
+
+.margin-x {
+  .margin-left();
+  .margin-right();
+}
+
+.margin-y {
+  .margin-top();
+  .margin-bottom();
+}
+.margin {
+  margin: @default-distance;
+}
+
+.padding-top {
+  padding-top: @default-distance;
+}
+.padding-left {
+  padding-left: @default-distance;
+}
+.padding-right {
+  padding-right: @default-distance;
+}
+.padding-bottom {
+  padding-bottom: @default-distance;
+}
+
+.padding-x {
+  .padding-left();
+  .padding-right();
+}
+
+.padding-y {
+  .padding-top();
+  .padding-bottom();
+}
+
+.padding {
+  padding: @default-distance;
+}
+
+.clip {
+  background: linear-gradient(
+    135deg,
+    transparent 6%,
+    white 6%,
+    white 94%,
+    transparent 94%
+  );
+}

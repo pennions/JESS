@@ -1,58 +1,27 @@
-/* hamburger dropdown menu */
-
 details {
-  & > summary {
-    // src = // "<?xml version=\"1.0\" encoding=\"UTF-8\" ?><svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" viewBox=\"0 0 100 80\" width=\"40\" height=\"40\"><rect width=\"80\" height=\"12\"></rect><rect y=\"25\" width=\"80\" height=\"12\"></rect><rect y=\"50\" width=\"80\" height=\"12\"></rect></svg>"
-    // src = // "<?xml version=\"1.0\" encoding=\"UTF-8\" ?><svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" viewBox=\"0 0 100 80\" width=\"40\" height=\"40\"><rect y=\"25\" width=\"80\" height=\"12\"></rect><rect y=\"50\" width=\"80\" height=\"12\"></rect><rect y=\"75\" width=\"80\" height=\"12\"></rect></svg>"
-    // list-style-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiID8+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDEwMCA4MCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIj48cmVjdCB3aWR0aD0iODAiIGhlaWdodD0iMTIiPjwvcmVjdD48cmVjdCB5PSIyNSIgd2lkdGg9IjgwIiBoZWlnaHQ9IjEyIj48L3JlY3Q+PHJlY3QgeT0iNTAiIHdpZHRoPSI4MCIgaGVpZ2h0PSIxMiI+PC9yZWN0Pjwvc3ZnPg==);
-    // list-style-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiID8+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDEwMCA4MCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIj48cmVjdCB5PSIyNSIgd2lkdGg9IjgwIiBoZWlnaHQ9IjEyIj48L3JlY3Q+PHJlY3QgeT0iNTAiIHdpZHRoPSI4MCIgaGVpZ2h0PSIxMiI+PC9yZWN0PjxyZWN0IHk9Ijc1IiB3aWR0aD0iODAiIGhlaWdodD0iMTIiPjwvcmVjdD48L3N2Zz4=);
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiID8+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDEwMCA4MCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjUwIj48cmVjdCB5PSIxMCIgd2lkdGg9IjYwIiBoZWlnaHQ9IjEwIj48L3JlY3Q+PHJlY3QgeT0iMzAiIHdpZHRoPSI2MCIgaGVpZ2h0PSIxMCI+PC9yZWN0PjxyZWN0IHk9IjUwIiB3aWR0aD0iNjAiIGhlaWdodD0iMTAiPjwvcmVjdD48L3N2Zz4=) no-repeat;
-    background-position: top 4p0x;
+  margin: 0 0.8rem;
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:not(.accordion) > summary {
+    display: table;
+  }
+
+  &.accordion {
+    & > div {
+      position: relative;
+      margin: 0.5rem;
+    }
+  }
+
+  summary {
+    padding: 0.5rem;
+  }
+
+  & > div {
+    position: absolute;
+    display: inline-flex;
+    flex-direction: column;
   }
 }
-
-// details
-
-/* standard dropdown menu */
-
-// .dropdown {
-//     position: relative;
-//     display: inline-block;
-//   }
-
-//   .dropdown-button {
-//     z-index: 15;
-//   }
-
-//   .dropdown-content {
-//     position: absolute;
-//     z-index: 20;
-//     background-color: white;
-//     margin-top: 0.1rem;
-//     white-space: nowrap;
-
-//     &.to-right {
-//       left: 0;
-//     }
-//     &.to-left {
-//       right: 0;
-//     }
-//   }
-
-//   .dropdown-overlay {
-//     position: fixed;
-//     padding: 100px 0;
-//     width: 100%;
-//     height: 100%;
-//     top: 0;
-//     left: 0;
-//     background-color: transparent;
-//     z-index: 10;
-//   }
-
-// "<?xml version=\"1.0\" encoding=\"UTF-8\" ?><svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" viewBox=\"0 0 100 80\" width=\"40\" height=\"50\"><rect y=\"10\" width=\"60\" height=\"10\"></rect><rect y=\"30\" width=\"60\" height=\"10\"></rect><rect y=\"50\" width=\"60\" height=\"10\"></rect></svg>"
-
-// viewBox=\"0 0 100 80\" width=\"40\" height=\"50\"><rect y=\"40\" width=\"60\" height=\"10\"></rect><rect y=\"60\" width=\"60\" height=\"10\"></rect><rect y=\"80\" width=\"60\" height=\"10\"></rect></svg>
-// viewBox=\"0 0 100 80\" width=\"40\" height=\"50\"><rect y=\"40\" width=\"60\" height=\"10\"></rect><rect y=\"10\" width=\"60\" height=\"10\"></rect><rect y=\"30\" width=\"50\" height=\"10\"></rect></svg>
-
-// viewBox=\"0 0 100 80\" width=\"40\" height=\"50\"><rect y=\"10\" width=\"60\" height=\"10\"></rect><rect y=\"30\" width=\"60\" height=\"10\"></rect><rect y=\"50\" width=\"60\" height=\"10\"></rect></svg>

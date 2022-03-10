@@ -9,3 +9,62 @@ select {
     box-shadow: inset 1px 1px 0 @primary, inset -1px -1px 0 @primary;
   }
 }
+
+details {
+  &.accordion {
+    & > div {
+      box-shadow: none;
+    }
+  }
+
+  summary {
+    &.button {
+      border: 0.5px solid @input-border-color;
+
+      & ~ div {
+        margin-top: 0.3rem;
+      }
+    }
+
+    &:hover {
+      background-color: @default-button-hover;
+    }
+
+    & > .icon,
+    & > .feather,
+    & > img {
+      top: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    &:not(.button):focus {
+      outline: none;
+      border-color: @primary;
+      box-shadow: inset 1px 1px 0 @primary, inset -1px -1px 0 @primary;
+    }
+  }
+
+  &[open]:not(details[open="false"]) {
+    & > div {
+      .ms-motion-slideDownIn();
+    }
+  }
+
+  & > div {
+    background-color: @default-background;
+
+    box-shadow: 0 6.4px 14.4px 0 rgba(@shadow-color, 0.132),
+      0 1.2px 3.6px 0 rgba(@shadow-color, 0.108);
+
+    &.align-right {
+      right: 0.8rem;
+    }
+  }
+}
+
+nav > details {
+  & > summary {
+    border: none;
+  }
+}

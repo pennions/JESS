@@ -1,4 +1,8 @@
 footer {
   padding: @default-distance;
   min-height: @footer-min-height;
+
+  & > *:not(:last-child) {
+    margin-bottom: @default-distance;
+  }
 }
