@@ -1,8 +1,14 @@
 article,
 .card {
   border-radius: 2px;
-
   padding: @default-distance;
+
+  & > header {
+    *:last-child:not(hr) {
+      border-bottom: 0.5px solid @hr-color;
+      padding-bottom: @default-distance;
+    }
+  }
 
   &:not(.flip) {
     box-shadow: 0 6.4px 14.4px 0 rgba(@shadow-color, 0.132),
