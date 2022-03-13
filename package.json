@@ -4,10 +4,11 @@
   "description": "Stylesheet influenced by Pico CSS and Fluent UI from Microsoft ",
   "main": "index.js",
   "scripts": {
-    "jess": "node ./node_modules/less/bin/lessc src/jess.less dist/jess.css",
+    "jess": "node ./node_modules/less/bin/lessc src/jess.less dist/jess.css | node ./node_modules/copyfiles/copyfiles -u 1 dist/jess.css docs/css",
     "jess-reset": "node ./node_modules/less/bin/lessc src/utilities/reset-css.less dist/jess-reset.css",
     "jess-flex-layout": "node ./node_modules/less/bin/lessc src/layout/jess-flex-layout.less dist/jess-flex-layout.css",
-    "build": "npm run jess | npm run jess-flex-layout | npm run jess-reset"
+    "build": "npm run jess | npm run jess-flex-layout | npm run jess-reset",
+    "build-docs": "node docsrc/build | node ./node_modules/copyfiles/copyfiles -u 2 docsrc/css/documentation.css docs/css"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
   },
   "homepage": "https://github.com/pennions/JESS#readme",
   "devDependencies": {
+    "copyfiles": "^2.4.1",
     "less": "^4.1.2"
   }
 }

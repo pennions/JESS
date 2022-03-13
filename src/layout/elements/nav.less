@@ -3,4 +3,14 @@ nav {
   align-items: center;
   min-height: @nav-min-height;
   padding: @default-distance;
+
+  & > header {
+    width: 100%;
+  }
+
+  & > ul {
+    & li:not(:last-child) > {
+      margin-bottom: @default-distance;
+    }
+  }
 }

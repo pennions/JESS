@@ -1,0 +1,10 @@
+{
+  "block_100": "<section>\n    <div>Block 100% width</div>\n</section>",
+  "block_50": "<section class=\"two-columns\">\n    <div>Block 50% width</div>\n    <div>Block 50% width</div>\n</section>",
+  "block_33": "<section class=\"three-columns\">\n    <div>Block 33.336% width</div>\n    <div>Block 33.336% width</div>\n    <div>Block 33.336% width</div>\n</section>",
+  "block_25": "<section class=\"four-columns\">\n    <div>Block 25% width</div>\n</section>",
+  "block_20": "<section class=\"five-columns\">\n    <div>Block 20% width</div>\n    <div>Block 20% width</div>\n    <div>Block 20% width</div>\n    <div>Block 20% width</div>\n    <div>Block 20% width</div>\n</section>",
+  "block_16": "<section class=\"six-columns\">\n    <div>Block 16.667% width</div>\n    <div>Block 16.667% width</div>\n    <div>Block 16.667% width</div>\n    <div>Block 16.667% width</div>\n    <div>Block 16.667% width</div>\n    <div>Block 16.667% width</div>\n</section>",
+  "block_8": "<section class=\"twelve-columns\">\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n</section>",
+  "partials": {}
+}
