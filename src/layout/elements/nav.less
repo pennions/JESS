@@ -9,8 +9,11 @@ nav {
   }
 
   & > ul {
-    & li:not(:last-child) > {
-      margin-bottom: @default-distance;
+    & li {
+      margin-left: 0;
+      &:not(:last-child) > {
+        margin-bottom: @default-distance;
+      }
     }
   }
 }
