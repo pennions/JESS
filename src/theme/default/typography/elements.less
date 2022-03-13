@@ -1,6 +1,7 @@
-html {
+html, body {
   font-family: Arial, Helvetica, sans-serif;
   color: @default-font-color;
+  line-height: 1.8;
 }
 
 h1 {
@@ -12,5 +13,15 @@ h2 {
 }
 
 h3 {
-  font-size:  1.8rem;
+  font-size: 1.8rem;
+}
+
+code:not([class*="language"]) {
+  margin: 0 0.2rem;
+  padding: 0.2rem 0.4rem;
+  position: relative;
+  background-color: @code-background;
+  border-radius: 0.2rem;
+  .border();
+  bottom: 0.1rem;
 }

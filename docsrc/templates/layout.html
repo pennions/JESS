@@ -31,19 +31,42 @@
     <section>
       <article>
         <header>
-          <h1>Sections</h1>
+          <h1>Main, Section, Fieldset</h1>
         </header>
-
         <p>
-          // TODO write something about how it works also make gifs that show
-          the responsiveness
+          The elements
+          <code class="language-html">&lt;main&gt;</code>,
+          <code class="language-html">&lt;section&gt;</code> and
+          <code class="language-html">&lt;fieldset&gt;</code> elements are all
+          displayed with <code class="language-css">display:flex</code>.
+          <br />
+          The child elements are all displayed at
+          <code class="language-css">width: 100%</code> which results in a
+          single column by default. <br />
+          All columns will be automatically scaled down and wrapped when the
+          viewport can not fit all the columns properly. <br />
+          You can try it by resizing the browser.
         </p>
+        <hr />
+        <small>
+          <b>N.B.</b> The blue fill texture is for demonstration purpose only.
+        </small>
       </article>
       <article id="single-column">
         <header>
-          <h2>Single section</h2>
+          <h2>Single column</h2>
         </header>
-        <p>Sections are by default 100% width.</p>
+        <p>
+          <code class="language-html">&lt;main&gt;</code>,
+          <code class="language-html">&lt;section&gt;</code> and
+          <code class="language-html">&lt;fieldset&gt;</code> elements are 100%
+          width.
+        </p>
+        <p>
+          All elements start out as
+          <code class="language-css">width:100%;</code> and will take up more
+          space if there is room, up to their specified maximum.
+        </p>
         <section><div class="demo-block">Block 100% width</div></section>
         <pre
           class="border"
@@ -52,9 +75,18 @@
 
       <article id="two-columns">
         <header>
-          <h2>Two column section</h2>
+          <h2>Two columns</h2>
         </header>
-        <p>A normal section with added class <code>two-columns</code></p>
+        <p>
+          Add <code class="language-html">class="two-columns"</code> to get a
+          double column layout.
+        </p>
+        <ul>
+          <li>
+            It will display two columns when the viewport has
+            <code class="language-css">min-width:576px;</code>
+          </li>
+        </ul>
         <section class="two-columns">
           <div class="demo-block">Block 50% width</div>
           <div class="demo-block">Block 50% width</div>
@@ -66,9 +98,22 @@
 
       <article id="three-columns">
         <header>
-          <h2>Three column section</h2>
+          <h2>Three columns</h2>
         </header>
-        <p>A normal section with added class <code>three-columns</code></p>
+        <p>
+          Add <code class="language-html">class="three-columns"</code> to get a
+          three column layout.
+        </p>
+        <ul>
+          <li>
+            It will display three columns when the viewport has
+            <code class="language-css">min-width:768px;</code>
+          </li>
+          <li>
+            It will display two columns when the viewport has
+            <code class="language-css">min-width:576px;</code>
+          </li>
+        </ul>
         <section class="three-columns">
           <div class="demo-block">Block 33.336% width</div>
           <div class="demo-block">Block 33.336% width</div>
@@ -81,9 +126,27 @@
 
       <article id="four-columns">
         <header>
-          <h2>Four column section</h2>
+          <h2>Four columns</h2>
         </header>
-        <p>A normal section with added class <code>four-columns</code></p>
+        <p>
+          Add <code class="language-html">class="four-columns"</code> to get a
+          four column layout.
+        </p>
+        <ul>
+          <li>
+            It will display four columns when the viewport has
+            <code class="language-css">min-width:992px;</code>
+          </li>
+          <li>
+            It will display three columns when the viewport has
+            <code class="language-css">min-width:768px;</code>
+          </li>
+          <li>
+            It will display two columns when the viewport has
+            <code class="language-css">min-width:576px;</code>
+          </li>
+        </ul>
+
         <section class="four-columns">
           <div class="demo-block">Block 25% width</div>
           <div class="demo-block">Block 25% width</div>
@@ -97,9 +160,30 @@
 
       <article id="five-columns">
         <header>
-          <h2>Five column section</h2>
+          <h2>Five columns</h2>
         </header>
-        <p>A normal section with added class <code>five-columns</code></p>
+        <p>
+          Add <code class="language-html">class="five-columns"</code> to get a
+          five column layout.
+        </p>
+        <ul>
+          <li>
+            It will display five columns when the viewport has
+            <code class="language-css">min-width:1200px;</code>
+          </li>
+          <li>
+            It will display four columns when the viewport has
+            <code class="language-css">min-width:992px;</code>
+          </li>
+          <li>
+            It will display three columns when the viewport has
+            <code class="language-css">min-width:768px;</code>
+          </li>
+          <li>
+            It will display two columns when the viewport has
+            <code class="language-css">min-width:576px;</code>
+          </li>
+        </ul>
         <section class="five-columns">
           <div class="demo-block">Block 20% width</div>
           <div class="demo-block">Block 20% width</div>
@@ -114,9 +198,34 @@
 
       <article id="six-columns">
         <header>
-          <h2>Six column section</h2>
+          <h2>Six columns</h2>
         </header>
-        <p>A normal section with added class <code>six-columns</code></p>
+        <p>
+          Add <code class="language-html">class="six-columns"</code> to get a
+          six column layout.
+        </p>
+        <ul>
+          <li>
+            It will display six columns when the viewport has
+            <code class="language-css">min-width:1400px;</code>
+          </li>
+          <li>
+            It will display five columns when the viewport has
+            <code class="language-css">min-width:1200px;</code>
+          </li>
+          <li>
+            It will display four columns when the viewport has
+            <code class="language-css">min-width:992px;</code>
+          </li>
+          <li>
+            It will display three columns when the viewport has
+            <code class="language-css">min-width:768px;</code>
+          </li>
+          <li>
+            It will display two columns when the viewport has
+            <code class="language-css">min-width:576px;</code>
+          </li>
+        </ul>
         <section class="six-columns">
           <div class="demo-block">Block 16.667% width</div>
           <div class="demo-block">Block 16.667% width</div>
@@ -130,9 +239,34 @@
 
       <article id="twelve-columns">
         <header>
-          <h2>Twelve column section</h2>
+          <h2>Twelve columns</h2>
         </header>
-        <p>A normal section with added class <code>twelve-columns</code></p>
+        <p>
+          Add <code class="language-html">class="twelve-columns"</code> to get a
+          twelve column layout.
+        </p>
+        <ul>
+          <li>
+            It will display twelve columns when the viewport has
+            <code class="language-css">min-width:1400px;</code>
+          </li>
+          <li>
+            It will display six columns when the viewport has
+            <code class="language-css">min-width:1200px;</code>
+          </li>
+          <li>
+            It will display five columns when the viewport has
+            <code class="language-css">min-width:992px;</code>
+          </li>
+          <li>
+            It will display four columns when the viewport has
+            <code class="language-css">min-width:768px;</code>
+          </li>
+          <li>
+            It will display three columns when the viewport has
+            <code class="language-css">min-width:576px;</code>
+          </li>
+        </ul>
         <section class="twelve-columns">
           <div class="demo-block">Block 8.3333% width</div>
           <div class="demo-block">Block 8.3333% width</div>

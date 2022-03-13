@@ -706,6 +706,9 @@ details > div {
   display: inline-flex;
   flex-direction: column;
 }
+ul > li {
+  margin-left: 1.5rem;
+}
 .border {
   border: 0.5px solid #8a8886;
 }
@@ -1232,9 +1235,11 @@ input[type="range"]:focus::-webkit-slider-thumb {
   stroke-linejoin: round;
   fill: none;
 }
-html {
+html,
+body {
   font-family: Arial, Helvetica, sans-serif;
   color: #323130;
+  line-height: 1.8;
 }
 h1 {
   font-size: 3.2rem;
@@ -1244,4 +1249,13 @@ h2 {
 }
 h3 {
   font-size: 1.8rem;
+}
+code:not([class*="language"]) {
+  margin: 0 0.2rem;
+  padding: 0.2rem 0.4rem;
+  position: relative;
+  background-color: #f3f2f1;
+  border-radius: 0.2rem;
+  border: 0.5px solid #8a8886;
+  bottom: 0.1rem;
 }
