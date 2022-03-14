@@ -10,7 +10,7 @@
     <li>Main</li>
   </ul>
 </nav>
-<body>
+<body id="layout">
   <main>
     <aside>
       <nav class="sticky">
@@ -25,6 +25,9 @@
           <li><a href="#five-columns">Five columns</a></li>
           <li><a href="#six-columns">Six columns</a></li>
           <li><a href="#twelve-columns">Twelve columns</a></li>
+          <li><a href="#center">Center</a></li>
+          <li><a href="#aside">Aside</a></li>
+          <li><a href="#layout" class="button normal full-width">Back to top</a></li>
         </ul>
       </nav>
     </aside>
@@ -32,18 +35,18 @@
     <section>
       <article>
         <header>
-          <h1>Main, Section, Fieldset</h1>
+          <h1>Layout elements</h1>
         </header>
         <p>
           The elements
           <code class="language-html">&lt;main&gt;</code>,
           <code class="language-html">&lt;section&gt;</code> and
-          <code class="language-html">&lt;fieldset&gt;</code> elements are all
-          displayed with <code class="language-css">display:flex</code>.
+          <code class="language-html">&lt;fieldset&gt;</code> are all displayed
+          with <code class="language-css">display:flex</code>.
           <br />
-          The child elements are all displayed at
+          The child elements are all displayed by default at
           <code class="language-css">width: 100%</code> which results in a
-          single column by default. <br />
+          single column. <br />
           All columns will be automatically scaled down and wrapped when the
           viewport can not fit all the columns properly. <br />
           You can try it by resizing the browser.
@@ -58,13 +61,7 @@
           <h2>Single column</h2>
         </header>
         <p>
-          <code class="language-html">&lt;main&gt;</code>,
-          <code class="language-html">&lt;section&gt;</code> and
-          <code class="language-html">&lt;fieldset&gt;</code> elements are 100%
-          width.
-        </p>
-        <p>
-          All elements start out as
+          All child elements start out as
           <code class="language-css">width:100%;</code> and will take up more
           space if there is room, up to their specified maximum.
         </p>
@@ -252,7 +249,9 @@
           <div class="demo-block">Block 16.667% width</div>
           <div class="demo-block">Block 16.667% width</div>
         </section>
-        <pre><code class="language-html">&lt;section class=&quot;six-columns&quot;&gt;
+        <pre
+          class="border"
+        ><code class="language-html">&lt;section class=&quot;six-columns&quot;&gt;
     &lt;div&gt;Block 16.667% width&lt;/div&gt;
     &lt;div&gt;Block 16.667% width&lt;/div&gt;
     &lt;div&gt;Block 16.667% width&lt;/div&gt;
@@ -322,6 +321,124 @@
     &lt;div&gt;Block 8.3333% width&lt;/div&gt;
     &lt;div&gt;Block 8.3333% width&lt;/div&gt;
 &lt;/section&gt;</code></pre>
+      </article>
+
+      <article id="center">
+        <header>
+          <h2>Center</h2>
+        </header>
+        <p>
+          Add <code class="language-html">class="center"</code> to get a single
+          element centered vertically and horizontally. It has
+          <code class="language-css">height:100vh;</code> by default. <br />
+          It works well for a login screen or a single card that needs to be
+          centered.
+        </p>
+        <p>It has the following variants available:</p>
+        <ul>
+          <li>
+            <code class="language-html">class="center"</code>
+            <ul>
+              <li>It will take 100vh and will be centered horizontally.</li>
+              <li>
+                if the screen is bigger than
+                <code class="language-css">min-width:576px;</code> it will be
+                centered vertically.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <code class="language-html">class="center with-header"</code>
+            <ul>
+              <li>It will subtract the height of the header from the area.</li>
+            </ul>
+          </li>
+          <li>
+            <code class="language-html">class="center with-footer"</code>
+            <ul>
+              <li>It will subtract the height of the footer from the area.</li>
+            </ul>
+          </li>
+          <li>
+            <code class="language-html"
+              >class="center with-header with-footer"</code
+            >
+            <ul>
+              <li>
+                It will subtract both height of the header and the footer from
+                the area.
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <hr />
+
+        <div class="border">
+          <section class="center">
+            <article class="demo-block auto-width">
+              <p>A centered element</p>
+            </article>
+          </section>
+        </div>
+        <hr />
+        <div class="border">
+          <nav>Demo navbar</nav>
+          <section class="center with-header">
+            <article class="demo-block auto-width">
+              <p>A centered element with a header</p>
+            </article>
+          </section>
+        </div>
+        <div class="border">
+          <section class="center with-footer">
+            <article class="demo-block auto-width">
+              <p>A centered element with a footer</p>
+            </article>
+          </section>
+          <footer>Demo footer</footer>
+        </div>
+        <div class="border">
+          <nav>Demo navbar</nav>
+          <section class="center with-header with-footer">
+            <article class="demo-block auto-width">
+              <p>A centered element with a header and a footer</p>
+            </article>
+          </section>
+          <footer>Demo footer</footer>
+        </div>
+      </article>
+
+      <article id="aside">
+        <header>
+          <h2>Aside layout</h2>
+        </header>
+        <p>
+          The aside layout can be used if you want to have a small - wide
+          layout. horizontal layout. <br />
+          The aside element has a
+          <code class="language-css">width:auto;</code><br />
+          The element on the right will have
+          <code class="language-css">flex:1;</code> and take the remaining
+          space. <br />
+          Only the first element must be
+          <code class="language-html">&lt;aside&gt;</code>, the right side can
+          be any element.
+        </p>
+        <pre
+          class="border"
+        ><code class="language-html">&lt;main&gt;
+    &lt;aside&gt;
+        Element with auto width
+    &lt;/aside&gt;
+    &lt;section&gt;
+        Element that takes the remaining space
+    &lt;/section&gt;
+&lt;/main&gt;</code></pre>
+        <hr />
+        <small>
+          <b>Fun fact:</b> the current page uses this aside layout for having a
+          vertical navigation bar.
+        </small>
       </article>
     </section>
   </main>

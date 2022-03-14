@@ -115,6 +115,12 @@ select {
   top: 0;
   height: auto;
 }
+.full-width {
+  width: 100%;
+}
+.auto-width {
+  width: auto;
+}
 /**
  *  The <main> HTML element represents the dominant content of the <body> of a document. 
  *  The main content area consists of content that is directly related to or expands upon the central topic of a document, 
@@ -417,6 +423,9 @@ nav {
 }
 nav > header {
   width: 100%;
+}
+nav > ul li {
+  margin-left: 0;
 }
 nav > ul li:not(:last-child) {
   margin-bottom: 1.5rem;
@@ -840,7 +849,8 @@ article.flip section:last-child,
 }
 summary.button,
 button {
-  padding: 0.75rem;
+  border-radius: 2px;
+  padding: 0.2rem 1.5rem;
   background-color: white;
   border: 0.5px solid #8a8886;
 }
@@ -848,6 +858,8 @@ summary.button.link,
 button.link {
   border: 0;
   color: #0078d4;
+  background-color: transparent;
+  padding: 0;
 }
 summary.button.link:hover,
 button.link:hover,
@@ -856,7 +868,7 @@ button.link:focus,
 summary.button.link:active,
 button.link:active {
   text-decoration: underline;
-  background-color: white;
+  background-color: transparent;
 }
 summary.button:hover,
 button:hover {
@@ -943,11 +955,13 @@ a:active {
   text-decoration: underline;
 }
 a.button {
+  border-radius: 2px;
   color: black;
   text-decoration: none;
-  padding: 0.75rem;
-  background-color: white;
+  padding: 0.2rem 1.5rem;
+  background-color: transparent;
   display: inline-block;
+  text-align: center;
 }
 a.button.normal {
   border: 0.5px solid #8a8886;
@@ -1112,7 +1126,7 @@ input[type="submit"],
 input[type="button"],
 input[type="reset"] {
   border: 0;
-  padding: 0.75rem;
+  padding: 0.2rem 1.5rem;
 }
 input[type="submit"]:hover,
 input[type="button"]:hover,

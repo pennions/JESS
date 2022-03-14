@@ -1,18 +1,21 @@
 summary.button,
 button {
-  padding: 0.75rem;
+  border-radius: 2px;
+  padding: 0.2rem 1.5rem;
   background-color: @default-button-background;
   .border();
 
   &.link {
     border: 0;
     color: @primary;
+    background-color: transparent;
+    padding: 0;
 
     &:hover,
     &:focus,
     &:active {
       text-decoration: underline;
-      background-color: @default-background;
+      background-color: transparent;
     }
   }
 
