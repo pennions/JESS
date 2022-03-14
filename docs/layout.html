@@ -27,7 +27,9 @@
           <li><a href="#twelve-columns">Twelve columns</a></li>
           <li><a href="#center">Center</a></li>
           <li><a href="#aside">Aside</a></li>
-          <li><a href="#layout" class="button normal full-width">Back to top</a></li>
+          <li>
+            <a href="#layout" class="button normal full-width">Back to top</a>
+          </li>
         </ul>
       </nav>
     </aside>
@@ -341,7 +343,7 @@
             <ul>
               <li>It will take 100vh and will be centered horizontally.</li>
               <li>
-                if the screen is bigger than
+                if the screen is has
                 <code class="language-css">min-width:576px;</code> it will be
                 centered vertically.
               </li>
@@ -371,8 +373,15 @@
             </ul>
           </li>
         </ul>
-        <hr />
-
+        <pre
+          class="border"
+        ><code class="language-html">&lt;nav&gt;Navigation menu&lt;/nav&gt;
+&lt;main class=&quot;center with-header with-footer&quot;&gt;
+    &lt;article&gt;
+       A centered element with a header and a footer
+    &lt;/article&gt;
+&lt;main&gt;
+&lt;footer&gt;Footer area&lt;/footer&gt;</code></pre>
         <div class="border">
           <section class="center">
             <article class="demo-block auto-width">
@@ -397,6 +406,7 @@
           </section>
           <footer>Demo footer</footer>
         </div>
+        <hr />
         <div class="border">
           <nav>Demo navbar</nav>
           <section class="center with-header with-footer">

@@ -6,6 +6,7 @@
   "block_20": "<section class=\"five-columns\">\n    <div>Block 20% width</div>\n    <div>Block 20% width</div>\n    <div>Block 20% width</div>\n    <div>Block 20% width</div>\n    <div>Block 20% width</div>\n</section>",
   "block_16": "<section class=\"six-columns\">\n    <div>Block 16.667% width</div>\n    <div>Block 16.667% width</div>\n    <div>Block 16.667% width</div>\n    <div>Block 16.667% width</div>\n    <div>Block 16.667% width</div>\n    <div>Block 16.667% width</div>\n</section>",
   "block_8": "<section class=\"twelve-columns\">\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n</section>",
-  "aside_layout":"<main>\n    <aside>\n        Element with auto width\n    </aside>\n    <section>\n        Element that takes the remaining space\n    </section>\n</main>",
+  "center_layout": "<nav>Navigation menu</nav>\n<main class=\"center with-header with-footer\">\n    <article>\n       A centered element with a header and a footer\n    </article>\n<main>\n<footer>Footer area</footer>",
+  "aside_layout": "<main>\n    <aside>\n        Element with auto width\n    </aside>\n    <section>\n        Element that takes the remaining space\n    </section>\n</main>",
   "partials": {}
 }
