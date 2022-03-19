@@ -115,6 +115,11 @@ select {
   top: 0;
   height: auto;
 }
+.sticky > *:first-child {
+  position: sticky;
+  top: 0;
+  height: auto;
+}
 .full-width {
   width: 100%;
 }
@@ -126,9 +131,6 @@ select {
  *  The main content area consists of content that is directly related to or expands upon the central topic of a document, 
  *  or the central functionality of an application. ~ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main
  */
-main {
-  height: 100%;
-}
 section,
 fieldset {
   padding: 1.5rem;
@@ -184,7 +186,7 @@ fieldset:not(.center) > aside {
   min-width: 100%;
   width: 100%;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   main:not(.center) > aside,
   section:not(.center) > aside,
   fieldset:not(.center) > aside {
@@ -986,6 +988,12 @@ a:hover,
 a:focus,
 a:active {
   text-decoration: underline;
+}
+a.accent {
+  color: #fce100;
+}
+a.danger {
+  color: #d13438;
 }
 a.button {
   border-radius: 2px;

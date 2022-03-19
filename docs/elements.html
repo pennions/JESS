@@ -12,14 +12,14 @@
 </nav>
 <body id="elements">
   <main>
-    <aside>
-      <nav class="sticky">
-        <header>
-          <h2>Index</h2>
-        </header>
+    <aside class="sticky">
+      <nav>
         <ul>
           <li>
             <a href="#buttons">Buttons</a>
+          </li>
+          <li>
+            <a href="#links">Links</a>
           </li>
           <li>
             <a href="#elements" class="button normal full-width">Back to top</a>
@@ -48,13 +48,7 @@
           <button>A standard button</button>
           <button class="no-border">A button without a border</button>
           <button class="link">A link button</button>
-          <div class="black-background padding-x">
-            <button class="link accent">An accent colored link button</button>
-          </div>
-          <small
-            ><b>N.B.</b>The black background is for demo purpose only, it is
-            exactly the same as the other link.</small
-          >
+          <button class="link accent">An accent colored link button</button>
           <button class="link danger">A danger colored link button</button>
           <button class="primary">A button with primary color</button>
           <button class="accent">A button with accent color</button>
@@ -70,6 +64,32 @@
 &lt;button class=&quot;primary&quot;&gt;A button with primary color&lt;/button&gt;
 &lt;button class=&quot;accent&quot;&gt;A button with accent color&lt;/button&gt;
 &lt;button class=&quot;danger&quot;&gt;A button with danger color&lt;/button&gt;</code></pre>
+      </article>
+
+      <article id="links">
+        <header>
+          <h2>Links</h2>
+        </header>
+        <section class="column dont-stretch">
+          <a href>A standard link</a>
+          <a href class="accent">An accent colored link</a>
+          <a href class="danger">A danger colored link</a>
+          <a href class="button">A link as a button</a>
+          <a href class="button normal">A link as normal button</a>
+          <a href class="button primary">A link as primary button</a>
+          <a href class="button accent">A link as accent button</a>
+          <a href class="button danger">A link as danger button</a>
+        </section>
+        <pre
+          class="border"
+        ><code class="language-html">&lt;a href&gt;A standard link&lt;/a&gt;
+&lt;a href class=&quot;accent&quot;&gt;An accent colored link&lt;/a&gt;
+&lt;a href class=&quot;danger&quot;&gt;A danger colored link&lt;/a&gt;
+&lt;a href class=&quot;button&quot;&gt;A link as a button&lt;/a&gt;
+&lt;a href class=&quot;button normal&quot;&gt;A link as normal button&lt;/a&gt;
+&lt;a href class=&quot;button primary&quot;&gt;A link as primary button&lt;/a&gt;
+&lt;a href class=&quot;button accent&quot;&gt;A link as accent button&lt;/a&gt;
+&lt;a href class=&quot;button danger&quot;&gt;A link as danger button&lt;/a&gt;</code></pre>
       </article>
     </section>
   </main>

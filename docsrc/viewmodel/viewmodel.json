@@ -9,5 +9,6 @@
   "center_layout": "<nav>Navigation menu</nav>\n<main class=\"center with-header with-footer\">\n    <article>\n       A centered element with a header and a footer\n    </article>\n<main>\n<footer>Footer area</footer>",
   "aside_layout": "<main>\n    <aside>\n        Element with auto width\n    </aside>\n    <section>\n        Element that takes the remaining space\n    </section>\n</main>",
   "buttons": "<button>A standard button</button>\n<button class=\"no-border\">A button without a border</button>\n<button class=\"link\">A link button</button>\n<button class=\"link accent\">An accent colored link button</button>\n<button class=\"link danger\">A danger colored link button</button>\n<button class=\"primary\">A button with primary color</button>\n<button class=\"accent\">A button with accent color</button>\n<button class=\"danger\">A button with danger color</button>",
+  "links": "<a href>A standard link</a>\n<a href class=\"accent\">An accent colored link</a>\n<a href class=\"danger\">A danger colored link</a>\n<a href class=\"button\">A link as a button</a>\n<a href class=\"button normal\">A link as normal button</a>\n<a href class=\"button primary\">A link as primary button</a>\n<a href class=\"button accent\">A link as accent button</a>\n<a href class=\"button danger\">A link as danger button</a>",
   "partials": {}
 }

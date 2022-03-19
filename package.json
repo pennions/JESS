@@ -8,7 +8,7 @@
     "jess-reset": "node ./node_modules/less/bin/lessc src/utilities/reset-css.less dist/jess-reset.css",
     "jess-flex-layout": "node ./node_modules/less/bin/lessc src/layout/jess-flex-layout.less dist/jess-flex-layout.css",
     "build": "npm run jess | npm run jess-flex-layout | npm run jess-reset",
-    "build-docs": "node docsrc/build | node ./node_modules/copyfiles/copyfiles -u 2 docsrc/css/documentation.css docs/css"
+    "build-docs": "npm run build | node docsrc/build | node ./node_modules/copyfiles/copyfiles -u 2 docsrc/css/documentation.css docs/css"
   },
   "repository": {
     "type": "git",
