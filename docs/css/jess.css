@@ -213,6 +213,18 @@ fieldset:not(.center) > * {
   min-width: 100%;
   width: 100%;
 }
+main.column,
+section.column,
+fieldset.column {
+  flex-direction: column;
+  gap: 1.5rem;
+}
+main.column > *,
+section.column > *,
+fieldset.column > * {
+  width: auto;
+  min-width: auto;
+}
 main.two-columns,
 section.two-columns,
 fieldset.two-columns {
@@ -730,11 +742,14 @@ ul > li {
 .background {
   background-color: white;
 }
-.gray-background-contrast {
+.gray-background {
   background-color: #faf9f8;
 }
 .gray-background-dark {
   background-color: #f3f2f1;
+}
+.black-background {
+  background-color: black;
 }
 .margin-top {
   margin-top: 1.5rem;
@@ -786,16 +801,19 @@ ul > li {
   background: linear-gradient(135deg, transparent 6%, white 6%, white 94%, transparent 94%);
 }
 nav {
-  box-shadow: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132), 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108);
   background-color: white;
+  box-shadow: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132), 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108);
 }
 footer {
+  background-color: white;
   box-shadow: 0 -1.6px 3.6px 0 rgba(0, 0, 0, 0.132), 0 -0.3px 0.9px 0 rgba(0, 0, 0, 0.108);
 }
 dialog {
+  background-color: white;
   border: 0.5px solid #8a8886;
 }
 aside > nav {
+  background-color: white;
   box-shadow: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132), 0 2px 2px -1px rgba(0, 0, 0, 0.108), 0 -2px 2px -1px rgba(0, 0, 0, 0.108), 2px 0 2px -1px rgba(0, 0, 0, 0.108);
 }
 nav > ul > li {
@@ -817,6 +835,7 @@ article,
 .card {
   border-radius: 2px;
   padding: 1.5rem;
+  background-color: white;
 }
 article > header *:last-child:not(hr),
 .card > header *:last-child:not(hr) {
@@ -851,8 +870,13 @@ summary.button,
 button {
   border-radius: 2px;
   padding: 0.2rem 1.5rem;
-  background-color: white;
+  background-color: transparent;
+  border: 0;
+}
+summary.button:not(.no-border),
+button:not(.no-border) {
   border: 0.5px solid #8a8886;
+  background-color: white;
 }
 summary.button.link,
 button.link {
@@ -860,6 +884,14 @@ button.link {
   color: #0078d4;
   background-color: transparent;
   padding: 0;
+}
+summary.button.link.accent,
+button.link.accent {
+  color: #fce100;
+}
+summary.button.link.danger,
+button.link.danger {
+  color: #d13438;
 }
 summary.button.link:hover,
 button.link:hover,
@@ -869,6 +901,7 @@ summary.button.link:active,
 button.link:active {
   text-decoration: underline;
   background-color: transparent;
+  box-shadow: unset;
 }
 summary.button:hover,
 button:hover {
@@ -890,34 +923,34 @@ button.disabled {
   border-color: #f3f2f1;
   cursor: initial;
 }
-summary.button.primary,
-button.primary {
+summary.button.primary:not(.link),
+button.primary:not(.link) {
   border: 0;
   color: white;
   background-color: #0078d4;
 }
-summary.button.primary:hover,
-button.primary:hover {
+summary.button.primary:not(.link):hover,
+button.primary:not(.link):hover {
   background-color: #0068b8;
 }
-summary.button.danger,
-button.danger {
+summary.button.danger:not(.link),
+button.danger:not(.link) {
   border: 0;
   color: white;
   background-color: #d13438;
 }
-summary.button.danger:hover,
-button.danger:hover {
+summary.button.danger:not(.link):hover,
+button.danger:not(.link):hover {
   background-color: #bb2a2f;
 }
-summary.button.accent,
-button.accent {
+summary.button.accent:not(.link),
+button.accent:not(.link) {
   border: 0;
   color: black;
   background-color: #fce100;
 }
-summary.button.accent:hover,
-button.accent:hover {
+summary.button.accent:not(.link):hover,
+button.accent:not(.link):hover {
   background-color: #e6cf00;
 }
 summary.button.primary:focus,

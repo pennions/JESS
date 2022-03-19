@@ -74,6 +74,16 @@ fieldset {
     .single();
   }
 
+  &.column {
+    flex-direction: column;
+    gap: @default-distance;
+
+    & > * {
+      width: auto;
+      min-width: auto;
+    }
+  }
+
   &.two-columns {
     .single();
     gap: @default-distance;

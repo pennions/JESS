@@ -2,8 +2,13 @@ summary.button,
 button {
   border-radius: 2px;
   padding: 0.2rem 1.5rem;
-  background-color: @default-button-background;
-  .border();
+  background-color: transparent;
+  border: 0;
+
+  &:not(.no-border) {
+    .border();
+    background-color: @default-button-background;
+  }
 
   &.link {
     border: 0;
@@ -11,11 +16,20 @@ button {
     background-color: transparent;
     padding: 0;
 
+    &.accent {
+      color: @accent;
+    }
+
+    &.danger {
+      color: @danger;
+    }
+
     &:hover,
     &:focus,
     &:active {
       text-decoration: underline;
       background-color: transparent;
+      box-shadow: unset;
     }
   }
 
@@ -38,7 +52,7 @@ button {
     cursor: initial;
   }
 
-  &.primary {
+  &.primary:not(.link) {
     border: 0;
     color: @color-on-primary;
     background-color: @primary;
@@ -48,7 +62,7 @@ button {
     }
   }
 
-  &.danger {
+  &.danger:not(.link) {
     border: 0;
     color: @color-on-danger;
     background-color: @danger;
@@ -58,7 +72,7 @@ button {
     }
   }
 
-  &.accent {
+  &.accent:not(.link) {
     border: 0;
     color: @color-on-accent;
     background-color: @accent;
