@@ -21,6 +21,9 @@
             <a href="#links">Links</a>
           </li>
           <li>
+            <a href="#inputs">Inputs</a>
+          </li>
+          <li>
             <a href="#elements" class="button normal full-width">Back to top</a>
           </li>
         </ul>
@@ -81,54 +84,163 @@
         <header>
           <h2>Inputs</h2>
         </header>
+        <nav>
+          <ul>
+            <li>
+              <a href="#input_checkradio">Checkbox and Radiobutton</a>
+            </li>
+            <li>
+              <a href="#input_buttons">Button inputs</a>
+            </li>
+            <li>
+              <a href="#input_text">Text inputs</a>
+            </li>
+            <li>
+              <a href="#input_numbers">Number inputs</a>
+            </li>
+            <li>
+              <a href="#input_datetime">Date, Time and Datetime inputs</a>
+            </li>
+            <li>
+              <a href="#input_others">Other inputs</a>
+            </li>
+          </ul>
+        </nav>
+
         <section class="column dont-stretch">
-          <input type="button" value="submit" />
-
+          <h3 id="input_checkradio">Checkbox and Radiobutton inputs</h3>
+          <hr />
           <input type="checkbox" />
-
-          <input type="color" />
-
-          <input type="date" />
-
-          <input type="datetime-local" />
-
-          <input type="email" />
-
-          <input type="file" />
-
-          <input type="hidden" />
-
-          <input type="image" />
-
-          <input type="month" />
-
-          <input type="number" />
-
-          <input type="password" />
-
           <input type="radio" />
 
-          <input type="range" />
+          <pre
+            class="border full-width stretch"
+          ><code class="language-html full-width">{{! input_checkradio }}</code></pre>
 
+          <h3 id="input_buttons" class="margin-top">Button inputs</h3>
+          <hr />
+          <input type="button" value="submit" />
           <input type="reset" />
-
-          <input type="search" />
-
           <input type="submit" />
 
-          <input type="tel" />
+          <pre
+            class="border full-width stretch"
+          ><code class="language-html full-width">{{! input_buttons }}</code></pre>
 
-          <input type="text" />
+          <h3 id="input_text" class="margin-top">Text inputs</h3>
+          <hr />
 
-          <input type="time" />
+          <table>
+            <tbody>
+              <tr>
+                <td class="padding-right">Email</td>
+                <td><input type="email" /></td>
+              </tr>
+              <tr>
+                <td class="padding-right">Password</td>
+                <td><input type="password" /></td>
+              </tr>
+              <tr>
+                <td class="padding-right">Search</td>
+                <td><input type="search" /></td>
+              </tr>
+              <tr>
+                <td class="padding-right">Text</td>
+                <td><input type="text" /></td>
+              </tr>
+              <tr>
+                <td class="padding-right">Url</td>
+                <td><input type="url" /></td>
+              </tr>
+            </tbody>
+          </table>
 
-          <input type="url" />
+          <pre
+            class="border full-width stretch"
+          ><code class="language-html full-width">{{! input_text }}</code></pre>
 
-          <input type="week" />
+          <h3 id="input_numbers" class="margin-top">Number inputs</h3>
+          <hr />
+          <table>
+            <tbody>
+              <tr>
+                <td class="padding-right">Number</td>
+                <td><input type="number" /></td>
+              </tr>
+              <tr>
+                <td class="padding-right">Range</td>
+                <td><input type="range" /></td>
+              </tr>
+              <tr>
+                <td class="padding-right">Tel (Phonenumber)</td>
+                <td><input type="tel" /></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <pre
+            class="border full-width stretch"
+          ><code class="language-html full-width">{{! input_numbers }}</code></pre>
+
+          <h3 id="input_datetime" class="margin-top">Date / Datetime inputs</h3>
+          <hr />
+
+          <table>
+            <tbody>
+              <tr>
+                <td class="padding-right">Date</td>
+                <td><input type="date" /></td>
+              </tr>
+              <tr>
+                <td class="padding-right">Datetime local</td>
+                <td><input type="datetime-local" /></td>
+              </tr>
+              <tr>
+                <td class="padding-right">Time</td>
+                <td><input type="time" /></td>
+              </tr>
+              <tr>
+                <td class="padding-right">Month</td>
+                <td><input type="month" /></td>
+              </tr>
+              <tr>
+                <td class="padding-right">Week</td>
+                <td><input type="week" /></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <pre
+            class="border full-width stretch"
+          ><code class="language-html full-width">{{! input_datetime }}</code></pre>
+
+          <h3 id="input_others" class="margin-top">Other inputs</h3>
+          <hr />
+
+          <table>
+            <tbody>
+              <tr>
+                <td class="padding-right">Color</td>
+                <td><input type="color" /></td>
+              </tr>
+              <tr>
+                <td class="padding-right">File</td>
+                <td><input type="file" /></td>
+              </tr>
+              <tr>
+                <td class="padding-right">Image</td>
+                <td><input type="image" /></td>
+              </tr>
+              <tr>
+                <td class="padding-right">Hidden</td>
+                <td><input type="hidden" /></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre
+            class="border full-width stretch"
+          ><code class="language-html full-width">{{! input_others }}</code></pre>
         </section>
-        <pre
-          class="border"
-        ><code class="language-html">{{! inputs }}</code></pre>
       </article>
     </section>
   </main>

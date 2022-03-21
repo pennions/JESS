@@ -22,6 +22,9 @@
             <a href="#links">Links</a>
           </li>
           <li>
+            <a href="#inputs">Inputs</a>
+          </li>
+          <li>
             <a href="#elements" class="button normal full-width">Back to top</a>
           </li>
         </ul>
@@ -90,6 +93,185 @@
 &lt;a href class=&quot;button primary&quot;&gt;A link as primary button&lt;/a&gt;
 &lt;a href class=&quot;button accent&quot;&gt;A link as accent button&lt;/a&gt;
 &lt;a href class=&quot;button danger&quot;&gt;A link as danger button&lt;/a&gt;</code></pre>
+      </article>
+
+      <article id="inputs">
+        <header>
+          <h2>Inputs</h2>
+        </header>
+        <nav>
+          <ul>
+            <li>
+              <a href="#input_checkradio">Checkbox and Radiobutton</a>
+            </li>
+            <li>
+              <a href="#input_buttons">Button inputs</a>
+            </li>
+            <li>
+              <a href="#input_text">Text inputs</a>
+            </li>
+            <li>
+              <a href="#input_numbers">Number inputs</a>
+            </li>
+            <li>
+              <a href="#input_datetime">Date, Time and Datetime inputs</a>
+            </li>
+            <li>
+              <a href="#input_others">Other inputs</a>
+            </li>
+          </ul>
+        </nav>
+
+        <section class="column dont-stretch">
+          <h3 id="input_checkradio">Checkbox and Radiobutton inputs</h3>
+          <hr />
+          <input type="checkbox" />
+          <input type="radio" />
+
+          <pre
+            class="border full-width stretch"
+          ><code class="language-html full-width">&lt;input type=&quot;checkbox&quot; /&gt;
+&lt;input type=&quot;radio&quot; /&gt;</code></pre>
+
+          <h3 id="input_buttons" class="margin-top">Button inputs</h3>
+          <hr />
+          <input type="button" value="submit" />
+          <input type="reset" />
+          <input type="submit" />
+
+          <pre
+            class="border full-width stretch"
+          ><code class="language-html full-width">&lt;input type=&quot;button&quot; value=&quot;submit&quot; /&gt;
+&lt;input type=&quot;reset&quot; /&gt;
+&lt;input type=&quot;submit&quot; /&gt;</code></pre>
+
+          <h3 id="input_text" class="margin-top">Text inputs</h3>
+          <hr />
+
+          <table>
+            <tbody>
+              <tr>
+                <td class="padding-right">Email</td>
+                <td><input type="email" /></td>
+              </tr>
+              <tr>
+                <td class="padding-right">Password</td>
+                <td><input type="password" /></td>
+              </tr>
+              <tr>
+                <td class="padding-right">Search</td>
+                <td><input type="search" /></td>
+              </tr>
+              <tr>
+                <td class="padding-right">Text</td>
+                <td><input type="text" /></td>
+              </tr>
+              <tr>
+                <td class="padding-right">Url</td>
+                <td><input type="url" /></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <pre
+            class="border full-width stretch"
+          ><code class="language-html full-width">&lt;input type=&quot;email&quot; /&gt;
+&lt;input type=&quot;password&quot; /&gt;
+&lt;input type=&quot;search&quot; /&gt;
+&lt;input type=&quot;text&quot; /&gt;
+&lt;input type=&quot;url&quot; /&gt;</code></pre>
+
+          <h3 id="input_numbers" class="margin-top">Number inputs</h3>
+          <hr />
+          <table>
+            <tbody>
+              <tr>
+                <td class="padding-right">Number</td>
+                <td><input type="number" /></td>
+              </tr>
+              <tr>
+                <td class="padding-right">Range</td>
+                <td><input type="range" /></td>
+              </tr>
+              <tr>
+                <td class="padding-right">Tel (Phonenumber)</td>
+                <td><input type="tel" /></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <pre
+            class="border full-width stretch"
+          ><code class="language-html full-width">&lt;input type=&quot;number&quot; /&gt;
+&lt;input type=&quot;range&quot; /&gt;
+&lt;input type=&quot;tel&quot; /&gt;</code></pre>
+
+          <h3 id="input_datetime" class="margin-top">Date / Datetime inputs</h3>
+          <hr />
+
+          <table>
+            <tbody>
+              <tr>
+                <td class="padding-right">Date</td>
+                <td><input type="date" /></td>
+              </tr>
+              <tr>
+                <td class="padding-right">Datetime local</td>
+                <td><input type="datetime-local" /></td>
+              </tr>
+              <tr>
+                <td class="padding-right">Time</td>
+                <td><input type="time" /></td>
+              </tr>
+              <tr>
+                <td class="padding-right">Month</td>
+                <td><input type="month" /></td>
+              </tr>
+              <tr>
+                <td class="padding-right">Week</td>
+                <td><input type="week" /></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <pre
+            class="border full-width stretch"
+          ><code class="language-html full-width">&lt;input type=&quot;date&quot; /&gt;
+&lt;input type=&quot;datetime-local&quot; /&gt;
+&lt;input type=&quot;time&quot; /&gt;
+&lt;input type=&quot;month&quot; /&gt;
+&lt;input type=&quot;week&quot; /&gt;</code></pre>
+
+          <h3 id="input_others" class="margin-top">Other inputs</h3>
+          <hr />
+
+          <table>
+            <tbody>
+              <tr>
+                <td class="padding-right">Color</td>
+                <td><input type="color" /></td>
+              </tr>
+              <tr>
+                <td class="padding-right">File</td>
+                <td><input type="file" /></td>
+              </tr>
+              <tr>
+                <td class="padding-right">Image</td>
+                <td><input type="image" /></td>
+              </tr>
+              <tr>
+                <td class="padding-right">Hidden</td>
+                <td><input type="hidden" /></td>
+              </tr>
+            </tbody>
+          </table>
+          <pre
+            class="border full-width stretch"
+          ><code class="language-html full-width">&lt;input type=&quot;color&quot; /&gt;
+&lt;input type=&quot;file&quot; /&gt;
+&lt;input type=&quot;image&quot; /&gt;
+&lt;input type=&quot;hidden&quot; /&gt;</code></pre>
+        </section>
       </article>
     </section>
   </main>
