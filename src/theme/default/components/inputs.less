@@ -100,6 +100,37 @@ input {
     }
   }
 
+  &[type="file"] {
+    &::file-selector-button,
+    &::-webkit-file-upload-button {
+      background-color: @primary;
+      color: @color-on-primary;
+      border-radius: 2px;
+      padding: 0.6rem 1.5rem;
+      border: 0;
+    }
+
+    &:active {
+      &::file-selector-button,
+      &::-webkit-file-upload-button {
+      box-shadow: inset 0 0 0 2px @button-outline-color;
+      }
+    }
+
+    &:hover {
+      &::file-selector-button,
+      &::-webkit-file-upload-button {
+        cursor: pointer;
+        background-color: @primary-hover;
+      }
+    }
+
+    &:focus {
+      outline-offset: 0.1rem;
+      outline: @button-outline-color solid 0.2rem;
+    }
+  }
+
   &[type="color"] {
     width: 8rem;
     padding: 0;
@@ -108,7 +139,7 @@ input {
   &[type="range"] {
     -webkit-appearance: none;
     background: transparent;
-    padding:0;
+    padding: 0;
 
     &::-moz-range-thumb {
       width: 1.2rem;
