@@ -76,6 +76,13 @@ input {
   &[type="reset"] {
     background-color: @default-background;
     .border();
+
+    &:focus,
+    &:active {
+      outline: none;
+      cursor: pointer;
+      box-shadow: 0 0 0 1px @button-outline-color;
+    }
   }
 
   &[type="button"],
