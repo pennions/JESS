@@ -1,0 +1,57 @@
+.tooltip,
+[data-tooltip] {
+  position: relative;
+
+  &:hover,
+  &:focus {
+    cursor: help;
+
+    &::before {
+      width: auto;
+      position: absolute;
+      z-index: 200;
+      left: 0rem;
+      bottom: 2rem;
+      padding: 0 0.5rem;
+      background-color: @primary;
+      color: @color-on-primary;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    &[data-tooltip] {
+      &::before {
+        content: attr(data-tooltip);
+      }
+    }
+
+    &:after {
+      display: inline-block;
+      z-index: 200;
+      position: absolute;
+      content: "";
+      left: 0.5rem;
+      bottom: 1.5rem;
+      width: 0;
+      height: 0;
+      border-left: 0.5rem solid transparent;
+      border-right: 0.5rem solid transparent;
+      border-top: 0.5rem solid @primary;
+    }
+  }
+
+  &.tooltip-right {
+    &:hover,
+    &:focus {
+      &::before {
+        left: initial;
+        right: 0;
+        bottom: 2rem;
+      }
+      &::after {
+        left: initial;
+        right: 0.5rem;
+        bottom: 1.5rem;
+      }
+    }
+  }
+}

@@ -21,7 +21,10 @@
             <a href="#links">Links</a>
           </li>
           <li>
-            <a href="#inputs">Inputs</a>
+            <a href="#input">Input</a>
+          </li>
+          <li>
+            <a href="#label">Label</a>
           </li>
           <li>
             <a href="#elements" class="button normal full-width">Back to top</a>
@@ -80,7 +83,7 @@
         ><code class="language-html">{{! links }}</code></pre>
       </article>
 
-      <article id="inputs">
+      <article id="input">
         <header>
           <h2>Inputs</h2>
         </header>
@@ -241,6 +244,53 @@
             class="border full-width stretch"
           ><code class="language-html full-width">{{! input_others }}</code></pre>
         </section>
+      </article>
+
+      <article id="label">
+        <header>
+          <h2>Labels</h2>
+        </header>
+        <p>
+          Labels render with a
+          <code class="language-css">font-size: 1.2rem;</code> which results in
+          12px by default. <br />
+          And have a <code class="language-css">font-weigth: 600;</code>
+        </p>
+        <label>A standard label</label> <br />
+        <p>
+          Their presentation can be altered by a some classes or attributes:
+        </p>
+        <label class="required">Label with required class</label> <br />
+        <label class="disabled">Label with disabled class</label> <br />
+        <p>
+          If you add <code class="language-html">tabindex="0"</code> as well as
+          the required class, you get a tooltip which can be focussed:
+        </p>
+        <label class="required" tabindex="0"
+          >This is a required field with a tooltip</label
+        ><br />
+        <p>
+          You can modify the tooltip by providing
+          <code class="language-html">data-tooltip="Your text"</code>
+        </p>
+        <label class="required" tabindex="0" data-tooltip="Custom tooltip text."
+          >This is a required field with a custom tooltip</label
+        ><br />
+
+        <p>
+          You can also use the attribute
+          <code class="language-html">disabled</code> /
+          <code class="language-html">disabled="true"</code> or
+          <code class="language-html">required</code> /
+          <code class="language-html">required="true"</code> for the same effect
+          of adding the class. <br />
+          You can then set these to false to remove the effect. <br />
+          <code class="language-html">disabled="false"</code> and
+          <code class="language-html">required="false"</code> respectively.
+        </p>
+        <pre
+          class="border"
+        ><code class="language-html">{{! labels }}</code></pre>
       </article>
     </section>
   </main>
