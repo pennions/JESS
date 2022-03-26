@@ -11,6 +11,25 @@ input {
     box-shadow: inset 1px 1px 0 @primary, inset -1px -1px 0 @primary;
   }
 
+  &.underline {
+    padding: 0;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-radius: 0;
+    background-color: transparent;
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: @primary;
+      box-shadow: @primary, inset -1px -1px 0 @primary;
+    }
+  }
+
   &:invalid {
     border-color: @danger;
     &:hover,

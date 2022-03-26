@@ -1202,6 +1202,22 @@ input:focus {
   border-color: #0078d4;
   box-shadow: inset 1px 1px 0 #0078d4, inset -1px -1px 0 #0078d4;
 }
+input.underline {
+  padding: 0;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-radius: 0;
+  background-color: transparent;
+}
+input.underline:focus {
+  box-shadow: none;
+}
+input.underline:hover,
+input.underline:focus {
+  border-color: #0078d4;
+  box-shadow: #0078d4, inset -1px -1px 0 #0078d4;
+}
 input:invalid {
   border-color: #d13438;
 }

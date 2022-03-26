@@ -18,6 +18,7 @@
   "input_numbers": "<input type=\"number\" />\n<input type=\"range\" />\n<input type=\"tel\" />",
   "input_datetime": "<input type=\"date\" />\n<input type=\"datetime-local\" />\n<input type=\"time\" />\n<input type=\"month\" />\n<input type=\"week\" />",
   "input_others": "<input type=\"color\" />\n<input type=\"file\" />\n<input type=\"image\" />\n<input type=\"hidden\" />",
+  "input_classes": "<input type=\"text\" class=\"underline\" placeholder=\"Input with underline class\" />",
   "labels": "<label>A standard label</label>\n\n<label class=\"required\">Label with required class</label>\n<label required>Label with required attribute</label>\n<label required=\"false\">Not required label</label>\n\n<label class=\"disabled\">Label with disabled class</label>\n<label disabled>Label with disabled attribute</label>\n<label disabled=\"false\">Not disabled label</label>\n\n<label class=\"required\" tabindex=\"0\">This is a required field with a tooltip</label>\n<label required tabindex=\"0\">This is a required field with a tooltip</label>\n<label required tabindex=\"0\" data-tooltip=\"Custom text\">Required label with custom tooltip</label>\n",
   "partials": {}
 }
