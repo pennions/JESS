@@ -24,6 +24,8 @@
           <li><a href="#twelve-columns">Twelve columns</a></li>
           <li><a href="#center">Center</a></li>
           <li><a href="#aside">Aside</a></li>
+          <li><a href="#nav">Nav</a></li>
+          <li><a href="#footer">Footer</a></li>
           <li><a href="#utility-classes">Utility classes</a></li>
           <li>
             <a href="#layout" class="button normal full-width">Back to top</a>
@@ -389,7 +391,7 @@
         </div>
         <hr />
         <div class="border">
-          <nav>Demo navbar</nav>
+          <nav class="demo-navbar">Demo navbar</nav>
           <section class="center with-header">
             <article class="demo-block auto-width">
               <p>A centered element with a header</p>
@@ -406,7 +408,7 @@
         </div>
         <hr />
         <div class="border">
-          <nav>Demo navbar</nav>
+          <nav class="demo-navbar">Demo navbar</nav>
           <section class="center with-header with-footer">
             <article class="demo-block auto-width">
               <p>A centered element with a header and a footer</p>
@@ -449,6 +451,59 @@
         </small>
       </article>
 
+      <article id="nav">
+        <header>
+          <h2>Nav</h2>
+        </header>
+        <p>
+          When you include a <code>nav</code> element directly inside a
+          <code>body</code> element it will:
+        </p>
+        <ul>
+          <li>Have a box-shadow</li>
+          <li>Have <code class="language-css">min-height: 5rem;</code></li>
+          <li>Have <code class="language-css">padding: 1.5rem;</code></li>
+        </ul>
+        <hr />
+        <section>
+          <nav class="demo-navbar">Navigation bar</nav>
+        </section>
+        <hr />
+        <pre
+          class="border"
+        ><code class="language-html">&lt;body&gt;
+    &lt;nav&gt;Navigation bar&lt;/nav&gt;
+    ...
+&lt;/body&gt;</code></pre>
+      </article>
+
+      <article id="footer">
+        <header>
+          <h2>Footer</h2>
+        </header>
+        <p>
+          When you include a <code>footer</code> element directly inside a
+          <code>body</code> element it will:
+        </p>
+        <ul>
+          <li>Have a box-shadow</li>
+          <li>Have <code class="language-css">min-height: 5rem;</code></li>
+          <li>Have <code class="language-css">padding: 1.5rem;</code></li>
+        </ul>
+        <hr />
+        <section>
+          <footer>Footer</footer>
+        </section>
+        <hr />
+        <pre
+          class="border"
+        ><code class="language-html">&lt;body&gt;
+    ...
+    &lt;footer&gt;Footer&lt;/footer&gt;
+&lt;/body&gt;</code></pre>
+      </article>
+      </article>
+
       <article id="utility-classes">
         <header>
           <h2>Utility classes</h2>
@@ -475,7 +530,6 @@
             </ul>
           </li>
         </ul>
-        <hr />
       </article>
     </section>
   </main>
