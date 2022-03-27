@@ -1,0 +1,86 @@
+label.switch {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-width: 3.8rem;
+  max-width: 3.8rem;
+  min-height: 2rem;
+  max-height: 2rem;
+  border-radius: 2rem;
+
+  & > .toggle {
+    position: relative;
+    left: 0.2rem;
+    display: inline-block;
+    height: 1.4rem;
+    width: 1.4rem;
+    border-radius: 50%;
+    transition: left 0.2s ease-in-out;
+  }
+
+  & input:checked ~ .toggle {
+    display: inline-block;
+    position: absolute;
+    left: 2.2rem;
+    border: none;
+    z-index: 20;
+  }
+
+  & input {
+    & ~ .toggle-background[data-label]::before {
+      position: absolute;
+      left: 4.5rem;
+      top: -0.5rem;
+      content: attr(data-label);
+    }
+
+    & ~ .toggle-background.label-right {
+      &::before {
+        left: unset;
+        right: 4.5rem;
+      }
+    }
+
+    &:checked ~ .toggle-background[data-label]::before {
+      content: attr(data-label-on);
+    }
+  }
+
+  & input ~ .toggle-background {
+    display: block;
+    position: absolute;
+    content: "";
+    height: 2rem;
+    width: 3.9rem;
+    left: -1px;
+    border-radius: 2rem;
+  }
+
+  & input:checked ~ .toggle-background {
+    display: block;
+    position: absolute;
+    content: "";
+    height: 2rem;
+    width: 3.9rem;
+    left: -1px;
+    border-radius: 2rem;
+  }
+
+  &.active:hover::after {
+    position: absolute;
+    display: block;
+    content: "";
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.2;
+    border-radius: 2rem;
+  }
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+}

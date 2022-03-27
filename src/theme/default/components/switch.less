@@ -1,0 +1,39 @@
+label.switch {
+  & > .toggle {
+    background-color: @switch-toggle-off-color;
+  }
+
+  & input ~ .toggle-background {
+    background-color: transparent;
+    border: 0.5px solid @switch-border-color;
+  }
+
+  & input:checked {
+    & ~ .toggle {
+      background-color: @switch-toggle-on-color;
+    }
+    & ~ .toggle-background {
+      background-color: @primary;
+      border: 0.5px solid @primary;
+    }
+
+    &:disabled {
+      & ~ .toggle {
+        background-color: @disabled-button-color;
+      }
+      & ~ .toggle-background {
+        background-color: @default-background;
+        border-color: @disabled-button-color;
+      }
+    }
+  }
+
+  & input:disabled {
+    & ~ .toggle {
+      background-color: @disabled-button-color;
+    }
+    & ~ .toggle-background {
+      border: 0.5px solid @disabled-button-color;
+    }
+  }
+}
