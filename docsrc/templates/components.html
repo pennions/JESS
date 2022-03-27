@@ -89,6 +89,12 @@
         </label>
 
         <label class="switch">
+          <input type="checkbox" hidden checked disabled />
+          <span class="toggle"></span>
+          <span class="toggle-background"></span>
+        </label>
+
+        <label class="switch">
           <input type="checkbox" hidden />
           <span class="toggle"></span>
           <span
@@ -107,6 +113,24 @@
             data-label-on="On"
           ></span>
         </label>
+
+        <label class="switch">
+          <input type="checkbox" hidden />
+          <span class="toggle"></span>
+          <span class="toggle-background" data-label="Off state only"></span>
+        </label>
+
+        <label class="switch">
+          <input type="checkbox" hidden checked />
+          <span class="toggle"></span>
+          <span class="toggle-background" data-label-on="On state only"></span>
+        </label>
+
+        <hr />
+        <small
+          ><b>N.B.</b> when using the data-label attribute, make sure it will
+          fit in your design.</small
+        >
       </article>
     </section>
   </main>

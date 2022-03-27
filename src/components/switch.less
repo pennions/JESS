@@ -19,7 +19,6 @@ label.switch {
   }
 
   & input:checked ~ .toggle {
-    display: inline-block;
     position: absolute;
     left: 2.2rem;
     border: none;
@@ -32,6 +31,7 @@ label.switch {
       left: 4.5rem;
       top: -0.5rem;
       content: attr(data-label);
+      white-space: nowrap;
     }
 
     & ~ .toggle-background.label-right {
@@ -41,8 +41,19 @@ label.switch {
       }
     }
 
-    &:checked ~ .toggle-background[data-label]::before {
+    &:checked ~ .toggle-background[data-label-on]:not(.label-right)::before {
+      left: 4.5rem;
+    }
+
+    &:checked ~ .toggle-background[data-label-on]::before {
+      position: absolute;
+      top: -0.5rem;
       content: attr(data-label-on);
+      white-space: nowrap;
+    }
+
+    &:checked ~ .toggle-background:not([data-label-on])::before {
+      content: "";
     }
   }
 
