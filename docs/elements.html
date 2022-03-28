@@ -22,10 +22,19 @@
             <a href="#links">Links</a>
           </li>
           <li>
-            <a href="#input">Input</a>
+            <a href="#input">Inputs</a>
           </li>
           <li>
-            <a href="#label">Label</a>
+            <a href="#select">Select</a>
+          </li>
+          <li>
+            <a href="#text-area">Textarea</a>
+          </li>
+          <li>
+            <a href="#label">Labels</a>
+          </li>
+          <li>
+            <a href="#table">Table</a>
           </li>
           <li>
             <a href="#elements" class="button normal full-width">Back to top</a>
@@ -123,7 +132,7 @@
               <a href="#input_others">Other inputs</a>
             </li>
             <li>
-              <a href="#input_classes">Input classes</a>
+              <a href="#input_modifiers">Input modifiers</a>
             </li>
           </ul>
         </nav>
@@ -133,6 +142,8 @@
           <hr />
           <input type="checkbox" />
           <input type="radio" />
+
+          <a href="/components.html#switch">Checkbox as a switch</a>
 
           <pre
             class="border full-width stretch"
@@ -278,9 +289,13 @@
 &lt;input type=&quot;image&quot; /&gt;
 &lt;input type=&quot;hidden&quot; /&gt;</code></pre>
 
-          <h3 id="input_classes" class="margin-top">Input classes</h3>
+          <h3 id="input_modifiers" class="margin-top">Input modifiers</h3>
           <hr />
-          <p>You can create a very minimalistic input by adding the <code>underline</code> class.</p>
+
+          <p>
+            You can create a very minimalistic input by adding the
+            <code class="language-html">underline</code> class.
+          </p>
 
           <input
             type="text"
@@ -288,10 +303,107 @@
             placeholder="Input with underline class"
           />
 
+          <p>
+            The invalid and disabled attributes work on all inputs, even
+            textarea.
+          </p>
+
+          <p>
+            To disable an input add the
+            <code class="language-html">disabled</code> attribute:
+          </p>
+
+          <input type="text" disabled />
+          <input type="range" disabled />
+          <input type="number" disabled />
+          <input type="button" value="submit" disabled />
+
+          <p>
+            To show that an input is invalid add the
+            <code class="language-html">invalid</code> attribute <br />
+            adding <code class="language-html">invalid="false"</code> attribute
+            will make it normal again (visual only):
+          </p>
+
+          <input type="text" invalid />
+          <input type="text" invalid="false" />
+
+          <p>
+            Or type a letter in the number input to trigger the webbrowsers
+            built-in invalidation:
+          </p>
+          <input type="number" />
+
           <pre
-          class="border full-width stretch"
-        ><code class="language-html full-width">&lt;input type=&quot;text&quot; class=&quot;underline&quot; placeholder=&quot;Input with underline class&quot; /&gt;</code></pre>
+            class="border full-width stretch"
+          ><code class="language-html full-width">&lt;input type=&quot;text&quot; class=&quot;underline&quot; placeholder=&quot;Input with underline class&quot; /&gt;
+&lt;input type=&quot;range&quot; disabled /&gt;
+&lt;input type=&quot;number&quot; disabled /&gt;
+&lt;input type=&quot;text&quot; invalid /&gt;
+&lt;input type=&quot;text&quot; invalid=&quot;false&quot; /&gt;
+&lt;input type=&quot;button&quot; value=&quot;submit&quot; disabled&gt;</code></pre>
         </section>
+      </article>
+
+      <article id="select">
+        <header>
+          <h2>Select</h2>
+        </header>
+        <p>A default select element:</p>
+
+        <select name="fruits" id="fruit">
+          <option value="apple">Apple</option>
+          <option value="banana">Banana</option>
+          <option value="pineapple">Pineapple</option>
+          <option value="cherry">Cherry</option>
+        </select>
+
+        <p>A disabled select element:</p>
+
+        <select name="fruits" id="fruit" disabled>
+          <option value="apple">Apple</option>
+          <option value="banana">Banana</option>
+          <option value="pineapple">Pineapple</option>
+          <option value="cherry">Cherry</option>
+        </select>
+
+        <pre
+          class="border full-width stretch"
+        ><code class="language-html full-width">&lt;select name=&quot;fruits&quot; id=&quot;fruit&quot;&gt;
+      &lt;option value=&quot;apple&quot;&gt;Apple&lt;/option&gt;
+      &lt;option value=&quot;banana&quot;&gt;Banana&lt;/option&gt;
+      &lt;option value=&quot;pineapple&quot;&gt;Pineapple&lt;/option&gt;
+      &lt;option value=&quot;cherry&quot;&gt;Cherry&lt;/option&gt;
+&lt;/select&gt;
+&lt;select name=&quot;fruits&quot; id=&quot;fruit&quot; disabled&gt;
+      &lt;option value=&quot;apple&quot;&gt;Apple&lt;/option&gt;
+      &lt;option value=&quot;banana&quot;&gt;Banana&lt;/option&gt;
+      &lt;option value=&quot;pineapple&quot;&gt;Pineapple&lt;/option&gt;
+      &lt;option value=&quot;cherry&quot;&gt;Cherry&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+      </article>
+
+      <article id="text-area">
+        <header>
+          <h2>Textarea</h2>
+        </header>
+        <p>A default resizable textarea element:</p>
+
+        <textarea cols="30" rows="10"></textarea>
+
+        <p>A disabled textarea element:</p>
+
+        <textarea cols="6" rows="3" disabled></textarea>
+
+        <p>An invalid textarea element:</p>
+
+        <textarea cols="6" rows="3" invalid></textarea>
+
+        <pre
+          class="border full-width stretch"
+        ><code class="language-html full-width">&lt;textarea cols=&quot;30&quot; rows=&quot;10&quot;&gt;&lt;/textarea&gt;
+&lt;textarea cols=&quot;6&quot; rows=&quot;3&quot; disabled&gt;&lt;/textarea&gt;
+&lt;textarea cols=&quot;6&quot; rows=&quot;3&quot; invalid&gt;&lt;/textarea&gt;</code></pre>
       </article>
 
       <article id="label">
@@ -351,6 +463,13 @@
 &lt;label class=&quot;required&quot; tabindex=&quot;0&quot;&gt;This is a required field with a tooltip&lt;/label&gt;
 &lt;label required tabindex=&quot;0&quot;&gt;This is a required field with a tooltip&lt;/label&gt;
 &lt;label required tabindex=&quot;0&quot; data-tooltip=&quot;Custom text&quot;&gt;Required label with custom tooltip&lt;/label&gt;</code></pre>
+      </article>
+
+      <article>
+        <header>
+          <h1>Table</h1>
+        </header>
+        <p>TODO</p>
       </article>
     </section>
   </main>

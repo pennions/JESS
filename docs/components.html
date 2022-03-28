@@ -1,14 +1,15 @@
-<!--dev-->
-<link rel="stylesheet" href="../css/prism.css" />
-<link rel="stylesheet" href="../css/documentation.css" />
-<link rel="stylesheet/less" type="text/css" href="../../../src/jess.less" />
-<script src="../js/prism.js" type="text/javascript"></script>
-<script
-  src="../../../node_modules/less/dist/less.min.js"
-  type="text/javascript"
-></script>
-<!--end-->
-{{# partials.header #}}
+
+<link rel="stylesheet" href="./css/prism.css" />
+<link rel="stylesheet" href="./css/documentation.css" />
+<link rel="stylesheet" type="text/css" href="./css/jess.css" />
+<script src="./js/prism.js" type="text/javascript"></script>
+
+
+<nav>
+  <ul>
+    <li>Main</li>
+  </ul>
+</nav>
 <body id="components">
   <main>
     <aside class="sticky">
@@ -155,7 +156,55 @@
 
         <pre
           class="border full-width stretch"
-        ><code class="language-html full-width">{{! components_switch }}</code></pre>
+        ><code class="language-html full-width">&lt;label class=&quot;switch&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; hidden /&gt;
+    &lt;span class=&quot;toggle&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;toggle-background&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;label class=&quot;switch&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; hidden disabled /&gt;
+    &lt;span class=&quot;toggle&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;toggle-background&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;label class=&quot;switch&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; hidden checked disabled /&gt;
+    &lt;span class=&quot;toggle&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;toggle-background&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;label class=&quot;switch&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; hidden /&gt;
+    &lt;span class=&quot;toggle&quot;&gt;&lt;/span&gt;
+    &lt;span
+        class=&quot;toggle-background&quot;
+        data-label=&quot;Off&quot;
+        data-label-on=&quot;On&quot;
+    &gt;&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;label class=&quot;switch switch-margin&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; hidden /&gt;
+    &lt;span class=&quot;toggle&quot;&gt;&lt;/span&gt;
+    &lt;span
+        class=&quot;toggle-background label-left&quot;
+        data-label=&quot;Off&quot;
+        data-label-on=&quot;On&quot;
+    &gt;&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;label class=&quot;switch&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; hidden /&gt;
+    &lt;span class=&quot;toggle&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;toggle-background&quot; data-label=&quot;Off state only&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;label class=&quot;switch&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; hidden checked /&gt;
+    &lt;span class=&quot;toggle&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;toggle-background&quot; data-label-on=&quot;On state only&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;</code></pre>
 
         <hr />
         <small

@@ -8,6 +8,14 @@ select {
     border-color: @primary;
     box-shadow: inset 1px 1px 0 @primary, inset -1px -1px 0 @primary;
   }
+
+  &:disabled {
+    color: @disabled-button-color;
+    background-color: @disabled-button-background;
+    border-color: @disabled-button-background;
+    box-shadow: none;
+    cursor: initial;
+  }
 }
 
 details {

@@ -27,6 +27,9 @@
             <a href="#select">Select</a>
           </li>
           <li>
+            <a href="#text-area">Textarea</a>
+          </li>
+          <li>
             <a href="#label">Labels</a>
           </li>
           <li>
@@ -114,7 +117,7 @@
               <a href="#input_others">Other inputs</a>
             </li>
             <li>
-              <a href="#input_classes">Input classes</a>
+              <a href="#input_modifiers">Input modifiers</a>
             </li>
           </ul>
         </nav>
@@ -125,7 +128,7 @@
           <input type="checkbox" />
           <input type="radio" />
 
-          // link to switch -> components
+          <a href="/components.html#switch">Checkbox as a switch</a>
 
           <pre
             class="border full-width stretch"
@@ -255,11 +258,12 @@
             class="border full-width stretch"
           ><code class="language-html full-width">{{! input_others }}</code></pre>
 
-          <h3 id="input_classes" class="margin-top">Input classes</h3>
+          <h3 id="input_modifiers" class="margin-top">Input modifiers</h3>
           <hr />
+
           <p>
             You can create a very minimalistic input by adding the
-            <code>underline</code> class.
+            <code class="language-html">underline</code> class.
           </p>
 
           <input
@@ -268,20 +272,89 @@
             placeholder="Input with underline class"
           />
 
+          <p>
+            The invalid and disabled attributes work on all inputs, even
+            textarea.
+          </p>
+
+          <p>
+            To disable an input add the
+            <code class="language-html">disabled</code> attribute:
+          </p>
+
+          <input type="text" disabled />
+          <input type="range" disabled />
+          <input type="number" disabled />
+          <input type="button" value="submit" disabled />
+
+          <p>
+            To show that an input is invalid add the
+            <code class="language-html">invalid</code> attribute <br />
+            adding <code class="language-html">invalid="false"</code> attribute
+            will make it normal again (visual only):
+          </p>
+
+          <input type="text" invalid />
+          <input type="text" invalid="false" />
+
+          <p>
+            Or type a letter in the number input to trigger the webbrowsers
+            built-in invalidation:
+          </p>
+          <input type="number" />
+
           <pre
             class="border full-width stretch"
-          ><code class="language-html full-width">{{! input_classes }}</code></pre>
+          ><code class="language-html full-width">{{! input_modifiers }}</code></pre>
         </section>
-
-        // TODO: Valid / Invalid / Textfield
-
       </article>
 
       <article id="select">
         <header>
           <h2>Select</h2>
         </header>
-        <p>TODO</p>
+        <p>A default select element:</p>
+
+        <select name="fruits" id="fruit">
+          <option value="apple">Apple</option>
+          <option value="banana">Banana</option>
+          <option value="pineapple">Pineapple</option>
+          <option value="cherry">Cherry</option>
+        </select>
+
+        <p>A disabled select element:</p>
+
+        <select name="fruits" id="fruit" disabled>
+          <option value="apple">Apple</option>
+          <option value="banana">Banana</option>
+          <option value="pineapple">Pineapple</option>
+          <option value="cherry">Cherry</option>
+        </select>
+
+        <pre
+          class="border full-width stretch"
+        ><code class="language-html full-width">{{! input_select }}</code></pre>
+      </article>
+
+      <article id="text-area">
+        <header>
+          <h2>Textarea</h2>
+        </header>
+        <p>A default resizable textarea element:</p>
+
+        <textarea cols="30" rows="10"></textarea>
+
+        <p>A disabled textarea element:</p>
+
+        <textarea cols="6" rows="3" disabled></textarea>
+
+        <p>An invalid textarea element:</p>
+
+        <textarea cols="6" rows="3" invalid></textarea>
+
+        <pre
+          class="border full-width stretch"
+        ><code class="language-html full-width">{{! input_textarea }}</code></pre>
       </article>
 
       <article id="label">

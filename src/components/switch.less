@@ -34,14 +34,14 @@ label.switch {
       white-space: nowrap;
     }
 
-    & ~ .toggle-background.label-right {
+    & ~ .toggle-background.label-left {
       &::before {
         left: unset;
         right: 4.5rem;
       }
     }
 
-    &:checked ~ .toggle-background[data-label-on]:not(.label-right)::before {
+    &:checked ~ .toggle-background[data-label-on]:not(.label-left)::before {
       left: 4.5rem;
     }
 
