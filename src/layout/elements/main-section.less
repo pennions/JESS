@@ -48,7 +48,7 @@ fieldset {
 
   // When you have a sidebar
   &:not(.center) > aside {
-    .single();
+    .w-100();
 
     @media (min-width: @xl) {
       width: auto;
@@ -57,7 +57,7 @@ fieldset {
   }
 
   &:not(.center) > aside + * {
-    .single();
+    .w-100();
 
     @media (min-width: @md) {
       width: auto;
@@ -67,7 +67,7 @@ fieldset {
   }
 
   &:not(.center) > * {
-    .single();
+    .w-100();
   }
 
   &.column {
@@ -85,131 +85,131 @@ fieldset {
   }
 
   &.two-columns {
-    .single();
+    .w-100();
     gap: @default-distance;
     @media (min-width: @sm) {
       & > * {
-        .two();
+        .w-50();
       }
     }
   }
 
   &.three-columns {
-    .single();
+    .w-100();
     gap: @default-distance;
     @media (min-width: @sm) {
       & > * {
-        .two();
+        .w-50();
       }
     }
     @media (min-width: @md) {
       & > * {
-        .three();
+        .w-33();
       }
     }
   }
 
   &.four-columns {
-    .single();
+    .w-100();
     gap: @default-distance;
     @media (min-width: @sm) {
       & > * {
-        .two();
+        .w-50();
       }
     }
     @media (min-width: @md) {
       & > * {
-        .three();
+        .w-33();
       }
     }
     @media (min-width: @lg) {
       & > * {
-        .four();
+        .w-25();
       }
     }
   }
 
   &.five-columns {
-    .single();
+    .w-100();
     gap: @default-distance;
     @media (min-width: @sm) {
       & > * {
-        .two();
+        .w-50();
       }
     }
     @media (min-width: @md) {
       & > * {
-        .three();
+        .w-33();
       }
     }
     @media (min-width: @lg) {
       & > * {
-        .four();
+        .w-25();
       }
     }
     @media (min-width: @xl) {
       & > * {
-        .five();
+        .w-20();
       }
     }
   }
 
   &.six-columns {
-    .single();
+    .w-100();
     gap: @default-distance;
     @media (min-width: @sm) {
       & > * {
-        .two();
+        .w-50();
       }
     }
     @media (min-width: @md) {
       & > * {
-        .three();
+        .w-33();
       }
     }
     @media (min-width: @lg) {
       & > * {
-        .four();
+        .w-25();
       }
     }
     @media (min-width: @xl) {
       & > * {
-        .five();
+        .w-20();
       }
     }
     @media (min-width: @xxl) {
       & > * {
-        .six();
+        .w-16();
       }
     }
   }
 
   &.twelve-columns {
-    .single();
+    .w-100();
     gap: @default-distance;
     @media (min-width: @sm) {
       & > * {
-        .three();
+        .w-33();
       }
     }
     @media (min-width: @md) {
       & > * {
-        .four();
+        .w-25();
       }
     }
     @media (min-width: @lg) {
       & > * {
-        .five();
+        .w-20();
       }
     }
     @media (min-width: @xl) {
       & > * {
-        .six();
+        .w-16();
       }
     }
     @media (min-width: @xxl) {
       & > * {
-        .twelve();
+        .w-8();
       }
     }
   }
