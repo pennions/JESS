@@ -222,9 +222,9 @@ section > *:not(:last-child),
 fieldset > *:not(:last-child) {
   margin-bottom: 1.5rem;
 }
-main.dont-stretch,
-section.dont-stretch,
-fieldset.dont-stretch {
+main.no-stretch,
+section.no-stretch,
+fieldset.no-stretch {
   justify-content: flex-start;
   align-items: flex-start;
 }
@@ -726,22 +726,22 @@ article > *:nth-child(2),
   margin-top: 1.5rem;
   padding: 0;
 }
-article > header,
-.card > header,
-article > footer,
-.card > footer {
+article header,
+.card header,
+article footer,
+.card footer {
   width: 100%;
   min-height: auto;
   padding-bottom: 1.5rem;
 }
-article > header > *,
-.card > header > *,
-article > footer > *,
-.card > footer > * {
+article header > *,
+.card header > *,
+article footer > *,
+.card footer > * {
   margin: 0;
 }
-article > footer,
-.card > footer {
+article footer,
+.card footer {
   padding: 1.5rem 0 0 0;
 }
 article.flip,
@@ -757,48 +757,49 @@ article.flip:hover > [tabindex="0"],
 .card.flip:hover > [tabindex="0"] {
   transform: rotateY(180deg);
 }
-article.flip > [tabindex="0"],
-.card.flip > [tabindex="0"] {
+article.flip [tabindex="0"],
+.card.flip [tabindex="0"] {
   position: relative;
   width: 100%;
   height: 100%;
   transition: transform 0.6s;
   transform-style: preserve-3d;
 }
-article.flip > [tabindex="0"]:focus,
-.card.flip > [tabindex="0"]:focus {
+article.flip [tabindex="0"]:focus,
+.card.flip [tabindex="0"]:focus {
   transform: rotateY(180deg);
 }
-article.flip > [tabindex="0"] section,
-.card.flip > [tabindex="0"] section {
+article.flip [tabindex="0"] section,
+.card.flip [tabindex="0"] section {
   position: absolute;
-  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: start;
   width: 100%;
   height: 100%;
-  overflow: auto;
   -webkit-backface-visibility: hidden;
   /* Safari */
   backface-visibility: hidden;
   box-sizing: border-box;
 }
-article.flip > [tabindex="0"] section > *:first-child,
-.card.flip > [tabindex="0"] section > *:first-child {
+article.flip [tabindex="0"] section div,
+.card.flip [tabindex="0"] section div {
   word-break: break-word;
   white-space: normal;
   overflow: auto;
 }
-article.flip > [tabindex="0"] section > header,
-.card.flip > [tabindex="0"] section > header {
-  padding: 1.5rem;
+article.flip [tabindex="0"] section header,
+.card.flip [tabindex="0"] section header {
+  padding: 0 0 1.5rem 0;
 }
-article.flip > [tabindex="0"] section > footer,
-.card.flip > [tabindex="0"] section > footer {
+article.flip [tabindex="0"] section footer,
+.card.flip [tabindex="0"] section footer {
   margin-top: auto;
+  padding: 1.5rem 0 0 0;
   min-height: unset;
-  height: auto;
 }
-article.flip > [tabindex="0"] section:last-child,
-.card.flip > [tabindex="0"] section:last-child {
+article.flip [tabindex="0"] section:last-child,
+.card.flip [tabindex="0"] section:last-child {
   transform: rotateY(180deg);
 }
 article.normal,
@@ -811,22 +812,22 @@ article.danger,
 .card.danger {
   padding: 0;
 }
-article.normal > header,
-.card.normal > header,
-article.primary > header,
-.card.primary > header,
-article.accent > header,
-.card.accent > header,
-article.danger > header,
-.card.danger > header,
-article.normal > footer,
-.card.normal > footer,
-article.primary > footer,
-.card.primary > footer,
-article.accent > footer,
-.card.accent > footer,
-article.danger > footer,
-.card.danger > footer {
+article.normal header,
+.card.normal header,
+article.primary header,
+.card.primary header,
+article.accent header,
+.card.accent header,
+article.danger header,
+.card.danger header,
+article.normal footer,
+.card.normal footer,
+article.primary footer,
+.card.primary footer,
+article.accent footer,
+.card.accent footer,
+article.danger footer,
+.card.danger footer {
   padding: 1.5rem;
 }
 article.normal > *:nth-child(2),
@@ -837,6 +838,60 @@ article.accent > *:nth-child(2),
 .card.accent > *:nth-child(2),
 article.danger > *:nth-child(2),
 .card.danger > *:nth-child(2) {
+  padding: 1.5rem;
+}
+article.normal.flip section,
+.card.normal.flip section,
+article.primary.flip section,
+.card.primary.flip section,
+article.accent.flip section,
+.card.accent.flip section,
+article.danger.flip section,
+.card.danger.flip section {
+  padding: 0;
+}
+article.normal.flip section header,
+.card.normal.flip section header,
+article.primary.flip section header,
+.card.primary.flip section header,
+article.accent.flip section header,
+.card.accent.flip section header,
+article.danger.flip section header,
+.card.danger.flip section header {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 1.5rem;
+}
+article.normal.flip section footer,
+.card.normal.flip section footer,
+article.primary.flip section footer,
+.card.primary.flip section footer,
+article.accent.flip section footer,
+.card.accent.flip section footer,
+article.danger.flip section footer,
+.card.danger.flip section footer {
+  padding: 1.5rem;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+article.normal.flip section div,
+.card.normal.flip section div,
+article.primary.flip section div,
+.card.primary.flip section div,
+article.accent.flip section div,
+.card.accent.flip section div,
+article.danger.flip section div,
+.card.danger.flip section div {
+  padding: 0 1.5rem;
+}
+article.normal.flip section div:first-child,
+.card.normal.flip section div:first-child,
+article.primary.flip section div:first-child,
+.card.primary.flip section div:first-child,
+article.accent.flip section div:first-child,
+.card.accent.flip section div:first-child,
+article.danger.flip section div:first-child,
+.card.danger.flip section div:first-child {
   padding: 1.5rem;
 }
 /* traditional top or bottom notification*/
@@ -1008,119 +1063,85 @@ dialog.modal[open]:not(dialog.modal[open="false"]).transparent {
 dialog.modal[open]:not(dialog.modal[open="false"]) > * {
   background-color: #fff;
 }
-article,
-.card {
+article {
   border-radius: 2px;
 }
-article:not(.flip),
-.card:not(.flip) {
+article:not(.flip) {
   background-color: #fff;
 }
-article > header,
-.card > header {
+article header {
   border-bottom: 0.5px solid #d2d0ce;
 }
-article > footer,
-.card > footer {
+article footer {
   border-top: 0.5px solid #d2d0ce;
 }
-article:not(.flip),
-.card:not(.flip) {
+article:not(.flip) {
   box-shadow: 0 6.4px 14.4px 0 rgba(0, 0, 0, 0.132), 0 1.2px 3.6px 0 rgba(0, 0, 0, 0.108);
 }
-article > [tabindex="0"] section > footer,
-.card > [tabindex="0"] section > footer {
+article > [tabindex="0"] section footer {
   box-shadow: none;
 }
 article.primary,
-.card.primary,
 article.accent,
-.card.accent,
-article.danger,
-.card.danger {
+article.danger {
   border-radius: 2px;
 }
-article.primary > header,
-.card.primary > header,
-article.accent > header,
-.card.accent > header,
-article.danger > header,
-.card.danger > header {
+article.primary header,
+article.accent header,
+article.danger header {
   border-radius: 2px;
 }
-article.primary > footer,
-.card.primary > footer,
-article.accent > footer,
-.card.accent > footer,
-article.danger > footer,
-.card.danger > footer {
+article.primary footer,
+article.accent footer,
+article.danger footer {
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
 }
-article.primary.inverse > footer,
-.card.primary.inverse > footer,
-article.accent.inverse > footer,
-.card.accent.inverse > footer,
-article.danger.inverse > footer,
-.card.danger.inverse > footer {
+article.primary.inverse footer,
+article.accent.inverse footer,
+article.danger.inverse footer {
   border: none;
 }
-article.primary.inverse.primary > footer,
-.card.primary.inverse.primary > footer,
-article.accent.inverse.primary > footer,
-.card.accent.inverse.primary > footer,
-article.danger.inverse.primary > footer,
-.card.danger.inverse.primary > footer {
+article.primary.inverse.primary footer,
+article.accent.inverse.primary footer,
+article.danger.inverse.primary footer {
   background-color: #0078d4;
   color: #fff;
 }
-article.primary.inverse.accent > footer,
-.card.primary.inverse.accent > footer,
-article.accent.inverse.accent > footer,
-.card.accent.inverse.accent > footer,
-article.danger.inverse.accent > footer,
-.card.danger.inverse.accent > footer {
+article.primary.inverse.accent footer,
+article.accent.inverse.accent footer,
+article.danger.inverse.accent footer {
   background-color: #fce100;
   color: #000;
 }
-article.primary.inverse.danger > footer,
-.card.primary.inverse.danger > footer,
-article.accent.inverse.danger > footer,
-.card.accent.inverse.danger > footer,
-article.danger.inverse.danger > footer,
-.card.danger.inverse.danger > footer {
+article.primary.inverse.danger footer,
+article.accent.inverse.danger footer,
+article.danger.inverse.danger footer {
   background-color: #d13438;
   color: #fff;
 }
-article:not(.inverse).primary > header,
-.card:not(.inverse).primary > header,
-article:not(.inverse).accent > header,
-.card:not(.inverse).accent > header,
-article:not(.inverse).danger > header,
-.card:not(.inverse).danger > header {
+article:not(.inverse).primary header,
+article:not(.inverse).accent header,
+article:not(.inverse).danger header {
   border: none;
 }
-article:not(.inverse).primary > header,
-.card:not(.inverse).primary > header {
+article:not(.inverse).primary header {
   background-color: #0078d4;
   color: #fff;
 }
-article:not(.inverse).accent > header,
-.card:not(.inverse).accent > header {
+article:not(.inverse).accent header {
   background-color: #fce100;
   color: #000;
 }
-article:not(.inverse).danger > header,
-.card:not(.inverse).danger > header {
+article:not(.inverse).danger header {
   background-color: #d13438;
   color: #fff;
 }
-article.flip > [tabindex="0"] > section,
-.card.flip > [tabindex="0"] > section {
+article.flip [tabindex="0"] section {
   background-color: #fff;
+  border: 0.1px solid #fff;
 }
-article.flip > [tabindex="0"] > section:first-child,
-.card.flip > [tabindex="0"] > section:first-child {
+article.flip [tabindex="0"] > section:first-child {
   box-shadow: 0 6.4px 14.4px 0 rgba(0, 0, 0, 0.132), 0 1.2px 3.6px 0 rgba(0, 0, 0, 0.108);
 }
 summary.button,

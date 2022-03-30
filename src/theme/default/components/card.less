@@ -1,15 +1,14 @@
-article,
-.card {
+article {
   border-radius: 2px;
 
   &:not(.flip) {
     background-color: @default-background;
   }
 
-  & > header {
+  & header {
     border-bottom: 0.5px solid @hr-color;
   }
-  & > footer {
+  & footer {
     border-top: 0.5px solid @hr-color;
   }
 
@@ -18,7 +17,7 @@ article,
       0 1.2px 3.6px 0 rgba(@shadow-color, 0.108);
   }
 
-  & > [tabindex="0"] section > footer {
+  & > [tabindex="0"] section footer {
     box-shadow: none;
   }
 
@@ -26,36 +25,36 @@ article,
   &.accent,
   &.danger {
     border-radius: 2px;
-    & > header {
+    & header {
       border-radius: 2px;
     }
 
-    & > footer {
+    & footer {
       border-bottom-left-radius: 2px;
       border-bottom-right-radius: 2px;
     }
 
     &.inverse {
-      & > footer {
+      & footer {
         border: none;
       }
 
       &.primary {
-        & > footer {
+        & footer {
           background-color: @primary;
           color: @color-on-primary;
         }
       }
 
       &.accent {
-        & > footer {
+        & footer {
           background-color: @accent;
           color: @color-on-accent;
         }
       }
 
       &.danger {
-        & > footer {
+        & footer {
           background-color: @danger;
           color: @color-on-danger;
         }
@@ -67,27 +66,27 @@ article,
     &.primary,
     &.accent,
     &.danger {
-      & > header {
+      & header {
         border: none;
       }
     }
 
     &.primary {
-      & > header {
+      & header {
         background-color: @primary;
         color: @color-on-primary;
       }
     }
 
     &.accent {
-      & > header {
+      & header {
         background-color: @accent;
         color: @color-on-accent;
       }
     }
 
     &.danger {
-      & > header {
+      & header {
         background-color: @danger;
         color: @color-on-danger;
       }
@@ -95,11 +94,12 @@ article,
   }
 }
 
-article.flip,
-.card.flip {
-  & > [tabindex="0"] {
-    & > section {
+article.flip {
+  & [tabindex="0"] {
+    & section {
       background-color: @default-background;
+      // prevent tearing on flip
+      border: 0.1px solid @default-background;
     }
     & > section:first-child {
       box-shadow: 0 6.4px 14.4px 0 rgba(@shadow-color, 0.132),

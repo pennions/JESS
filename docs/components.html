@@ -67,7 +67,7 @@
         </article>
 
         <p>More specialized cards:</p>
-        <section class="four-columns dont-stretch">
+        <section class="four-columns no-stretch">
           <article class="normal">
             <header><h3>Header</h3></header>
             <section>
@@ -130,10 +130,87 @@
             <footer>Footer</footer>
           </article>
 
-          <article class="flip rounded">
+          <article class="flip">
             <div tabindex="0">
               <section>Hover or click me</section>
               <section>Flipped!</section>
+            </div>
+          </article>
+
+          <article class="flip normal">
+            <div tabindex="0">
+              <section>
+                <header><h2>Normal flip card</h2></header>
+                <div>Normal class with flip</div>
+              </section>
+              <section><div>Flipped!</div><footer>Back of normal card.</footer></section>
+            </div>
+          </article>
+
+          <article class="flip">
+            <div tabindex="0">
+              <section>
+                <header>Header</header>
+                <div>Body</div>
+                <footer><span>Footer</span></footer>
+              </section>
+              <section>Flipped!</section>
+            </div>
+          </article>
+
+          <article class="flip primary">
+            <div tabindex="0">
+              <section>
+                <header>Header</header>
+                <div>Body</div>
+                <footer><span>Footer</span></footer>
+              </section>
+              <section><div>Flipped!</div></section>
+            </div>
+          </article>
+
+          <article class="flip accent">
+            <div tabindex="0">
+              <section>
+                <header>Header</header>
+                <div>Body with a card on the back</div>
+                <footer><span>Footer</span></footer>
+              </section>
+              <section>
+                <header>Back Header</header>
+                <div>Back Body</div>
+                <footer><span>Back Footer</span></footer>
+              </section>
+            </div>
+          </article>
+
+          <article class="flip danger inverse">
+            <div tabindex="0">
+              <section>
+                <header>Header</header>
+                <div>Flippable card with inverse</div>
+                <footer><span>Footer</span></footer>
+              </section>
+              <section><div>Flipped!</div></section>
+            </div>
+          </article>
+
+          <article class="flip card">
+            <div tabindex="0">
+              <section>A card with overflowing content on the back.</section>
+              <section>
+                <header><h3>Lorum ipsum text.</h3></header>
+                <div>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book. It has survived not only five centuries, but
+                  also the leap into electronic typesetting, remaining
+                  essentially unchanged.
+                </div>
+                <footer>(c) Someone</footer>
+              </section>
             </div>
           </article>
         </section>
