@@ -19,6 +19,10 @@ fieldset {
     padding: 0;
   }
 
+  & > *:not(:last-child) {
+    margin-bottom: @default-distance;
+  }
+
   &.dont-stretch {
     justify-content: flex-start;
     align-items: flex-start;
@@ -87,6 +91,7 @@ fieldset {
   &.two-columns {
     .w-100();
     gap: @default-distance;
+
     @media (min-width: @sm) {
       & > * {
         .w-50();
@@ -211,6 +216,17 @@ fieldset {
       & > * {
         .w-8();
       }
+    }
+  }
+
+  &.two-columns,
+  &.three-columns,
+  &.four-columns,
+  &.five-columns,
+  &.six-columns,
+  &.twelve-columns {
+    & > * {
+      margin-bottom: 0;
     }
   }
 }

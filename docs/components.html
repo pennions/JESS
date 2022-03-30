@@ -54,18 +54,89 @@
       </article>
 
       <article id="card">
-        <header>
-          <h2>Card</h2>
-        </header>
+        <header></header>
+        <h3>Card</h3>
         <p>TODO</p>
 
         <article>This is a default card</article>
 
-        <article>
-          <header>Card header</header>
-          <section>This is a default card</section>
+        <article class="w-25">
+          <header><h3>Card header</h3></header>
+          <section>This is a default card with a header and a footer</section>
           <footer>Card footer</footer>
         </article>
+
+        <p>More specialized cards:</p>
+        <section class="four-columns dont-stretch">
+          <article class="normal">
+            <header><h3>Header</h3></header>
+            <section>
+              <p>
+                <code class="language-html">class="normal"</code>
+              </p>
+            </section>
+            <footer>Footer</footer>
+          </article>
+
+          <article class="primary">
+            <header><h3>Header</h3></header>
+            <section>
+              <p>
+                <code class="language-html">class="primary"</code>
+              </p>
+            </section>
+            <footer>Footer</footer>
+          </article>
+
+          <article class="accent">
+            <header><h3>Header</h3></header>
+            <section>
+              <p><code class="language-html">class="accent"</code></p>
+            </section>
+            <footer>Footer</footer>
+          </article>
+          <article class="danger">
+            <header><h3>Header</h3></header>
+            <section>
+              <p><code class="language-html">class="danger"</code></p>
+            </section>
+            <footer>Footer</footer>
+          </article>
+
+          <article class="primary inverse">
+            <header><h3>Header</h3></header>
+            <section>
+              <p>
+                <code class="language-html">class="primary inverse"</code>
+              </p>
+            </section>
+            <footer>Footer</footer>
+          </article>
+
+          <article class="accent inverse">
+            <header><h3>Header</h3></header>
+            <section>
+              <p>
+                <code class="language-html">class="accent inverse"</code>
+              </p>
+            </section>
+            <footer>Footer</footer>
+          </article>
+          <article class="danger inverse">
+            <header><h3>Header</h3></header>
+            <section>
+              <p><code class="language-html">class="danger inverse"</code></p>
+            </section>
+            <footer>Footer</footer>
+          </article>
+
+          <article class="flip rounded">
+            <div tabindex="0">
+              <section>Hover or click me</section>
+              <section>Flipped!</section>
+            </div>
+          </article>
+        </section>
       </article>
 
       <article id="modal">
@@ -175,7 +246,7 @@
         </label>
 
         <pre
-          class="border full-width stretch"
+          class="border full-width stretch margin-top"
         ><code class="language-html full-width">&lt;label class=&quot;switch&quot;&gt;
     &lt;input type=&quot;checkbox&quot; hidden /&gt;
     &lt;span class=&quot;toggle&quot;&gt;&lt;/span&gt;

@@ -2,16 +2,36 @@
 
 article,
 .card {
+  padding: @default-distance;
 
-  &:not(:last-child) {
+  & > *:not(header):not(footer):not(:last-child) {
+    min-height: auto;
     margin-bottom: @default-distance;
   }
 
-  & > *:not(header):not(footer):not(:last-child) {
-    margin-bottom: @default-distance;
+  // for the body
+  & > *:nth-child(2) {
+    margin-top: @default-distance;
+    padding: 0;
+  }
+
+  & > header,
+  & > footer {
+    width: 100%;
+    min-height: auto;
+    padding-bottom: @default-distance;
+
+    & > * {
+      margin: 0;
+    }
+  }
+
+  & > footer {
+    padding: @default-distance 0 0 0;
   }
 
   &.flip {
+    padding: 0;
     position: relative;
     width: 22rem;
     height: 30rem;
@@ -43,15 +63,14 @@ article,
         backface-visibility: hidden;
         box-sizing: border-box;
 
-        & > header {
-          padding: @default-distance;
-        }
-
-        & div {
-          padding: @default-distance;
+        & > *:first-child {
           word-break: break-word;
           white-space: normal;
           overflow: auto;
+        }
+
+        & > header {
+          padding: @default-distance;
         }
 
         & > footer {
@@ -64,6 +83,22 @@ article,
       section:last-child {
         transform: rotateY(180deg);
       }
+    }
+  }
+
+  &.normal,
+  &.primary,
+  &.accent,
+  &.danger {
+    padding: 0;
+
+    & > header,
+    & > footer {
+      padding: @default-distance;
+    }
+
+    & > *:nth-child(2) {
+      padding: @default-distance;
     }
   }
 }

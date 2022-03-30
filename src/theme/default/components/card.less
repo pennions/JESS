@@ -1,14 +1,16 @@
 article,
 .card {
   border-radius: 2px;
-  padding: @default-distance;
-  background-color: @default-background;
+
+  &:not(.flip) {
+    background-color: @default-background;
+  }
 
   & > header {
-    *:last-child:not(hr) {
-      border-bottom: 0.5px solid @hr-color;
-      padding-bottom: @default-distance;
-    }
+    border-bottom: 0.5px solid @hr-color;
+  }
+  & > footer {
+    border-top: 0.5px solid @hr-color;
   }
 
   &:not(.flip) {
@@ -19,23 +21,89 @@ article,
   & > [tabindex="0"] section > footer {
     box-shadow: none;
   }
+
+  &.primary,
+  &.accent,
+  &.danger {
+    border-radius: 2px;
+    & > header {
+      border-radius: 2px;
+    }
+
+    & > footer {
+      border-bottom-left-radius: 2px;
+      border-bottom-right-radius: 2px;
+    }
+
+    &.inverse {
+      & > footer {
+        border: none;
+      }
+
+      &.primary {
+        & > footer {
+          background-color: @primary;
+          color: @color-on-primary;
+        }
+      }
+
+      &.accent {
+        & > footer {
+          background-color: @accent;
+          color: @color-on-accent;
+        }
+      }
+
+      &.danger {
+        & > footer {
+          background-color: @danger;
+          color: @color-on-danger;
+        }
+      }
+    }
+  }
+
+  &:not(.inverse) {
+    &.primary,
+    &.accent,
+    &.danger {
+      & > header {
+        border: none;
+      }
+    }
+
+    &.primary {
+      & > header {
+        background-color: @primary;
+        color: @color-on-primary;
+      }
+    }
+
+    &.accent {
+      & > header {
+        background-color: @accent;
+        color: @color-on-accent;
+      }
+    }
+
+    &.danger {
+      & > header {
+        background-color: @danger;
+        color: @color-on-danger;
+      }
+    }
+  }
 }
 
 article.flip,
 .card.flip {
-  & > [tabindex="0"] section {
-    box-shadow: 0 6.4px 14.4px 0 rgba(@shadow-color, 0.132),
-      0 1.2px 3.6px 0 rgba(@shadow-color, 0.108);
-
-    & > header {
-      .border-bottom();
+  & > [tabindex="0"] {
+    & > section {
+      background-color: @default-background;
     }
-
-    & > footer {
-      .border-top();
+    & > section:first-child {
+      box-shadow: 0 6.4px 14.4px 0 rgba(@shadow-color, 0.132),
+        0 1.2px 3.6px 0 rgba(@shadow-color, 0.108);
     }
-  }
-  section:last-child {
-    background-color: @default-background;
   }
 }

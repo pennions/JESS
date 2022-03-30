@@ -167,10 +167,10 @@ select {
 .column-end {
   margin-top: auto;
 }
-.align-left {
+.padding-left-0 {
   padding-left: 0;
 }
-.align-right {
+.padding-right-0 {
   padding-right: 0;
 }
 .sticky {
@@ -216,6 +216,11 @@ main > * > *,
 section > * > *,
 fieldset > * > * {
   padding: 0;
+}
+main > *:not(:last-child),
+section > *:not(:last-child),
+fieldset > *:not(:last-child) {
+  margin-bottom: 1.5rem;
 }
 main.dont-stretch,
 section.dont-stretch,
@@ -505,6 +510,26 @@ fieldset.twelve-columns {
     min-width: calc(8.33333333% - 1.375rem);
   }
 }
+main.two-columns > *,
+section.two-columns > *,
+fieldset.two-columns > *,
+main.three-columns > *,
+section.three-columns > *,
+fieldset.three-columns > *,
+main.four-columns > *,
+section.four-columns > *,
+fieldset.four-columns > *,
+main.five-columns > *,
+section.five-columns > *,
+fieldset.five-columns > *,
+main.six-columns > *,
+section.six-columns > *,
+fieldset.six-columns > *,
+main.twelve-columns > *,
+section.twelve-columns > *,
+fieldset.twelve-columns > * {
+  margin-bottom: 0;
+}
 nav {
   display: flex;
   align-items: center;
@@ -687,16 +712,41 @@ footer > *:not(:last-child) {
   animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) both;
 }
 /* Based on W3 schools example */
-article:not(:last-child),
-.card:not(:last-child) {
-  margin-bottom: 1.5rem;
+article,
+.card {
+  padding: 1.5rem;
 }
 article > *:not(header):not(footer):not(:last-child),
 .card > *:not(header):not(footer):not(:last-child) {
+  min-height: auto;
   margin-bottom: 1.5rem;
+}
+article > *:nth-child(2),
+.card > *:nth-child(2) {
+  margin-top: 1.5rem;
+  padding: 0;
+}
+article > header,
+.card > header,
+article > footer,
+.card > footer {
+  width: 100%;
+  min-height: auto;
+  padding-bottom: 1.5rem;
+}
+article > header > *,
+.card > header > *,
+article > footer > *,
+.card > footer > * {
+  margin: 0;
+}
+article > footer,
+.card > footer {
+  padding: 1.5rem 0 0 0;
 }
 article.flip,
 .card.flip {
+  padding: 0;
   position: relative;
   width: 22rem;
   height: 30rem;
@@ -731,16 +781,15 @@ article.flip > [tabindex="0"] section,
   backface-visibility: hidden;
   box-sizing: border-box;
 }
-article.flip > [tabindex="0"] section > header,
-.card.flip > [tabindex="0"] section > header {
-  padding: 1.5rem;
-}
-article.flip > [tabindex="0"] section div,
-.card.flip > [tabindex="0"] section div {
-  padding: 1.5rem;
+article.flip > [tabindex="0"] section > *:first-child,
+.card.flip > [tabindex="0"] section > *:first-child {
   word-break: break-word;
   white-space: normal;
   overflow: auto;
+}
+article.flip > [tabindex="0"] section > header,
+.card.flip > [tabindex="0"] section > header {
+  padding: 1.5rem;
 }
 article.flip > [tabindex="0"] section > footer,
 .card.flip > [tabindex="0"] section > footer {
@@ -751,6 +800,44 @@ article.flip > [tabindex="0"] section > footer,
 article.flip > [tabindex="0"] section:last-child,
 .card.flip > [tabindex="0"] section:last-child {
   transform: rotateY(180deg);
+}
+article.normal,
+.card.normal,
+article.primary,
+.card.primary,
+article.accent,
+.card.accent,
+article.danger,
+.card.danger {
+  padding: 0;
+}
+article.normal > header,
+.card.normal > header,
+article.primary > header,
+.card.primary > header,
+article.accent > header,
+.card.accent > header,
+article.danger > header,
+.card.danger > header,
+article.normal > footer,
+.card.normal > footer,
+article.primary > footer,
+.card.primary > footer,
+article.accent > footer,
+.card.accent > footer,
+article.danger > footer,
+.card.danger > footer {
+  padding: 1.5rem;
+}
+article.normal > *:nth-child(2),
+.card.normal > *:nth-child(2),
+article.primary > *:nth-child(2),
+.card.primary > *:nth-child(2),
+article.accent > *:nth-child(2),
+.card.accent > *:nth-child(2),
+article.danger > *:nth-child(2),
+.card.danger > *:nth-child(2) {
+  padding: 1.5rem;
 }
 /* traditional top or bottom notification*/
 dialog {
@@ -890,83 +977,13 @@ label.switch:hover {
   cursor: pointer;
   opacity: 0.8;
 }
-.border {
-  border: 0.5px solid #8a8886;
-}
-.border-bottom {
-  border-bottom: 0.5px solid #8a8886;
-}
-.border-top {
-  border-top: 0.5px solid #8a8886;
-}
-.background {
-  background-color: #fff;
-}
-.gray-background {
-  background-color: #faf9f8;
-}
-.gray-background-dark {
-  background-color: #f3f2f1;
-}
-.black-background {
-  background-color: black;
-}
-.margin-top {
-  margin-top: 1.5rem;
-}
-.margin-left {
-  margin-left: 1.5rem;
-}
-.margin-right {
-  margin-right: 1.5rem;
-}
-.margin-bottom {
-  margin-bottom: 1.5rem;
-}
-.margin-x {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-}
-.margin-y {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-.margin {
-  margin: 1.5rem;
-}
-.padding-top {
-  padding-top: 1.5rem;
-}
-.padding-left {
-  padding-left: 1.5rem;
-}
-.padding-right {
-  padding-right: 1.5rem;
-}
-.padding-bottom {
-  padding-bottom: 1.5rem;
-}
-.padding-x {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-.padding-y {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-.padding {
-  padding: 1.5rem;
-}
-.clip {
-  background: linear-gradient(135deg, transparent 6%, white 6%, white 94%, transparent 94%);
-}
 nav {
   background-color: #fff;
   box-shadow: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132), 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108);
 }
-footer {
-  background-color: #fff;
+body > footer {
   box-shadow: 0 -1.6px 3.6px 0 rgba(0, 0, 0, 0.132), 0 -0.3px 0.9px 0 rgba(0, 0, 0, 0.108);
+  background-color: #fff;
 }
 dialog {
   background-color: #fff;
@@ -994,13 +1011,18 @@ dialog.modal[open]:not(dialog.modal[open="false"]) > * {
 article,
 .card {
   border-radius: 2px;
-  padding: 1.5rem;
+}
+article:not(.flip),
+.card:not(.flip) {
   background-color: #fff;
 }
-article > header *:last-child:not(hr),
-.card > header *:last-child:not(hr) {
+article > header,
+.card > header {
   border-bottom: 0.5px solid #d2d0ce;
-  padding-bottom: 1.5rem;
+}
+article > footer,
+.card > footer {
+  border-top: 0.5px solid #d2d0ce;
 }
 article:not(.flip),
 .card:not(.flip) {
@@ -1010,21 +1032,96 @@ article > [tabindex="0"] section > footer,
 .card > [tabindex="0"] section > footer {
   box-shadow: none;
 }
-article.flip > [tabindex="0"] section,
-.card.flip > [tabindex="0"] section {
-  box-shadow: 0 6.4px 14.4px 0 rgba(0, 0, 0, 0.132), 0 1.2px 3.6px 0 rgba(0, 0, 0, 0.108);
+article.primary,
+.card.primary,
+article.accent,
+.card.accent,
+article.danger,
+.card.danger {
+  border-radius: 2px;
 }
-article.flip > [tabindex="0"] section > header,
-.card.flip > [tabindex="0"] section > header {
-  border-bottom: 0.5px solid #8a8886;
+article.primary > header,
+.card.primary > header,
+article.accent > header,
+.card.accent > header,
+article.danger > header,
+.card.danger > header {
+  border-radius: 2px;
 }
-article.flip > [tabindex="0"] section > footer,
-.card.flip > [tabindex="0"] section > footer {
-  border-top: 0.5px solid #8a8886;
+article.primary > footer,
+.card.primary > footer,
+article.accent > footer,
+.card.accent > footer,
+article.danger > footer,
+.card.danger > footer {
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
-article.flip section:last-child,
-.card.flip section:last-child {
+article.primary.inverse > footer,
+.card.primary.inverse > footer,
+article.accent.inverse > footer,
+.card.accent.inverse > footer,
+article.danger.inverse > footer,
+.card.danger.inverse > footer {
+  border: none;
+}
+article.primary.inverse.primary > footer,
+.card.primary.inverse.primary > footer,
+article.accent.inverse.primary > footer,
+.card.accent.inverse.primary > footer,
+article.danger.inverse.primary > footer,
+.card.danger.inverse.primary > footer {
+  background-color: #0078d4;
+  color: #fff;
+}
+article.primary.inverse.accent > footer,
+.card.primary.inverse.accent > footer,
+article.accent.inverse.accent > footer,
+.card.accent.inverse.accent > footer,
+article.danger.inverse.accent > footer,
+.card.danger.inverse.accent > footer {
+  background-color: #fce100;
+  color: #000;
+}
+article.primary.inverse.danger > footer,
+.card.primary.inverse.danger > footer,
+article.accent.inverse.danger > footer,
+.card.accent.inverse.danger > footer,
+article.danger.inverse.danger > footer,
+.card.danger.inverse.danger > footer {
+  background-color: #d13438;
+  color: #fff;
+}
+article:not(.inverse).primary > header,
+.card:not(.inverse).primary > header,
+article:not(.inverse).accent > header,
+.card:not(.inverse).accent > header,
+article:not(.inverse).danger > header,
+.card:not(.inverse).danger > header {
+  border: none;
+}
+article:not(.inverse).primary > header,
+.card:not(.inverse).primary > header {
+  background-color: #0078d4;
+  color: #fff;
+}
+article:not(.inverse).accent > header,
+.card:not(.inverse).accent > header {
+  background-color: #fce100;
+  color: #000;
+}
+article:not(.inverse).danger > header,
+.card:not(.inverse).danger > header {
+  background-color: #d13438;
+  color: #fff;
+}
+article.flip > [tabindex="0"] > section,
+.card.flip > [tabindex="0"] > section {
   background-color: #fff;
+}
+article.flip > [tabindex="0"] > section:first-child,
+.card.flip > [tabindex="0"] > section:first-child {
+  box-shadow: 0 6.4px 14.4px 0 rgba(0, 0, 0, 0.132), 0 1.2px 3.6px 0 rgba(0, 0, 0, 0.108);
 }
 summary.button,
 button {
@@ -1829,4 +1926,74 @@ label.switch input:disabled ~ .toggle {
 }
 label.switch input:disabled ~ .toggle-background {
   border: 0.5px solid #a19f9d;
+}
+.border {
+  border: 0.5px solid #8a8886;
+}
+.border-bottom {
+  border-bottom: 0.5px solid #8a8886;
+}
+.border-top {
+  border-top: 0.5px solid #8a8886;
+}
+.background {
+  background-color: #fff;
+}
+.gray-background {
+  background-color: #faf9f8;
+}
+.gray-background-dark {
+  background-color: #f3f2f1;
+}
+.black-background {
+  background-color: black;
+}
+.margin-top {
+  margin-top: 1.5rem;
+}
+.margin-left {
+  margin-left: 1.5rem;
+}
+.margin-right {
+  margin-right: 1.5rem;
+}
+.margin-bottom {
+  margin-bottom: 1.5rem;
+}
+.margin-x {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+.margin-y {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.margin {
+  margin: 1.5rem;
+}
+.padding-top {
+  padding-top: 1.5rem;
+}
+.padding-left {
+  padding-left: 1.5rem;
+}
+.padding-right {
+  padding-right: 1.5rem;
+}
+.padding-bottom {
+  padding-bottom: 1.5rem;
+}
+.padding-x {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.padding-y {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.padding {
+  padding: 1.5rem;
+}
+.clip {
+  background: linear-gradient(135deg, transparent 6%, white 6%, white 94%, transparent 94%);
 }
