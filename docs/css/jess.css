@@ -177,12 +177,7 @@ select {
   position: sticky;
   position: -webkit-sticky;
   top: 0;
-  height: auto;
   z-index: 1000;
-}
-.sticky > *:first-child {
-  position: sticky;
-  top: 0;
   height: auto;
 }
 .full-width {
