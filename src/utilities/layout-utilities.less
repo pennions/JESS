@@ -70,15 +70,10 @@
 
 .sticky {
   position: sticky;
+  position: -webkit-sticky;
   top: 0;
-  height: auto;
   z-index: 1000;
-
-  & > *:first-child {
-    position: sticky;
-    top: 0;
-    height: auto;
-  }
+  height: auto;
 }
 
 .full-width {
