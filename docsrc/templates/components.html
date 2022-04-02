@@ -11,7 +11,7 @@
 {{# partials.header #}}
 <body id="components">
   <main>
-    <aside >
+    <aside>
       <nav class="sticky">
         <ul>
           <li>
@@ -64,8 +64,8 @@
           <section>This is a default card with a header and a footer</section>
           <footer>Card footer</footer>
         </article>
-
-        <p>More specialized cards:</p>
+        <hr />
+        <h4>More specialized cards:</h4>
         <section class="four-columns no-stretch">
           <article class="normal">
             <header><h3>Header</h3></header>
@@ -128,21 +128,25 @@
             </section>
             <footer>Footer</footer>
           </article>
+        </section>
+        <pre
+        class="border stretch margin-top"
+      ><code class="language-html full-width">{{! components_card_normal }}</code></pre>
 
+        <hr />
+        <p>
+          <b>Flip cards</b> <br />
+          The back and front of cards are sections. So they can have any card
+          layout as above. <br /> All cards can have focus which means they can be clicked or tabbed into to stay flipped. <br />
+          Here are some examples:
+        </p>
+        <section class="four-columns no-stretch">
           <article class="flip">
             <div tabindex="0">
-              <section>Hover or click me</section>
-              <section>Flipped!</section>
-            </div>
-          </article>
-
-          <article class="flip normal">
-            <div tabindex="0">
               <section>
-                <header><h2>Normal flip card</h2></header>
-                <div>Normal class with flip</div>
+                <p><code class="language-html">class="flip"</code></p>
               </section>
-              <section><div>Flipped!</div><footer>Back of normal card.</footer></section>
+              <section>Flipped!</section>
             </div>
           </article>
 
@@ -157,11 +161,29 @@
             </div>
           </article>
 
+          <article class="flip normal">
+            <div tabindex="0">
+              <section>
+                <header><h3>Normal flip card</h3></header>
+                <div>
+                  <p></p>
+                    A header and
+                    <code class="language-html">class="flip normal"</code>
+                  </p>
+                </div>
+              </section>
+              <section>
+                <div>Backside of the card with a footer</div>
+                <footer>Backcard footer</footer>
+              </section>
+            </div>
+          </article>
+
           <article class="flip primary">
             <div tabindex="0">
               <section>
                 <header>Header</header>
-                <div>Body</div>
+                <div><code class="language-html">class="flip primary"</code></div>
                 <footer><span>Footer</span></footer>
               </section>
               <section><div>Flipped!</div></section>
@@ -172,7 +194,7 @@
             <div tabindex="0">
               <section>
                 <header>Header</header>
-                <div>Body with a card on the back</div>
+                <div>Card with a header on the back has same properties by default.</div>
                 <footer><span>Footer</span></footer>
               </section>
               <section>
@@ -187,7 +209,7 @@
             <div tabindex="0">
               <section>
                 <header>Header</header>
-                <div>Flippable card with inverse</div>
+                <div>Flippable card with  <code class="language-html">class="flip danger inverse"</code></div>
                 <footer><span>Footer</span></footer>
               </section>
               <section><div>Flipped!</div></section>
@@ -196,7 +218,7 @@
 
           <article class="flip card">
             <div tabindex="0">
-              <section>A card with overflowing content on the back.</section>
+              <section>Content will automatically create a scrollbar if contents overflow and automatically wraps words, flip the card to see.</section>
               <section>
                 <header><h3>Lorum ipsum text.</h3></header>
                 <div>
@@ -213,6 +235,14 @@
             </div>
           </article>
         </section>
+
+        <pre
+        class="border stretch margin-top"
+      ><code class="language-html full-width">{{! components_card_flip }}</code></pre>
+
+        <hr>
+        <small><b>N.B.</b> The body of the card must be a div element.</small>
+
       </article>
 
       <article id="modal">
