@@ -53,15 +53,27 @@
       </article>
 
       <article id="card">
-        <header></header>
-        <h3>Card</h3>
-        <p>Cards are a basic building block in JESS and the element for this is <code class="language-html">&lt;article&gt;</code> </p>
+        <header><h2>Card</h2></header>
 
-        <article>This is a default card</article>
+        <p>
+          Cards are a basic building block in JESS and the element for this is
+          <code class="language-html">&lt;article&gt;</code> for the examples I
+          have set a max-width of 25%. <br />
+          Only the flip cards have a fixed height and width.
+        </p>
+
+        <article class="w-25">This is a default card</article>
 
         <article class="w-25">
           <header><h3>Card header</h3></header>
-          <section><p>This is a default card with a <code class="language-html">&lt;header&gt;</code> and a <code class="language-html">&lt;footer&gt;</code> element and a <code class="language-html">&lt;section&gt;</code> as body.</p></section>
+          <section>
+            <p>
+              This is a default card with a
+              <code class="language-html">&lt;header&gt;</code> and a
+              <code class="language-html">&lt;footer&gt;</code> element and a
+              <code class="language-html">&lt;section&gt;</code> as body.
+            </p>
+          </section>
           <footer>Card footer</footer>
         </article>
         <hr />
@@ -121,6 +133,7 @@
             </section>
             <footer>Footer</footer>
           </article>
+
           <article class="danger inverse">
             <header><h3>Header</h3></header>
             <section>
@@ -130,14 +143,16 @@
           </article>
         </section>
         <pre
-        class="border stretch margin-top"
-      ><code class="language-html full-width">{{! components_card_normal }}</code></pre>
+          class="border stretch margin-top"
+        ><code class="language-html full-width">{{! components_card_normal }}</code></pre>
 
         <hr />
         <p>
           <b>Flip cards</b> <br />
           The back and front of cards are sections. So they can have any card
-          layout as above. <br /> All cards can have focus which means they can be clicked or tabbed into to stay flipped. <br />
+          layout as above. <br />
+          All cards can have focus which means they can be clicked or tabbed
+          into to stay flipped. <br />
           Here are some examples:
         </p>
         <section class="four-columns no-stretch">
@@ -166,7 +181,7 @@
               <section>
                 <header><h3>Normal flip card</h3></header>
                 <div>
-                  <p></p>
+                  <p>
                     A header and
                     <code class="language-html">class="flip normal"</code>
                   </p>
@@ -183,7 +198,9 @@
             <div tabindex="0">
               <section>
                 <header>Header</header>
-                <div><code class="language-html">class="flip primary"</code></div>
+                <div>
+                  <code class="language-html">class="flip primary"</code>
+                </div>
                 <footer><span>Footer</span></footer>
               </section>
               <section><div>Flipped!</div></section>
@@ -194,7 +211,9 @@
             <div tabindex="0">
               <section>
                 <header>Header</header>
-                <div>Card with a header on the back has same properties by default.</div>
+                <div>
+                  Card with a header on the back has same properties by default.
+                </div>
                 <footer><span>Footer</span></footer>
               </section>
               <section>
@@ -209,7 +228,10 @@
             <div tabindex="0">
               <section>
                 <header>Header</header>
-                <div>Flippable card with  <code class="language-html">class="flip danger inverse"</code></div>
+                <div>
+                  Flippable card with
+                  <code class="language-html">class="flip danger inverse"</code>
+                </div>
                 <footer><span>Footer</span></footer>
               </section>
               <section><div>Flipped!</div></section>
@@ -218,7 +240,10 @@
 
           <article class="flip card">
             <div tabindex="0">
-              <section>Content will automatically create a scrollbar if contents overflow and automatically wraps words, flip the card to see.</section>
+              <section>
+                Content will automatically create a scrollbar if contents
+                overflow and automatically wraps words, flip the card to see.
+              </section>
               <section>
                 <header><h3>Lorum ipsum text.</h3></header>
                 <div>
@@ -237,12 +262,11 @@
         </section>
 
         <pre
-        class="border stretch margin-top"
-      ><code class="language-html full-width">{{! components_card_flip }}</code></pre>
+          class="border stretch margin-top"
+        ><code class="language-html full-width">{{! components_card_flip }}</code></pre>
 
-        <hr>
+        <hr />
         <small><b>N.B.</b> The body of the card must be a div element.</small>
-
       </article>
 
       <article id="modal">
