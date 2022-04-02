@@ -88,145 +88,46 @@ fieldset {
     }
   }
 
-  &.two-columns {
-    .w-100();
+  &[class*="-columns"] {
     gap: @default-distance;
+    & > * {
+      margin-bottom: 0;
+    }
+  }
 
-    @media (min-width: @sm) {
-      & > * {
-        .w-50();
-      }
+  &.two-columns {
+    & > * {
+      .w-50();
     }
   }
 
   &.three-columns {
-    .w-100();
-    gap: @default-distance;
-    @media (min-width: @sm) {
-      & > * {
-        .w-50();
-      }
-    }
-    @media (min-width: @md) {
-      & > * {
-        .w-33();
-      }
+    & > * {
+      .w-33();
     }
   }
 
   &.four-columns {
-    .w-100();
-    gap: @default-distance;
-    @media (min-width: @sm) {
-      & > * {
-        .w-50();
-      }
-    }
-    @media (min-width: @md) {
-      & > * {
-        .w-33();
-      }
-    }
-    @media (min-width: @lg) {
-      & > * {
-        .w-25();
-      }
+    & > * {
+      .w-25();
     }
   }
 
   &.five-columns {
-    .w-100();
-    gap: @default-distance;
-    @media (min-width: @sm) {
-      & > * {
-        .w-50();
-      }
-    }
-    @media (min-width: @md) {
-      & > * {
-        .w-33();
-      }
-    }
-    @media (min-width: @lg) {
-      & > * {
-        .w-25();
-      }
-    }
-    @media (min-width: @xl) {
-      & > * {
-        .w-20();
-      }
+    & > * {
+      .w-20();
     }
   }
 
   &.six-columns {
-    .w-100();
-    gap: @default-distance;
-    @media (min-width: @sm) {
-      & > * {
-        .w-50();
-      }
-    }
-    @media (min-width: @md) {
-      & > * {
-        .w-33();
-      }
-    }
-    @media (min-width: @lg) {
-      & > * {
-        .w-25();
-      }
-    }
-    @media (min-width: @xl) {
-      & > * {
-        .w-20();
-      }
-    }
-    @media (min-width: @xxl) {
-      & > * {
-        .w-16();
-      }
+    & > * {
+      .w-16();
     }
   }
 
-  &.twelve-columns {
-    .w-100();
-    gap: @default-distance;
-    @media (min-width: @sm) {
-      & > * {
-        .w-33();
-      }
-    }
-    @media (min-width: @md) {
-      & > * {
-        .w-25();
-      }
-    }
-    @media (min-width: @lg) {
-      & > * {
-        .w-20();
-      }
-    }
-    @media (min-width: @xl) {
-      & > * {
-        .w-16();
-      }
-    }
-    @media (min-width: @xxl) {
-      & > * {
-        .w-8();
-      }
-    }
-  }
-
-  &.two-columns,
-  &.three-columns,
-  &.four-columns,
-  &.five-columns,
-  &.six-columns,
   &.twelve-columns {
     & > * {
-      margin-bottom: 0;
+      .w-8();
     }
   }
 }

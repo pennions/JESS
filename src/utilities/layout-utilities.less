@@ -11,33 +11,77 @@
 }
 
 .w-50 {
-  width: calc(50% - 0.75rem);
-  min-width: calc(50% - 0.75rem);
+  .w-100();
+
+  @media (min-width: @sm) {
+    width: calc(50% - 0.75rem);
+    min-width: calc(50% - 0.75rem);
+  }
 }
 
 .w-33 {
-  width: calc(33.333333333333333333333333333333% - 1rem);
-  min-width: calc(33.333333333333333333333333333333% - 1rem);
+  .w-50();
+
+  @media (min-width: @md) {
+    width: calc(33.333333333333333333333333333333% - 1rem);
+    min-width: calc(33.333333333333333333333333333333% - 1rem);
+  }
 }
 
 .w-25 {
-  width: calc(25% - 1.13rem);
-  min-width: calc(25% - 1.13rem);
+  .w-33();
+
+  @media (min-width: @lg) {
+    width: calc(25% - 1.13rem);
+    min-width: calc(25% - 1.13rem);
+  }
 }
 
 .w-20 {
-  width: calc(20% - 1.2rem);
-  min-width: calc(20% - 1.2rem);
+  .w-25();
+
+  @media (min-width: @xl) {
+    width: calc(20% - 1.2rem);
+    min-width: calc(20% - 1.2rem);
+  }
 }
 
 .w-16 {
-  width: calc(16.666666666666666666666666666667% - 1.25rem);
-  min-width: calc(16.666666666666666666666666666667% - 1.25rem);
+  .w-20();
+
+  @media (min-width: @xxl) {
+    width: calc(16.666666666666666666666666666667% - 1.25rem);
+    min-width: calc(16.666666666666666666666666666667% - 1.25rem);
+  }
 }
 
 .w-8 {
-  width: calc(8.3333333333333333333333333333333% - 1.375rem);
-  min-width: calc(8.3333333333333333333333333333333% - 1.375rem);
+  .w-100();
+
+  @media (min-width: @sm) {
+    width: calc(33.333333333333333333333333333333% - 1rem);
+    min-width: calc(33.333333333333333333333333333333% - 1rem);
+  }
+
+  @media (min-width: @md) {
+    width: calc(25% - 1.13rem);
+    min-width: calc(25% - 1.13rem);
+  }
+
+  @media (min-width: @lg) {
+    width: calc(20% - 1.2rem);
+    min-width: calc(20% - 1.2rem);
+  }
+
+  @media (min-width: @xl) {
+    width: calc(16.666666666666666666666666666667% - 1.25rem);
+    min-width: calc(16.666666666666666666666666666667% - 1.25rem);
+  }
+
+  @media (min-width: @xxl) {
+    width: calc(8.3333333333333333333333333333333% - 1.375rem);
+    min-width: calc(8.3333333333333333333333333333333% - 1.375rem);
+  }
 }
 
 .mobile-only {
@@ -91,4 +135,8 @@
 
 .d-inline-block {
   display: inline-block;
+}
+
+.no-scroll {
+  overflow: hidden;
 }

@@ -21,10 +21,10 @@
             <a href="#modal">Modal</a>
           </li>
           <li>
-            <a href="#notification">Notification</a>
+            <a href="#breadcrumb">Breadcrumb</a>
           </li>
           <li>
-            <a href="#breadcrumb">Breadcrumb</a>
+            <a href="#notification">Notification</a>
           </li>
           <li>
             <a href="#dropdown">Dropdown</a>
@@ -269,17 +269,51 @@
         <small><b>N.B.</b> The body of the card must be a div element.</small>
       </article>
 
-      <article id="modal">
-        <header>
-          <h2>Modal</h2>
-        </header>
-        <p>TODO</p>
-      </article>
-
       <article id="notification">
         <header>
           <h2>Notification</h2>
         </header>
+      </article>
+
+      <article id="modal">
+        <header>
+          <h2>Modal</h2>
+        </header>
+        <p>
+          A modal is a <code class="language-html">&lt;dialog&gt;</code> with a
+          <code class="language-html">class="modal"</code>. <br />
+          It opens when it has a property
+          <code class="language-html">open</code> or
+          <code class="language-html">open="true"</code>. <br />
+          It closes when the property is removed or set to false. <br />
+          You could use a card (article) for the modal as demonstrated below.
+        </p>
+
+        <button
+          onclick="document.getElementById('demo-modal').setAttribute('open', true)"
+        >
+          Open modal
+        </button>
+
+        <dialog
+          id="demo-modal"
+          class="modal"
+          onclick="this.removeAttribute('open')"
+        >
+          <article class="normal w-25">
+            <header>
+              <h3>Message</h3>
+            </header>
+            <div>I am a modal.</div>
+            <footer>
+              <button
+                onclick="document.getElementById('demo-modal').setAttribute('open', false)"
+              >
+                Close
+              </button>
+            </footer>
+          </article>
+        </dialog>
       </article>
 
       <article id="breadcrumb">
