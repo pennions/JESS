@@ -41,17 +41,7 @@
     <script>
       function create() {
         let contents = document.getElementById("contents").value;
-
-        let step1 = contents.replace(/ /g, "¶");
-        let step2 = JSON.stringify(step1);
-        let step3 = step2.replace(/¶/, " ");
-
-        do {
-          step3 = step3.replace(/¶/, " ");
-          console.log(step3);
-        } while (/¶/.test(step3));
-
-        document.getElementById("result").innerText = step3;
+        document.getElementById("result").innerText = JSON.stringify(contents);
       }
     </script>
   </body>
