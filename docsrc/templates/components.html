@@ -273,6 +273,43 @@
         <header>
           <h2>Notification</h2>
         </header>
+        <p>
+          A notification is a
+          <code class="language-html">&lt;dialog&gt;</code> that is directly
+          inside a <code class="language-html">&lt;body&gt;</code> and under a
+          <code class="language-html">&lt;nav&gt;</code> element to make it a
+          top notification. <br />
+          and stick to the top.
+          <br />
+
+          example:
+        </p>
+
+        <pre
+          class="border stretch margin-top"
+        ><code class="language-html full-width">{{! components_notification_header }}</code></pre>
+
+        <p>
+          Or inside <code class="language-html">&lt;body&gt;</code> and above
+          the <code class="language-html">&lt;footer&gt;</code>. <br />
+          Add the <code class="language-html">bottom</code> class to make it
+          appear above the footer <br />
+          and make it stick to the bottom <br />
+          Example:
+        </p>
+        <dialog class="row" open>Default notification <button class="no-border row-end outline-hover">X</button></dialog>
+        <dialog class="row warning" open>Warning notification <button class="no-border row-end outline-hover">X</button></dialog>
+        <dialog class="row error" open>Error notification <button class="no-border row-end outline-hover">X</button></dialog>
+        <dialog class="row success" open>Success notification <button class="no-border row-end outline-hover">X</button></dialog>
+
+        <pre
+          class="border stretch margin-top"
+        ><code class="language-html full-width">{{! components_notification_footer }}</code></pre>
+
+        <p>
+          You can place it inside an element, then it will be inline. <br />
+          It has the default sticky behaviour.
+        </p>
       </article>
 
       <article id="modal">
@@ -308,6 +345,36 @@
             <footer>
               <button
                 onclick="document.getElementById('demo-modal').setAttribute('open', false)"
+              >
+                Close
+              </button>
+            </footer>
+          </article>
+        </dialog>
+
+        <p>
+          If you want to disable scroll on the body add the
+          <code class="language-html">no-scroll</code> class on the body.
+        </p>
+        <button
+          onclick="document.getElementById('demo-modal-noscroll').setAttribute('open', true); document.getElementsByTagName('body')[0].classList.add('no-scroll')"
+        >
+          Open modal with no-scroll applied.
+        </button>
+
+        <dialog
+          id="demo-modal-noscroll"
+          class="modal"
+          onclick="this.removeAttribute('open'); document.getElementsByTagName('body')[0].classList.remove('no-scroll')"
+        >
+          <article class="normal w-25">
+            <header>
+              <h3>Message</h3>
+            </header>
+            <div>I am a modal.</div>
+            <footer>
+              <button
+                onclick="document.getElementById('demo-modal-noscroll').setAttribute('open', false); document.getElementsByTagName('body')[0].classList.remove('no-scroll')"
               >
                 Close
               </button>

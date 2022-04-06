@@ -1,13 +1,16 @@
 /* traditional top or bottom notification*/
 dialog {
-  position: absolute;
+  top: 0;
   width: 100%;
-  min-height: @nav-min-height;
+  z-index: 1040;
+  position: sticky;
+  position: --webkit-sticky;
   padding: @default-distance;
+  min-height: @nav-min-height;
   .ms-motion-slideDownIn();
 
   &.bottom {
     .ms-motion-slideUpIn();
-    bottom: @footer-min-height;
+    bottom: 0;
   }
 }

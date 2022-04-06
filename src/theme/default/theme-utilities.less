@@ -1,3 +1,4 @@
+// used internally, so can not be important.
 .border {
   border: 0.5px solid @ms-color-gray110;
 }
@@ -9,82 +10,83 @@
 .border-top {
   border-top: 0.5px solid @ms-color-gray110;
 }
+//
 
-.background {
-  background-color: @default-background;
-}
-
-.gray-background {
-  background-color: @gray-background;
+.bg-gray {
+  background-color: @gray-background !important;
+  color: @default-font-color !important;
 }
 
-.gray-background-dark {
-  background-color: @gray-background-dark;
+.bg-gray-dark {
+  background-color: @gray-background-dark !important;
+  color: @default-font-color !important;
 }
 
-.black-background {
-  background-color: black;
+.bg-black {
+  background-color: #000 !important;
+  color: @ms-color-gray60 !important;
 }
 
-.margin-top {
-  margin-top: @default-distance;
-}
-.margin-left {
-  margin-left: @default-distance;
-}
-.margin-right {
-  margin-right: @default-distance;
-}
-.margin-bottom {
-  margin-bottom: @default-distance;
+.bg-white {
+  background-color: #fff !important;
+  color: @default-font-color !important;
 }
 
-.margin-x {
-  .margin-left();
-  .margin-right();
+.bg-primary {
+  background-color: @primary !important;
+  color: @color-on-primary !important;
 }
 
-.margin-y {
-  .margin-top();
-  .margin-bottom();
-}
-.margin {
-  margin: @default-distance;
+.bg-accent {
+  background-color: @accent !important;
+  color: @color-on-accent !important;
 }
 
-.padding-top {
-  padding-top: @default-distance;
-}
-.padding-left {
-  padding-left: @default-distance;
-}
-.padding-right {
-  padding-right: @default-distance;
-}
-.padding-bottom {
-  padding-bottom: @default-distance;
+.bg-danger {
+  background-color: @danger !important;
+  color: @color-on-danger !important;
 }
 
-.padding-x {
-  .padding-left();
-  .padding-right();
+.text-black {
+  color: #000 !important;
 }
 
-.padding-y {
-  .padding-top();
-  .padding-bottom();
+.text-white {
+  color: #fff !important;
 }
 
-.padding {
-  padding: @default-distance;
+.text-primary {
+  color: @primary !important;
 }
 
-.clip {
-  background: linear-gradient(
-    135deg,
-    transparent 6%,
-    white 6%,
-    white 94%,
-    transparent 94%
-  );
+.text-accent {
+  color: @accent !important;
+}
+
+.text-danger {
+  color: @danger !important;
+}
+
+.border-black {
+  border-color: #000 !important;
+}
+
+.border-white {
+  border-color: #fff !important;
+}
+
+.border-primary {
+  border-color: @primary !important;
+}
+
+.border-accent {
+  border-color: @accent !important;
+}
+
+.border-danger {
+  border-color: @danger !important;
+}
+
+.border-light {
+  border-color: @hr-color !important;
 }

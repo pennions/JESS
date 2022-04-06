@@ -22,10 +22,10 @@
             <a href="#modal">Modal</a>
           </li>
           <li>
-            <a href="#notification">Notification</a>
+            <a href="#breadcrumb">Breadcrumb</a>
           </li>
           <li>
-            <a href="#breadcrumb">Breadcrumb</a>
+            <a href="#notification">Notification</a>
           </li>
           <li>
             <a href="#dropdown">Dropdown</a>
@@ -54,15 +54,27 @@
       </article>
 
       <article id="card">
-        <header></header>
-        <h3>Card</h3>
-        <p>Cards are a basic building block in JESS and the element for this is <code class="language-html">&lt;article&gt;</code> </p>
+        <header><h2>Card</h2></header>
 
-        <article>This is a default card</article>
+        <p>
+          Cards are a basic building block in JESS and the element for this is
+          <code class="language-html">&lt;article&gt;</code> for the examples I
+          have set a max-width of 25%. <br />
+          Only the flip cards have a fixed height and width.
+        </p>
+
+        <article class="w-25">This is a default card</article>
 
         <article class="w-25">
           <header><h3>Card header</h3></header>
-          <section>This is a default card with a <code class="language-html">&lt;header&gt;</code> and a <code class="language-html">&lt;footer&gt;</code> element and a <code class="language-html">&lt;section&gt;</code> as body.</section>
+          <section>
+            <p>
+              This is a default card with a
+              <code class="language-html">&lt;header&gt;</code> and a
+              <code class="language-html">&lt;footer&gt;</code> element and a
+              <code class="language-html">&lt;section&gt;</code> as body.
+            </p>
+          </section>
           <footer>Card footer</footer>
         </article>
         <hr />
@@ -122,6 +134,7 @@
             </section>
             <footer>Footer</footer>
           </article>
+
           <article class="danger inverse">
             <header><h3>Header</h3></header>
             <section>
@@ -131,8 +144,8 @@
           </article>
         </section>
         <pre
-        class="border stretch margin-top"
-      ><code class="language-html full-width">&lt;article class=&quot;normal&quot;&gt;
+          class="border stretch margin-top"
+        ><code class="language-html full-width">&lt;article class=&quot;normal&quot;&gt;
     &lt;div tabindex=&quot;0&quot;&gt;
         &lt;section&gt;
           &lt;header&gt;Header&lt;/header&gt;
@@ -146,7 +159,9 @@
         <p>
           <b>Flip cards</b> <br />
           The back and front of cards are sections. So they can have any card
-          layout as above. <br /> All cards can have focus which means they can be clicked or tabbed into to stay flipped. <br />
+          layout as above. <br />
+          All cards can have focus which means they can be clicked or tabbed
+          into to stay flipped. <br />
           Here are some examples:
         </p>
         <section class="four-columns no-stretch">
@@ -175,7 +190,7 @@
               <section>
                 <header><h3>Normal flip card</h3></header>
                 <div>
-                  <p></p>
+                  <p>
                     A header and
                     <code class="language-html">class="flip normal"</code>
                   </p>
@@ -192,7 +207,9 @@
             <div tabindex="0">
               <section>
                 <header>Header</header>
-                <div><code class="language-html">class="flip primary"</code></div>
+                <div>
+                  <code class="language-html">class="flip primary"</code>
+                </div>
                 <footer><span>Footer</span></footer>
               </section>
               <section><div>Flipped!</div></section>
@@ -203,7 +220,9 @@
             <div tabindex="0">
               <section>
                 <header>Header</header>
-                <div>Card with a header on the back has same properties by default.</div>
+                <div>
+                  Card with a header on the back has same properties by default.
+                </div>
                 <footer><span>Footer</span></footer>
               </section>
               <section>
@@ -218,7 +237,10 @@
             <div tabindex="0">
               <section>
                 <header>Header</header>
-                <div>Flippable card with  <code class="language-html">class="flip danger inverse"</code></div>
+                <div>
+                  Flippable card with
+                  <code class="language-html">class="flip danger inverse"</code>
+                </div>
                 <footer><span>Footer</span></footer>
               </section>
               <section><div>Flipped!</div></section>
@@ -227,7 +249,10 @@
 
           <article class="flip card">
             <div tabindex="0">
-              <section>Content will automatically create a scrollbar if contents overflow and automatically wraps words, flip the card to see.</section>
+              <section>
+                Content will automatically create a scrollbar if contents
+                overflow and automatically wraps words, flip the card to see.
+              </section>
               <section>
                 <header><h3>Lorum ipsum text.</h3></header>
                 <div>
@@ -246,8 +271,8 @@
         </section>
 
         <pre
-        class="border stretch margin-top"
-      ><code class="language-html full-width">&lt;article class=&quot;flip&quot;&gt;
+          class="border stretch margin-top"
+        ><code class="language-html full-width">&lt;article class=&quot;flip&quot;&gt;
     &lt;div tabindex=&quot;0&quot;&gt;
         &lt;section&gt;
           &lt;header&gt;Header&lt;/header&gt;
@@ -262,22 +287,130 @@
     &lt;/div&gt;
 &lt;/article&gt;</code></pre>
 
-        <hr>
+        <hr />
         <small><b>N.B.</b> The body of the card must be a div element.</small>
-
-      </article>
-
-      <article id="modal">
-        <header>
-          <h2>Modal</h2>
-        </header>
-        <p>TODO</p>
       </article>
 
       <article id="notification">
         <header>
           <h2>Notification</h2>
         </header>
+        <p>
+          A notification is a
+          <code class="language-html">&lt;dialog&gt;</code> that is directly
+          inside a <code class="language-html">&lt;body&gt;</code> and under a
+          <code class="language-html">&lt;nav&gt;</code> element to make it a
+          top notification. <br />
+          and stick to the top.
+          <br />
+
+          example:
+        </p>
+
+        <pre
+          class="border stretch margin-top"
+        ><code class="language-html full-width">&lt;body&gt;
+    &lt;nav&gt;Navigation menu content&lt;/nav&gt;
+    &lt;dialog&gt;Notification content goes here&lt;/dialog&gt;
+    ...
+&lt;/body&gt;</code></pre>
+
+        <p>
+          Or inside <code class="language-html">&lt;body&gt;</code> and above
+          the <code class="language-html">&lt;footer&gt;</code>. <br />
+          Add the <code class="language-html">bottom</code> class to make it
+          appear above the footer <br />
+          and make it stick to the bottom <br />
+          Example:
+        </p>
+        <dialog class="row" open>Default notification <button class="no-border row-end outline-hover">X</button></dialog>
+        <dialog class="row warning" open>Warning notification <button class="no-border row-end outline-hover">X</button></dialog>
+        <dialog class="row error" open>Error notification <button class="no-border row-end outline-hover">X</button></dialog>
+        <dialog class="row success" open>Success notification <button class="no-border row-end outline-hover">X</button></dialog>
+
+        <pre
+          class="border stretch margin-top"
+        ><code class="language-html full-width">&lt;body&gt;
+    ...
+    &lt;dialog class=&quot;bottom&quot;&gt;Notification content goes here&lt;/dialog&gt;
+    &lt;footer&gt;Footer content&lt;/footer&gt;
+&lt;/body&gt;</code></pre>
+
+        <p>
+          You can place it inside an element, then it will be inline. <br />
+          It has the default sticky behaviour.
+        </p>
+      </article>
+
+      <article id="modal">
+        <header>
+          <h2>Modal</h2>
+        </header>
+        <p>
+          A modal is a <code class="language-html">&lt;dialog&gt;</code> with a
+          <code class="language-html">class="modal"</code>. <br />
+          It opens when it has a property
+          <code class="language-html">open</code> or
+          <code class="language-html">open="true"</code>. <br />
+          It closes when the property is removed or set to false. <br />
+          You could use a card (article) for the modal as demonstrated below.
+        </p>
+
+        <button
+          onclick="document.getElementById('demo-modal').setAttribute('open', true)"
+        >
+          Open modal
+        </button>
+
+        <dialog
+          id="demo-modal"
+          class="modal"
+          onclick="this.removeAttribute('open')"
+        >
+          <article class="normal w-25">
+            <header>
+              <h3>Message</h3>
+            </header>
+            <div>I am a modal.</div>
+            <footer>
+              <button
+                onclick="document.getElementById('demo-modal').setAttribute('open', false)"
+              >
+                Close
+              </button>
+            </footer>
+          </article>
+        </dialog>
+
+        <p>
+          If you want to disable scroll on the body add the
+          <code class="language-html">no-scroll</code> class on the body.
+        </p>
+        <button
+          onclick="document.getElementById('demo-modal-noscroll').setAttribute('open', true); document.getElementsByTagName('body')[0].classList.add('no-scroll')"
+        >
+          Open modal with no-scroll applied.
+        </button>
+
+        <dialog
+          id="demo-modal-noscroll"
+          class="modal"
+          onclick="this.removeAttribute('open'); document.getElementsByTagName('body')[0].classList.remove('no-scroll')"
+        >
+          <article class="normal w-25">
+            <header>
+              <h3>Message</h3>
+            </header>
+            <div>I am a modal.</div>
+            <footer>
+              <button
+                onclick="document.getElementById('demo-modal-noscroll').setAttribute('open', false); document.getElementsByTagName('body')[0].classList.remove('no-scroll')"
+              >
+                Close
+              </button>
+            </footer>
+          </article>
+        </dialog>
       </article>
 
       <article id="breadcrumb">
@@ -403,7 +536,7 @@
     &gt;&lt;/span&gt;
 &lt;/label&gt;
 
-&lt;label class=&quot;switch switch-margin&quot;&gt;
+&lt;label class=&quot;switch&quot;&gt;
     &lt;input type=&quot;checkbox&quot; hidden /&gt;
     &lt;span class=&quot;toggle&quot;&gt;&lt;/span&gt;
     &lt;span
