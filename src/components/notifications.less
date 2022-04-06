@@ -1,5 +1,5 @@
 /* traditional top or bottom notification*/
-dialog {
+dialog.notification {
   top: 0;
   width: 100%;
   z-index: 1040;
@@ -7,6 +7,11 @@ dialog {
   position: --webkit-sticky;
   padding: @default-distance;
   min-height: @nav-min-height;
+  display: flex;
+
+  & > .close {
+    margin-left: auto;
+  }
   .ms-motion-slideDownIn();
 
   &.bottom {

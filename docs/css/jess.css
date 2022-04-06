@@ -1056,7 +1056,7 @@ article.danger.flip section div:first-child,
   padding: 1.5rem;
 }
 /* traditional top or bottom notification*/
-dialog {
+dialog.notification {
   top: 0;
   width: 100%;
   z-index: 1040;
@@ -1064,9 +1064,13 @@ dialog {
   position: --webkit-sticky;
   padding: 1.5rem;
   min-height: 5rem;
+  display: flex;
   animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) both;
 }
-dialog.bottom {
+dialog.notification > .close {
+  margin-left: auto;
+}
+dialog.notification.bottom {
   animation: ms-motion-slideUpIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) both;
   bottom: 0;
 }
@@ -1933,7 +1937,7 @@ html,
 body {
   font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", sans-serif;
   color: #323130;
-  line-height: 1.8;
+  line-height: 1.9;
 }
 h1 {
   font-size: 3.2rem;
@@ -2120,26 +2124,33 @@ label.switch input:disabled ~ .toggle {
 label.switch input:disabled ~ .toggle-background {
   border: 0.5px solid #a19f9d;
 }
-dialog.error {
+dialog.notification.error {
   background-color: #fde7e9;
 }
-dialog.error > .icon,
-dialog.error > .feather {
+dialog.notification.error > .icon,
+dialog.notification.error > .feather {
   color: #a80000;
 }
-dialog.warning {
+dialog.notification.warning {
   background-color: #fff4ce;
 }
-dialog.warning > .icon,
-dialog.warning > .feather {
+dialog.notification.warning > .icon,
+dialog.notification.warning > .feather {
   color: #797673;
 }
-dialog.success {
+dialog.notification.success {
   background-color: #dff6dd;
 }
-dialog.success > .icon,
-dialog.success > .feather {
+dialog.notification.success > .icon,
+dialog.notification.success > .feather {
   color: #107c10;
+}
+dialog.notification > .close {
+  border: unset;
+  background-color: transparent;
+}
+dialog.notification > .close:hover {
+  outline: 0.5px solid #000;
 }
 .border {
   border: 0.5px solid #8a8886;

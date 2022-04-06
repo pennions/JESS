@@ -300,46 +300,54 @@
           <code class="language-html">&lt;dialog&gt;</code> that is directly
           inside a <code class="language-html">&lt;body&gt;</code> and under a
           <code class="language-html">&lt;nav&gt;</code> element to make it a
-          top notification. <br />
-          and stick to the top.
+          top notification <br />
+          and stick to the top when scrolling.
           <br />
-
-          example:
-        </p>
-
-        <pre
-          class="border stretch margin-top"
-        ><code class="language-html full-width">&lt;body&gt;
-    &lt;nav&gt;Navigation menu content&lt;/nav&gt;
-    &lt;dialog&gt;Notification content goes here&lt;/dialog&gt;
-    ...
-&lt;/body&gt;</code></pre>
-
-        <p>
           Or inside <code class="language-html">&lt;body&gt;</code> and above
-          the <code class="language-html">&lt;footer&gt;</code>. <br />
-          Add the <code class="language-html">bottom</code> class to make it
-          appear above the footer <br />
-          and make it stick to the bottom <br />
-          Example:
+          the <code class="language-html">&lt;footer&gt;</code> with the
+          additional <code class="language-html">bottom</code> class to make it
+          appear above the footer and make it stick to the bottom when
+          scrolling. <br />
+          You can add or remove the
+          <code class="language-html">open</code> attribute to show / hide the
+          notification.
         </p>
-        <dialog class="row" open>Default notification <button class="no-border row-end outline-hover">X</button></dialog>
-        <dialog class="row warning" open>Warning notification <button class="no-border row-end outline-hover">X</button></dialog>
-        <dialog class="row error" open>Error notification <button class="no-border row-end outline-hover">X</button></dialog>
-        <dialog class="row success" open>Success notification <button class="no-border row-end outline-hover">X</button></dialog>
+
+        <p>Variants:</p>
+        <dialog class="notification" open>
+          <span>Default notification</span> <button class="close">X</button>
+        </dialog>
+        <dialog class="notification warning" open>
+          <span>Warning notification</span> <button class="close">X</button>
+        </dialog>
+        <dialog class="notification error" open>
+          <span>Error notification</span> <button class="close">X</button>
+        </dialog>
+        <dialog class="notification success" open>
+          <span>Success notification</span> <button class="close">X</button>
+        </dialog>
 
         <pre
           class="border stretch margin-top"
-        ><code class="language-html full-width">&lt;body&gt;
-    ...
-    &lt;dialog class=&quot;bottom&quot;&gt;Notification content goes here&lt;/dialog&gt;
-    &lt;footer&gt;Footer content&lt;/footer&gt;
-&lt;/body&gt;</code></pre>
+        ><code class="language-html full-width">&lt;dialog class=&quot;notification&quot; open&gt;
+    &lt;span&gt;Default notification&lt;/span&gt;
+    &lt;button class=&quot;close&quot;&gt;X&lt;/button&gt;
+&lt;/dialog&gt;
 
-        <p>
-          You can place it inside an element, then it will be inline. <br />
-          It has the default sticky behaviour.
-        </p>
+&lt;dialog class=&quot;notification warning&quot; open&gt;
+    &lt;span&gt;Warning notification&lt;/span&gt;
+    &lt;button class=&quot;close&quot;&gt;X&lt;/button&gt;
+&lt;/dialog&gt;
+
+&lt;dialog class=&quot;notification error&quot; open&gt;
+    &lt;span&gt;Error notification&lt;/span&gt;
+    &lt;button class=&quot;close&quot;&gt;X&lt;/button&gt;
+&lt;/dialog&gt;
+
+&lt;dialog class=&quot;notification success&quot; open&gt;
+    &lt;span&gt;Success notification&lt;/span&gt;
+    &lt;button class=&quot;close&quot;&gt;X&lt;/button&gt;
+&lt;/dialog&gt;</code></pre>
       </article>
 
       <article id="modal">

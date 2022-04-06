@@ -1,4 +1,4 @@
-dialog {
+dialog.notification {
   &.error {
     background-color: @dialog-error;
 
@@ -21,6 +21,15 @@ dialog {
     & > .icon,
     & > .feather {
       color: @dialog-success-icon;
+    }
+  }
+
+  & > .close {
+    border: unset;
+    background-color: transparent;
+
+    &:hover {
+      outline: 0.5px solid @button-outline-color;
     }
   }
 }
