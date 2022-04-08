@@ -159,9 +159,11 @@
         <p>
           <b>Flip cards</b> <br />
           The back and front of cards are sections. So they can have any card
-          layout as above. <br />
+          layout as above.
+          <br />
           All cards can have focus which means they can be clicked or tabbed
-          into to stay flipped. <br />
+          into to stay flipped.
+          <br />
           Here are some examples:
         </p>
         <section class="four-columns no-stretch">
@@ -300,7 +302,8 @@
           <code class="language-html">&lt;dialog&gt;</code> that is directly
           inside a <code class="language-html">&lt;body&gt;</code> and under a
           <code class="language-html">&lt;nav&gt;</code> element to make it a
-          top notification <br />
+          top notification
+          <br />
           and stick to the top when scrolling.
           <br />
           Or inside <code class="language-html">&lt;body&gt;</code> and above
@@ -359,7 +362,8 @@
           <code class="language-html">class="modal"</code>. <br />
           It opens when it has a property
           <code class="language-html">open</code> or
-          <code class="language-html">open="true"</code>. <br />
+          <code class="language-html">open="true"</code>.
+          <br />
           It closes when the property is removed or set to false. <br />
           You could use a card (article) for the modal as demonstrated below.
         </p>
@@ -395,7 +399,8 @@
           <code class="language-html">no-scroll</code> class on the body.
         </p>
         <button
-          onclick="document.getElementById('demo-modal-noscroll').setAttribute('open', true); document.getElementsByTagName('body')[0].classList.add('no-scroll')"
+          onclick="document.getElementById('demo-modal-noscroll').setAttribute('open', true); 
+                   document.getElementsByTagName('body')[0].classList.add('no-scroll')"
         >
           Open modal with no-scroll applied.
         </button>
@@ -403,7 +408,8 @@
         <dialog
           id="demo-modal-noscroll"
           class="modal"
-          onclick="this.removeAttribute('open'); document.getElementsByTagName('body')[0].classList.remove('no-scroll')"
+          onclick="this.removeAttribute('open'); 
+                   document.getElementsByTagName('body')[0].classList.remove('no-scroll')"
         >
           <article class="normal w-25">
             <header>
@@ -412,13 +418,76 @@
             <div>I am a modal.</div>
             <footer>
               <button
-                onclick="document.getElementById('demo-modal-noscroll').setAttribute('open', false); document.getElementsByTagName('body')[0].classList.remove('no-scroll')"
+                onclick="document.getElementById('demo-modal-noscroll').setAttribute('open', false); 
+                         document.getElementsByTagName('body')[0].classList.remove('no-scroll')"
               >
                 Close
               </button>
             </footer>
           </article>
         </dialog>
+
+        <pre
+          class="border stretch margin-top"
+        ><code class="language-html full-width">&lt;button
+    onclick=&quot;document.getElementById(&#039;demo-modal&#039;).setAttribute(&#039;open&#039;, true)&quot;
+    &gt;
+    Open modal
+&lt;/button&gt;
+
+&lt;dialog
+    id=&quot;demo-modal&quot;
+    class=&quot;modal&quot;
+    onclick=&quot;this.removeAttribute(&#039;open&#039;)&quot;
+    &gt;
+    &lt;article class=&quot;normal w-25&quot;&gt;
+        &lt;header&gt;
+            &lt;h3&gt;Message&lt;/h3&gt;
+        &lt;/header&gt;
+        &lt;div&gt;I am a modal.&lt;/div&gt;
+        &lt;footer&gt;
+            &lt;button
+                onclick=&quot;document.getElementById(&#039;demo-modal&#039;).setAttribute(&#039;open&#039;, false)&quot;
+            &gt;
+                Close
+            &lt;/button&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+&lt;/dialog&gt;
+
+&lt;button
+    onclick=&quot;document.getElementById(&#039;demo-modal-noscroll&#039;).setAttribute(&#039;open&#039;, true); 
+             document.getElementsByTagName(&#039;body&#039;)[0].classList.add(&#039;no-scroll&#039;)&quot;
+    &gt;
+    Open modal with no-scroll applied.
+&lt;/button&gt;
+
+&lt;dialog
+    id=&quot;demo-modal-noscroll&quot;
+    class=&quot;modal&quot;
+    onclick=&quot;this.removeAttribute(&#039;open&#039;); 
+             document.getElementsByTagName(&#039;body&#039;)[0].classList.remove(&#039;no-scroll&#039;)&quot;
+    &gt;
+    &lt;article class=&quot;normal w-25&quot;&gt;
+        &lt;header&gt;
+            &lt;h3&gt;Message&lt;/h3&gt;
+        &lt;/header&gt;
+        &lt;div&gt;I am a modal.&lt;/div&gt;
+        &lt;footer&gt;
+            &lt;button
+                onclick=&quot;document.getElementById(&#039;demo-modal-noscroll&#039;).setAttribute(&#039;open&#039;, false); 
+                         document.getElementsByTagName(&#039;body&#039;)[0].classList.remove(&#039;no-scroll&#039;)&quot;
+                &gt;
+                Close
+            &lt;/button&gt;
+        &lt;/footer&gt;
+    &lt;/article&gt;
+&lt;/dialog&gt;</code></pre>
+
+        <small
+          ><b>N.B.</b> You can also set a close on the outside of the modal. As
+          done in the example. Try it!</small
+        >
       </article>
 
       <article id="breadcrumb">
