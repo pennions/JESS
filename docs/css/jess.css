@@ -448,7 +448,7 @@ fieldset:not(.center) > aside + * {
   min-width: 100%;
   width: 100%;
 }
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   main:not(.center) > aside + *,
   section:not(.center) > aside + *,
   fieldset:not(.center) > aside + * {
