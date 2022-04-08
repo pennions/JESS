@@ -13,19 +13,33 @@
         align-items: center;
       }
 
-      textarea,
-      button {
+      #contents {
         width: 50%;
         margin-bottom: 2rem;
       }
 
-      span {
-        height: auto;
-        width: auto;
+      button {
+        width: 49%;
+        display: inline-block;
+        margin-bottom: 2rem;
+        background-color: lightblue;
+      }
+
+      button:first-child {
+        margin-right: 1.3%;
+        background-color: lightgreen;
+      }
+
+      .button-bar {
+        width: 50%;
       }
 
       textarea {
         height: 40vh;
+      }
+
+      #result {
+        width: 98vw;
       }
     </style>
   </head>
@@ -34,14 +48,36 @@
       id="contents"
       placeholder="Write or paste your code example here"
     ></textarea>
-    <button onclick="create()">Generate</button>
+    <div class="button-bar">
+      <button onclick="create()">Create</button>
+      <button onclick="revert()">Convert back</button>
+    </div>
 
-    <pre id="result"></pre>
+    <input type="text" id="result" />
 
     <script>
+      const textarea = document.getElementById("contents");
+
+      textarea.onkeydown = function (e) {
+        if (e.keyCode == 9 || e.which == 9) {
+          e.preventDefault();
+          const s = this.selectionStart;
+          this.value =
+            this.value.substring(0, this.selectionStart) +
+            "    " +
+            this.value.substring(this.selectionEnd);
+          this.selectionEnd = s + 4;
+        }
+      };
+
       function create() {
         let contents = document.getElementById("contents").value;
-        document.getElementById("result").innerText = JSON.stringify(contents);
+        document.getElementById("result").value = JSON.stringify(contents);
+      }
+
+      function revert() {
+        let result = document.getElementById("result").value;
+        document.getElementById("contents").value = JSON.parse(result);
       }
     </script>
   </body>
