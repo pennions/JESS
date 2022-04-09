@@ -1,11 +1,21 @@
 details {
+  position: relative;
   margin: 0 0.8rem;
+
   &:hover {
+    cursor: default;
+  }
+
+  &:not([open]):hover {
     cursor: pointer;
   }
 
-  &:not(.accordion) > summary {
-    display: table;
+  &:not(.accordion) {
+    display: inline-block;
+    white-space: nowrap;
+    & > summary {
+      display: table;
+    }
   }
 
   &.accordion {
@@ -19,9 +29,16 @@ details {
     padding: 0.5rem;
   }
 
-  & > div {
+  & > nav {
     position: absolute;
-    display: inline-flex;
-    flex-direction: column;
+    display: inline-block;
+    width: auto;
+    z-index: 1040;
+  }
+
+  &.align-right & {
+    > *:not(summary) {
+      right: 0;
+    }
   }
 }

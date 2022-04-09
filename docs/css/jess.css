@@ -1100,10 +1100,18 @@ dialog.modal[open="false"] {
   display: none;
 }
 details {
+  position: relative;
   margin: 0 0.8rem;
 }
 details:hover {
+  cursor: default;
+}
+details:not([open]):hover {
   cursor: pointer;
+}
+details:not(.accordion) {
+  display: inline-block;
+  white-space: nowrap;
 }
 details:not(.accordion) > summary {
   display: table;
@@ -1115,10 +1123,14 @@ details.accordion > div {
 details summary {
   padding: 0.5rem;
 }
-details > div {
+details > nav {
   position: absolute;
-  display: inline-flex;
-  flex-direction: column;
+  display: inline-block;
+  width: auto;
+  z-index: 1040;
+}
+details.align-right details > *:not(summary) {
+  right: 0;
 }
 ul > li {
   margin-left: 1.5rem;
@@ -1540,33 +1552,23 @@ details.accordion > div {
 details summary.button {
   border: 0.5px solid #605e5c;
 }
-details summary.button ~ div {
-  margin-top: 0.3rem;
-}
 details summary:hover {
   background-color: #e1dfdd;
-}
-details summary > .icon,
-details summary > .feather,
-details summary > img {
-  top: 0;
-  height: 100%;
-  width: 100%;
 }
 details summary:not(.button):focus {
   outline: none;
   border-color: #0078d4;
   box-shadow: inset 1px 1px 0 #0078d4, inset -1px -1px 0 #0078d4;
 }
-details[open]:not(details[open="false"]) > div {
+details[open]:not(details[open="false"]) > *:not(summary) {
   animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) both;
 }
-details > div {
+details > *:not(summary) {
   background-color: #fff;
   box-shadow: 0 6.4px 14.4px 0 rgba(0, 0, 0, 0.132), 0 1.2px 3.6px 0 rgba(0, 0, 0, 0.108);
 }
-details > div.align-right {
-  right: 0.8rem;
+details.align-right > *:not(summary) {
+  right: 0;
 }
 nav > details > summary {
   border: none;
@@ -1574,9 +1576,6 @@ nav > details > summary {
 nav > header *:last-child:not(hr) {
   border-bottom: 0.5px solid #d2d0ce;
   padding-bottom: 1.5rem;
-}
-*:not(body):not(aside) > nav {
-  box-shadow: none;
 }
 input,
 textarea {
@@ -1926,13 +1925,19 @@ textarea.underline:disabled:focus {
 .feather,
 .icon {
   position: relative;
-  width: 1.8rem;
-  height: 1.8rem;
+  width: 2.4rem;
+  height: 2.4rem;
   stroke: currentColor;
   stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  stroke-linecap: square;
+  stroke-linejoin: square;
   fill: none;
+}
+.feather.large,
+.icon.large {
+  width: 3.2rem;
+  height: 3.2rem;
+  stroke-width: 3;
 }
 html,
 body {

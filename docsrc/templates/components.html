@@ -34,9 +34,7 @@
             <a href="#switch">Switch</a>
           </li>
           <li>
-            <a href="#components" class="button normal full-width"
-              >Back to top</a
-            >
+            <a href="#components" class="button normal">Back to top</a>
           </li>
         </ul>
       </nav>
@@ -313,7 +311,7 @@
           the notification:
         </p>
         <dialog class="notification error" open>
-          <svg class="icon margin-right">
+          <svg class="icon margin-right small">
             <use href="./icons/feather-sprite.svg#alert-triangle" />
           </svg>
           <span>Error notification</span> <button class="close">X</button>
@@ -418,6 +416,87 @@
         <header>
           <h2>Dropdown</h2>
         </header>
+        <p>
+          There are two types of dropdown in JESS, the accordion and the
+          dropdown menu. Both use a
+        </p>
+        <p>
+          Both use a <code class="language-html">&lt;details&gt;</code> element,
+          with a nested
+          <code class="language-html">&lt;summary&gt;</code> followed by the
+          contents that should be visible on click. <br />
+          The contents inside the
+          <code class="language-html">&lt;summary&gt;</code> tag is the visible
+          part when it is closed.
+        </p>
+
+        <p>Default:</p>
+
+        <details>
+          <summary>Menu 1</summary>
+          <nav>
+            <ul>
+              <li><a href>Item one</a></li>
+              <li><a href>Item two</a></li>
+              <li><a href>Item three</a></li>
+              <li><a href>Item four</a></li>
+              <li><a href>Item five</a></li>
+            </ul>
+          </nav>
+        </details>
+
+        <p>
+          With the <code class="language-html">align-right</code> class it can
+          be used on the other side of the screen:
+        </p>
+
+        <details class="align-right">
+          <summary>Right side menu</summary>
+          <nav>
+            <ul>
+              <li><a href>Item one</a></li>
+              <li><a href>Item two</a></li>
+              <li><a href>Item three</a></li>
+              <li><a href>Item four</a></li>
+              <li><a href>Item five</a></li>
+            </ul>
+          </nav>
+        </details>
+
+        <p>Or with an icon:</p>
+
+        <details>
+          <summary>
+            <svg class="icon">
+              <use href="./icons/feather-sprite.svg#menu" />
+            </svg>
+          </summary>
+          <nav>
+            <ul>
+              <li><a href>Item one</a></li>
+              <li><a href>Item two</a></li>
+              <li><a href>Item three</a></li>
+              <li><a href>Item four</a></li>
+              <li><a href>Item five</a></li>
+            </ul>
+          </nav>
+        </details>
+
+        <p>With the <code class="language-html">accordion</code> class:</p>
+        <details class="accordion">
+          <summary>Lorum ipsum story</summary>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged.
+        </details>
+
+        <pre
+          class="border stretch margin-top"
+        ><code class="language-html full-width">{{! components_dropdowns }}</code></pre>
+
       </article>
 
       <article id="switch">
