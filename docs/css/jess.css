@@ -1106,6 +1106,9 @@ details {
 details:hover {
   cursor: default;
 }
+details > summary:hover {
+  cursor: pointer;
+}
 details:not([open]):hover {
   cursor: pointer;
 }
@@ -1549,11 +1552,12 @@ select:disabled {
 details.accordion > div {
   box-shadow: none;
 }
+details > summary:hover {
+  cursor: pointer;
+  background-color: #e1dfdd;
+}
 details.button summary {
   border: 0.5px solid #8a8886;
-}
-details.button:hover {
-  background-color: #e1dfdd;
 }
 details:not(.button):focus {
   outline: none;

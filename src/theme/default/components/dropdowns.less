@@ -25,13 +25,14 @@ details {
     }
   }
 
+  & > summary:hover {
+    cursor: pointer;
+    background-color: @default-button-hover;
+  }
+
   &.button {
     summary {
       .border();
-    }
-
-    &:hover {
-      background-color: @default-button-hover;
     }
   }
   &:not(.button):focus {
