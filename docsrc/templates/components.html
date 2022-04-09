@@ -1,10 +1,11 @@
 <!--dev-->
-<link rel="stylesheet" href="../css/prism.css" />
-<link rel="stylesheet" href="../css/documentation.css" />
-<link rel="stylesheet/less" type="text/css" href="../../../src/jess.less" />
-<script src="../js/prism.js" type="text/javascript"></script>
+<base href="../" />
+<link rel="stylesheet" href="css/prism.css" />
+<link rel="stylesheet" href="css/documentation.css" />
+<link rel="stylesheet/less" type="text/css" href="../../src/jess.less" />
+<script src="js/prism.js" type="text/javascript"></script>
 <script
-  src="../../../node_modules/less/dist/less.min.js"
+  src="../../node_modules/less/dist/less.min.js"
   type="text/javascript"
 ></script>
 <!--end-->
@@ -18,13 +19,13 @@
             <a href="#card">Card</a>
           </li>
           <li>
+            <a href="#notification">Notification</a>
+          </li>
+          <li>
             <a href="#modal">Modal</a>
           </li>
           <li>
             <a href="#breadcrumb">Breadcrumb</a>
-          </li>
-          <li>
-            <a href="#notification">Notification</a>
           </li>
           <li>
             <a href="#dropdown">Dropdown</a>
@@ -298,14 +299,24 @@
         <dialog class="notification" open>
           <span>Default notification</span> <button class="close">X</button>
         </dialog>
+
         <dialog class="notification warning" open>
           <span>Warning notification</span> <button class="close">X</button>
         </dialog>
-        <dialog class="notification error" open>
-          <span>Error notification</span> <button class="close">X</button>
-        </dialog>
+
         <dialog class="notification success" open>
           <span>Success notification</span> <button class="close">X</button>
+        </dialog>
+
+        <p>
+          If you add a feather icon, it will have a contrasting color, matching
+          the notification:
+        </p>
+        <dialog class="notification error" open>
+          <svg class="icon margin-right">
+            <use href="./icons/feather-sprite.svg#alert-triangle" />
+          </svg>
+          <span>Error notification</span> <button class="close">X</button>
         </dialog>
 
         <pre

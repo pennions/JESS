@@ -5,9 +5,11 @@ dialog.notification {
   z-index: 1040;
   position: sticky;
   position: --webkit-sticky;
-  padding: @default-distance;
+  padding: calc(@default-distance / 3);
+  padding-left: @default-distance;
   min-height: @nav-min-height;
   display: flex;
+  align-items: center;
 
   & > .close {
     margin-left: auto;

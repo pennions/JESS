@@ -19,13 +19,13 @@
             <a href="#card">Card</a>
           </li>
           <li>
+            <a href="#notification">Notification</a>
+          </li>
+          <li>
             <a href="#modal">Modal</a>
           </li>
           <li>
             <a href="#breadcrumb">Breadcrumb</a>
-          </li>
-          <li>
-            <a href="#notification">Notification</a>
           </li>
           <li>
             <a href="#dropdown">Dropdown</a>
@@ -320,14 +320,21 @@
         <dialog class="notification" open>
           <span>Default notification</span> <button class="close">X</button>
         </dialog>
+
         <dialog class="notification warning" open>
           <span>Warning notification</span> <button class="close">X</button>
         </dialog>
-        <dialog class="notification error" open>
-          <span>Error notification</span> <button class="close">X</button>
-        </dialog>
+
         <dialog class="notification success" open>
           <span>Success notification</span> <button class="close">X</button>
+        </dialog>
+
+        <p>If you add a feather icon, it will have a contrasting color, matching the notification:</p>
+        <dialog class="notification error" open>
+          <svg class="icon margin-right">
+            <use href="./icons/feather-sprite.svg#alert-triangle" />
+          </svg>
+          <span>Error notification</span> <button class="close">X</button>
         </dialog>
 
         <pre
@@ -342,14 +349,16 @@
     &lt;button class=&quot;close&quot;&gt;X&lt;/button&gt;
 &lt;/dialog&gt;
 
-&lt;dialog class=&quot;notification error&quot; open&gt;
-    &lt;span&gt;Error notification&lt;/span&gt;
-    &lt;button class=&quot;close&quot;&gt;X&lt;/button&gt;
-&lt;/dialog&gt;
-
 &lt;dialog class=&quot;notification success&quot; open&gt;
     &lt;span&gt;Success notification&lt;/span&gt;
     &lt;button class=&quot;close&quot;&gt;X&lt;/button&gt;
+&lt;/dialog&gt;
+
+&lt;dialog class=&quot;notification error&quot; open&gt;
+    &lt;svg class=&quot;icon margin-right&quot;&gt;
+      &lt;use href=&quot;./icons/feather-sprite.svg#alert-triangle&quot; /&gt;
+    &lt;/svg&gt;
+    &lt;span&gt;Error notification&lt;/span&gt; &lt;button class=&quot;close&quot;&gt;X&lt;/button&gt;
 &lt;/dialog&gt;</code></pre>
       </article>
 
