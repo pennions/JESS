@@ -25,20 +25,19 @@ details {
     }
   }
 
-  summary {
-    &.button {
-      border: 0.5px solid @input-border-color;
+  &.button {
+    summary {
+      .border();
     }
 
     &:hover {
       background-color: @default-button-hover;
     }
-
-    &:not(.button):focus {
-      outline: none;
-      border-color: @primary;
-      box-shadow: inset 1px 1px 0 @primary, inset -1px -1px 0 @primary;
-    }
+  }
+  &:not(.button):focus {
+    outline: none;
+    border-color: @primary;
+    box-shadow: inset 1px 1px 0 @primary, inset -1px -1px 0 @primary;
   }
 
   &[open]:not(details[open="false"]) {

@@ -1549,13 +1549,13 @@ select:disabled {
 details.accordion > div {
   box-shadow: none;
 }
-details summary.button {
-  border: 0.5px solid #605e5c;
+details.button summary {
+  border: 0.5px solid #8a8886;
 }
-details summary:hover {
+details.button:hover {
   background-color: #e1dfdd;
 }
-details summary:not(.button):focus {
+details:not(.button):focus {
   outline: none;
   border-color: #0078d4;
   box-shadow: inset 1px 1px 0 #0078d4, inset -1px -1px 0 #0078d4;
