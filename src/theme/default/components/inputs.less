@@ -278,3 +278,32 @@ textarea {
     }
   }
 }
+
+.custom-input {
+  .checkmark {
+    border-color: @input-border-color;
+    background-color: @default-background;
+  }
+
+  input:checked ~ .checkmark {
+    background-color: @primary;
+    border-color: @primary;
+  }
+
+  input:not(:checked):focus ~ .checkmark {
+    border-color: @primary-hover;
+  }
+
+  &:hover > input:not(:checked) ~ .checkmark:after {
+    border-color: @input-border-color;
+  }
+
+  &:hover > input:checked ~ .checkmark {
+    background-color: @primary-hover;
+    border-color: @primary-hover;
+  }
+
+  .checkmark:after {
+    border-color: @color-on-primary;
+  }
+}

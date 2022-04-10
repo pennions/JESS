@@ -324,50 +324,50 @@ select {
   overflow: hidden;
 }
 .margin-top {
-  margin-top: 1.5rem;
+  margin-top: 1.5rem !important;
 }
 .margin-left {
-  margin-left: 1.5rem;
+  margin-left: 1.5rem !important;
 }
 .margin-right {
-  margin-right: 1.5rem;
+  margin-right: 1.5rem !important;
 }
 .margin-bottom {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem !important;
 }
 .margin-x {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+  margin-left: 1.5rem !important;
+  margin-right: 1.5rem !important;
 }
 .margin-y {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
 }
 .margin {
-  margin: 1.5rem;
+  margin: 1.5rem !important;
 }
 .padding-top {
-  padding-top: 1.5rem;
+  padding-top: 1.5rem !important;
 }
 .padding-left {
-  padding-left: 1.5rem;
+  padding-left: 1.5rem !important;
 }
 .padding-right {
-  padding-right: 1.5rem;
+  padding-right: 1.5rem !important;
 }
 .padding-bottom {
-  padding-bottom: 1.5rem;
+  padding-bottom: 1.5rem !important;
 }
 .padding-x {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
 }
 .padding-y {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
 }
 .padding {
-  padding: 1.5rem;
+  padding: 1.5rem !important;
 }
 /**
  *  The <main> HTML element represents the dominant content of the <body> of a document. 
@@ -1229,6 +1229,58 @@ label.switch:hover {
   cursor: pointer;
   opacity: 0.8;
 }
+.custom-input {
+  display: inline-block;
+  padding-left: 2.5rem;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.custom-input input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.custom-input .checkmark {
+  position: absolute;
+  top: 0.5rem;
+  left: 0;
+  height: 1.7rem;
+  width: 1.7rem;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 2px;
+}
+.custom-input .checkmark:after {
+  content: "";
+  position: absolute;
+  display: block;
+}
+.custom-input input:checked ~ .checkmark:after {
+  display: block;
+}
+.custom-input:hover > input:not(:checked) ~ .checkmark:after {
+  display: block;
+}
+.custom-input:hover > input:checked ~ .checkmark {
+  display: block;
+}
+.custom-input .checkmark:after {
+  left: 0.5rem;
+  top: 0.1rem;
+  width: 0.6rem;
+  height: 1rem;
+  border-style: solid;
+  border-width: 0 0.2rem 0.2rem 0;
+  -webkit-transform: rotate(42deg);
+  -ms-transform: rotate(42deg);
+  transform: rotate(42deg);
+}
 nav {
   background-color: #fff;
   box-shadow: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132), 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108);
@@ -1617,6 +1669,9 @@ nav[aria-label="Breadcrumb"] ul > li:not(:last-child)::after {
 nav[aria-label="Breadcrumb"] ul a[aria-current="page"] {
   color: #0078d4;
 }
+article > nav {
+  box-shadow: none;
+}
 input,
 textarea {
   border: 0.5px solid #605e5c;
@@ -1961,6 +2016,27 @@ textarea.underline:disabled:hover,
 input.underline:disabled:focus,
 textarea.underline:disabled:focus {
   border-color: #f3f2f1;
+}
+.custom-input .checkmark {
+  border-color: #605e5c;
+  background-color: #fff;
+}
+.custom-input input:checked ~ .checkmark {
+  background-color: #0078d4;
+  border-color: #0078d4;
+}
+.custom-input input:not(:checked):focus ~ .checkmark {
+  border-color: #0068b8;
+}
+.custom-input:hover > input:not(:checked) ~ .checkmark:after {
+  border-color: #605e5c;
+}
+.custom-input:hover > input:checked ~ .checkmark {
+  background-color: #0068b8;
+  border-color: #0068b8;
+}
+.custom-input .checkmark:after {
+  border-color: #fff;
 }
 .feather,
 .icon {
