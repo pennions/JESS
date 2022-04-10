@@ -700,6 +700,20 @@ nav > ul li {
 nav > ul li:not(:last-child) {
   margin-bottom: 1.5rem;
 }
+nav[aria-label="Breadcrumb"] {
+  padding: 0;
+}
+nav[aria-label="Breadcrumb"] ul {
+  display: flex;
+}
+nav[aria-label="Breadcrumb"] ul > li {
+  margin: 0;
+}
+nav[aria-label="Breadcrumb"] ul > li:not(:last-child)::after {
+  content: "/";
+  position: relative;
+  margin: 0 0.5rem;
+}
 aside {
   margin: 1.5rem 0;
 }
@@ -1101,7 +1115,6 @@ dialog.modal[open="false"] {
 }
 details {
   position: relative;
-  margin: 0 0.8rem;
 }
 details:hover {
   cursor: default;
@@ -1119,10 +1132,6 @@ details:not(.accordion) {
 details:not(.accordion) > summary {
   display: table;
 }
-details.accordion > div {
-  position: relative;
-  margin: 0.5rem;
-}
 details summary {
   padding: 0.5rem;
 }
@@ -1132,7 +1141,7 @@ details > nav {
   width: auto;
   z-index: 1040;
 }
-details.align-right details > *:not(summary) {
+details.align-right > *:not(summary) {
   right: 0;
 }
 ul > li {
@@ -1549,9 +1558,6 @@ select:disabled {
   box-shadow: none;
   cursor: initial;
 }
-details.accordion > div {
-  box-shadow: none;
-}
 details > summary:hover {
   cursor: pointer;
   background-color: #e1dfdd;
@@ -1559,27 +1565,24 @@ details > summary:hover {
 details.button summary {
   border: 0.5px solid #8a8886;
 }
-details:not(.button):focus {
-  outline: none;
-  border-color: #0078d4;
-  box-shadow: inset 1px 1px 0 #0078d4, inset -1px -1px 0 #0078d4;
-}
 details[open]:not(details[open="false"]) > *:not(summary) {
   animation: ms-motion-slideDownIn 100ms cubic-bezier(0.1, 0.9, 0.2, 1) both, ms-motion-fadeIn 100ms cubic-bezier(0, 0, 1, 1) both;
-}
-details > *:not(summary) {
-  background-color: #fff;
-  box-shadow: 0 6.4px 14.4px 0 rgba(0, 0, 0, 0.132), 0 1.2px 3.6px 0 rgba(0, 0, 0, 0.108);
-}
-details.align-right > *:not(summary) {
-  right: 0;
-}
-nav > details > summary {
-  border: none;
 }
 nav > header *:last-child:not(hr) {
   border-bottom: 0.5px solid #d2d0ce;
   padding-bottom: 1.5rem;
+}
+nav[aria-label="Breadcrumb"] {
+  box-shadow: none;
+}
+nav[aria-label="Breadcrumb"] ul > li > * {
+  color: #323130;
+}
+nav[aria-label="Breadcrumb"] ul > li:not(:last-child)::after {
+  color: #323130;
+}
+nav[aria-label="Breadcrumb"] ul a[aria-current="page"] {
+  color: #0078d4;
 }
 input,
 textarea {

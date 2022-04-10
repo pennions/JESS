@@ -5,4 +5,23 @@ nav {
       padding-bottom: @default-distance;
     }
   }
+
+  &[aria-label="Breadcrumb"] {
+    box-shadow: none;
+    & ul {
+      & > li {
+        & > * {
+          color: @default-font-color;
+        }
+
+        &:not(:last-child)::after {
+          color: @default-font-color;
+        }
+      }
+
+      & a[aria-current="page"] {
+        color: @primary;
+      }
+    }
+  }
 }
