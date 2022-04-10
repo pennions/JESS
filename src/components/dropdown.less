@@ -1,6 +1,5 @@
 details {
   position: relative;
-  margin: 0 0.8rem;
 
   &:hover {
     cursor: default;
@@ -22,13 +21,6 @@ details {
     }
   }
 
-  &.accordion {
-    & > div {
-      position: relative;
-      margin: 0.5rem;
-    }
-  }
-
   summary {
     padding: 0.5rem;
   }
@@ -40,8 +32,8 @@ details {
     z-index: 1040;
   }
 
-  &.align-right & {
-    > *:not(summary) {
+  &.align-right {
+    & > *:not(summary) {
       right: 0;
     }
   }

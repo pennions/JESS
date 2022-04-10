@@ -19,12 +19,6 @@ select {
 }
 
 details {
-  &.accordion {
-    & > div {
-      box-shadow: none;
-    }
-  }
-
   & > summary:hover {
     cursor: pointer;
     background-color: @default-button-hover;
@@ -35,32 +29,10 @@ details {
       .border();
     }
   }
-  &:not(.button):focus {
-    outline: none;
-    border-color: @primary;
-    box-shadow: inset 1px 1px 0 @primary, inset -1px -1px 0 @primary;
-  }
 
   &[open]:not(details[open="false"]) {
     & > *:not(summary) {
       .ms-motion-slideDownIn();
     }
-  }
-
-  & > *:not(summary) {
-    background-color: @default-background;
-
-    box-shadow: 0 6.4px 14.4px 0 rgba(@shadow-color, 0.132),
-      0 1.2px 3.6px 0 rgba(@shadow-color, 0.108);
-  }
-
-  &.align-right > *:not(summary) {
-    right: 0;
-  }
-}
-
-nav > details {
-  & > summary {
-    border: none;
   }
 }
