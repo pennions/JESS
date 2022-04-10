@@ -1260,77 +1260,110 @@ dialog.modal[open]:not(dialog.modal[open="false"]).transparent {
 dialog.modal[open]:not(dialog.modal[open="false"]) > * {
   background-color: #fff;
 }
-article {
+article,
+.card {
   border-radius: 2px;
 }
-article:not(.flip) {
+article:not(.flip),
+.card:not(.flip) {
   background-color: #fff;
 }
-article header {
+article header,
+.card header {
   border-bottom: 0.5px solid #d2d0ce;
 }
-article footer {
+article footer,
+.card footer {
   border-top: 0.5px solid #d2d0ce;
 }
-article:not(.flip) {
+article:not(.flip),
+.card:not(.flip) {
   box-shadow: 0 6.4px 14.4px 0 rgba(0, 0, 0, 0.132), 0 1.2px 3.6px 0 rgba(0, 0, 0, 0.108);
 }
-article > [tabindex="0"] section footer {
+article > [tabindex="0"] section footer,
+.card > [tabindex="0"] section footer {
   box-shadow: none;
 }
 article.primary,
+.card.primary,
 article.accent,
-article.danger {
+.card.accent,
+article.danger,
+.card.danger {
   border-radius: 2px;
 }
 article.primary header,
+.card.primary header,
 article.accent header,
-article.danger header {
+.card.accent header,
+article.danger header,
+.card.danger header {
   border-radius: 2px;
 }
 article.primary footer,
+.card.primary footer,
 article.accent footer,
-article.danger footer {
+.card.accent footer,
+article.danger footer,
+.card.danger footer {
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
 }
 article.primary.inverse footer,
+.card.primary.inverse footer,
 article.accent.inverse footer,
-article.danger.inverse footer {
+.card.accent.inverse footer,
+article.danger.inverse footer,
+.card.danger.inverse footer {
   border: none;
 }
 article.primary.inverse.primary footer,
+.card.primary.inverse.primary footer,
 article.accent.inverse.primary footer,
-article.danger.inverse.primary footer {
+.card.accent.inverse.primary footer,
+article.danger.inverse.primary footer,
+.card.danger.inverse.primary footer {
   background-color: #0078d4;
   color: #fff;
 }
 article.primary.inverse.accent footer,
+.card.primary.inverse.accent footer,
 article.accent.inverse.accent footer,
-article.danger.inverse.accent footer {
+.card.accent.inverse.accent footer,
+article.danger.inverse.accent footer,
+.card.danger.inverse.accent footer {
   background-color: #fce100;
   color: #000;
 }
 article.primary.inverse.danger footer,
+.card.primary.inverse.danger footer,
 article.accent.inverse.danger footer,
-article.danger.inverse.danger footer {
+.card.accent.inverse.danger footer,
+article.danger.inverse.danger footer,
+.card.danger.inverse.danger footer {
   background-color: #d13438;
   color: #fff;
 }
 article:not(.inverse).primary header,
+.card:not(.inverse).primary header,
 article:not(.inverse).accent header,
-article:not(.inverse).danger header {
+.card:not(.inverse).accent header,
+article:not(.inverse).danger header,
+.card:not(.inverse).danger header {
   border: none;
 }
-article:not(.inverse).primary header {
+article:not(.inverse).primary header,
+.card:not(.inverse).primary header {
   background-color: #0078d4;
   color: #fff;
 }
-article:not(.inverse).accent header {
+article:not(.inverse).accent header,
+.card:not(.inverse).accent header {
   background-color: #fce100;
   color: #000;
 }
-article:not(.inverse).danger header {
+article:not(.inverse).danger header,
+.card:not(.inverse).danger header {
   background-color: #d13438;
   color: #fff;
 }
