@@ -303,6 +303,10 @@ textarea {
     border-color: @primary-hover;
   }
 
+  input[type="radio"]:not(:checked) ~ .checkmark {
+   border-color: #000; // compensate for border-radius
+  }
+
   .checkmark:after {
     border-color: @color-on-primary;
   }
