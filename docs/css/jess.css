@@ -1269,7 +1269,7 @@ label.switch:hover {
 }
 .custom-input input[type="radio"] ~ .checkmark {
   position: absolute;
-  top: 0.5rem;
+  top: 0.4rem;
   left: 0;
   height: 1.8rem;
   width: 1.8rem;
@@ -1277,21 +1277,24 @@ label.switch:hover {
   border-width: 1px;
   border-radius: 50%;
 }
-.custom-input input[type="radio"] ~ .checkmark:after {
-  left: 0.4rem;
-  top: 0.4rem;
-  width: 0.4rem;
-  height: 0.4rem;
-  border-style: solid;
-  border-width: 0.4rem;
-  border-radius: 50%;
+.custom-input input[type="radio"]:checked ~ .checkmark,
+.custom-input:hover > input[type="radio"] ~ .checkmark {
+  border-width: 0.5rem;
+}
+.custom-input input:focus ~ .checkmark {
+  outline-width: 1px;
+  outline-style: dashed;
+  outline-offset: 1px;
+}
+.custom-input input:not(:checked):focus ~ .checkmark {
+  border-color: #0068b8;
 }
 .custom-input .checkmark:after {
   content: "";
   position: absolute;
   display: block;
 }
-.custom-input input:checked ~ .checkmark:after {
+.custom-input input:not[type="radio"]:checked ~ .checkmark:after {
   display: block;
 }
 .custom-input:hover > input:not(:checked) ~ .checkmark:after {
@@ -2044,9 +2047,6 @@ textarea.underline:disabled:focus {
   background-color: #0078d4;
   border-color: #0078d4;
 }
-.custom-input input:not(:checked):focus ~ .checkmark {
-  border-color: #0068b8;
-}
 .custom-input:hover > input:not(:checked) ~ .checkmark:after {
   border-color: #605e5c;
 }
@@ -2056,6 +2056,16 @@ textarea.underline:disabled:focus {
 }
 .custom-input input[type="radio"]:not(:checked) ~ .checkmark {
   border-color: #000;
+}
+.custom-input input[type="radio"]:checked ~ .checkmark {
+  background-color: #fff;
+  border-color: #0078d4;
+}
+.custom-input:hover > input[type="radio"]:not(:checked) ~ .checkmark {
+  border-color: #605e5c;
+}
+.custom-input input[type="radio"]:focus ~ .checkmark {
+  outline-color: #605e5c;
 }
 .custom-input .checkmark:after {
   border-color: #fff;

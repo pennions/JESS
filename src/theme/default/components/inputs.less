@@ -290,10 +290,6 @@ textarea {
     border-color: @primary;
   }
 
-  input:not(:checked):focus ~ .checkmark {
-    border-color: @primary-hover;
-  }
-
   &:hover > input:not(:checked) ~ .checkmark:after {
     border-color: @input-border-color;
   }
@@ -314,6 +310,10 @@ textarea {
 
   &:hover > input[type="radio"]:not(:checked) ~ .checkmark {
     border-color: @input-border-color;
+  }
+
+ input[type="radio"]:focus ~ .checkmark {
+   outline-color: @input-border-color;
   }
 
   .checkmark:after {
