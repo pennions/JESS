@@ -304,7 +304,16 @@ textarea {
   }
 
   input[type="radio"]:not(:checked) ~ .checkmark {
-   border-color: #000; // compensate for border-radius
+    border-color: #000; // compensate for border-radius
+  }
+
+  input[type="radio"]:checked ~ .checkmark {
+    background-color: @default-background;
+    border-color: @primary;
+  }
+
+  &:hover > input[type="radio"]:not(:checked) ~ .checkmark {
+    border-color: @input-border-color;
   }
 
   .checkmark:after {
