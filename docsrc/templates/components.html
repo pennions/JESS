@@ -34,7 +34,9 @@
             <a href="#custom-inputs">Custom inputs</a>
           </li>
           <li>
-            <a href="#components" class="button normal standard-only">Back to top</a>
+            <a href="#components" class="button normal standard-only"
+              >Back to top</a
+            >
           </li>
         </ul>
       </nav>
@@ -549,6 +551,14 @@
           <span class="checkmark"></span>
         </label>
 
+        <p>Or with the <code class="language-html">label-left</code> class:</p>
+
+        <label class="custom-input label-left">
+          Custom checkbox with the label on the left.
+          <input type="checkbox" checked="checked" />
+          <span class="checkmark"></span>
+        </label>
+
         <pre
           class="border full-width stretch margin-top"
         ><code class="language-html full-width">{{! components_checkbox }}</code></pre>
@@ -559,12 +569,20 @@
 
         <label class="custom-input">
           Custom radiobutton with full color control.
-          <input type="radio" name="custom"/>
+          <input type="radio" name="custom" />
           <span class="checkmark"></span>
         </label>
 
         <label class="custom-input margin-left">
           Unchecked version.
+          <input type="radio" name="custom" />
+          <span class="checkmark"></span>
+        </label>
+
+        <p>Or with the <code class="language-html">label-left</code> class:</p>
+
+        <label class="custom-input label-left">
+          Custom radiobutton with label on the left.
           <input type="radio" name="custom" />
           <span class="checkmark"></span>
         </label>

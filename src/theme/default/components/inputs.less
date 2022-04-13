@@ -299,9 +299,9 @@ textarea {
     border-color: @primary-hover;
   }
 
-  input[type="radio"]:not(:checked) ~ .checkmark {
-    border-color: #000; // compensate for border-radius
-  }
+  // input[type="radio"]:not(:checked) ~ .checkmark {
+  //   border-color: @button-outline-color;
+  // }
 
   input[type="radio"]:checked ~ .checkmark {
     background-color: @default-background;
@@ -312,8 +312,8 @@ textarea {
     border-color: @input-border-color;
   }
 
- input[type="radio"]:focus ~ .checkmark {
-   outline-color: @input-border-color;
+  input[type="radio"]:focus ~ .checkmark {
+    outline-color: @input-border-color;
   }
 
   .checkmark:after {

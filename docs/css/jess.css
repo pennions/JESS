@@ -1315,6 +1315,14 @@ label.switch:hover {
 .custom-input:hover > input:checked ~ .checkmark {
   display: block;
 }
+.custom-input.label-left {
+  padding-left: unset;
+  padding-right: 2.5rem;
+}
+.custom-input.label-left input ~ .checkmark {
+  left: unset;
+  right: 0;
+}
 nav {
   background-color: #fff;
   box-shadow: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132), 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108);
@@ -2065,9 +2073,6 @@ textarea.underline:disabled:focus {
 .custom-input:hover > input:checked ~ .checkmark {
   background-color: #0068b8;
   border-color: #0068b8;
-}
-.custom-input input[type="radio"]:not(:checked) ~ .checkmark {
-  border-color: #000;
 }
 .custom-input input[type="radio"]:checked ~ .checkmark {
   background-color: #fff;

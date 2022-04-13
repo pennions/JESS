@@ -34,7 +34,9 @@
             <a href="#custom-inputs">Custom inputs</a>
           </li>
           <li>
-            <a href="#components" class="button normal standard-only">Back to top</a>
+            <a href="#components" class="button normal standard-only"
+              >Back to top</a
+            >
           </li>
         </ul>
       </nav>
@@ -712,6 +714,14 @@
           <span class="checkmark"></span>
         </label>
 
+        <p>Or with the <code class="language-html">label-left</code> class:</p>
+
+        <label class="custom-input label-left">
+          Custom checkbox with the label on the left.
+          <input type="checkbox" checked="checked" />
+          <span class="checkmark"></span>
+        </label>
+
         <pre
           class="border full-width stretch margin-top"
         ><code class="language-html full-width">&lt;label class=&quot;custom-input&quot;&gt;
@@ -724,6 +734,12 @@
   Unchecked version.
   &lt;input type=&quot;checkbox&quot; /&gt;
   &lt;span class=&quot;checkmark&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;label class=&quot;custom-input label-left&quot;&gt;
+  Custom checkbox with the label on the left.
+  &lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot; /&gt;
+  &lt;span class=&quot;checkmark&quot;&gt;&lt;/span&gt;
 &lt;/label&gt;</code></pre>
         <br />
 
@@ -732,12 +748,20 @@
 
         <label class="custom-input">
           Custom radiobutton with full color control.
-          <input type="radio" name="custom"/>
+          <input type="radio" name="custom" />
           <span class="checkmark"></span>
         </label>
 
         <label class="custom-input margin-left">
           Unchecked version.
+          <input type="radio" name="custom" />
+          <span class="checkmark"></span>
+        </label>
+
+        <p>Or with the <code class="language-html">label-left</code> class:</p>
+
+        <label class="custom-input label-left">
+          Custom radiobutton with label on the left.
           <input type="radio" name="custom" />
           <span class="checkmark"></span>
         </label>
@@ -752,6 +776,12 @@
 
 &lt;label class=&quot;custom-input margin-left&quot;&gt;
   Unchecked version.
+  &lt;input type=&quot;radio&quot; name=&quot;custom&quot; /&gt;
+  &lt;span class=&quot;checkmark&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;
+
+&lt;label class=&quot;custom-input label-left&quot;&gt;
+  Custom radiobutton with label on the left.
   &lt;input type=&quot;radio&quot; name=&quot;custom&quot; /&gt;
   &lt;span class=&quot;checkmark&quot;&gt;&lt;/span&gt;
 &lt;/label&gt;</code></pre>
