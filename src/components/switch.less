@@ -26,6 +26,12 @@ label.switch {
   }
 
   & input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+
     & ~ .toggle-background[data-label]::before {
       position: absolute;
       left: 4.5rem;
@@ -54,6 +60,12 @@ label.switch {
 
     &:checked ~ .toggle-background:not([data-label-on])::before {
       content: "";
+    }
+
+    &:focus ~ .toggle-background {
+      outline-width: 1px;
+      outline-style: dashed;
+      outline-offset: 1px;
     }
   }
 

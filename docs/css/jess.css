@@ -1172,6 +1172,13 @@ label.switch input:checked ~ .toggle {
   border: none;
   z-index: 20;
 }
+label.switch input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
 label.switch input ~ .toggle-background[data-label]::before {
   position: absolute;
   left: 4.5rem;
@@ -1194,6 +1201,11 @@ label.switch input:checked ~ .toggle-background[data-label-on]::before {
 }
 label.switch input:checked ~ .toggle-background:not([data-label-on])::before {
   content: "";
+}
+label.switch input:focus ~ .toggle-background {
+  outline-width: 1px;
+  outline-style: dashed;
+  outline-offset: 1px;
 }
 label.switch input ~ .toggle-background {
   display: block;
