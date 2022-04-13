@@ -282,15 +282,26 @@ textarea {
 .custom-input {
   .checkmark {
     border-color: @input-border-color;
-    background-color: @default-background;
+    background-color: transparent;
   }
 
   input:checked ~ .checkmark {
     background-color: @primary;
     border-color: @primary;
   }
+  input[disabled=""] ~ .checkmark,
+  input[disabled="true"] ~ .checkmark {
+    background-color: @disabled-button-background;
+    border-color: @disabled-button-color;
 
-  &:hover > input:not(:checked) ~ .checkmark:after {
+    &::after {
+      border-color: @disabled-button-background;
+    }
+  }
+
+  &:hover
+    > input:not(:checked):not([disabled=""]):not([disabled="true"])
+    ~ .checkmark:after {
     border-color: @input-border-color;
   }
 
@@ -302,10 +313,6 @@ textarea {
   input[type="radio"]:checked ~ .checkmark {
     background-color: @default-background;
     border-color: @primary;
-  }
-
-  &:hover > input[type="radio"]:not(:checked) ~ .checkmark {
-    border-color: @input-border-color;
   }
 
   input[type="radio"]:focus ~ .checkmark {

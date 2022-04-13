@@ -51,7 +51,8 @@
   }
 
   input[type="radio"]:checked,
-  &:hover > input[type="radio"] {
+  &:hover
+    > input[type="radio"]:not(:checked):not([disabled=""]):not([disabled="true"]) {
     & ~ .checkmark {
       border-width: 0.5rem;
     }
@@ -70,18 +71,6 @@
   .checkmark:after {
     content: "";
     position: absolute;
-    display: block;
-  }
-
-  input:not[type="radio"]:checked ~ .checkmark:after {
-    display: block;
-  }
-
-  &:hover > input:not(:checked) ~ .checkmark:after {
-    display: block;
-  }
-
-  &:hover > input:checked ~ .checkmark {
     display: block;
   }
 
