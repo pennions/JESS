@@ -1241,6 +1241,14 @@ label.switch:hover {
   cursor: pointer;
   opacity: 0.8;
 }
+table {
+  border-collapse: collapse;
+}
+table td,
+table th {
+  text-align: left;
+  padding: calc(1.5rem / 3) calc(1.5rem * 2) calc(1.5rem / 3) calc(1.5rem / 2);
+}
 .custom-input {
   display: inline-block;
   padding-left: 2.5rem;
@@ -1297,9 +1305,6 @@ label.switch:hover {
   outline-width: 1px;
   outline-style: dashed;
   outline-offset: 1px;
-}
-.custom-input input:not(:checked):focus ~ .checkmark {
-  border-color: #0068b8;
 }
 .custom-input .checkmark:after {
   content: "";
@@ -2319,6 +2324,29 @@ dialog.notification > .close {
 }
 dialog.notification > .close:hover {
   outline: 0.5px solid #000;
+}
+table.table td,
+table.table th {
+  padding: calc(1.5rem / 3) calc(1.5rem * 2) calc(1.5rem / 3) calc(1.5rem / 2);
+}
+table.table td > button,
+table.table th > button {
+  border: none;
+  padding: 0.5rem;
+  margin-left: -0.5rem;
+}
+table.table thead {
+  border-bottom: 0.5px solid #8a8886;
+}
+table.table tbody tr {
+  border-bottom: 0.5px solid #8a8886;
+}
+table.table tbody tr:hover {
+  background-color: #e1dfdd;
+}
+table.table tfoot {
+  font-size: small;
+  font-style: italic;
 }
 .border {
   border: 0.5px solid #8a8886;

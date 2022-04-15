@@ -40,7 +40,9 @@
             <a href="#table">Table</a>
           </li>
           <li>
-            <a href="#elements" class="button normal standard-only">Back to top</a>
+            <a href="#elements" class="button normal standard-only"
+              >Back to top</a
+            >
           </li>
         </ul>
       </nav>
@@ -150,7 +152,9 @@
           <input type="checkbox" />
           <input type="radio" />
 
-          <a href="/components.html#custom-input">Click here for custom inputs for checkbox and radiobutton.</a>
+          <a href="/components.html#custom-input"
+            >Click here for custom inputs for checkbox and radiobutton.</a
+          >
 
           <pre
             class="border full-width stretch"
@@ -215,7 +219,7 @@
               </tr>
               <tr>
                 <td class="padding-right">Range</td>
-                <td><input type="range" /></td>
+                <td><input type="range" class="w-100" /></td>
               </tr>
               <tr>
                 <td class="padding-right">Tel (Phonenumber)</td>
@@ -495,7 +499,139 @@
         <header>
           <h1>Table</h1>
         </header>
-        <p>TODO</p>
+        <p>A table with the <code class="language-html">table</code> class.</p>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Column header 1</th>
+              <th>Column header 2</th>
+              <th>Column header 3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>A</td>
+              <td>B</td>
+              <td>C</td>
+            </tr>
+            <tr>
+              <td>D</td>
+              <td>E</td>
+              <td>F</td>
+            </tr>
+            <tr>
+              <td>G</td>
+              <td>H</td>
+              <td>I</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3">Table footer with colspan 3</td>
+            </tr>
+          </tfoot>
+        </table>
+
+        <p>With a button in the header to make it sortable for example:</p>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th><button>Column clickable 1</button></th>
+              <th><button>Column clickable 2</button></th>
+              <th><button>Column clickable 3</button></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>A</td>
+              <td>B</td>
+              <td>C</td>
+            </tr>
+            <tr>
+              <td>D</td>
+              <td>E</td>
+              <td>F</td>
+            </tr>
+            <tr>
+              <td>G</td>
+              <td>H</td>
+              <td>I</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3">Table footer with colspan 3</td>
+            </tr>
+          </tfoot>
+        </table>
+
+        <pre
+        class="border"
+      ><code class="language-html">&lt;table class=&quot;table&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Column header 1&lt;/th&gt;
+      &lt;th&gt;Column header 2&lt;/th&gt;
+      &lt;th&gt;Column header 3&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;A&lt;/td&gt;
+      &lt;td&gt;B&lt;/td&gt;
+      &lt;td&gt;C&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;D&lt;/td&gt;
+      &lt;td&gt;E&lt;/td&gt;
+      &lt;td&gt;F&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;G&lt;/td&gt;
+      &lt;td&gt;H&lt;/td&gt;
+      &lt;td&gt;I&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;td colspan=&quot;3&quot;&gt;Table footer with colspan 3&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;
+
+&lt;table class=&quot;table&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;&lt;button&gt;Column clickable 1&lt;/button&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;button&gt;Column clickable 2&lt;/button&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;button&gt;Column clickable 3&lt;/button&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;A&lt;/td&gt;
+      &lt;td&gt;B&lt;/td&gt;
+      &lt;td&gt;C&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;D&lt;/td&gt;
+      &lt;td&gt;E&lt;/td&gt;
+      &lt;td&gt;F&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;G&lt;/td&gt;
+      &lt;td&gt;H&lt;/td&gt;
+      &lt;td&gt;I&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;td colspan=&quot;3&quot;&gt;Table footer with colspan 3&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
       </article>
     </section>
   </main>

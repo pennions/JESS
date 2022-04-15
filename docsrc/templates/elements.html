@@ -39,7 +39,9 @@
             <a href="#table">Table</a>
           </li>
           <li>
-            <a href="#elements" class="button normal standard-only">Back to top</a>
+            <a href="#elements" class="button normal standard-only"
+              >Back to top</a
+            >
           </li>
         </ul>
       </nav>
@@ -134,7 +136,9 @@
           <input type="checkbox" />
           <input type="radio" />
 
-          <a href="/components.html#custom-input">Click here for custom inputs for checkbox and radiobutton.</a>
+          <a href="/components.html#custom-input"
+            >Click here for custom inputs for checkbox and radiobutton.</a
+          >
 
           <pre
             class="border full-width stretch"
@@ -192,7 +196,7 @@
               </tr>
               <tr>
                 <td class="padding-right">Range</td>
-                <td><input type="range" /></td>
+                <td><input type="range" class="w-100" /></td>
               </tr>
               <tr>
                 <td class="padding-right">Tel (Phonenumber)</td>
@@ -433,7 +437,77 @@
         <header>
           <h1>Table</h1>
         </header>
-        <p>TODO</p>
+        <p>A table with the <code class="language-html">table</code> class.</p>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Column header 1</th>
+              <th>Column header 2</th>
+              <th>Column header 3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>A</td>
+              <td>B</td>
+              <td>C</td>
+            </tr>
+            <tr>
+              <td>D</td>
+              <td>E</td>
+              <td>F</td>
+            </tr>
+            <tr>
+              <td>G</td>
+              <td>H</td>
+              <td>I</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3">Table footer with colspan 3</td>
+            </tr>
+          </tfoot>
+        </table>
+
+        <p>With a button in the header to make it sortable for example:</p>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th><button>Column clickable 1</button></th>
+              <th><button>Column clickable 2</button></th>
+              <th><button>Column clickable 3</button></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>A</td>
+              <td>B</td>
+              <td>C</td>
+            </tr>
+            <tr>
+              <td>D</td>
+              <td>E</td>
+              <td>F</td>
+            </tr>
+            <tr>
+              <td>G</td>
+              <td>H</td>
+              <td>I</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3">Table footer with colspan 3</td>
+            </tr>
+          </tfoot>
+        </table>
+
+        <pre
+        class="border"
+      ><code class="language-html">{{! table }}</code></pre>
       </article>
     </section>
   </main>
