@@ -14,6 +14,10 @@ fieldset {
   display: flex;
   flex-wrap: wrap;
 
+  & > * {
+    .w-100();
+  }
+
   // remove padding in nested childrens
   & > * > * {
     padding: 0;
@@ -31,6 +35,11 @@ fieldset {
   // For a modal layout
   &.center {
     justify-content: center;
+
+    & > * {
+      width: initial;
+      min-width: initial;
+    }
 
     @media (min-width: @sm) {
       height: calc(100vh);
@@ -70,10 +79,6 @@ fieldset {
     }
   }
 
-  &:not(.center) > * {
-    .w-100();
-  }
-
   &.column {
     gap: @default-distance;
 
@@ -95,37 +100,37 @@ fieldset {
   }
 
   &.two-columns {
-    & > * {
+    & > *:not(.w-100):not(.w-50):not(.w-33):not(.w-25):not(.w-16):not(.w-8) {
       .w-50();
     }
   }
 
   &.three-columns {
-    & > * {
+    & > *:not(.w-100):not(.w-50):not(.w-33):not(.w-25):not(.w-16):not(.w-8) {
       .w-33();
     }
   }
 
   &.four-columns {
-    & > * {
+    & > *:not(.w-100):not(.w-50):not(.w-33):not(.w-25):not(.w-16):not(.w-8) {
       .w-25();
     }
   }
 
   &.five-columns {
-    & > * {
+    & > *:not(.w-100):not(.w-50):not(.w-33):not(.w-25):not(.w-16):not(.w-8) {
       .w-20();
     }
   }
 
   &.six-columns {
-    & > * {
+    & > *:not(.w-100):not(.w-50):not(.w-33):not(.w-25):not(.w-16):not(.w-8) {
       .w-16();
     }
   }
 
   &.twelve-columns {
-    & > * {
+    & > *:not(.w-100):not(.w-50):not(.w-33):not(.w-25):not(.w-16):not(.w-8) {
       .w-8();
     }
   }

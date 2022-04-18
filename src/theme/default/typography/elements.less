@@ -37,7 +37,7 @@ label {
           content: "Required field";
         }
         .tooltip();
-        .tooltip-right()
+        .tooltip-right();
       }
     }
 
@@ -50,6 +50,7 @@ label {
   }
 }
 
+kbd,
 code:not([class*="language"]) {
   margin: 0 0.2rem;
   padding: 0.2rem 0.4rem;
@@ -58,4 +59,30 @@ code:not([class*="language"]) {
   border-radius: 0.2rem;
   .border();
   bottom: 0.1rem;
+}
+
+mark {
+  background-color: @accent;
+}
+
+blockquote {
+  font-weight: bold;
+  display: block;
+  height: 100%;
+  line-height: 1.4;
+  border-left: 0.75rem solid @accent;
+  padding-top: @default-distance;
+  padding-left: @default-distance;
+
+  & > cite {
+    font-weight: initial;
+    padding: 3rem @default-distance @default-distance @default-distance;
+    display: block;
+    float: right;
+    &::before {
+      position: relative;
+      content: "~";
+      margin-right: 0.5rem;
+    }
+  }
 }
