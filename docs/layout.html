@@ -27,8 +27,11 @@
           <li><a href="#nav">Nav</a></li>
           <li><a href="#footer">Footer</a></li>
           <li><a href="#utility-classes">Utility classes</a></li>
+          <li><a href="#nested">Nested sections example</a></li>
           <li>
-            <a href="#layout" class="button normal standard-only">Back to top</a>
+            <a href="#layout" class="button normal standard-only"
+              >Back to top</a
+            >
           </li>
         </ul>
       </nav>
@@ -557,11 +560,45 @@
         </ul>
 
         <small
-          >For the exact implementation of the width check out the column variants of the
-          <code class="language-html">&lt;main&gt;</code>,
+          >For the exact implementation of the width check out the column
+          variants of the <code class="language-html">&lt;main&gt;</code>,
           <code class="language-html">&lt;section&gt;</code> and
           <code class="language-html">&lt;fieldset&gt;</code>
         </small>
+      </article>
+
+      <article id="nested">
+        <header>
+          <h2>Nested sections example</h2>
+        </header>
+        <section>
+          <p class="demo-block">Block</p>
+          <section class="no-padding two-columns">
+            <section class="five-columns">
+              <p class="demo-block">Block</p>
+              <p class="demo-block">Block</p>
+              <p class="demo-block">Block</p>
+              <p class="demo-block">Block</p>
+              <p class="demo-block">Block</p>
+            </section>
+            <p class="demo-block">Block</p>
+          </section>
+        </section>
+        <pre
+          class="border"
+        ><code class="language-html">&lt;section&gt;
+  &lt;p class=&quot;demo-block&quot;&gt;Block&lt;/p&gt;
+  &lt;section class=&quot;no-padding two-columns&quot;&gt;
+    &lt;section class=&quot;five-columns&quot;&gt;
+      &lt;p class=&quot;demo-block&quot;&gt;Block&lt;/p&gt;
+      &lt;p class=&quot;demo-block&quot;&gt;Block&lt;/p&gt;
+      &lt;p class=&quot;demo-block&quot;&gt;Block&lt;/p&gt;
+      &lt;p class=&quot;demo-block&quot;&gt;Block&lt;/p&gt;
+      &lt;p class=&quot;demo-block&quot;&gt;Block&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;p class=&quot;demo-block&quot;&gt;Block&lt;/p&gt;
+  &lt;/section&gt;
+&lt;/section&gt;</code></pre>
       </article>
     </section>
   </main>

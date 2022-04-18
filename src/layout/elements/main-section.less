@@ -82,7 +82,7 @@ fieldset {
   &.column {
     gap: @default-distance;
 
-    & > * {
+    & > *:not(.w-100):not(.w-50):not(.w-33):not(.w-25):not(.w-16):not(.w-8) {
       width: auto;
       min-width: auto;
     }

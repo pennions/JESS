@@ -480,9 +480,9 @@ section.column,
 fieldset.column {
   gap: 1.5rem;
 }
-main.column > *,
-section.column > *,
-fieldset.column > * {
+main.column > *:not(.w-100):not(.w-50):not(.w-33):not(.w-25):not(.w-16):not(.w-8),
+section.column > *:not(.w-100):not(.w-50):not(.w-33):not(.w-25):not(.w-16):not(.w-8),
+fieldset.column > *:not(.w-100):not(.w-50):not(.w-33):not(.w-25):not(.w-16):not(.w-8) {
   width: auto;
   min-width: auto;
 }
