@@ -444,9 +444,8 @@
         </ul>
         <hr />
         <section>
-          <footer>Footer</footer>
+          <footer class="demo-footer">Footer</footer>
         </section>
-        <hr />
         <pre
           class="border"
         ><code class="language-html">{{! footer_layout }}</code></pre>
@@ -490,24 +489,298 @@
             </ul>
           </li>
         </ul>
-        Width classes, with the number being an approximate percentage for both
-        <code class="language-css">width</code> and
-        <code class="language-css">min-width</code>: <br />
-        <ul>
-          <li><code class="language-css">w-100</code></li>
-          <li><code class="language-css">w-33</code></li>
-          <li><code class="language-css">w-25</code></li>
-          <li><code class="language-css">w-20</code></li>
-          <li><code class="language-css">w-16</code></li>
-          <li><code class="language-css">w-8</code></li>
-        </ul>
+        <section>
+          <h3>Width classes</h3>
+          <hr />
+          <p>
+            Width classes that set the
+            <code class="language-css">width</code> and
+            <code class="language-css">min-width</code>, with safeguards for the
+            padding <br />
+            and out-of-the-box responsive fallback based on viewport min-width:
+          </p>
+          <br />
 
-        <small
-          >For the exact implementation of the width check out the column
-          variants of the <code class="language-html">&lt;main&gt;</code>,
-          <code class="language-html">&lt;section&gt;</code> and
-          <code class="language-html">&lt;fieldset&gt;</code>
-        </small>
+          <table>
+            <thead>
+              <tr>
+                <th>Class</th>
+                <th>CSS</th>
+                <th>w-100</th>
+                <th>w-50</th>
+                <th>w-33</th>
+                <th>w-25</th>
+                <th>w-20</th>
+                <th>w-16</th>
+                <th>w-8</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="language-css">w-100</code></td>
+                <td>100%</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td><code class="language-css">w-50</code></td>
+                <td>calc(50% - 0.75rem)</td>
+                <td>415px</td>
+                <td>576px</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td><code class="language-css">w-33</code></td>
+                <td>calc(33.3333% - 1rem)</td>
+                <td>415px</td>
+                <td>576px</td>
+                <td>768px</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td><code class="language-css">w-25</code></td>
+                <td>calc(25% - 1.13rem)</td>
+                <td>415px</td>
+                <td>576px</td>
+                <td>768px</td>
+                <td>992px</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td><code class="language-css">w-20</code></td>
+                <td>calc(20% - 1.2rem)</td>
+                <td>415px</td>
+                <td>576px</td>
+                <td>768px</td>
+                <td>992px</td>
+                <td>1200px</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td><code class="language-css">w-16</code></td>
+                <td>calc(16.6667% - 1.25rem)</td>
+                <td>415px</td>
+                <td>576px</td>
+                <td>768px</td>
+                <td>992px</td>
+                <td>1200px</td>
+                <td>1400px</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td><code class="language-css">w-8</code></td>
+                <td>calc(8.3333% - 1.375rem)</td>
+                <td>415px</td>
+                <td>-</td>
+                <td>576px</td>
+                <td>768px</td>
+                <td>992px</td>
+                <td>1200px</td>
+                <td>1400px</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section>
+          <h3>Hide / show for Mobile and Normal layout</h3>
+          <hr />
+
+          <table>
+            <thead>
+              <tr>
+                <th>Class</th>
+                <th>415px</th>
+                <th>576px</th>
+                <th>768px</th>
+                <th>992px</th>
+                <th>1200px</th>
+                <th>1400px</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>mobile-only</td>
+                <td>X</td>
+                <td>X</td>
+                <td>X</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>normal-only</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>X</td>
+                <td>X</td>
+                <td>X</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section>
+          <h3>Margin utilities</h3>
+          <hr />
+          <table>
+            <thead>
+              <tr>
+                <th>Class</th>
+                <th>Top</th>
+                <th>Right</th>
+                <th>Bottom</th>
+                <th>Left</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>margin</td>
+                <td>1.5rem</td>
+                <td>1.5rem</td>
+                <td>1.5rem</td>
+                <td>1.5rem</td>
+              </tr>
+              <tr>
+                <td>margin-top</td>
+                <td>1.5rem</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>margin-bottom</td>
+                <td>-</td>
+                <td>-</td>
+                <td>1.5rem</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>margin-left</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>1.5rem</td>
+              </tr>
+              <tr>
+                <td>margin-right</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>margin-x</td>
+                <td>-</td>
+                <td>1.5rem</td>
+                <td>-</td>
+                <td>1.5rem</td>
+              </tr>
+              <tr>
+                <td>margin-y</td>
+                <td>1.5rem</td>
+                <td>-</td>
+                <td>1.5rem</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>no-margin</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section>
+          <h3>Padding utilities</h3>
+          <hr />
+          <table>
+            <thead>
+              <tr>
+                <th>Class</th>
+                <th>Top</th>
+                <th>Right</th>
+                <th>Bottom</th>
+                <th>Left</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>padding</td>
+                <td>1.5rem</td>
+                <td>1.5rem</td>
+                <td>1.5rem</td>
+                <td>1.5rem</td>
+              </tr>
+              <tr>
+                <td>padding-top</td>
+                <td>1.5rem</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>padding-bottom</td>
+                <td>-</td>
+                <td>-</td>
+                <td>1.5rem</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>padding-left</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>1.5rem</td>
+              </tr>
+              <tr>
+                <td>padding-right</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>padding-x</td>
+                <td>-</td>
+                <td>1.5rem</td>
+                <td>-</td>
+                <td>1.5rem</td>
+              </tr>
+              <tr>
+                <td>padding-y</td>
+                <td>1.5rem</td>
+                <td>-</td>
+                <td>1.5rem</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>no-padding</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
       </article>
 
       <article id="nested">
