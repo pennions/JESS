@@ -29,9 +29,7 @@
           <li><a href="#utility-classes">Utility classes</a></li>
           <li><a href="#nested">Nested sections example</a></li>
           <li>
-            <a href="#layout" class="button normal standard-only"
-              >Back to top</a
-            >
+            <a href="#layout" class="button normal desktop">Back to top</a>
           </li>
         </ul>
       </nav>
@@ -512,40 +510,87 @@
         <header>
           <h2>Utility classes</h2>
         </header>
-        <p>
-          By default the direction for
-          <code class="language-html">&lt;main&gt;</code>,
-          <code class="language-html">&lt;section&gt;</code> and
-          <code class="language-html">&lt;fieldset&gt;</code> is set as row
-          <br />
-          and the contents will be stretched to take up the full space.
-        </p>
-        <ul>
-          <li>
-            You can change the direction with the class:
-            <ul>
-              <li>
-                <code class="language-html">column</code>
-              </li>
-            </ul>
-          </li>
-          <li>
-            You can make the child elements to not stretch with the class:
-            <ul>
-              <li>
-                <code class="language-html">no-stretch</code>
-              </li>
-            </ul>
-          </li>
-          <li>
-            You can make any element display as an inline-block with the class:
-            <ul>
-              <li>
-                <code class="language-html">d-inline-block</code>
-              </li>
-            </ul>
-          </li>
-        </ul>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Class</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code class="language-html">sticky</code></td>
+              <td>Makes it stick to the top when scrolling down.</td>
+            </tr>
+            <tr>
+              <td><code class="language-html">no-scroll</code></td>
+              <td>
+                Remove all scrollbars, handy to apply on the body when opening a
+                modal.
+              </td>
+            </tr>
+            <tr>
+              <td><code class="language-html">full-width</code></td>
+              <td>Make an element take 100% of its parent size.</td>
+            </tr>
+
+            <tr>
+              <td><code class="language-html">no-stretch</code></td>
+              <td>
+                Apply this to an element inside a flex layout to not make them
+                take up all the space.
+              </td>
+            </tr>
+
+            <tr>
+              <td><code class="language-html no-wrap">d-inline-block</code></td>
+              <td>Make an element display as an inline-block.</td>
+            </tr>
+
+            <tr>
+              <td><code class="language-html">row</code></td>
+              <td>
+                Make an element display flex with the default row direction.
+              </td>
+            </tr>
+
+            <tr>
+              <td><code class="language-html">column</code></td>
+              <td>Make an element display flex with the column direction</td>
+            </tr>
+
+            <tr>
+              <td><code class="language-html">row-end</code></td>
+              <td>
+                When applied to an element inside a display flex element, you
+                can have it move all the way to the right.
+              </td>
+            </tr>
+
+            <tr>
+              <td><code class="language-html">column-end</code></td>
+              <td>
+                When applied to an element inside a display flex element with
+                the column direction, you can have it move all the way down to
+                the bottom.
+              </td>
+            </tr>
+            <tr>
+              <td><code class="language-html">auto-width</code></td>
+              <td>Makes an element take on an auto-width.</td>
+            </tr>
+            <tr>
+              <td><code class="language-html">no-wrap</code></td>
+              <td>Makes a text not wrap.</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+
         <section>
           <h3>Width classes</h3>
           <hr />
@@ -554,7 +599,7 @@
             <code class="language-css">width</code> and
             <code class="language-css">min-width</code>, with safeguards for the
             padding <br />
-            and out-of-the-box responsive fallback based on viewport min-width:
+            and out-of-the-box responsive fallback based on viewport max-width:
           </p>
           <br />
 
@@ -654,7 +699,7 @@
           </table>
         </section>
         <section>
-          <h3>Hide / show for Mobile and Normal layout</h3>
+          <h3>Hide / show for Mobile and Desktop layout</h3>
           <hr />
 
           <table>
@@ -671,7 +716,7 @@
             </thead>
             <tbody>
               <tr>
-                <td>mobile-only</td>
+                <td>mobile</td>
                 <td>X</td>
                 <td>X</td>
                 <td>X</td>
@@ -680,7 +725,7 @@
                 <td>-</td>
               </tr>
               <tr>
-                <td>normal-only</td>
+                <td>desktop</td>
                 <td>-</td>
                 <td>-</td>
                 <td>-</td>

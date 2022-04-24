@@ -84,13 +84,13 @@
   }
 }
 
-.mobile-only {
+.mobile {
   @media (min-width: @lg) {
     display: none !important;
   }
 }
 
-.standard-only {
+.desktop {
   @media (max-width: (@lg - 1px)) {
     display: none !important;
   }
@@ -230,4 +230,8 @@
 
 .no-padding-right {
   padding-right: 0 !important;
+}
+
+.no-wrap {
+  white-space: nowrap !important;
 }
