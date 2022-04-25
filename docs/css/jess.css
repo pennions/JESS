@@ -272,12 +272,12 @@ select {
   }
 }
 @media (min-width: 992px) {
-  .mobile-only {
+  .mobile {
     display: none !important;
   }
 }
 @media (max-width: 991px) {
-  .standard-only {
+  .desktop {
     display: none !important;
   }
 }
@@ -392,6 +392,9 @@ select {
 }
 .no-padding-right {
   padding-right: 0 !important;
+}
+.no-wrap {
+  white-space: nowrap !important;
 }
 /**
  *  The <main> HTML element represents the dominant content of the <body> of a document. 

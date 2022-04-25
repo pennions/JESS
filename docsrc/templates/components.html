@@ -9,8 +9,10 @@
   type="text/javascript"
 ></script>
 <!--end-->
-{{# partials.header #}}
+
+{{# partials.open #}}
 <body id="components">
+  {{# partials.header #}}
   <main>
     <aside>
       <nav class="sticky">
@@ -34,9 +36,7 @@
             <a href="#custom-inputs">Custom inputs</a>
           </li>
           <li>
-            <a href="#components" class="button normal desktop"
-              >Back to top</a
-            >
+            <a href="#components" class="button normal desktop">Back to top</a>
           </li>
         </ul>
       </nav>
@@ -696,4 +696,6 @@
       </article>
     </section>
   </main>
+  {{# partials.footer #}}
 </body>
+{{# partials.close #}}

@@ -8,8 +8,9 @@
   type="text/javascript"
 ></script>
 <!--end-->
-{{# partials.header #}}
+{{# partials.open #}}
 <body id="layout">
+  {{# partials.header #}}
   <main>
     <aside>
       <nav class="sticky">
@@ -851,4 +852,6 @@
       </article>
     </section>
   </main>
+  {{# partials.footer #}}
 </body>
+{{# partials.close #}}

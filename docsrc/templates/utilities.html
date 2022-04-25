@@ -8,8 +8,9 @@
   type="text/javascript"
 ></script>
 <!--end-->
-{{# partials.header #}}
-<body>
+{{# partials.open #}}
+<body id="utilities">
+  {{# partials.header #}}
   <main>
     <section>
       <article>
@@ -121,4 +122,6 @@
       </article>
     </section>
   </main>
+  {{# partials.footer #}}
 </body>
+{{# partials.close #}}
