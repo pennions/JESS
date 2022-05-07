@@ -422,15 +422,9 @@ section > * > *,
 fieldset > * > * {
   padding: 0;
 }
-main > article:not(:last-child),
-section > article:not(:last-child),
-fieldset > article:not(:last-child),
-main > section:not(:last-child),
-section > section:not(:last-child),
-fieldset > section:not(:last-child),
-main > fieldset:not(:last-child),
-section > fieldset:not(:last-child),
-fieldset > fieldset:not(:last-child) {
+main > *:not(:last-child),
+section > *:not(:last-child),
+fieldset > *:not(:last-child) {
   margin-bottom: 1.5rem;
 }
 main.no-stretch,
