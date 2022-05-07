@@ -422,9 +422,15 @@ section > * > *,
 fieldset > * > * {
   padding: 0;
 }
-main > *:not(:last-child),
-section > *:not(:last-child),
-fieldset > *:not(:last-child) {
+main > article:not(:last-child),
+section > article:not(:last-child),
+fieldset > article:not(:last-child),
+main > section:not(:last-child),
+section > section:not(:last-child),
+fieldset > section:not(:last-child),
+main > fieldset:not(:last-child),
+section > fieldset:not(:last-child),
+fieldset > fieldset:not(:last-child) {
   margin-bottom: 1.5rem;
 }
 main.no-stretch,
@@ -746,6 +752,14 @@ nav[aria-label="Breadcrumb"] ul > li:not(:last-child)::after {
   content: "/";
   position: relative;
   margin: 0 0.5rem;
+}
+body > nav > ul {
+  display: flex;
+  width: 100%;
+  gap: 1.5rem;
+}
+body > nav > ul li:not(:last-child) {
+  margin-bottom: 0;
 }
 aside {
   margin: 1.5rem 0;
@@ -1742,6 +1756,9 @@ nav[aria-label="Breadcrumb"] ul a[aria-current="page"] {
 }
 article > nav {
   box-shadow: none;
+}
+body > nav a {
+  color: #323130;
 }
 input,
 textarea {

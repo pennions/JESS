@@ -23,8 +23,12 @@ fieldset {
     padding: 0;
   }
 
-  & > *:not(:last-child) {
-    margin-bottom: @default-distance;
+  & article,
+  & section,
+  & fieldset {
+    &:not(:last-child) {
+      margin-bottom: @default-distance;
+    }
   }
 
   &.no-stretch {

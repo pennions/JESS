@@ -32,3 +32,13 @@ nav {
     }
   }
 }
+
+body > nav > ul {
+  display: flex;
+  width: 100%;
+  gap: @default-distance;
+
+  & li:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
