@@ -1,4 +1,4 @@
-# Welcome to Jelmer's Easy Style system!!
+# Welcome to Jelmer's Easy Style system!
 
 I have written this Style System
 so you can quickly make any webpage look consistent and good without
