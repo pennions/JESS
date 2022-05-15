@@ -131,11 +131,27 @@
 
 .row {
   display: flex !important;
+
+  &.center-content-vertical {
+    align-items: center;
+  }
+
+  &.center-content-horizontal {
+    justify-content: center;
+  }
 }
 
 .column {
   display: flex !important;
   flex-direction: column !important;
+
+  &.center-content-vertical {
+    justify-content: center;
+  }
+
+  &.center-content-horizontal {
+    align-items: center;
+  }
 }
 
 .no-scroll {

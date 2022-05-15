@@ -1,6 +1,45 @@
+<!--dev-->
+<link rel="stylesheet" href="../css/prism.css" />
+<link rel="stylesheet" href="../css/documentation.css" />
+<link rel="stylesheet/less" type="text/css" href="../../../src/jess.less" />
+<script src="../js/prism.js" type="text/javascript"></script>
+<script
+  src="../../../node_modules/less/dist/less.min.js"
+  type="text/javascript"
+></script>
+<!--end-->
+
 {{# partials.open #}}
 <body>
-    {{# partials.header #}}
-    {{# partials.footer #}}
+  {{# partials.header #}}
+  <main class="row center-content-horizontal">
+    <article class="w-50">
+      <h1>Welcome!</h1>
+      <p>
+        Welcome to Jelmer's Easy Style system. I have written this Style System
+        so you can quickly make any webpage look consistent and good without
+        having an overkill on features. Keeping its footprint low. And I
+        separated theming. Which means colours, borders, box-shadows, fonts and
+        the like can be adjusted super easy.
+      </p>
+      <h2>Features</h2>
+
+      <ul>
+        <li>Out-of-the-box responsive</li>
+        <li>A lot of layout variations</li>
+        <li>Semantic classes and use of HTML5 elements</li>
+        <li>Based on Microsoft Fluent Design.</li>
+        <li>Theming is seperate.</li>
+        <li>Built with Less, so you can easily modify inside a webbrowser.</li>
+      </ul>
+      <h2>What it is not</h2>
+      <p>
+        It was not intented to be a 100% complete library. Just to get 80 -
+        90% of all the heavy lifting out of the way so you can add your own CSS
+        as you see fit.
+      </p>
+    </article>
+  </main>
+  <div class="at-bottom">{{# partials.footer #}}</div>
 </body>
 {{# partials.close #}}

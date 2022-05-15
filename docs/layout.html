@@ -12,10 +12,14 @@
 
     <title>JESS Documentation</title>
   </head>
-</html>
 <body id="layout">
-  <nav>
+  <nav class="no-padding-top no-padding-bottom">
   <ul>
+    <li class="margin-right">
+      <a href="/index.html"
+        ><h1 class="header-padding">Jelmer's Easy Style System</h1></a
+      >
+    </li>
     <li><a href="/index.html">Home</a></li>
     <li><a href="/layout.html">Layout</a></li>
     <li><a href="/elements.html">Buttons and Inputs</a></li>
@@ -613,6 +617,29 @@
                 the bottom.
               </td>
             </tr>
+
+            <tr>
+              <td>
+                <code class="language-html">center-content-vertical</code>
+              </td>
+              <td>
+                This class can be used combined with <code>row</code> or
+                <code>column</code> class to align all children along the Y-axis
+                (top to bottom).
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <code class="language-html">center-content-horizontal</code>
+              </td>
+              <td>
+                This class can be used combined with <code>row</code> or
+                <code>column</code> class to align all children along the X-axis
+                (left to right).
+              </td>
+            </tr>
+
             <tr>
               <td><code class="language-html">auto-width</code></td>
               <td>Makes an element take on an auto-width.</td>
@@ -957,6 +984,22 @@
       </article>
     </section>
   </main>
-  <footer>TODO</footer>
+  <footer>
+  <div class="no-margin">
+    <span>Documentation powered by</span>
+    <a href="https://github.com/pennions/JET"
+      >Jelmer's Easy Templating engine</a
+    >
+  </div>
+  <div class="row-end row center-content-vertical  ">
+    <span class="margin-right">Created for</span>
+    <img
+      class="inline-block"
+      height="36"
+      src="./images/pennions-creative.svg"
+      alt="The text Pennions shown in a creative way."
+    />
+  </div>
+</footer>
 </body>
 </html>
