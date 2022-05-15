@@ -735,7 +735,6 @@ fieldset.twelve-columns > *:not(.w-100):not(.w-50):not(.w-33):not(.w-25):not(.w-
 nav {
   display: flex;
   align-items: center;
-  max-height: 6rem;
   padding: 1.5rem;
 }
 nav > header {
@@ -760,6 +759,9 @@ nav[aria-label="Breadcrumb"] ul > li:not(:last-child)::after {
   content: "/";
   position: relative;
   margin: 0 0.5rem;
+}
+body > nav {
+  max-height: 6rem;
 }
 body > nav > ul {
   display: flex;

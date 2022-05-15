@@ -1,7 +1,6 @@
 nav {
   display: flex;
   align-items: center;
-  max-height: @nav-max-height;
   padding: @default-distance;
 
   & > header {
@@ -33,13 +32,17 @@ nav {
   }
 }
 
-body > nav > ul {
-  display: flex;
-  width: 100%;
-  gap: @default-distance;
-  align-items: center;
+body > nav {
+  max-height: @nav-max-height;
 
-  & li:not(:last-child) {
-    margin-bottom: 0;
+  & > ul {
+    display: flex;
+    width: 100%;
+    gap: @default-distance;
+    align-items: center;
+
+    & li:not(:last-child) {
+      margin-bottom: 0;
+    }
   }
 }
