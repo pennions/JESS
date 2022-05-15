@@ -1,6 +1,6 @@
-# Welcome!
+# Welcome to Jelmer's Easy Style system!!
 
-Welcome to Jelmer's Easy Style system. I have written this Style System
+I have written this Style System
 so you can quickly make any webpage look consistent and good without
 having an overkill on features. Keeping its footprint low. And I
 separated theming. Which means colours, borders, box-shadows, fonts and
