@@ -336,13 +336,22 @@
               </li>
             </ul>
           </li>
+          <li>
+            <code class="language-html">content-top</code>
+            <ul>
+              <li>
+                If you add content-top class to any of the above, the child will
+                only be horizontally centered and not vertically
+              </li>
+            </ul>
+          </li>
         </ul>
         <pre
           class="border"
         ><code class="language-html">{{! center_layout }}</code></pre>
         <div class="border">
           <section class="center">
-            <article class="demo-block auto-width">
+            <article class="demo-block w-50">
               <p>A centered element</p>
             </article>
           </section>
@@ -351,14 +360,14 @@
         <div class="border">
           <nav class="demo-navbar">Demo navbar</nav>
           <section class="center with-header">
-            <article class="demo-block auto-width">
+            <article class="demo-block w-50">
               <p>A centered element with a header</p>
             </article>
           </section>
         </div>
         <div class="border">
           <section class="center with-footer">
-            <article class="demo-block auto-width">
+            <article class="demo-block w-50">
               <p>A centered element with a footer</p>
             </article>
           </section>
@@ -368,7 +377,7 @@
         <div class="border">
           <nav class="demo-navbar">Demo navbar</nav>
           <section class="center with-header with-footer">
-            <article class="demo-block auto-width">
+            <article class="demo-block w-50">
               <p>A centered element with a header and a footer</p>
             </article>
           </section>
@@ -554,6 +563,16 @@
                 This class can be used combined with <code>row</code> or
                 <code>column</code> class to align all children along the X-axis
                 (left to right).
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code class="language-html">space-between</code>
+              </td>
+              <td>
+                This class can be used combined with <code>row</code> or
+                <code>column</code> to align have the first and last child on
+                the start and end and have even spaces in between.
               </td>
             </tr>
 

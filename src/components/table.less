@@ -3,7 +3,16 @@ table {
   & td,
   & th {
     text-align: left;
-    padding: calc(@default-distance / 3) calc(@default-distance * 2)
-      calc(@default-distance / 3) calc(@default-distance / 2);
+    padding: @cell-padding;
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    & > button {
+      border: none;
+      padding: @th-button-padding;
+      margin-left: @th-button-margin;
+    }
   }
 }

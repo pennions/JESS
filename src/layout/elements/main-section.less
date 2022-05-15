@@ -36,11 +36,6 @@ fieldset {
   &.center {
     justify-content: center;
 
-    & > * {
-      width: initial;
-      min-width: initial;
-    }
-
     @media (min-width: @sm) {
       height: calc(100vh);
       align-items: center;
@@ -56,6 +51,10 @@ fieldset {
       &.with-header.with-footer {
         height: calc(100vh - @nav-and-footer-height - 0.4rem);
       }
+    }
+
+    &.content-top {
+      align-items: flex-start;
     }
   }
 

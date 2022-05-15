@@ -316,6 +316,9 @@ select {
 .row.center-content-horizontal {
   justify-content: center;
 }
+.space-between {
+  justify-content: space-between;
+}
 .column {
   display: flex !important;
   flex-direction: column !important;
@@ -450,12 +453,6 @@ section.center,
 fieldset.center {
   justify-content: center;
 }
-main.center > *,
-section.center > *,
-fieldset.center > * {
-  width: initial;
-  min-width: initial;
-}
 @media (min-width: 576px) {
   main.center,
   section.center,
@@ -478,6 +475,11 @@ fieldset.center > * {
   fieldset.center.with-header.with-footer {
     height: calc(100vh - 10rem - 0.4rem);
   }
+}
+main.center.content-top,
+section.center.content-top,
+fieldset.center.content-top {
+  align-items: flex-start;
 }
 main:not(.center) > aside,
 section:not(.center) > aside,
@@ -1303,7 +1305,17 @@ table {
 table td,
 table th {
   text-align: left;
-  padding: calc(1.5rem / 3) calc(1.5rem * 2) calc(1.5rem / 3) calc(1.5rem / 2);
+  padding: 0.6rem;
+}
+table td:last-child,
+table th:last-child {
+  padding-right: 0;
+}
+table td > button,
+table th > button {
+  border: none;
+  padding: 0.5rem;
+  margin-left: -0.5rem;
 }
 .custom-input {
   display: inline-block;
@@ -2407,16 +2419,6 @@ dialog.notification > .close {
 }
 dialog.notification > .close:hover {
   outline: 0.5px solid #000;
-}
-table.table td,
-table.table th {
-  padding: calc(1.5rem / 3) calc(1.5rem * 2) calc(1.5rem / 3) calc(1.5rem / 2);
-}
-table.table td > button,
-table.table th > button {
-  border: none;
-  padding: 0.5rem;
-  margin-left: -0.5rem;
 }
 table.table thead {
   border-bottom: 0.5px solid #8a8886;
