@@ -763,6 +763,11 @@ nav[aria-label="Breadcrumb"] ul > li:not(:last-child)::after {
 body > nav {
   max-height: 6rem;
 }
+@media (max-width: 991px) {
+  body > nav {
+    max-height: unset;
+  }
+}
 body > nav > ul {
   display: flex;
   width: 100%;
