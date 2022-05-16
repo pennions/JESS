@@ -1180,6 +1180,11 @@ dialog.modal[open="false"] {
 }
 details {
   position: relative;
+  line-height: 1;
+}
+details.button,
+details.accordion {
+  line-height: 1.9;
 }
 details:hover {
   cursor: default;
