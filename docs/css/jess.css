@@ -1184,6 +1184,9 @@ details {
 details.icon-dropdown {
   line-height: 0.8;
 }
+details.icon-dropdown > *:not(summary) {
+  line-height: 1.9;
+}
 details:hover {
   cursor: default;
 }
