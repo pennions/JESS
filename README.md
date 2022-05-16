@@ -17,7 +17,7 @@ the like can be adjusted super easy.
 
 ## What it is not
 
-It was not intented to be a 100% complete library. Just to get 80 -
+It was not intended to be a 100% complete library. Just to get 80 -
 90% of all the heavy lifting out of the way so you can add your own CSS
 as you see fit.
 
