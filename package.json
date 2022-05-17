@@ -4,11 +4,13 @@
   "description": "Stylesheet influenced by Pico CSS and Fluent UI from Microsoft ",
   "main": "index.js",
   "scripts": {
-    "jess": "node ./node_modules/less/bin/lessc src/jess.less dist/jess.css | node ./node_modules/copyfiles/copyfiles -u 1 dist/jess.css docs/css",
+    "jess": "node ./node_modules/less/bin/lessc src/jess.less dist/jess.css",
     "jess-reset": "node ./node_modules/less/bin/lessc src/utilities/reset-css.less dist/jess-reset.css",
     "jess-flex-layout": "node ./node_modules/less/bin/lessc src/layout/jess-flex-layout.less dist/jess-flex-layout.css",
-    "build": "npm run jess | npm run jess-flex-layout | npm run jess-reset",
-    "build-docs": "npm run build | node docsrc/build | node ./node_modules/copyfiles/copyfiles -u 2 docsrc/css/documentation.css docs/css"
+    "build": "npm run jess && postcss ./dist/jess.css --use autoprefixer -r && postcss ./dist/jess.css > ./dist/jess.min.css && npm run build-theme && npm run copy-to-docs",
+    "build-theme": "node ./node_modules/less/bin/lessc ./src/theme/default/default.less dist/default-theme.css && postcss ./dist/default-theme.css --use autoprefixer -r && postcss ./dist/default-theme.css > ./dist/default-theme.min.css",
+    "copy-to-docs": "node ./node_modules/copyfiles/copyfiles -u 1 dist/jess.min.css docs/css && node ./node_modules/copyfiles/copyfiles -u 1 dist/default-theme.min.css docs/css && node ./node_modules/copyfiles/copyfiles -u 2 docsrc/css/documentation.css docs/css",
+    "build-docs": "npm run build && node docsrc/build"
   },
   "repository": {
     "type": "git",
@@ -28,5 +30,11 @@
   "devDependencies": {
     "copyfiles": "^2.4.1",
     "less": "^4.1.2"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.7",
+    "cssnano": "^5.1.8",
+    "postcss": "^8.4.13",
+    "postcss-cli": "^9.1.0"
   }
 }
