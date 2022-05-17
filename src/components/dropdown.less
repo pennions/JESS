@@ -26,7 +26,9 @@ details {
     white-space: nowrap;
     & > summary {
       display: table;
-      list-style: none;
+      &::-webkit-details-marker {
+        display: none;
+      }
     }
   }
 
