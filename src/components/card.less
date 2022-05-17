@@ -8,9 +8,14 @@ article,
     margin-bottom: 0;
   }
 
-  & > *:not(header):not(footer):not(:last-child) {
+  & > *:not(header):not(footer):not(:last-child):not(dialog) {
     min-height: auto;
     padding-bottom: @default-distance;
+  }
+
+  & > dialog {
+    min-height: auto;
+    margin-bottom: @default-distance;
   }
 
   // for the body
