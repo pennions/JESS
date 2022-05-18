@@ -37,19 +37,19 @@ fieldset {
     justify-content: center;
 
     @media (min-width: @sm) {
-      height: calc(100vh);
+      height: calc(100%);
       align-items: center;
 
       &.with-footer {
-        height: calc(100vh - @footer-min-height);
+        height: calc(100% - @footer-min-height);
       }
 
       &.with-header {
-        height: calc(100vh - @nav-max-height);
+        height: calc(100% - @nav-max-height);
       }
 
       &.with-header.with-footer {
-        height: calc(100vh - @nav-and-footer-height - 0.4rem);
+        height: calc(100% - @nav-and-footer-height - 0.4rem);
       }
     }
 
@@ -81,7 +81,8 @@ fieldset {
   &.column {
     gap: @default-distance;
 
-    & > *:not(.w-100):not(.w-50):not(.w-33):not(.w-25):not(.w-16):not(.w-8):not(hr) {
+    &
+      > *:not(.w-100):not(.w-50):not(.w-33):not(.w-25):not(.w-16):not(.w-8):not(hr) {
       width: auto;
       min-width: auto;
     }

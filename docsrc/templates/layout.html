@@ -346,10 +346,16 @@
             </ul>
           </li>
         </ul>
+        <small
+          ><b>N.B.</b> if you want the footer to stick to the bottom, apply a
+          <code class="language-html">column</code> class on the body and
+          <code class="language-html">column-end</code> class on the
+          footer.</small
+        >
         <pre
           class="border"
         ><code class="language-html">{{! center_layout }}</code></pre>
-        <div class="border">
+        <div class="border demo-body">
           <section class="center">
             <article class="demo-block w-50">
               <p>A centered element</p>
@@ -357,7 +363,7 @@
           </section>
         </div>
         <hr />
-        <div class="border">
+        <div class="border demo-body">
           <nav class="demo-navbar">Demo navbar</nav>
           <section class="center with-header">
             <article class="demo-block w-50">
@@ -365,7 +371,7 @@
             </article>
           </section>
         </div>
-        <div class="border">
+        <div class="border demo-body">
           <section class="center with-footer">
             <article class="demo-block w-50">
               <p>A centered element with a footer</p>
@@ -374,9 +380,9 @@
           <footer class="demo-footer">Demo footer</footer>
         </div>
         <hr />
-        <div class="border">
+        <div class="border demo-body">
           <nav class="demo-navbar">Demo navbar</nav>
-          <section class="center with-header with-footer">
+          <section class="center with-header with-footer demo-body">
             <article class="demo-block w-50">
               <p>A centered element with a header and a footer</p>
             </article>
@@ -549,9 +555,10 @@
                 <code class="language-html">center-content-vertical</code>
               </td>
               <td>
-                This class can be used combined with <code>row</code> or
-                <code>column</code> class to align all children along the Y-axis
-                (top to bottom).
+                This class can be used combined with
+                <code class="language-html">row</code> or
+                <code class="language-html">column</code> class to align all
+                children along the Y-axis (top to bottom).
               </td>
             </tr>
 
@@ -560,9 +567,10 @@
                 <code class="language-html">center-content-horizontal</code>
               </td>
               <td>
-                This class can be used combined with <code>row</code> or
-                <code>column</code> class to align all children along the X-axis
-                (left to right).
+                This class can be used combined with
+                <code class="language-html">row</code> or
+                <code class="language-html">column</code> class to align all
+                children along the X-axis (left to right).
               </td>
             </tr>
             <tr>
@@ -570,9 +578,11 @@
                 <code class="language-html">space-between</code>
               </td>
               <td>
-                This class can be used combined with <code>row</code> or
-                <code>column</code> to align have the first and last child on
-                the start and end and have even spaces in between.
+                This class can be used combined with
+                <code class="language-html">row</code> or
+                <code class="language-html">column</code> to align have the
+                first and last child on the start and end and have even spaces
+                in between.
               </td>
             </tr>
 
