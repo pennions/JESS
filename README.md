@@ -26,4 +26,7 @@ as you see fit.
 [Go to the full documentation](https://pennions.github.io/JESS/)
 
 
-> If you intend to use this commercially, think about becoming a supporter, check *Sponsor this project* section on this GitHub page or send us a message.
+> If you are using this for paid products and services please consider:
+> - Becoming a supporter on [Patreon.com](https://patreon.com/pennions)
+> - Doing a one time donation on [Ko-Fi](https://ko-fi.com/pennions). 
+> - If you want to donate but are not able to do so on these platforms, please contact us at www.pennions.com we can provide an iDeal link.
