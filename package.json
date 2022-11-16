@@ -1,5 +1,5 @@
 {
-  "name": "jess",
+  "name": "@pennions/jess",
   "version": "1.1.0",
   "description": "Stylesheet influenced by Pico CSS and Fluent UI from Microsoft ",
   "main": "index.js",
@@ -10,7 +10,8 @@
     "build": "npm run jess && postcss ./dist/jess.css > ./dist/jess.min.css && npm run build-theme && npm run copy-to-docs",
     "build-theme": "node ./node_modules/less/bin/lessc ./src/theme/default/default.less dist/default-theme.css && postcss ./dist/default-theme.css > ./dist/default-theme.min.css",
     "copy-to-docs": "node ./node_modules/copyfiles/copyfiles -u 1 dist/jess.min.css docs/css && node ./node_modules/copyfiles/copyfiles -u 1 dist/default-theme.min.css docs/css && node ./node_modules/copyfiles/copyfiles -u 2 docsrc/css/documentation.css docs/css",
-    "build-docs": "npm run build && node docsrc/build"
+    "build-docs": "npm run build && node docsrc/build",
+    "publish": "npm publish --access public"
   },
   "repository": {
     "type": "git",
