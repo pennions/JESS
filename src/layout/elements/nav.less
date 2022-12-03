@@ -2,10 +2,7 @@ nav {
   display: flex;
   align-items: center;
   padding: @default-distance;
-
-  & > header {
-    width: 100%;
-  }
+  width: 100%;
 
   & > ul {
     & li {
@@ -16,14 +13,14 @@ nav {
     }
   }
 
-  &[aria-label="Breadcrumb"] {
+  &[aria-label='Breadcrumb'] {
     padding: 0;
     & ul {
       display: flex;
       & > li {
         margin: 0;
         &:not(:last-child)::after {
-          content: "/";
+          content: '/';
           position: relative;
           margin: 0 0.5rem;
         }
@@ -32,7 +29,8 @@ nav {
   }
 }
 
-body > nav {
+body > nav,
+body > header > nav {
   min-height: @nav-max-height;
   max-height: @nav-max-height;
 

@@ -1,12 +1,5 @@
 nav {
-  & > header {
-    *:last-child:not(hr) {
-      border-bottom: 0.5px solid @hr-color;
-      padding-bottom: @default-distance;
-    }
-  }
-
-  &[aria-label="Breadcrumb"] {
+  &[aria-label='Breadcrumb'] {
     box-shadow: none;
     & ul {
       & > li {
@@ -19,7 +12,7 @@ nav {
         }
       }
 
-      & a[aria-current="page"] {
+      & a[aria-current='page'] {
         color: @primary;
       }
     }
@@ -30,6 +23,7 @@ article > nav {
   box-shadow: none;
 }
 
-body > nav a {
+body > nav a,
+body > header > nav a {
   color: @default-font-color;
 }
