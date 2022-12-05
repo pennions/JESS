@@ -69,16 +69,30 @@
         </header>
         <section class="column no-stretch">
           <button>A standard button</button>
+          <button disabled>A disabled standard button</button>
           <button class="no-border">A button without a border</button>
+          <button class="no-border" disabled>
+            A disabled button without a border
+          </button>
           <button class="no-border outline-hover">
             A button with only an outline on hover
           </button>
+          <button class="no-border outline-hover" disabled>
+            A disabled button with only an outline on hover
+          </button>
           <button class="link">A link button</button>
+          <button class="link" disabled>A disabled link button</button>
           <button class="link accent">An accent colored link button</button>
           <button class="link danger">A danger colored link button</button>
+          <button class="link accent" disabled>
+            A disabled colored link button
+          </button>
           <button class="primary">A button with primary color</button>
           <button class="accent">A button with accent color</button>
           <button class="danger">A button with danger color</button>
+          <button class="danger" disabled="disabled">
+            A disabled colored button
+          </button>
         </section>
         <pre
           class="border"
@@ -98,6 +112,7 @@
           <a href class="button primary">A link as primary button</a>
           <a href class="button accent">A link as accent button</a>
           <a href class="button danger">A link as danger button</a>
+          <a href class="button danger disabled">A link as button with the disabled class</a>
         </section>
         <pre
           class="border"
