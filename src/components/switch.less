@@ -35,7 +35,7 @@ label.switch {
     & ~ .toggle-background[data-label]::before {
       position: absolute;
       left: 4.5rem;
-      top: -0.5rem;
+      top: 0.1rem;
       content: attr(data-label);
       white-space: nowrap;
     }
@@ -53,7 +53,7 @@ label.switch {
 
     &:checked ~ .toggle-background[data-label-on]::before {
       position: absolute;
-      top: -0.5rem;
+      top: 0.1rem;
       content: attr(data-label-on);
       white-space: nowrap;
     }

@@ -27,7 +27,7 @@ const writeFile = util.promisify(fs.writeFile);
         vm.partials[partialName] = fileContents.toString();
     }
 
-    // Resolve partial in partials.
+    /** Resolve partial in partials. */
     for (const partial of Object.keys(vm.partials)) {
         vm.partials[partial] = jet.compile(vm.partials[partial], vm);
     }

@@ -17,7 +17,7 @@
   </head>
 </html>
 <body id="components">
-  <nav class="no-padding-top no-padding-bottom">
+  <nav class="py-0">
   <ul class="desktop">
     <li>
       <a href="/JESS/index.html"
@@ -38,7 +38,7 @@
         ><h2 class="header-padding">Jelmer's Easy Style System</h2></a
       >
     </div>
-    <section class="no-padding-left three-columns">
+    <section class="pl-0 three-columns">
       <a href="/JESS/index.html">Home</a>
 
       <a href="/JESS/layout.html">Layout</a>
@@ -186,7 +186,7 @@
           </article>
         </section>
         <pre
-          class="border stretch margin-top"
+          class="border stretch mt-1"
         ><code class="language-html">&lt;article class=&quot;normal&quot;&gt;
     &lt;div tabindex=&quot;0&quot;&gt;
         &lt;section&gt;
@@ -315,7 +315,7 @@
         </section>
 
         <pre
-          class="border stretch margin-top"
+          class="border stretch mt-1"
         ><code class="language-html">&lt;article class=&quot;flip&quot;&gt;
     &lt;div tabindex=&quot;0&quot;&gt;
         &lt;section&gt;
@@ -376,14 +376,14 @@
           the notification:
         </p>
         <dialog class="notification error" open>
-          <svg class="icon margin-right small">
+          <svg class="icon mr-1 small">
             <use href="./icons/feather-sprite.svg#alert-triangle" />
           </svg>
           <span>Error notification</span> <button class="close">X</button>
         </dialog>
 
         <pre
-          class="border stretch margin-top"
+          class="border stretch mt-1"
         ><code class="language-html">&lt;dialog class=&quot;notification&quot; open&gt;
     &lt;span&gt;Default notification&lt;/span&gt;
     &lt;button class=&quot;close&quot;&gt;X&lt;/button&gt;
@@ -400,7 +400,7 @@
 &lt;/dialog&gt;
 
 &lt;dialog class=&quot;notification error&quot; open&gt;
-    &lt;svg class=&quot;icon margin-right&quot;&gt;
+    &lt;svg class=&quot;icon mr-1&quot;&gt;
       &lt;use href=&quot;./icons/feather-sprite.svg#alert-triangle&quot; /&gt;
     &lt;/svg&gt;
     &lt;span&gt;Error notification&lt;/span&gt; &lt;button class=&quot;close&quot;&gt;X&lt;/button&gt;
@@ -482,7 +482,7 @@
         </dialog>
 
         <pre
-          class="border stretch margin-top"
+          class="border stretch mt-1"
         ><code class="language-html">&lt;button
     onclick=&quot;document.getElementById(&#039;demo-modal&#039;).setAttribute(&#039;open&#039;, true)&quot;
     &gt;
@@ -559,7 +559,7 @@
         </nav>
 
         <pre
-          class="border stretch margin-top"
+          class="border stretch mt-1"
         ><code class="language-html">&lt;nav aria-label=&quot;Breadcrumb&quot;&gt;
   &lt;ul&gt;
     &lt;li&gt;&lt;a href=&quot;&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
@@ -669,7 +669,7 @@
         </details>
 
         <pre
-          class="border stretch margin-top"
+          class="border stretch mt-1"
         ><code class="language-html">&lt;details&gt;
   &lt;summary&gt;Menu 1&lt;/summary&gt;
   &lt;nav&gt;
@@ -741,7 +741,7 @@
           <h2>Custom inputs</h2>
         </header>
 
-        <h3 class="padding-top">Checkbox</h3>
+        <h3 class="pt-1">Checkbox</h3>
         <hr />
 
         <label class="custom-input">
@@ -750,13 +750,13 @@
           <span class="checkmark"></span>
         </label>
 
-        <label class="custom-input margin-left">
+        <label class="custom-input ml-1">
           Unchecked version.
           <input type="checkbox" />
           <span class="checkmark"></span>
         </label>
 
-        <label class="custom-input margin">
+        <label class="custom-input m-1">
           Disabled version.
           <input type="checkbox" name="custom" disabled />
           <span class="checkmark"></span>
@@ -771,14 +771,14 @@
         </label>
 
         <pre
-          class="border stretch margin-top"
+          class="border stretch mt-1"
         ><code class="language-html">&lt;label class=&quot;custom-input&quot;&gt;
   Custom checkbox with full color control.
   &lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot; /&gt;
   &lt;span class=&quot;checkmark&quot;&gt;&lt;/span&gt;
 &lt;/label&gt;
 
-&lt;label class=&quot;custom-input margin-left&quot;&gt;
+&lt;label class=&quot;custom-input ml-1&quot;&gt;
   Unchecked version.
   &lt;input type=&quot;checkbox&quot; /&gt;
   &lt;span class=&quot;checkmark&quot;&gt;&lt;/span&gt;
@@ -797,7 +797,7 @@
 &lt;/label&gt;</code></pre>
         <br />
 
-        <h3 class="padding-top">Radiobutton</h3>
+        <h3 class="pt-1">Radiobutton</h3>
         <hr />
 
         <label class="custom-input">
@@ -806,13 +806,13 @@
           <span class="checkmark"></span>
         </label>
 
-        <label class="custom-input margin-left">
+        <label class="custom-input ml-1">
           Unchecked version.
           <input type="radio" name="custom" />
           <span class="checkmark"></span>
         </label>
 
-        <label class="custom-input margin">
+        <label class="custom-input m-1">
           Disabled version.
           <input type="radio" name="custom" disabled />
           <span class="checkmark"></span>
@@ -827,14 +827,14 @@
         </label>
 
         <pre
-          class="border stretch margin-top"
+          class="border stretch mt-1"
         ><code class="language-html">&lt;label class=&quot;custom-input&quot;&gt;
   Custom radiobutton with full color control.
   &lt;input type=&quot;radio&quot; checked=&quot;checked&quot; name=&quot;custom&quot; /&gt;
   &lt;span class=&quot;checkmark&quot;&gt;&lt;/span&gt;
 &lt;/label&gt;
 
-&lt;label class=&quot;custom-input margin-left&quot;&gt;
+&lt;label class=&quot;custom-input ml-1&quot;&gt;
   Unchecked version.
   &lt;input type=&quot;radio&quot; name=&quot;custom&quot; /&gt;
   &lt;span class=&quot;checkmark&quot;&gt;&lt;/span&gt;
@@ -933,7 +933,7 @@
         </label>
 
         <pre
-          class="border stretch margin-top"
+          class="border stretch mt-1"
         ><code class="language-html">&lt;label class=&quot;switch&quot;&gt;
     &lt;input type=&quot;checkbox&quot; /&gt;
     &lt;span class=&quot;toggle&quot;&gt;&lt;/span&gt;
@@ -987,23 +987,23 @@
         <hr />
         <small
           ><b>N.B.</b> The data-label attribute is rendered as a pseudo element,
-          make sure it will fit by applying the correct margins around the
+          make sure it will fit by applying the correct m-1s around the
           switch.</small
         >
       </article>
     </section>
   </main>
-  <footer class="desktop column-end">
-  <section class="two-columns space-between w-100 no-padding">
-    <div class="no-margin">
+  <footer class="desktop mt-auto">
+  <section class="two-columns justify-between align-center w-100 p-0">
+    <div class="m-0">
       <span>Documentation powered by</span>
       <a href="https://github.com/pennions/JET"
         >Jelmer's Easy Templating engine</a
       >
     </div>
     <div class="row">
-      <div class="row-end row center-content-vertical">
-        <span class="margin-right">Created for</span>
+      <div class="ml-auto row align-center">
+        <span class="mr-1">Created for</span>
         <img
           class="inline-block"
           height="36"
@@ -1015,16 +1015,16 @@
   </section>
 </footer>
 <footer class="mobile">
-  <section class="column center-content-horizontal w-100">
-    <div class="no-margin column center-content-horizontal">
-      <span>Documentation powered by</span> <br />
+  <section class="column align-center w-100">
+    <div class="m-0 column align-center">
+      <span class="mb-1">Documentation powered by</span> <br />
       <a href="https://github.com/pennions/JET"
         >Jelmer's Easy Templating engine</a
       >
     </div>
     <div class="row">
-      <div class="row-end row center-content-vertical">
-        <span class="margin-right">Created for</span>
+      <div class="ml-auto row align-center">
+        <span class="mr-1">Created for</span>
         <img
           class="inline-block"
           height="36"

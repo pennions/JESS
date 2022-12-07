@@ -16,7 +16,7 @@
   </head>
 </html>
 <body id="elements">
-  <nav class="no-padding-top no-padding-bottom">
+  <nav class="py-0">
   <ul class="desktop">
     <li>
       <a href="/JESS/index.html"
@@ -37,7 +37,7 @@
         ><h2 class="header-padding">Jelmer's Easy Style System</h2></a
       >
     </div>
-    <section class="no-padding-left three-columns">
+    <section class="pl-0 three-columns">
       <a href="/JESS/index.html">Home</a>
 
       <a href="/JESS/layout.html">Layout</a>
@@ -107,28 +107,48 @@
         </header>
         <section class="column no-stretch">
           <button>A standard button</button>
+          <button disabled>A disabled standard button</button>
           <button class="no-border">A button without a border</button>
+          <button class="no-border" disabled>
+            A disabled button without a border
+          </button>
           <button class="no-border outline-hover">
             A button with only an outline on hover
           </button>
+          <button class="no-border outline-hover" disabled>
+            A disabled button with only an outline on hover
+          </button>
           <button class="link">A link button</button>
+          <button class="link" disabled>A disabled link button</button>
           <button class="link accent">An accent colored link button</button>
           <button class="link danger">A danger colored link button</button>
+          <button class="link accent" disabled>
+            A disabled colored link button
+          </button>
           <button class="primary">A button with primary color</button>
           <button class="accent">A button with accent color</button>
           <button class="danger">A button with danger color</button>
+          <button class="danger" disabled="disabled">
+            A disabled colored button
+          </button>
         </section>
         <pre
           class="border"
         ><code class="language-html">&lt;button&gt;A standard button&lt;/button&gt;
+&lt;button disabled&gt;A disabled standard button&lt;/button&gt;
 &lt;button class=&quot;no-border&quot;&gt;A button without a border&lt;/button&gt;
+&lt;button class=&quot;no-border&quot; disabled&gt;A disabled button without a border&lt;/button&gt;
 &lt;button class=&quot;no-border outline-hover&quot;&gt;A button with only an outline on hover&lt;/button&gt;
+&lt;button class=&quot;no-border outline-hover&quot; disabled&gt;A disabled button with only an outline on hover&lt;/button&gt;
 &lt;button class=&quot;link&quot;&gt;A link button&lt;/button&gt;
+&lt;button class=&quot;link&quot; disabled&gt;A disabled link button&lt;/button&gt;
 &lt;button class=&quot;link accent&quot;&gt;An accent colored link button&lt;/button&gt;
 &lt;button class=&quot;link danger&quot;&gt;A danger colored link button&lt;/button&gt;
+&lt;button class=&quot;link accent&quot; disabled&gt;A disabled colored link button&lt;/button&gt;
 &lt;button class=&quot;primary&quot;&gt;A button with primary color&lt;/button&gt;
 &lt;button class=&quot;accent&quot;&gt;A button with accent color&lt;/button&gt;
-&lt;button class=&quot;danger&quot;&gt;A button with danger color&lt;/button&gt;</code></pre>
+&lt;button class=&quot;danger&quot;&gt;A button with danger color&lt;/button&gt;
+&lt;button class=&quot;danger&quot; disabled=&quot;disabled&quot;&gt;A disabled colored button&lt;/button&gt;</code></pre>
       </article>
 
       <article id="links">
@@ -144,6 +164,7 @@
           <a href class="button primary">A link as primary button</a>
           <a href class="button accent">A link as accent button</a>
           <a href class="button danger">A link as danger button</a>
+          <a href class="button danger disabled">A link as button with the disabled class</a>
         </section>
         <pre
           class="border"
@@ -154,7 +175,8 @@
 &lt;a href class=&quot;button normal&quot;&gt;A link as normal button&lt;/a&gt;
 &lt;a href class=&quot;button primary&quot;&gt;A link as primary button&lt;/a&gt;
 &lt;a href class=&quot;button accent&quot;&gt;A link as accent button&lt;/a&gt;
-&lt;a href class=&quot;button danger&quot;&gt;A link as danger button&lt;/a&gt;</code></pre>
+&lt;a href class=&quot;button danger&quot;&gt;A link as danger button&lt;/a&gt;
+&lt;a href class=&quot;button danger disabled&quot;&gt;A link as button with the disabled class&lt;/a&gt;</code></pre>
       </article>
 
       <article id="input">
@@ -202,7 +224,7 @@
           ><code class="language-html">&lt;input type=&quot;checkbox&quot; /&gt;
 &lt;input type=&quot;radio&quot; /&gt;</code></pre>
 
-          <h3 id="input_buttons" class="margin-top">Button inputs</h3>
+          <h3 id="input_buttons" class="mt-1">Button inputs</h3>
           <hr />
           <input type="button" value="submit" />
           <input type="reset" />
@@ -214,29 +236,29 @@
 &lt;input type=&quot;reset&quot; /&gt;
 &lt;input type=&quot;submit&quot; /&gt;</code></pre>
 
-          <h3 id="input_text" class="margin-top">Text inputs</h3>
+          <h3 id="input_text" class="mt-1">Text inputs</h3>
           <hr />
 
           <table>
             <tbody>
               <tr>
-                <td class="padding-right">Email</td>
+                <td class="pr-1">Email</td>
                 <td><input type="email" /></td>
               </tr>
               <tr>
-                <td class="padding-right">Password</td>
+                <td class="pr-1">Password</td>
                 <td><input type="password" /></td>
               </tr>
               <tr>
-                <td class="padding-right">Search</td>
+                <td class="pr-1">Search</td>
                 <td><input type="search" /></td>
               </tr>
               <tr>
-                <td class="padding-right">Text</td>
+                <td class="pr-1">Text</td>
                 <td><input type="text" /></td>
               </tr>
               <tr>
-                <td class="padding-right">Url</td>
+                <td class="pr-1">Url</td>
                 <td><input type="url" /></td>
               </tr>
             </tbody>
@@ -250,20 +272,20 @@
 &lt;input type=&quot;text&quot; /&gt;
 &lt;input type=&quot;url&quot; /&gt;</code></pre>
 
-          <h3 id="input_numbers" class="margin-top">Number inputs</h3>
+          <h3 id="input_numbers" class="mt-1">Number inputs</h3>
           <hr />
           <table>
             <tbody>
               <tr>
-                <td class="padding-right">Number</td>
+                <td class="pr-1">Number</td>
                 <td><input type="number" /></td>
               </tr>
               <tr>
-                <td class="padding-right">Range</td>
+                <td class="pr-1">Range</td>
                 <td><input type="range" class="w-100" /></td>
               </tr>
               <tr>
-                <td class="padding-right">Tel (Phonenumber)</td>
+                <td class="pr-1">Tel (Phonenumber)</td>
                 <td><input type="tel" /></td>
               </tr>
             </tbody>
@@ -275,29 +297,29 @@
 &lt;input type=&quot;range&quot; /&gt;
 &lt;input type=&quot;tel&quot; /&gt;</code></pre>
 
-          <h3 id="input_datetime" class="margin-top">Date / Datetime inputs</h3>
+          <h3 id="input_datetime" class="mt-1">Date / Datetime inputs</h3>
           <hr />
 
           <table>
             <tbody>
               <tr>
-                <td class="padding-right">Date</td>
+                <td class="pr-1">Date</td>
                 <td><input type="date" /></td>
               </tr>
               <tr>
-                <td class="padding-right">Datetime local</td>
+                <td class="pr-1">Datetime local</td>
                 <td><input type="datetime-local" /></td>
               </tr>
               <tr>
-                <td class="padding-right">Time</td>
+                <td class="pr-1">Time</td>
                 <td><input type="time" /></td>
               </tr>
               <tr>
-                <td class="padding-right">Month</td>
+                <td class="pr-1">Month</td>
                 <td><input type="month" /></td>
               </tr>
               <tr>
-                <td class="padding-right">Week</td>
+                <td class="pr-1">Week</td>
                 <td><input type="week" /></td>
               </tr>
             </tbody>
@@ -311,25 +333,25 @@
 &lt;input type=&quot;month&quot; /&gt;
 &lt;input type=&quot;week&quot; /&gt;</code></pre>
 
-          <h3 id="input_others" class="margin-top">Other inputs</h3>
+          <h3 id="input_others" class="mt-1">Other inputs</h3>
           <hr />
 
           <table>
             <tbody>
               <tr>
-                <td class="padding-right">Color</td>
+                <td class="pr-1">Color</td>
                 <td><input type="color" /></td>
               </tr>
               <tr>
-                <td class="padding-right">File</td>
+                <td class="pr-1">File</td>
                 <td><input type="file" /></td>
               </tr>
               <tr>
-                <td class="padding-right">Image</td>
+                <td class="pr-1">Image</td>
                 <td><input type="image" /></td>
               </tr>
               <tr>
-                <td class="padding-right">Hidden</td>
+                <td class="pr-1">Hidden</td>
                 <td><input type="hidden" /></td>
               </tr>
             </tbody>
@@ -341,7 +363,7 @@
 &lt;input type=&quot;image&quot; /&gt;
 &lt;input type=&quot;hidden&quot; /&gt;</code></pre>
 
-          <h3 id="input_modifiers" class="margin-top">Input modifiers</h3>
+          <h3 id="input_modifiers" class="mt-1">Input modifiers</h3>
           <hr />
 
           <p>
@@ -711,17 +733,17 @@
       </article>
     </section>
   </main>
-  <footer class="desktop column-end">
-  <section class="two-columns space-between w-100 no-padding">
-    <div class="no-margin">
+  <footer class="desktop mt-auto">
+  <section class="two-columns justify-between align-center w-100 p-0">
+    <div class="m-0">
       <span>Documentation powered by</span>
       <a href="https://github.com/pennions/JET"
         >Jelmer's Easy Templating engine</a
       >
     </div>
     <div class="row">
-      <div class="row-end row center-content-vertical">
-        <span class="margin-right">Created for</span>
+      <div class="ml-auto row align-center">
+        <span class="mr-1">Created for</span>
         <img
           class="inline-block"
           height="36"
@@ -733,16 +755,16 @@
   </section>
 </footer>
 <footer class="mobile">
-  <section class="column center-content-horizontal w-100">
-    <div class="no-margin column center-content-horizontal">
-      <span>Documentation powered by</span> <br />
+  <section class="column align-center w-100">
+    <div class="m-0 column align-center">
+      <span class="mb-1">Documentation powered by</span> <br />
       <a href="https://github.com/pennions/JET"
         >Jelmer's Easy Templating engine</a
       >
     </div>
     <div class="row">
-      <div class="row-end row center-content-vertical">
-        <span class="margin-right">Created for</span>
+      <div class="ml-auto row align-center">
+        <span class="mr-1">Created for</span>
         <img
           class="inline-block"
           height="36"

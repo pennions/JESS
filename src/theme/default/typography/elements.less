@@ -1,11 +1,20 @@
-@import "../../../utilities/tooltip.less";
+@import '../../../utilities/tooltip.less';
 
 html,
 body {
-  font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI",
-    -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", sans-serif;
+  font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI',
+    -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
   color: @default-font-color;
-  line-height: 1.9;
+}
+
+ul,
+ol,
+span,
+p,
+td,
+th,
+code {
+  line-height: 1.6;
 }
 
 h1 {
@@ -26,17 +35,17 @@ label {
   position: relative;
 
   &.disabled,
-  &[disabled]:not([disabled="false"]) {
+  &[disabled]:not([disabled='false']) {
     color: @disabled-font-color;
   }
 
   &.required,
   &[required] {
-    &[tabindex="0"] {
+    &[tabindex='0'] {
       &:hover,
       &:focus {
         &::before {
-          content: "Required field";
+          content: 'Required field';
         }
         .tooltip();
         .tooltip-right();
@@ -45,7 +54,7 @@ label {
 
     &::after {
       position: relative;
-      content: "*";
+      content: '*';
       color: @danger;
       margin-left: 0.5rem;
     }
@@ -53,7 +62,7 @@ label {
 }
 
 kbd,
-code:not([class*="language"]) {
+code:not([class*='language']) {
   margin: 0 0.2rem;
   padding: 0.2rem 0.4rem;
   position: relative;
@@ -83,7 +92,7 @@ blockquote {
     float: right;
     &::before {
       position: relative;
-      content: "~";
+      content: '~';
       margin-right: 0.5rem;
     }
   }

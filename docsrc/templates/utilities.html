@@ -30,14 +30,14 @@
 
         <section class="two-columns">
           <div>
-            <h2>Border utilities</h2>
+            <h2 class="mb-1">Border utilities</h2>
 
             <code class="language-html"> border </code> <br />
             <code class="language-html"> border-bottom </code> <br />
             <code class="language-html"> border-top </code> <br />
             <code class="language-html"> border-left </code> <br />
             <code class="language-html"> border-right </code> <br />
-            <h3 class="margin-y">Border colour classes</h3>
+            <h3 class="my-1">Border colour classes</h3>
             <code class="language-html"> border-primary </code> <br />
             <code class="language-html"> border-accent </code> <br />
             <code class="language-html"> border-danger </code> <br />
@@ -48,38 +48,34 @@
 
           <div>
             <p>Examples:</p>
-            <div class="border padding-left">Element with border</div>
-            <div class="border-bottom padding-left margin-y">
-              Element with border-bottom
-            </div>
-            <div class="border-top padding-left margin-y">
-              Element with border-top
-            </div>
-            <div class="border border-primary padding-left margin-bottom">
+            <div class="border p-1 mt-1">Element with border</div>
+            <div class="border-bottom p-1 my-1">Element with border-bottom</div>
+            <div class="border-top p-1 my-1">Element with border-top</div>
+            <div class="border border-primary p-1 mb-1">
               Element with border and border-primary
             </div>
-            <div class="border border-accent padding-left margin-bottom">
+            <div class="border border-accent p-1 mb-1">
               Element with border and border-accent
             </div>
-            <div class="border border-danger padding-left margin-bottom">
+            <div class="border border-danger p-1 mb-1">
               Element with border and border-danger
             </div>
-            <div class="border border-black padding-left margin-bottom">
+            <div class="border border-black p-1 mb-1">
               Element with border and border-black
             </div>
-            <div class="bg-black padding">
-              <div class="border border-white padding-left">
+            <div class="bg-black p-1">
+              <div class="border border-white p-1">
                 Element with border and border-white
               </div>
             </div>
-            <div class="border border-light padding-left margin-y">
+            <div class="border border-light p-1 my-1">
               Element with border and border-light
             </div>
           </div>
         </section>
         <section class="two-columns">
           <div>
-            <h2>Background colour utilities</h2>
+            <h2 class="mb-1">Background colour utilities</h2>
 
             <code class="language-html"> bg-gray </code> <br />
             <code class="language-html"> bg-gray-dark </code> <br />
@@ -91,26 +87,26 @@
           </div>
           <div>
             <p>Examples:</p>
-            <div class="bg-gray padding">gray background</div>
-            <div class="bg-gray-dark padding">dark gray background</div>
-            <div class="bg-black padding">
+            <div class="bg-gray p-1 mt-1">gray background</div>
+            <div class="bg-gray-dark p-1">dark gray background</div>
+            <div class="bg-black p-1">
               black background with auto colour adjustment
             </div>
-            <div class="bg-white padding">white background</div>
-            <div class="bg-primary padding">
+            <div class="bg-white p-1">white background</div>
+            <div class="bg-primary p-1">
               primary background with auto colour adjustment
             </div>
-            <div class="bg-accent padding">
+            <div class="bg-accent p-1">
               accent background with auto colour adjustment
             </div>
-            <div class="bg-danger padding">
+            <div class="bg-danger p-1">
               danger background with auto colour adjustment
             </div>
           </div>
         </section>
         <section class="two-columns">
           <div>
-            <h2>Text colour utilities</h2>
+            <h2 class="mb-1">Text colour utilities</h2>
             <code class="language-html"> text-black </code> <br />
             <code class="language-html"> text-white </code> <br />
             <code class="language-html"> text-primary </code> <br />
@@ -119,18 +115,18 @@
           </div>
           <div>
             <p>Examples:</p>
-            <div class="bg-primary text-black padding">black text</div>
-            <div class="bg-black text-white padding">white text</div>
-            <div class="bg-gray-dark text-primary padding">primary text</div>
-            <div class="bg-black text-accent padding">accent text</div>
-            <div class="bg-accent text-danger padding">danger text</div>
+            <div class="bg-primary text-black p-1">black text</div>
+            <div class="bg-black text-white p-1">white text</div>
+            <div class="bg-gray-dark text-primary p-1">primary text</div>
+            <div class="bg-black text-accent p-1">accent text</div>
+            <div class="bg-accent text-danger p-1">danger text</div>
           </div>
         </section>
       </article>
 
       <article id="utility-classes">
         <header>
-          <h2>Layout utility classes</h2>
+          <h2 class="mb-1">Layout utility classes</h2>
         </header>
 
         <table>
@@ -196,55 +192,100 @@
             </tr>
 
             <tr>
-              <td><code class="language-html">row-end</code></td>
               <td>
-                When applied to an element inside a display flex element, you
-                can have it move all the way to the right.
+                <code class="language-html">align-center</code>
+              </td>
+              <td>
+                Applies:
+                <code class="language-html">align-items: center;</code>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code class="language-html">align-end</code>
+              </td>
+              <td>
+                Applies:
+                <code class="language-html">align-items: flex-end;</code>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code class="language-html">align-start </code>
+              </td>
+              <td>
+                Applies:
+                <code class="language-html">align-items: flex-start; </code>
               </td>
             </tr>
 
             <tr>
-              <td><code class="language-html">column-end</code></td>
               <td>
-                When applied to an element inside a display flex element with
-                the column direction, you can have it move all the way down to
-                the bottom.
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <code class="language-html">center-content-vertical</code>
+                <code class="language-html">align-stretch </code>
               </td>
               <td>
-                This class can be used combined with
-                <code class="language-html">row</code> or
-                <code class="language-html">column</code> class to align all
-                children along the Y-axis (top to bottom).
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <code class="language-html">center-content-horizontal</code>
-              </td>
-              <td>
-                This class can be used combined with
-                <code class="language-html">row</code> or
-                <code class="language-html">column</code> class to align all
-                children along the X-axis (left to right).
+                Applies:
+                <code class="language-html">align-items: stretch; </code>
               </td>
             </tr>
             <tr>
               <td>
-                <code class="language-html">space-between</code>
+                <code class="language-html">justify-center </code>
               </td>
               <td>
-                This class can be used combined with
-                <code class="language-html">row</code> or
-                <code class="language-html">column</code> to align have the
-                first and last child on the start and end and have even spaces
-                in between.
+                Applies:
+                <code class="language-html">justify-content: center; </code>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code class="language-html">justify-around </code>
+              </td>
+              <td>
+                Applies:
+                <code class="language-html"
+                  >justify-content: space-around;
+                </code>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code class="language-html">justify-evenly </code>
+              </td>
+              <td>
+                Applies:
+                <code class="language-html"
+                  >justify-content: space-evenly;
+                </code>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code class="language-html">justify-end </code>
+              </td>
+              <td>
+                Applies:
+                <code class="language-html">justify-content: flex-end; </code>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code class="language-html">justify-between </code>
+              </td>
+              <td>
+                Applies:
+                <code class="language-html"
+                  >justify-content: space-between;
+                </code>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <code class="language-html">justify-start </code>
+              </td>
+              <td>
+                Applies:
+                <code class="language-html">justify-content: flex-start; </code>
               </td>
             </tr>
 
@@ -259,7 +300,7 @@
           </tbody>
         </table>
 
-        <section class="overflow-horizontal">
+        <section class="overflow-horizontal mt-5">
           <h3>Width classes</h3>
           <hr />
           <p>
@@ -384,7 +425,7 @@
             </tbody>
           </table>
         </section>
-        <section class="overflow-horizontal">
+        <section class="overflow-horizontal mt-5">
           <h3>Hide / show for Mobile and Desktop layout</h3>
           <hr />
 
@@ -422,101 +463,25 @@
             </tbody>
           </table>
         </section>
-        <section class="overflow-horizontal">
-          <h3>Margin utilities</h3>
-          <hr />
-          <table>
-            <thead>
-              <tr>
-                <th>Class</th>
-                <th>Top</th>
-                <th>Right</th>
-                <th>Bottom</th>
-                <th>Left</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>margin</td>
-                <td>1.5rem</td>
-                <td>1.5rem</td>
-                <td>1.5rem</td>
-                <td>1.5rem</td>
-              </tr>
-              <tr>
-                <td>margin-top</td>
-                <td>1.5rem</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td>margin-bottom</td>
-                <td>-</td>
-                <td>-</td>
-                <td>1.5rem</td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td>margin-left</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>1.5rem</td>
-              </tr>
-              <tr>
-                <td>margin-right</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td>margin-x</td>
-                <td>-</td>
-                <td>1.5rem</td>
-                <td>-</td>
-                <td>1.5rem</td>
-              </tr>
-              <tr>
-                <td>margin-y</td>
-                <td>1.5rem</td>
-                <td>-</td>
-                <td>1.5rem</td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td>no-margin</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-              </tr>
-              <tr>
-                <td>no-margin-x</td>
-                <td>unchanged</td>
-                <td>0</td>
-                <td>unchanged</td>
-                <td>0</td>
-              </tr>
-              <tr>
-                <td>no-margin-y</td>
-                <td>0</td>
-                <td>unchanged</td>
-                <td>0</td>
-                <td>unchanged</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
 
-        <section class="overflow-horizontal">
-          <h3>Padding utilities</h3>
+        <section class="overflow-horizontal mt-5">
+          <h3>Padding / Margin utilities</h3>
           <hr />
-          <table>
+          <p>
+            Each version has a number ranging from 0 and 5 and auto. 0 means no
+            padding or margin for that direction and 5 means 5 times the default
+            padding / margin value.
+          </p>
+          <p>
+            <b>Example:</b> pt-3, gives a padding-top of 3 * 1.5rem, which
+            equals to 4.5rem.
+          </p>
+          <hr />
+          <table class="table">
             <thead>
               <tr>
-                <th>Class</th>
+                <th>Padding class</th>
+                <th>Margin class</th>
                 <th>Top</th>
                 <th>Right</th>
                 <th>Bottom</th>
@@ -525,74 +490,164 @@
             </thead>
             <tbody>
               <tr>
-                <td>padding</td>
-                <td>1.5rem</td>
-                <td>1.5rem</td>
-                <td>1.5rem</td>
-                <td>1.5rem</td>
-              </tr>
-              <tr>
-                <td>padding-top</td>
-                <td>1.5rem</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td>padding-bottom</td>
-                <td>-</td>
-                <td>-</td>
-                <td>1.5rem</td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td>padding-left</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>1.5rem</td>
-              </tr>
-              <tr>
-                <td>padding-right</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td>padding-x</td>
-                <td>-</td>
-                <td>1.5rem</td>
-                <td>-</td>
-                <td>1.5rem</td>
-              </tr>
-              <tr>
-                <td>padding-y</td>
-                <td>1.5rem</td>
-                <td>-</td>
-                <td>1.5rem</td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td>no-padding</td>
+                <td>p-0</td>
+                <td>m-0</td>
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
                 <td>0</td>
               </tr>
               <tr>
-                <td>no-padding-x</td>
+                <td>p-1</td>
+                <td>m-1</td>
+                <td>1.5rem</td>
+                <td>1.5rem</td>
+                <td>1.5rem</td>
+                <td>1.5rem</td>
+              </tr>
+              <tr>
+                <td>pt-auto</td>
+                <td>mt-auto</td>
+                <td>auto</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>pt-0</td>
+                <td>mt-0</td>
+                <td>0</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>pt-1</td>
+                <td>mt-1</td>
+                <td>1.5rem</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>pb-auto</td>
+                <td>mb-auto</td>
+                <td>-</td>
+                <td>-</td>
+                <td>auto</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>pb-0</td>
+                <td>mb-0</td>
+                <td>-</td>
+                <td>-</td>
+                <td>0</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>pb-1</td>
+                <td>mb-1</td>
+                <td>-</td>
+                <td>-</td>
+                <td>1.5rem</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>pl-auto</td>
+                <td>ml-auto</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>auto</td>
+              </tr>
+              <tr>
+                <td>pl-0</td>
+                <td>ml-0</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>pl-1</td>
+                <td>ml-1</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>1.5rem</td>
+              </tr>
+              <tr>
+                <td>pr-auto</td>
+                <td>mr-auto</td>
+                <td>-</td>
+                <td>auto</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>pr-0</td>
+                <td>mr-0</td>
+                <td>-</td>
+                <td>0</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>pr-1</td>
+                <td>mr-1</td>
+                <td>-</td>
+                <td>1.5rem</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>px-auto</td>
+                <td>mx-auto</td>
+                <td>unchanged</td>
+                <td>auto</td>
+                <td>unchanged</td>
+                <td>auto</td>
+              </tr>
+              <tr>
+                <td>px-0</td>
+                <td>mx-0</td>
                 <td>unchanged</td>
                 <td>0</td>
                 <td>unchanged</td>
                 <td>0</td>
               </tr>
               <tr>
-                <td>no-padding-y</td>
+                <td>px-1</td>
+                <td>mx-1</td>
+                <td>-</td>
+                <td>1.5rem</td>
+                <td>-</td>
+                <td>1.5rem</td>
+              </tr>
+              <tr>
+                <td>py-auto</td>
+                <td>my-auto</td>
+                <td>auto</td>
+                <td>unchanged</td>
+                <td>auto</td>
+                <td>unchanged</td>
+              </tr>
+              <tr>
+                <td>py-0</td>
+                <td>my-0</td>
                 <td>0</td>
                 <td>unchanged</td>
                 <td>0</td>
                 <td>unchanged</td>
+              </tr>
+              <tr>
+                <td>py-1</td>
+                <td>my-1</td>
+                <td>1.5rem</td>
+                <td>-</td>
+                <td>1.5rem</td>
+                <td>-</td>
               </tr>
             </tbody>
           </table>

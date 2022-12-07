@@ -1,7 +1,7 @@
 summary.button,
 button {
   border-radius: 2px;
-  padding: 0.2rem 1.5rem;
+  padding: 0.9rem 1.5rem;
   background-color: transparent;
   border: 0;
 
@@ -45,13 +45,6 @@ button {
     box-shadow: 0 0 0 1px @button-outline-color;
   }
 
-  &.disabled {
-    color: @disabled-button-color;
-    background-color: @disabled-button-background;
-    border-color: @disabled-button-background;
-    cursor: initial;
-  }
-
   &.primary:not(.link) {
     border: 0;
     color: @color-on-primary;
@@ -81,6 +74,18 @@ button {
       background-color: @accent-hover;
     }
   }
+
+  &.disabled,
+  &:disabled {
+    color: @disabled-button-color;
+    cursor: initial;
+
+    &:not(.link) {
+      background-color: @disabled-button-background;
+      border-color: @disabled-button-background;
+    }
+  }
+
   &.primary,
   &.danger,
   &.accent {
@@ -88,17 +93,21 @@ button {
     &:active {
       box-shadow: 0 0 0 2px @button-outline-color;
     }
-
-    &.disabled {
-      color: @colored-disabled-button-color;
-      background-color: @disabled-button-background;
-      border-color: @disabled-button-background;
-      cursor: initial;
+    &.outline-hover:hover {
+      background-color: transparent;
+      outline: 0.5px solid @button-outline-color;
     }
-  }
 
-  &.outline-hover:hover {
-    background-color: transparent;
-    outline: 0.5px solid @button-outline-color;
+    &.disabled,
+    &:disabled {
+      color: @colored-disabled-button-color;
+      cursor: initial;
+      outline: none;
+
+      &:not(.link) {
+        background-color: @disabled-button-background;
+        border-color: @disabled-button-background;
+      }
+    }
   }
 }

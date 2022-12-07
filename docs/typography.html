@@ -16,7 +16,7 @@
   </head>
 </html>
 <body id="typography">
-  <nav class="no-padding-top no-padding-bottom">
+  <nav class="py-0">
   <ul class="desktop">
     <li>
       <a href="/JESS/index.html"
@@ -37,7 +37,7 @@
         ><h2 class="header-padding">Jelmer's Easy Style System</h2></a
       >
     </div>
-    <section class="no-padding-left three-columns">
+    <section class="pl-0 three-columns">
       <a href="/JESS/index.html">Home</a>
 
       <a href="/JESS/layout.html">Layout</a>
@@ -131,7 +131,7 @@
           </div>
         </section>
 
-        <section>
+        <section class="my-2">
           <header>
             <h2>Blockquote</h2>
           </header>
@@ -149,11 +149,11 @@
 
           <p>
             Blockquote inside an article, which has the
-            <code class="language-html">no-padding</code> class and a width
-            utility class:
+            <code class="language-html">p-0</code> class and a width utility
+            class:
           </p>
 
-          <article class="no-padding w-16">
+          <article class="p-0 w-16">
             <blockquote>
               A famous quote of someone, spanning multiple lines.
               <cite>Anonymous</cite>
@@ -167,7 +167,7 @@
     &lt;cite&gt;Anonymous&lt;/cite&gt;
   &lt;/blockquote&gt;
 
-  &lt;article class=&quot;no-padding w-16&quot;&gt;
+  &lt;article class=&quot;p-0 w-16&quot;&gt;
     &lt;blockquote&gt;
       A famous quote of someone, spanning multiple lines.
       &lt;cite&gt;Anonymous&lt;/cite&gt;
@@ -266,17 +266,17 @@
       </article>
     </section>
   </main>
-  <footer class="desktop column-end">
-  <section class="two-columns space-between w-100 no-padding">
-    <div class="no-margin">
+  <footer class="desktop mt-auto">
+  <section class="two-columns justify-between align-center w-100 p-0">
+    <div class="m-0">
       <span>Documentation powered by</span>
       <a href="https://github.com/pennions/JET"
         >Jelmer's Easy Templating engine</a
       >
     </div>
     <div class="row">
-      <div class="row-end row center-content-vertical">
-        <span class="margin-right">Created for</span>
+      <div class="ml-auto row align-center">
+        <span class="mr-1">Created for</span>
         <img
           class="inline-block"
           height="36"
@@ -288,16 +288,16 @@
   </section>
 </footer>
 <footer class="mobile">
-  <section class="column center-content-horizontal w-100">
-    <div class="no-margin column center-content-horizontal">
-      <span>Documentation powered by</span> <br />
+  <section class="column align-center w-100">
+    <div class="m-0 column align-center">
+      <span class="mb-1">Documentation powered by</span> <br />
       <a href="https://github.com/pennions/JET"
         >Jelmer's Easy Templating engine</a
       >
     </div>
     <div class="row">
-      <div class="row-end row center-content-vertical">
-        <span class="margin-right">Created for</span>
+      <div class="ml-auto row align-center">
+        <span class="mr-1">Created for</span>
         <img
           class="inline-block"
           height="36"
