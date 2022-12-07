@@ -1,4 +1,4 @@
-/* Based on W3 schools example */
+/** Based on W3 schools example */
 
 article,
 .card {
@@ -13,7 +13,7 @@ article,
     margin-bottom: @default-distance;
   }
 
-  // for the body
+  /** for the body */
   & > *:nth-child(2) {
     margin-top: @default-distance;
     padding: 0;
@@ -39,14 +39,14 @@ article,
     position: relative;
     width: 22rem;
     height: 30rem;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    perspective: 1000px; /** Remove this if you don't want the 3D effect */
 
-    &:hover > [tabindex="0"] {
+    &:hover > [tabindex='0'] {
       transform: rotateY(180deg);
     }
 
-    // to make sure it can also stay flipped on focus
-    & [tabindex="0"] {
+    /** to make sure it can also stay flipped on focus */
+    & [tabindex='0'] {
       position: relative;
       width: 100%;
       height: 100%;
@@ -65,7 +65,7 @@ article,
         justify-content: flex-start;
         width: 100%;
         height: 100%;
-        -webkit-backface-visibility: hidden; /* Safari */
+        -webkit-backface-visibility: hidden; /** Safari */
         backface-visibility: hidden;
         box-sizing: border-box;
 

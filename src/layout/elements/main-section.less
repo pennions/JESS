@@ -18,7 +18,7 @@ fieldset {
     .w-100();
   }
 
-  // remove padding in nested childrens
+  /** remove padding in nested childrens */
   & > * > * {
     padding: 0;
   }
@@ -27,34 +27,8 @@ fieldset {
     margin-bottom: @default-distance;
   }
 
-  // For a modal layout
-  &.center {
-    justify-content: center;
-
-    @media (min-width: @sm) {
-      height: calc(100%);
-      align-items: center;
-
-      &.with-footer {
-        height: calc(100% - @footer-min-height);
-      }
-
-      &.with-header {
-        height: calc(100% - @nav-max-height);
-      }
-
-      &.with-header.with-footer {
-        height: calc(100% - @nav-and-footer-height - 0.4rem);
-      }
-    }
-
-    &.content-top {
-      align-items: flex-start;
-    }
-  }
-
-  // When you have a sidebar
-  &:not(.center) > aside {
+  /** When you have a sidebar */
+  & > aside {
     .w-100();
 
     @media (min-width: @xl) {
@@ -63,13 +37,13 @@ fieldset {
     }
   }
 
-  &:not(.center) > aside + * {
+  & > aside + * {
     .w-100();
 
     @media (min-width: @xl) {
       width: auto;
       min-width: unset;
-      flex: 1; // make it fill the remaining space
+      flex: 1; /** make it fill the remaining space */
     }
   }
 

@@ -1,7 +1,7 @@
-@import "../variables/variables.less";
-// Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE in the project root for license information.
-
-// Outputs the keyframes used by the animation classes
+@import '../variables/variables.less';
+/** Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE in the project root for license information.
+  * Outputs the keyframes used by the animation classes
+  */
 
 @keyframes ms-motion-fadeIn {
   from {
@@ -111,7 +111,7 @@
   }
 }
 
-// Fades.
+/** Fades. */
 .ms-motion-fadeIn {
   animation: ms-motion-fadeIn @ms-motion-duration-1 @ms-motion-timing-linear
     both;
@@ -122,7 +122,7 @@
     both;
 }
 
-// Scales.
+/** Scales. */
 .ms-motion-scaleDownIn {
   animation: ms-motion-scaleDownIn @ms-motion-duration-3
       @ms-motion-timing-decelerate both,
@@ -135,13 +135,13 @@
     ms-motion-fadeOut @ms-motion-duration-1 @ms-motion-timing-linear both;
 }
 
-// Slides, default with ltr
+/** Slides, default with ltr */
 .ms-motion-slideLeftOut {
   animation: ms-motion-slideLeftOut @ms-motion-duration-1
       @ms-motion-timing-accelerate both,
     ms-motion-fadeOut @ms-motion-duration-1 @ms-motion-timing-linear both;
 
-  &[dir="rtl"] {
+  &[dir='rtl'] {
     animation: ms-motion-slideRightOut @ms-motion-duration-1
         @ms-motion-timing-accelerate both,
       ms-motion-fadeOut @ms-motion-duration-1 @ms-motion-timing-linear both;
@@ -153,7 +153,7 @@
       @ms-motion-timing-accelerate both,
     ms-motion-fadeOut @ms-motion-duration-1 @ms-motion-timing-linear both;
 
-  &[dir="rtl"] {
+  &[dir='rtl'] {
     animation: ms-motion-slideLeftOut @ms-motion-duration-1
         @ms-motion-timing-accelerate both,
       ms-motion-fadeOut @ms-motion-duration-1 @ms-motion-timing-linear both;
@@ -165,7 +165,7 @@
       @ms-motion-timing-decelerate both,
     ms-motion-fadeIn @ms-motion-duration-1 @ms-motion-timing-linear both;
 
-  &[dir="rtl"] {
+  &[dir='rtl'] {
     animation: ms-motion-slideRightIn @ms-motion-duration-1
         @ms-motion-timing-decelerate both,
       ms-motion-fadeIn @ms-motion-duration-1 @ms-motion-timing-linear both;
@@ -177,7 +177,7 @@
       @ms-motion-timing-decelerate both,
     ms-motion-fadeIn @ms-motion-duration-1 @ms-motion-timing-linear both;
 
-  &[dir="rtl"] {
+  &[dir='rtl'] {
     animation: ms-motion-slideLeftIn @ms-motion-duration-1
         @ms-motion-timing-decelerate both,
       ms-motion-fadeIn @ms-motion-duration-1 @ms-motion-timing-linear both;

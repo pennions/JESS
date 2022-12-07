@@ -65,7 +65,6 @@
           <li><a href="#five-columns">Five columns</a></li>
           <li><a href="#six-columns">Six columns</a></li>
           <li><a href="#twelve-columns">Twelve columns</a></li>
-          <li><a href="#center">Center</a></li>
           <li><a href="#aside">Aside</a></li>
           <li><a href="#nav">Nav</a></li>
           <li><a href="#footer">Footer</a></li>
@@ -366,120 +365,6 @@
     &lt;div&gt;Block 8.3333% width&lt;/div&gt;
     &lt;div&gt;Block 8.3333% width&lt;/div&gt;
 &lt;/section&gt;</code></pre>
-      </article>
-
-      <article id="center">
-        <header>
-          <h2>Center</h2>
-        </header>
-        <p>
-          Add <code class="language-html">class="center"</code> to get a single
-          element centered vertically and horizontally.
-        </p>
-        <p>It has the following variants available:</p>
-        <ul>
-          <li>
-            <code class="language-html">class="center"</code>
-            <ul>
-              <li>It will take 100% and will be centered horizontally.</li>
-              <li>
-                if the screen is has
-                <code class="language-css">min-width:576px;</code> it will be
-                centered vertically.
-              </li>
-            </ul>
-          </li>
-          <li>
-            <code class="language-html">class="center full-height"</code>
-            <ul>
-              <li>
-                it will render with
-                <code class="language-css">height:100vh;</code>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <code class="language-html">class="center with-header"</code>
-            <ul>
-              <li>It will subtract the height of the header from the area.</li>
-            </ul>
-          </li>
-          <li>
-            <code class="language-html">class="center with-footer"</code>
-            <ul>
-              <li>It will subtract the height of the footer from the area.</li>
-            </ul>
-          </li>
-          <li>
-            <code class="language-html"
-              >class="center with-header with-footer"</code
-            >
-            <ul>
-              <li>
-                It will subtract both height of the header and the footer from
-                the area.
-              </li>
-            </ul>
-          </li>
-          <li>
-            <code class="language-html">content-top</code>
-            <ul>
-              <li>
-                If you add content-top class to any of the above, the child will
-                only be horizontally centered and not vertically
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <small
-          ><b>N.B.</b> if you want the footer to stick to the bottom, apply a
-          <code class="language-html">column</code> class on the body and
-          <code class="language-html">mt-auto</code> class on the
-          footer.</small
-        >
-        <pre
-          class="border"
-        ><code class="language-html">&lt;nav&gt;Navigation menu&lt;/nav&gt;
-&lt;main class=&quot;center with-header with-footer&quot;&gt;
-    &lt;article&gt;
-       A centered element with a header and a footer
-    &lt;/article&gt;
-&lt;main&gt;
-&lt;footer&gt;Footer area&lt;/footer&gt;</code></pre>
-        <div class="border demo-body">
-          <section class="center">
-            <article class="demo-block w-50">
-              <p>A centered element</p>
-            </article>
-          </section>
-        </div>
-        <hr />
-        <div class="border demo-body">
-          <nav class="demo-navbar">Demo navbar</nav>
-          <section class="center with-header">
-            <article class="demo-block w-50">
-              <p>A centered element with a header</p>
-            </article>
-          </section>
-        </div>
-        <div class="border demo-body column">
-          <section class="center with-footer">
-            <article class="demo-block w-50">
-              <p>A centered element with a footer</p>
-            </article>
-          </section>
-          <footer class="demo-footer mt-auto">Demo footer</footer>
-        </div>
-        <hr />
-        <div class="border demo-body column">
-          <nav class="demo-navbar">Demo navbar</nav>
-          <section class="center with-header with-footer">
-            <article class="demo-block w-50">
-              <p>A centered element with a header and a footer</p>
-            </article>
-          </section>
-          <footer class="demo-footer mt-auto">Demo footer</footer>
-        </div>
       </article>
 
       <article id="aside">
