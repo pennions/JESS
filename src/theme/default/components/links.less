@@ -4,7 +4,9 @@ a {
 
   &:hover,
   &:focus,
+  &:focus-visible,
   &:active {
+    outline: unset;
     text-decoration: underline;
   }
 
@@ -13,6 +15,10 @@ a {
   }
   &.danger {
     color: @danger;
+  }
+
+  &.contrast {
+    color: @contrast;
   }
 
   &.button {
@@ -76,8 +82,20 @@ a {
         background-color: @accent-hover;
       }
     }
+
+    &.contrast {
+      border: 0;
+      color: @color-on-contrast;
+      background-color: @contrast;
+
+      &:hover {
+        background-color: @contrast-hover;
+      }
+    }
+
     &.primary,
     &.danger,
+    &.contrast,
     &.accent {
       &:focus,
       &:active {
