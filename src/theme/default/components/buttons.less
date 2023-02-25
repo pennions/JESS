@@ -22,6 +22,22 @@ button {
     background-color: @default-button-hover;
   }
 
+  &.icon {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    padding: 0;
+    color: @icon-gray-dark;
+
+    &:disabled {
+      color: @icon-gray;
+
+      &:hover {
+        background-color: @default-button-background;
+      }
+    }
+  }
+
   &.primary {
     border: 0;
     color: @color-on-primary;
@@ -121,7 +137,7 @@ button {
     color: @disabled-button-color;
     cursor: initial;
 
-    &:not(.link) {
+    &:not(.link):not(.icon) {
       background-color: @disabled-button-background;
       border-color: @disabled-button-background;
     }
