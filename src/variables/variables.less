@@ -9,11 +9,18 @@
 
 @nav-max-height: 6rem;
 @footer-min-height: 5rem;
-@default-distance: 1.5rem;
 @cell-padding: 0.6rem;
 @th-button-padding: 0.5rem;
 @th-button-margin: -0.5rem;
 @nav-and-footer-height: @nav-max-height + @footer-min-height;
+
+@default-distance: 1.5rem;
+@distance-0: 0;
+@distance-1: (@default-distance / 3);
+@distance-2: (@default-distance - @distance-1);
+@distance-3: @default-distance;
+@distance-4: (@default-distance * 1.5);
+@distance-5: (@default-distance * 2);
 
 /** Taken and adapted from Fluent UI */
 
