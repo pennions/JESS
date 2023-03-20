@@ -1,6 +1,6 @@
 {
   "name": "@pennions/jess",
-  "version": "2.5.0",
+  "version": "2.5.1",
   "description": "Stylesheet influenced by Pico CSS and Fluent UI from Microsoft ",
   "main": "index.js",
   "scripts": {
@@ -30,9 +30,7 @@
   "homepage": "https://github.com/pennions/JESS#readme",
   "devDependencies": {
     "copyfiles": "^2.4.1",
-    "less": "^4.1.2"
-  },
-  "dependencies": {
+    "less": "^4.1.2",
     "cssnano": "^5.1.8",
     "postcss": "^8.4.13",
     "postcss-cli": "^9.1.0"
