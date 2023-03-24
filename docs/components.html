@@ -186,8 +186,7 @@
           </article>
         </section>
         <pre
-          class="border stretch mt-1"
-        ><code class="language-html">&lt;article class=&quot;normal&quot;&gt;
+          class="border stretch mt-1"><code class="language-html">&lt;article class=&quot;normal&quot;&gt;
     &lt;div tabindex=&quot;0&quot;&gt;
         &lt;section&gt;
           &lt;header&gt;Header&lt;/header&gt;
@@ -315,8 +314,7 @@
         </section>
 
         <pre
-          class="border stretch mt-1"
-        ><code class="language-html">&lt;article class=&quot;flip&quot;&gt;
+          class="border stretch mt-1"><code class="language-html">&lt;article class=&quot;flip&quot;&gt;
     &lt;div tabindex=&quot;0&quot;&gt;
         &lt;section&gt;
           &lt;header&gt;Header&lt;/header&gt;
@@ -383,8 +381,7 @@
         </dialog>
 
         <pre
-          class="border stretch mt-1"
-        ><code class="language-html">&lt;dialog class=&quot;notification&quot; open&gt;
+          class="border stretch mt-1"><code class="language-html">&lt;dialog class=&quot;notification&quot; open&gt;
     &lt;span&gt;Default notification&lt;/span&gt;
     &lt;button class=&quot;close&quot;&gt;X&lt;/button&gt;
 &lt;/dialog&gt;
@@ -423,16 +420,14 @@
         </p>
 
         <button
-          onclick="document.getElementById('demo-modal').setAttribute('open', true)"
-        >
+          onclick="document.getElementById('demo-modal').setAttribute('open', true)">
           Open modal
         </button>
 
         <dialog
           id="demo-modal"
           class="modal"
-          onclick="this.removeAttribute('open')"
-        >
+          onclick="this.removeAttribute('open')">
           <article class="normal w-25">
             <header>
               <h3>Message</h3>
@@ -440,8 +435,7 @@
             <div>I am a modal.</div>
             <footer>
               <button
-                onclick="document.getElementById('demo-modal').setAttribute('open', false)"
-              >
+                onclick="document.getElementById('demo-modal').setAttribute('open', false)">
                 Close
               </button>
             </footer>
@@ -454,8 +448,7 @@
         </p>
         <button
           onclick="document.getElementById('demo-modal-noscroll').setAttribute('open', true); 
-                   document.getElementsByTagName('body')[0].classList.add('no-scroll')"
-        >
+                   document.getElementsByTagName('body')[0].classList.add('no-scroll')">
           Open modal with no-scroll applied.
         </button>
 
@@ -463,8 +456,7 @@
           id="demo-modal-noscroll"
           class="modal"
           onclick="this.removeAttribute('open'); 
-                   document.getElementsByTagName('body')[0].classList.remove('no-scroll')"
-        >
+                   document.getElementsByTagName('body')[0].classList.remove('no-scroll')">
           <article class="normal w-25">
             <header>
               <h3>Message</h3>
@@ -473,8 +465,7 @@
             <footer>
               <button
                 onclick="document.getElementById('demo-modal-noscroll').setAttribute('open', false); 
-                         document.getElementsByTagName('body')[0].classList.remove('no-scroll')"
-              >
+                         document.getElementsByTagName('body')[0].classList.remove('no-scroll')">
                 Close
               </button>
             </footer>
@@ -482,8 +473,7 @@
         </dialog>
 
         <pre
-          class="border stretch mt-1"
-        ><code class="language-html">&lt;button
+          class="border stretch mt-1"><code class="language-html">&lt;button
     onclick=&quot;document.getElementById(&#039;demo-modal&#039;).setAttribute(&#039;open&#039;, true)&quot;
     &gt;
     Open modal
@@ -559,8 +549,7 @@
         </nav>
 
         <pre
-          class="border stretch mt-1"
-        ><code class="language-html">&lt;nav aria-label=&quot;Breadcrumb&quot;&gt;
+          class="border stretch mt-1"><code class="language-html">&lt;nav aria-label=&quot;Breadcrumb&quot;&gt;
   &lt;ul&gt;
     &lt;li&gt;&lt;a href=&quot;&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;&quot;&gt;Workshop&lt;/a&gt;&lt;/li&gt;
@@ -669,8 +658,7 @@
         </details>
 
         <pre
-          class="border stretch mt-1"
-        ><code class="language-html">&lt;details&gt;
+          class="border stretch mt-1"><code class="language-html">&lt;details&gt;
   &lt;summary&gt;Menu 1&lt;/summary&gt;
   &lt;nav class=&quot;dropdown-container&quot;&gt;
     &lt;ul&gt;
@@ -771,8 +759,7 @@
         </label>
 
         <pre
-          class="border stretch mt-1"
-        ><code class="language-html">&lt;label class=&quot;custom-input&quot;&gt;
+          class="border stretch mt-1"><code class="language-html">&lt;label class=&quot;custom-input&quot;&gt;
   Custom checkbox with full color control.
   &lt;input type=&quot;checkbox&quot; checked=&quot;checked&quot; /&gt;
   &lt;span class=&quot;checkmark&quot;&gt;&lt;/span&gt;
@@ -827,8 +814,7 @@
         </label>
 
         <pre
-          class="border stretch mt-1"
-        ><code class="language-html">&lt;label class=&quot;custom-input&quot;&gt;
+          class="border stretch mt-1"><code class="language-html">&lt;label class=&quot;custom-input&quot;&gt;
   Custom radiobutton with full color control.
   &lt;input type=&quot;radio&quot; checked=&quot;checked&quot; name=&quot;custom&quot; /&gt;
   &lt;span class=&quot;checkmark&quot;&gt;&lt;/span&gt;
@@ -888,8 +874,7 @@
           <span
             class="toggle-background"
             data-label="Off"
-            data-label-on="On"
-          ></span>
+            data-label-on="On"></span>
         </label>
 
         <p>
@@ -904,8 +889,7 @@
           <span
             class="toggle-background label-left"
             data-label="Off"
-            data-label-on="On"
-          ></span>
+            data-label-on="On"></span>
         </label>
         <p>
           A switch with only
@@ -932,9 +916,9 @@
           <span class="toggle-background" data-label-on="On state only"></span>
         </label>
 
-        <pre
-          class="border stretch mt-1"
-        ><code class="language-html">&lt;label class=&quot;switch&quot;&gt;
+        <pre class="border stretch mt-1">
+          <code class="language-html">
+            &lt;label class=&quot;switch&quot;&gt;
     &lt;input type=&quot;checkbox&quot; /&gt;
     &lt;span class=&quot;toggle&quot;&gt;&lt;/span&gt;
     &lt;span class=&quot;toggle-background&quot;&gt;&lt;/span&gt;
@@ -982,14 +966,16 @@
     &lt;input type=&quot;checkbox&quot; checked /&gt;
     &lt;span class=&quot;toggle&quot;&gt;&lt;/span&gt;
     &lt;span class=&quot;toggle-background&quot; data-label-on=&quot;On state only&quot;&gt;&lt;/span&gt;
-&lt;/label&gt;</code></pre>
+&lt;/label&gt;
+          </code>
+        </pre>
 
         <hr />
-        <small
-          ><b>N.B.</b> The data-label attribute is rendered as a pseudo element,
+        <small>
+          <b>N.B.</b> The data-label attribute is rendered as a pseudo element,
           make sure it will fit by applying the correct margins around the
-          switch.</small
-        >
+          switch.
+        </small>
       </article>
     </section>
   </main>
