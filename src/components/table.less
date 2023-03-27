@@ -4,15 +4,23 @@ table {
   & th {
     text-align: left;
     padding: @cell-padding;
+  }
 
-    &:last-child {
-      padding-right: 0;
-    }
-
-    & > button {
-      border: none;
-      padding: @th-button-padding;
-      margin-left: @th-button-margin;
+  &.sticky-header {
+    & > thead {
+      top: 0;
+      position: sticky;
+      position: -webkit-sticky;
+      z-index: 2;
+      white-space: nowrap;
     }
   }
+}
+
+.table-container {
+  padding-right: @scrollbar-offset;
+  display: inline-block;
+  width: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
