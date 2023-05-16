@@ -1,59 +1,15 @@
+<script setup>
+import { onMounted } from "vue";
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/prism.css" />
-    <link rel="stylesheet" href="./css/documentation.css" />
-    <link rel="stylesheet" type="text/css" href="./css/jess.min.css" />
-    <link rel="stylesheet" type="text/css" href="./css/default-theme.min.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
-    <script src="./js/prism.js" type="text/javascript"></script>
+const typography_blockquote =
+  '<blockquote class="w-16">\n    A famous quote of someone, spanning multiple lines.\n    <cite>Anonymous</cite>\n  </blockquote>\n\n  <article class="p-0 w-16">\n    <blockquote>\n      A famous quote of someone, spanning multiple lines.\n      <cite>Anonymous</cite>\n    </blockquote>\n  </article>\n</section>';
 
-    <title>JESS Documentation</title>
-  </head>
-</html>
-<body id="typography">
-  <nav class="py-0">
-  <ul class="desktop">
-    <li>
-      <a href="/JESS/index.html"
-        ><h2 class="header-padding">Jelmer's Easy Style System</h2></a
-      >
-    </li>
-    <li><a href="/JESS/index.html">Home</a></li>
-    <li><a href="/JESS/layout.html">Layout</a></li>
-    <li><a href="/JESS/elements.html">Buttons and Inputs</a></li>
-    <li><a href="/JESS/components.html">Components</a></li>
-    <li><a href="/JESS/typography.html">Typography</a></li>
-    <li><a href="/JESS/utilities.html">Utility classes</a></li>
-    <li><a href="/JESS/icons.html">Icons</a></li>
-  </ul>
-  <div class="mobile w-100">
-    <div>
-      <a href="/JESS/index.html"
-        ><h2 class="header-padding">Jelmer's Easy Style System</h2></a
-      >
-    </div>
-    <section class="pl-0 three-columns">
-      <a href="/JESS/index.html">Home</a>
+onMounted(() => {
+  Prism.highlightAll();
+});
+</script>
 
-      <a href="/JESS/layout.html">Layout</a>
-
-      <a href="/JESS/elements.html">Buttons and Inputs</a>
-
-      <a href="/JESS/components.html">Components</a>
-
-      <a href="/JESS/typography.html">Typography</a>
-
-      <a href="/JESS/utilities.html">Utility classes</a>
-
-      <a href="/JESS/icons.html">Icons</a>
-    </section>
-  </div>
-</nav>
+<template>
   <main>
     <section>
       <article>
@@ -160,20 +116,7 @@
             </blockquote>
           </article>
 
-          <pre
-            class="border"
-          ><code class="language-html">&lt;blockquote class=&quot;w-16&quot;&gt;
-    A famous quote of someone, spanning multiple lines.
-    &lt;cite&gt;Anonymous&lt;/cite&gt;
-  &lt;/blockquote&gt;
-
-  &lt;article class=&quot;p-0 w-16&quot;&gt;
-    &lt;blockquote&gt;
-      A famous quote of someone, spanning multiple lines.
-      &lt;cite&gt;Anonymous&lt;/cite&gt;
-    &lt;/blockquote&gt;
-  &lt;/article&gt;
-&lt;/section&gt;</code></pre>
+          <pre class="border"><code class="language-html">{{ typography_blockquote }}</code></pre>
         </section>
 
         <section>
@@ -266,47 +209,4 @@
       </article>
     </section>
   </main>
-  <footer class="desktop mt-auto">
-  <section class="two-columns justify-between align-center w-100 p-0">
-    <div class="m-0">
-      <span>Documentation powered by</span>
-      <a href="https://github.com/pennions/JET"
-        >Jelmer's Easy Templating engine</a
-      >
-    </div>
-    <div class="row">
-      <div class="ml-auto row align-center">
-        <span class="mr-1">Created for</span>
-        <img
-          class="inline-block"
-          height="36"
-          src="./images/pennions-creative.svg"
-          alt="The text Pennions shown in a creative way."
-        />
-      </div>
-    </div>
-  </section>
-</footer>
-<footer class="mobile">
-  <section class="column align-center w-100">
-    <div class="m-0 column align-center">
-      <span class="mb-1">Documentation powered by</span> <br />
-      <a href="https://github.com/pennions/JET"
-        >Jelmer's Easy Templating engine</a
-      >
-    </div>
-    <div class="row">
-      <div class="ml-auto row align-center">
-        <span class="mr-1">Created for</span>
-        <img
-          class="inline-block"
-          height="36"
-          src="./images/pennions-creative.svg"
-          alt="The text Pennions shown in a creative way."
-        />
-      </div>
-    </div>
-  </section>
-</footer>
-</body>
-</html>
+</template>

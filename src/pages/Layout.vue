@@ -1,38 +1,55 @@
-<!--dev-->
-<link rel="stylesheet" href="../css/prism.css" />
-<link rel="stylesheet" href="../css/documentation.css" />
-<link rel="stylesheet/less" type="text/css" href="../../../src/jess.less" />
-<link
-  rel="stylesheet/less"
-  type="text/css"
-  href="../../../src/theme/default/default.less"
-/>
-<script src="../js/prism.js" type="text/javascript"></script>
-<script
-  src="../../../node_modules/less/dist/less.min.js"
-  type="text/javascript"
-></script>
-<!--end-->
-{{# partials.open #}}
-<body id="layout">
-  {{# partials.header #}}
+<script setup>
+import { inject, onMounted } from "vue";
+
+const block_100 = "<section>\n    <div>Block 100% width</div>\n</section>";
+const block_50 =
+  '<section class="two-columns">\n    <div>Block 50% width</div>\n    <div>Block 50% width</div>\n</section>';
+const block_33 =
+  '<section class="three-columns">\n    <div>Block 33.336% width</div>\n    <div>Block 33.336% width</div>\n    <div>Block 33.336% width</div>\n</section>';
+const block_25 =
+  '<section class="four-columns">\n    <div>Block 25% width</div>\n</section>';
+const block_20 =
+  '<section class="five-columns">\n    <div>Block 20% width</div>\n    <div>Block 20% width</div>\n    <div>Block 20% width</div>\n    <div>Block 20% width</div>\n    <div>Block 20% width</div>\n</section>';
+const block_16 =
+  '<section class="six-columns">\n    <div>Block 16.667% width</div>\n    <div>Block 16.667% width</div>\n    <div>Block 16.667% width</div>\n    <div>Block 16.667% width</div>\n    <div>Block 16.667% width</div>\n    <div>Block 16.667% width</div>\n</section>';
+const block_8 =
+  '<section class="twelve-columns">\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n</section>';
+const aside_layout =
+  "<main>\n    <aside>\n        Element with auto width\n    </aside>\n    <section>\n        Element that takes the remaining space\n    </section>\n</main>";
+const nav_layout =
+  "<body>\n    <nav>Navigation bar</nav>\n    ...\n</body>\n\n<body>\n  <nav>\n    <ul>\n      <li><a href>Link 1</a></li>\n      <li><a href>Link 2</a></li>\n      <li><a href>Link 3</a></li>\n    </ul>\n  </nav>\n  ...\n</body>\n\n<!-- or -->\n\n<body>\n  <header>\n    <nav>\n      <ul>\n        <li><a href>Link 1</a></li>\n        <li><a href>Link 2</a></li>\n        <li><a href>Link 3</a></li>\n      </ul>\n    </nav>\n  </header>\n  ...\n</body>";
+const footer_layout = "<body>\n    ...\n    <footer>Footer</footer>\n</body>";
+const mixed_layout =
+  '<section>\n  <div class="demo-block">Block</div>\n  <section class="p-0 two-columns">\n    <section class="five-columns">\n      <div class="demo-block">Block</div>\n      <div class="demo-block">Block</div>\n      <div class="demo-block">Block</div>\n      <div class="demo-block">Block</div>\n      <div class="demo-block">Block</div>\n    </section>\n    <div class="demo-block">Block</div>\n  </section>\n  <section class="row p-0">\n    <div class="demo-block w-75">Block</div>\n    <div class="demo-block w-25">Block</div>\n  </section>\n</section>';
+
+const scrollTo = inject("scrollTo");
+
+onMounted(() => {
+  Prism.highlightAll();
+});
+</script>
+
+<template>
   <main>
     <aside>
       <nav class="sticky">
         <ul>
-          <li><a href="#single-column">Single column</a></li>
-          <li><a href="#two-columns">Two columns</a></li>
-          <li><a href="#three-columns">Three columns</a></li>
-          <li><a href="#four-columns">Four columns</a></li>
-          <li><a href="#five-columns">Five columns</a></li>
-          <li><a href="#six-columns">Six columns</a></li>
-          <li><a href="#twelve-columns">Twelve columns</a></li>
-          <li><a href="#aside">Aside</a></li>
-          <li><a href="#nav">Nav</a></li>
-          <li><a href="#footer">Footer</a></li>
-          <li><a href="#nested">Nested sections example</a></li>
+          <li><a @click="scrollTo('single-column')">Single column</a></li>
+          <li><a @click="scrollTo('two-columns')">Two columns</a></li>
+          <li><a @click="scrollTo('three-columns')">Three columns</a></li>
+          <li><a @click="scrollTo('four-columns')">Four columns</a></li>
+          <li><a @click="scrollTo('five-columns')">Five columns</a></li>
+          <li><a @click="scrollTo('six-columns')">Six columns</a></li>
+          <li><a @click="scrollTo('twelve-columns')">Twelve columns</a></li>
+          <li><a @click="scrollTo('aside')">Aside</a></li>
+          <li><a @click="scrollTo('nav')">Nav</a></li>
+          <li><a @click="scrollTo('footer')">Footer</a></li>
+          <li><a @click="scrollTo('nested')">Nested sections example</a></li>
           <li>
-            <a href="#layout" class="button normal desktop">Back to top</a>
+            <a
+              @click="scrollTo('main-nav')"
+              class="button normal desktop"
+            >Back to top</a>
           </li>
         </ul>
       </nav>
@@ -71,10 +88,10 @@
           <code class="language-css">width:100%;</code> and will take up more
           space if there is room, up to their specified maximum.
         </p>
-        <section><div class="demo-block">Block 100% width</div></section>
-        <pre
-          class="border"
-        ><code class="language-html">{{! block_100 }}</code></pre>
+        <section>
+          <div class="demo-block">Block 100% width</div>
+        </section>
+        <pre class="border"><code class="language-html">{{ block_100 }}</code></pre>
       </article>
 
       <article id="two-columns">
@@ -95,9 +112,7 @@
           <div class="demo-block">Block 50% width</div>
           <div class="demo-block">Block 50% width</div>
         </section>
-        <pre
-          class="border"
-        ><code class="language-html">{{! block_50 }}</code></pre>
+        <pre class="border"><code class="language-html">{{ block_50 }}</code></pre>
       </article>
 
       <article id="three-columns">
@@ -123,9 +138,7 @@
           <div class="demo-block">Block 33.336% width</div>
           <div class="demo-block">Block 33.336% width</div>
         </section>
-        <pre
-          class="border"
-        ><code class="language-html">{{! block_33 }}</code></pre>
+        <pre class="border"><code class="language-html">{{ block_33 }}</code></pre>
       </article>
 
       <article id="four-columns">
@@ -157,9 +170,7 @@
           <div class="demo-block">Block 25% width</div>
           <div class="demo-block">Block 25% width</div>
         </section>
-        <pre
-          class="border"
-        ><code class="language-html">{{! block_25 }}</code></pre>
+        <pre class="border"><code class="language-html">{{ block_25 }}</code></pre>
       </article>
 
       <article id="five-columns">
@@ -195,9 +206,7 @@
           <div class="demo-block">Block 20% width</div>
           <div class="demo-block">Block 20% width</div>
         </section>
-        <pre
-          class="border"
-        ><code class="language-html">{{! block_20 }}</code></pre>
+        <pre class="border"><code class="language-html">{{ block_20 }}</code></pre>
       </article>
 
       <article id="six-columns">
@@ -238,9 +247,7 @@
           <div class="demo-block">Block 16.667% width</div>
           <div class="demo-block">Block 16.667% width</div>
         </section>
-        <pre
-          class="border"
-        ><code class="language-html">{{! block_16 }}</code></pre>
+        <pre class="border"><code class="language-html">{{ block_16 }}</code></pre>
       </article>
 
       <article id="twelve-columns">
@@ -287,9 +294,7 @@
           <div class="demo-block">Block 8.3333% width</div>
           <div class="demo-block">Block 8.3333% width</div>
         </section>
-        <pre
-          class="border"
-        ><code class="language-html">{{! block_8 }}</code></pre>
+        <pre class="border"><code class="language-html">{{ block_8 }}</code></pre>
       </article>
 
       <article id="aside">
@@ -308,9 +313,7 @@
           <code class="language-html">&lt;aside&gt;</code>, the right side can
           be any element.
         </p>
-        <pre
-          class="border"
-        ><code class="language-html">{{! aside_layout }}</code></pre>
+        <pre class="border"><code class="language-html">{{ aside_layout }}</code></pre>
         <hr />
         <small>
           <b>Fun fact:</b> the current page uses this aside layout for having a
@@ -356,9 +359,7 @@
           </nav>
         </section>
         <hr />
-        <pre
-          class="border"
-        ><code class="language-html">{{! nav_layout }}</code></pre>
+        <pre class="border"><code class="language-html">{{ nav_layout }}</code></pre>
       </article>
 
       <article id="footer">
@@ -380,9 +381,7 @@
         <section>
           <footer class="demo-footer">Footer</footer>
         </section>
-        <pre
-          class="border"
-        ><code class="language-html">{{! footer_layout }}</code></pre>
+        <pre class="border"><code class="language-html">{{ footer_layout }}</code></pre>
       </article>
 
       <article id="nested">
@@ -406,12 +405,8 @@
             <div class="demo-block w-25">Block</div>
           </section>
         </section>
-        <pre
-          class="border"
-        ><code class="language-html">{{! mixed_layout }}</code></pre>
+        <pre class="border"><code class="language-html">{{ mixed_layout }}</code></pre>
       </article>
     </section>
   </main>
-  {{# partials.footer #}}
-</body>
-{{# partials.close #}}
+</template>
