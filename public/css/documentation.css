@@ -1,3 +1,8 @@
+/** due to vue router we remove the href, but want to have a pointer */
+a:hover {
+  cursor: pointer;
+}
+
 .demo-block {
   background: repeating-linear-gradient(
     135deg,

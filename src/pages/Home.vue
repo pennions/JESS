@@ -1,22 +1,4 @@
-<!--dev-->
-<link rel="stylesheet" href="../css/prism.css" />
-<link rel="stylesheet" href="../css/documentation.css" />
-<link rel="stylesheet/less" type="text/css" href="../../../src/jess.less" />
-<link
-  rel="stylesheet/less"
-  type="text/css"
-  href="../../../src/theme/default/default.less"
-/>
-<script src="../js/prism.js" type="text/javascript"></script>
-<script
-  src="../../../node_modules/less/dist/less.min.js"
-  type="text/javascript"
-></script>
-<!--end-->
-
-{{# partials.open #}}
-<body class="column">
-  {{# partials.header #}}
+<template>
   <main>
     <section class="content-top with-header with-footer">
       <article class="w-100">
@@ -50,6 +32,4 @@
       </article>
     </section>
   </main>
-  {{# partials.footer #}}
-</body>
-{{# partials.close #}}
+</template>

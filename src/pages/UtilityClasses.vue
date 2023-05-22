@@ -1,19 +1,4 @@
-<!--dev-->
-<link rel="stylesheet" href="../css/prism.css" />
-<link rel="stylesheet" href="../css/documentation.css" />
-<link rel="stylesheet/less" type="text/css" href="../../../src/jess.less" />
-<link
-  rel="stylesheet/less"
-  type="text/css"
-  href="../../../src/theme/default/default.less" />
-<script src="../js/prism.js" type="text/javascript"></script>
-<script
-  src="../../../node_modules/less/dist/less.min.js"
-  type="text/javascript"></script>
-<!--end-->
-{{# partials.open #}}
-<body id="utilities">
-  {{# partials.header #}}
+<template>
   <main>
     <section>
       <article>
@@ -166,12 +151,28 @@
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                class="mr-5 feather feather-coffee">
+                class="mr-5 feather feather-coffee"
+              >
                 <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
                 <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
-                <line x1="6" y1="1" x2="6" y2="4" />
-                <line x1="10" y1="1" x2="10" y2="4" />
-                <line x1="14" y1="1" x2="14" y2="4" />
+                <line
+                  x1="6"
+                  y1="1"
+                  x2="6"
+                  y2="4"
+                />
+                <line
+                  x1="10"
+                  y1="1"
+                  x2="10"
+                  y2="4"
+                />
+                <line
+                  x1="14"
+                  y1="1"
+                  x2="14"
+                  y2="4"
+                />
               </svg>
               Gray icon
             </div>
@@ -180,12 +181,28 @@
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                class="mr-5 feather feather-coffee">
+                class="mr-5 feather feather-coffee"
+              >
                 <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
                 <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
-                <line x1="6" y1="1" x2="6" y2="4" />
-                <line x1="10" y1="1" x2="10" y2="4" />
-                <line x1="14" y1="1" x2="14" y2="4" />
+                <line
+                  x1="6"
+                  y1="1"
+                  x2="6"
+                  y2="4"
+                />
+                <line
+                  x1="10"
+                  y1="1"
+                  x2="10"
+                  y2="4"
+                />
+                <line
+                  x1="14"
+                  y1="1"
+                  x2="14"
+                  y2="4"
+                />
               </svg>
               Dark Gray icon
             </div>
@@ -194,12 +211,28 @@
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                class="mr-5 feather feather-coffee">
+                class="mr-5 feather feather-coffee"
+              >
                 <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
                 <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
-                <line x1="6" y1="1" x2="6" y2="4" />
-                <line x1="10" y1="1" x2="10" y2="4" />
-                <line x1="14" y1="1" x2="14" y2="4" />
+                <line
+                  x1="6"
+                  y1="1"
+                  x2="6"
+                  y2="4"
+                />
+                <line
+                  x1="10"
+                  y1="1"
+                  x2="10"
+                  y2="4"
+                />
+                <line
+                  x1="14"
+                  y1="1"
+                  x2="14"
+                  y2="4"
+                />
               </svg>
               Primary icon
             </div>
@@ -208,12 +241,28 @@
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                class="mr-5 feather feather-coffee">
+                class="mr-5 feather feather-coffee"
+              >
                 <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
                 <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
-                <line x1="6" y1="1" x2="6" y2="4" />
-                <line x1="10" y1="1" x2="10" y2="4" />
-                <line x1="14" y1="1" x2="14" y2="4" />
+                <line
+                  x1="6"
+                  y1="1"
+                  x2="6"
+                  y2="4"
+                />
+                <line
+                  x1="10"
+                  y1="1"
+                  x2="10"
+                  y2="4"
+                />
+                <line
+                  x1="14"
+                  y1="1"
+                  x2="14"
+                  y2="4"
+                />
               </svg>
               Accent icon
             </div>
@@ -222,12 +271,28 @@
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                class="mr-5 feather feather-coffee">
+                class="mr-5 feather feather-coffee"
+              >
                 <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
                 <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
-                <line x1="6" y1="1" x2="6" y2="4" />
-                <line x1="10" y1="1" x2="10" y2="4" />
-                <line x1="14" y1="1" x2="14" y2="4" />
+                <line
+                  x1="6"
+                  y1="1"
+                  x2="6"
+                  y2="4"
+                />
+                <line
+                  x1="10"
+                  y1="1"
+                  x2="10"
+                  y2="4"
+                />
+                <line
+                  x1="14"
+                  y1="1"
+                  x2="14"
+                  y2="4"
+                />
               </svg>
               Danger icon
             </div>
@@ -236,12 +301,28 @@
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                class="mr-5 feather feather-coffee">
+                class="mr-5 feather feather-coffee"
+              >
                 <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
                 <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
-                <line x1="6" y1="1" x2="6" y2="4" />
-                <line x1="10" y1="1" x2="10" y2="4" />
-                <line x1="14" y1="1" x2="14" y2="4" />
+                <line
+                  x1="6"
+                  y1="1"
+                  x2="6"
+                  y2="4"
+                />
+                <line
+                  x1="10"
+                  y1="1"
+                  x2="10"
+                  y2="4"
+                />
+                <line
+                  x1="14"
+                  y1="1"
+                  x2="14"
+                  y2="4"
+                />
               </svg>
               Success icon
             </div>
@@ -250,27 +331,58 @@
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                class="mr-5 feather feather-coffee">
+                class="mr-5 feather feather-coffee"
+              >
                 <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
                 <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
-                <line x1="6" y1="1" x2="6" y2="4" />
-                <line x1="10" y1="1" x2="10" y2="4" />
-                <line x1="14" y1="1" x2="14" y2="4" />
+                <line
+                  x1="6"
+                  y1="1"
+                  x2="6"
+                  y2="4"
+                />
+                <line
+                  x1="10"
+                  y1="1"
+                  x2="10"
+                  y2="4"
+                />
+                <line
+                  x1="14"
+                  y1="1"
+                  x2="14"
+                  y2="4"
+                />
               </svg>
               Black icon
             </div>
 
-            <div
-              class="bg-black text-white icon-white row align-center mt-2 p-2">
+            <div class="bg-black text-white icon-white row align-center mt-2 p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
-                class="mr-5 feather feather-coffee">
+                class="mr-5 feather feather-coffee"
+              >
                 <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
                 <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
-                <line x1="6" y1="1" x2="6" y2="4" />
-                <line x1="10" y1="1" x2="10" y2="4" />
-                <line x1="14" y1="1" x2="14" y2="4" />
+                <line
+                  x1="6"
+                  y1="1"
+                  x2="6"
+                  y2="4"
+                />
+                <line
+                  x1="10"
+                  y1="1"
+                  x2="10"
+                  y2="4"
+                />
+                <line
+                  x1="14"
+                  y1="1"
+                  x2="14"
+                  y2="4"
+                />
               </svg>
               White icon
             </div>
@@ -397,8 +509,7 @@
               </td>
               <td>
                 Applies:
-                <code class="language-html"
-                  >justify-content: space-around;
+                <code class="language-html">justify-content: space-around;
                 </code>
               </td>
             </tr>
@@ -408,8 +519,7 @@
               </td>
               <td>
                 Applies:
-                <code class="language-html"
-                  >justify-content: space-evenly;
+                <code class="language-html">justify-content: space-evenly;
                 </code>
               </td>
             </tr>
@@ -428,8 +538,7 @@
               </td>
               <td>
                 Applies:
-                <code class="language-html"
-                  >justify-content: space-between;
+                <code class="language-html">justify-content: space-between;
                 </code>
               </td>
             </tr>
@@ -836,6 +945,4 @@
       </article>
     </section>
   </main>
-  {{# partials.footer #}}
-</body>
-{{# partials.close #}}
+</template>
