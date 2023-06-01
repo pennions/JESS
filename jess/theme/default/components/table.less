@@ -6,10 +6,10 @@ table {
 
     & tbody tr {
       .border-bottom();
-      border-color: @hr-color;
+      border-color: var(--hr-color);
 
       &:hover {
-        background-color: @default-button-hover;
+        background-color: var(--button-hover);
       }
     }
 
@@ -21,11 +21,11 @@ table {
 
   &.sticky-header {
     & > thead {
-      background-color: @default-background;
-      -webkit-box-shadow: 0 1px 4px 0 rgba(@shadow-color, 0.16),
-        0 1px 4px 0 rgba(@shadow-color, 0.12);
-      box-shadow: 0 1px 4px 0 rgba(@shadow-color, 0.16),
-        0 1px 4px 0 rgba(@shadow-color, 0.12);
+      background-color: var(--background);
+      -webkit-box-shadow: 0 1px 4px 0 rgba(var(--shadow-colour), 0.16),
+        0 1px 4px 0 rgba(var(--shadow-colour), 0.12);
+      box-shadow: 0 1px 4px 0 rgba(var(--shadow-colour), 0.16),
+        0 1px 4px 0 rgba(var(--shadow-colour), 0.12);
     }
   }
 }

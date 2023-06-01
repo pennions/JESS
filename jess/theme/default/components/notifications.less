@@ -1,26 +1,26 @@
 dialog.notification {
   &.error {
-    background-color: @dialog-error;
+    background-color: var(--error);
 
     & > .icon,
     & > .feather {
-      color: @dialog-error-icon;
+      color: var(--icon-error);
     }
   }
   &.warning {
-    background-color: @dialog-warning;
+    background-color: var(--warning);
 
     & > .icon,
     & > .feather {
-      color: @dialog-warning-icon;
+      color: var(--icon-warning);
     }
   }
   &.success {
-    background-color: @dialog-success;
+    background-color: var(--success);
 
     & > .icon,
     & > .feather {
-      color: @dialog-success-icon;
+      color: var(--icon-success);
     }
   }
 
@@ -29,7 +29,7 @@ dialog.notification {
     background-color: transparent;
 
     &:hover {
-      outline: 0.5px solid @button-outline-color;
+      outline: 0.5px solid var(--button-outline-colour);
     }
   }
 }

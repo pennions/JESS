@@ -2,40 +2,40 @@ label.switch {
   display: inline-flex;
 
   & > .toggle {
-    background-color: @switch-toggle-off-color;
+    background-color: var(--switch-toggle-off-colour);
   }
 
   & input ~ .toggle-background {
     background-color: transparent;
-    border: 0.5px solid @switch-border-color;
+    border: 0.5px solid var(--switch-border-colour);
   }
 
   & input:checked {
     & ~ .toggle {
-      background-color: @switch-toggle-on-color;
+      background-color: var(--switch-toggle-on-colour);
     }
     & ~ .toggle-background {
-      background-color: @primary;
-      border: 0.5px solid @primary;
+      background-color: var(--primary);
+      border: 0.5px solid var(--primary);
     }
 
     &:disabled {
       & ~ .toggle {
-        background-color: @disabled-button-color;
+        background-color: var(--disabled-button-colour);
       }
       & ~ .toggle-background {
-        background-color: @default-background;
-        border-color: @disabled-button-color;
+        background-color: var(--default-background);
+        border-color: var(--disabled-button-colour);
       }
     }
   }
 
   & input:disabled {
     & ~ .toggle {
-      background-color: @disabled-button-color;
+      background-color: var(--disabled-button-colour);
     }
     & ~ .toggle-background {
-      border: 0.5px solid @disabled-button-color;
+      border: 0.5px solid var(--disabled-button-colour);
     }
   }
 }

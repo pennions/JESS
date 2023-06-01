@@ -1,20 +1,20 @@
 @import '../../../animations/animations.less';
 
 select {
-  border: 0.5px solid @input-border-color;
+  border: 0.5px solid var(--input-border-colour);
   padding: 0.5rem;
-  outline: @primary none 0px;
-  background-color: @default-background;
+  outline: var(--primary) none 0px;
+  background-color: var(--background);
 
   &:focus {
-    border-color: @primary;
-    box-shadow: inset 1px 1px 0 @primary, inset -1px -1px 0 @primary;
+    border-color: var(--primary);
+    box-shadow: inset 1px 1px 0 var(--primary), inset -1px -1px 0 var(--primary);
   }
 
   &:disabled {
-    color: @disabled-button-color;
-    background-color: @disabled-button-background;
-    border-color: @disabled-button-background;
+    color: var(--disabled-button-colour);
+    background-color: var(--disabled-button-background);
+    border-color: var(--disabled-button-background);
     box-shadow: none;
     cursor: initial;
   }
@@ -23,7 +23,7 @@ select {
 details {
   & > summary:hover {
     cursor: pointer;
-    background-color: @default-button-hover;
+    background-color: var(--button-hover);
   }
 
   &.button {

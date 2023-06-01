@@ -9,17 +9,17 @@ button {
   &:active {
     outline: none;
     cursor: pointer;
-    box-shadow: 0 0 0 1px @button-outline-color;
+    box-shadow: 0 0 0 1px var(--button-outline-colour);
   }
 
   &:not(.no-border) {
     .border();
-    background-color: @default-button-background;
+    background-color: var(--button-background);
   }
 
   &:hover {
     cursor: pointer;
-    background-color: @default-button-hover;
+    background-color: var(--button-hover);
   }
 
   &.icon {
@@ -27,10 +27,10 @@ button {
     flex-direction: column;
     width: auto;
     padding: 0;
-    color: @icon-gray-dark;
+    color: var(--icon);
 
     &:disabled {
-      color: @icon-gray;
+      color: var(--icon-disabled);
 
       &:hover {
         background-color: transparent;
@@ -40,41 +40,41 @@ button {
 
   &.primary {
     border: 0;
-    color: @color-on-primary;
-    background-color: @primary;
+    color: var(--colour-on-primary);
+    background-color: var(--primary);
 
     &:hover {
-      background-color: @primary-hover;
+      background-color: var(--primary-hover);
     }
   }
 
   &.danger {
     border: 0;
-    color: @color-on-danger;
-    background-color: @danger;
+    color: var(--colour-on-danger);
+    background-color: var(--danger);
 
     &:hover {
-      background-color: @danger-hover;
+      background-color: var(--danger-hover);
     }
   }
 
   &.accent {
     border: 0;
-    color: @color-on-accent;
-    background-color: @accent;
+    color: var(--colour-on-accent);
+    background-color: var(--accent);
 
     &:hover {
-      background-color: @accent-hover;
+      background-color: var(--accent-hover);
     }
   }
 
   &.contrast {
     border: 0;
-    color: @color-on-contrast;
-    background-color: @contrast;
+    color: var(--colour-on-contrast);
+    background-color: var(--contrast);
 
     &:hover {
-      background-color: @contrast-hover;
+      background-color: var(--contrast-hover);
     }
   }
 
@@ -84,43 +84,43 @@ button {
   &.contrast {
     &:focus,
     &:active {
-      box-shadow: 0 0 0 2px @button-outline-color;
+      box-shadow: 0 0 0 2px var(--button-outline-colour);
     }
 
     &.disabled,
     &:disabled {
-      color: @colored-disabled-button-color;
+      color: var(--coloured-disabled-button-colour);
       cursor: initial;
       outline: none;
 
       &:not(.link) {
-        background-color: @disabled-button-background;
-        border-color: @disabled-button-background;
+        background-color: var(--disabled-button-background);
+        border-color: var(--disabled-button-background);
       }
     }
   }
 
   &.outline-hover:hover {
     background-color: transparent;
-    outline: 0.5px solid @button-outline-color;
+    outline: 0.5px solid var(--button-outline-colour);
   }
 
   &.link {
     border: 0;
-    color: @primary;
+    color: var(--primary);
     background-color: transparent;
     padding: 0;
 
     &.accent {
-      color: @accent;
+      color: var(--accent);
     }
 
     &.contrast {
-      color: @contrast;
+      color: var(--contrast);
     }
 
     &.danger {
-      color: @danger;
+      color: var(--danger);
     }
 
     &:hover,
@@ -134,12 +134,12 @@ button {
 
   &.disabled,
   &:disabled {
-    color: @disabled-button-color;
+    color: var(--disabled-button-colour);
     cursor: initial;
 
     &:not(.link):not(.icon) {
-      background-color: @disabled-button-background;
-      border-color: @disabled-button-background;
+      background-color: var(--disabled-button-background);
+      border-color: var(--disabled-button-background);
     }
 
     &:hover {

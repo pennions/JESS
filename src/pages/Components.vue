@@ -612,7 +612,7 @@ onMounted(() => {
           <span class="checkmark"></span>
         </label>
 
-        <pre class="border stretch mt-1"><code class="language-html">{{! components_checkbox }}</code></pre>
+        <pre class="border stretch mt-1"><code class="language-html">{{ components_checkbox }}</code></pre>
         <br />
 
         <h3 class="pt-1">Radiobutton</h3>
@@ -657,7 +657,7 @@ onMounted(() => {
           <span class="checkmark"></span>
         </label>
 
-        <pre class="border stretch mt-1"><code class="language-html">{{! components_radio }}</code></pre>
+        <pre class="border stretch mt-1"><code class="language-html">{{ components_radio }}</code></pre>
         <br />
 
         <h3>Switch</h3>
@@ -757,7 +757,7 @@ onMounted(() => {
 
         <pre class="border stretch mt-1">
           <code class="language-html">
-            {{! components_switch }}
+            {{ components_switch }}
           </code>
         </pre>
 

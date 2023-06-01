@@ -1,30 +1,30 @@
 input,
 textarea {
-  border: 0.5px solid @input-border-color;
+  border: 0.5px solid var(--input-border-colour);
   border-radius: 2px;
   padding: 0 0.4rem;
   min-height: 3rem;
   outline: currentcolor none 0px;
-  accent-color: @primary; /** for checkboxes, radiobuttons etc */
+  accent-color: var(--primary); /** for checkboxes, radiobuttons etc */
 
   &:focus {
-    border-color: @primary;
-    box-shadow: inset 1px 1px 0 @primary, inset -1px -1px 0 @primary;
+    border-color: var(--primary);
+    box-shadow: inset 1px 1px 0 var(--primary), inset -1px -1px 0 var(--primary);
   }
 
   &:invalid,
   &[invalid]:not([invalid='false']) {
-    border-color: @danger;
+    border-color: var(--danger);
     &:hover,
     &:focus {
-      box-shadow: inset 1px 1px 0 @danger, inset -1px -1px 0 @danger;
+      box-shadow: inset 1px 1px 0 var(--danger), inset -1px -1px 0 var(--danger);
     }
   }
 
   &:disabled {
-    color: @disabled-button-color;
-    background-color: @disabled-button-background;
-    border-color: @disabled-button-background;
+    color: var(--disabled-button-colour);
+    background-color: var(--disabled-button-background);
+    border-color: var(--disabled-button-background);
     box-shadow: none;
     cursor: initial;
   }
@@ -44,7 +44,7 @@ textarea {
   &[type='checkbox'] {
     &:focus {
       outline-offset: 0.1rem;
-      outline: @button-outline-color dashed 0.1rem;
+      outline: var(--button-outline-colour) dashed 0.1rem;
     }
   }
 
@@ -56,45 +56,45 @@ textarea {
 
     &:hover {
       cursor: pointer;
-      background-color: @default-button-hover;
+      background-color: var(--button-hover);
     }
 
     &:focus,
     &:active {
       outline: none;
       cursor: pointer;
-      box-shadow: 0 0 0 2px @button-outline-color;
+      box-shadow: 0 0 0 2px var(--button-outline-color);
     }
 
     &:disabled,
     &:hover:disabled {
-      color: @disabled-button-color;
-      background-color: @disabled-button-background;
-      border-color: @disabled-button-background;
+      color: var(--disabled-button-colour);
+      background-color: var(--disabled-button-background);
+      border-color: var(--disabled-button-background);
       box-shadow: none;
       cursor: initial;
     }
   }
 
   &[type='reset'] {
-    background-color: @default-background;
+    background-color: var(--background);
     .border();
 
     &:focus,
     &:active {
       outline: none;
       cursor: pointer;
-      box-shadow: 0 0 0 1px @button-outline-color;
+      box-shadow: 0 0 0 1px var(--button-outline-colour);
     }
   }
 
   &[type='button'],
   &[type='submit'] {
-    color: @color-on-primary;
-    background-color: @primary;
+    color: var(--colour-on-primary);
+    background-color: var(--primary);
 
     &:hover {
-      background-color: @primary-hover;
+      background-color: var(--primary-hover);
     }
   }
 
@@ -104,7 +104,7 @@ textarea {
     border: none;
 
     &:focus {
-      outline: @primary solid 2px;
+      outline: var(--primary) solid 2px;
       outline-offset: 2px;
       box-shadow: none;
     }
@@ -113,8 +113,8 @@ textarea {
   &[type='file'] {
     &::file-selector-button,
     &::-webkit-file-upload-button {
-      background-color: @primary;
-      color: @color-on-primary;
+      background-color: var(--primary);
+      color: var(--colour-on-primary);
       border-radius: 2px;
       padding: 0.6rem 1.5rem;
       border: 0;
@@ -123,7 +123,7 @@ textarea {
     &:active {
       &::file-selector-button,
       &::-webkit-file-upload-button {
-        box-shadow: inset 0 0 0 2px @button-outline-color;
+        box-shadow: inset 0 0 0 2px var(--button-outline-colour);
       }
     }
 
@@ -131,13 +131,13 @@ textarea {
       &::file-selector-button,
       &::-webkit-file-upload-button {
         cursor: pointer;
-        background-color: @primary-hover;
+        background-color: var(--primary-hover);
       }
     }
 
     &:focus {
       outline-offset: 0.1rem;
-      outline: @button-outline-color solid 0.2rem;
+      outline: var(--button-outline-colour) solid 0.2rem;
     }
   }
 
@@ -148,6 +148,7 @@ textarea {
   }
 
   &[type='range'] {
+    appearance: none;
     -webkit-appearance: none;
     background: transparent;
     padding: 0;
@@ -155,19 +156,19 @@ textarea {
     &::-moz-range-thumb {
       width: 1.2rem;
       height: 1.2rem;
-      background: @default-background;
-      border: 2px solid @range-filled-track-color;
+      background: var(--background);
+      border: 2px solid var(--range-filled-track-colour);
       border-radius: 100px;
     }
 
     &::-moz-range-track {
       height: 0.3rem;
-      background-color: @range-track-color;
+      background-color: var(--range-track-colour);
     }
 
     &::-moz-range-progress {
       height: 0.3rem;
-      background-color: @range-filled-track-color;
+      background-color: var(--range-filled-track-colour);
     }
 
     &::-webkit-slider-thumb {
@@ -175,15 +176,15 @@ textarea {
       appearance: none;
       width: 1.6rem;
       height: 1.6rem;
-      background: @default-background;
-      border: 2px solid @range-filled-track-color;
+      background: var(--background);
+      border: 2px solid var(--range-filled-track-colour);
       border-radius: 100px;
       margin-top: -6px;
     }
 
     &::-webkit-slider-runnable-track {
       height: 3px;
-      background: @range-track-color;
+      background: var(--range-track-colour);
       border: none;
       border-radius: 3px;
     }
@@ -194,18 +195,18 @@ textarea {
       outline: none;
 
       &::-moz-range-progress {
-        background-color: @primary;
+        background-color: var(--primary);
       }
       &::-moz-range-thumb {
-        border: 2px solid @primary;
+        border: 2px solid var(--primary);
       }
 
       &::-webkit-slider-runnable-track {
-        background-color: @primary;
+        background-color: var(--primary);
       }
 
       &::-webkit-slider-thumb {
-        border: 2px solid @primary;
+        border: 2px solid var(--primary);
       }
     }
 
@@ -216,18 +217,18 @@ textarea {
         outline: none;
 
         &::-moz-range-progress {
-          background-color: @range-filled-track-color;
+          background-color: var(--range-filled-track-colour);
         }
         &::-moz-range-thumb {
-          border: 2px solid @range-filled-track-color;
+          border: 2px solid var(--range-filled-track-colour);
         }
 
         &::-webkit-slider-runnable-track {
-          background-color: @range-filled-track-color;
+          background-color: var(--range-filled-track-colour);
         }
 
         &::-webkit-slider-thumb {
-          border: 2px solid @range-filled-track-color;
+          border: 2px solid var(--range-filled-track-colour);
         }
       }
     }
@@ -246,8 +247,8 @@ textarea {
     }
     &:hover,
     &:focus {
-      border-color: @primary;
-      box-shadow: inset 0 -1px 0 @primary;
+      border-color: var(--primary);
+      box-shadow: inset 0 -1px 0 var(--primary);
     }
 
     &:disabled,
@@ -265,15 +266,15 @@ textarea {
     &[invalid]:not([invalid='false']) {
       &:hover,
       &:focus {
-        border-color: @danger;
-        box-shadow: inset 0 -1px 0 @danger;
+        border-color: var(--danger);
+        box-shadow: inset 0 -1px 0 var(--danger);
       }
     }
 
     &:disabled {
       &:hover,
       &:focus {
-        border-color: @disabled-button-background;
+        border-color: var(--disabled-button-background);
       }
     }
   }
@@ -281,45 +282,45 @@ textarea {
 
 .custom-input {
   .checkmark {
-    border-color: @input-border-color;
+    border-color: var(--input-border-colour);
     background-color: transparent;
   }
 
   input:checked ~ .checkmark {
-    background-color: @primary;
-    border-color: @primary;
+    background-color: var(--primary);
+    border-color: var(--primary);
   }
   input[disabled=''] ~ .checkmark,
   input[disabled='true'] ~ .checkmark {
-    background-color: @disabled-button-background;
-    border-color: @disabled-button-color;
+    background-color: var(--disabled-button-background);
+    border-color: var(--disabled-button-colour);
 
     &::after {
-      border-color: @disabled-button-background;
+      border-color: var(--disabled-button-background);
     }
   }
 
   &:hover
     > input:not(:checked):not([disabled='']):not([disabled='true'])
     ~ .checkmark:after {
-    border-color: @input-border-color;
+    border-color: var(--input-border-colour);
   }
 
   &:hover > input:checked ~ .checkmark {
-    background-color: @primary-hover;
-    border-color: @primary-hover;
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
   }
 
   input[type='radio']:checked ~ .checkmark {
-    background-color: @default-background;
-    border-color: @primary;
+    background-color: var(--background);
+    border-color: var(--primary);
   }
 
   input[type='radio']:focus ~ .checkmark {
-    outline-color: @input-border-color;
+    outline-color: var(--input-border-colour);
   }
 
   .checkmark:after {
-    border-color: @color-on-primary;
+    border-color: var(--colour-on-primary);
   }
 }

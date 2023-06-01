@@ -4,7 +4,7 @@ html,
 body {
   font-family: 'Segoe UI', 'Segoe UI Web (West European)', 'Segoe UI',
     -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
-  color: @default-font-color;
+  color: var(--font-colour);
 }
 
 ul,
@@ -36,7 +36,7 @@ label {
 
   &.disabled,
   &[disabled]:not([disabled='false']) {
-    color: @disabled-font-color;
+    color: var(--colour-on-disabled);
   }
 
   &.required,
@@ -55,7 +55,7 @@ label {
     &::after {
       position: relative;
       content: '*';
-      color: @danger;
+      color: var(--danger);
       margin-left: 0.5rem;
     }
   }
@@ -66,14 +66,14 @@ code:not([class*='language']) {
   margin: 0 0.2rem;
   padding: 0.2rem 0.4rem;
   position: relative;
-  background-color: @code-background;
+  background-color: var(--code-background);
   border-radius: 0.2rem;
   .border();
   bottom: 0.1rem;
 }
 
 mark {
-  background-color: @accent;
+  background-color: var(--accent);
 }
 
 blockquote {
@@ -81,7 +81,7 @@ blockquote {
   display: block;
   height: 100%;
   line-height: 1.4;
-  border-left: 0.75rem solid @accent;
+  border-left: 0.75rem solid var(--accent);
   padding-top: @default-distance;
   padding-left: @default-distance;
 

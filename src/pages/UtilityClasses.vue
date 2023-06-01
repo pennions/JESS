@@ -64,8 +64,8 @@
           <div>
             <h2 class="mb-3">Background colour utilities</h2>
 
-            <code class="language-html"> bg-gray </code> <br />
-            <code class="language-html"> bg-gray-dark </code> <br />
+            <code class="language-html"> bg-grey </code> <br />
+            <code class="language-html"> bg-grey-dark </code> <br />
             <code class="language-html"> bg-black </code> <br />
             <code class="language-html"> bg-white </code> <br />
             <code class="language-html"> bg-primary </code> <br />
@@ -74,8 +74,8 @@
           </div>
           <div>
             <p>Examples:</p>
-            <div class="bg-gray p-3 mt-3">gray background</div>
-            <div class="bg-gray-dark p-3">dark gray background</div>
+            <div class="bg-grey p-3 mt-3">grey background</div>
+            <div class="bg-grey-dark p-3">dark grey background</div>
             <div class="bg-black p-3">
               black background with auto colour adjustment
             </div>
@@ -100,17 +100,17 @@
             <code class="language-html"> text-accent </code> <br />
             <code class="language-html"> text-danger </code> <br />
             <code class="language-html"> text-success </code> <br />
-            <code class="language-html"> text-border </code> <br />
+            <code class="language-html"> text-grey </code> <br />
           </div>
           <div>
             <p>Examples:</p>
             <div class="bg-primary text-black p-3">black text</div>
             <div class="bg-black text-white p-3">white text</div>
-            <div class="bg-gray-dark text-primary p-3">primary text</div>
+            <div class="bg-grey-dark text-primary p-3">primary text</div>
             <div class="bg-black text-accent p-3">accent text</div>
             <div class="bg-accent text-danger p-3">danger text</div>
             <div class="text-success p-3">success text</div>
-            <div class="text-border p-3">border coloured text</div>
+            <div class="text-grey p-3">grey text</div>
           </div>
         </section>
         <section class="two-columns">
@@ -136,8 +136,8 @@
         <section class="two-columns">
           <div>
             <h2 class="mb-3">Icon colour utilities</h2>
-            <code class="language-html">icon-gray </code> <br />
-            <code class="language-html">icon-gray-dark </code> <br />
+            <code class="language-html">icon-grey </code> <br />
+            <code class="language-html">icon-grey-dark </code> <br />
             <code class="language-html">icon-primary </code><br />
             <code class="language-html">icon-accent </code><br />
             <code class="language-html">icon-danger </code><br />
@@ -147,7 +147,7 @@
           </div>
           <div>
             <p>Examples:</p>
-            <div class="icon-gray row align-center mt-2 p-2">
+            <div class="icon-grey row align-center mt-2 p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -174,10 +174,10 @@
                   y2="4"
                 />
               </svg>
-              Gray icon
+              Grey icon
             </div>
 
-            <div class="icon-gray-dark row align-center mt-2 p-2">
+            <div class="icon-grey-dark row align-center mt-2 p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -204,7 +204,7 @@
                   y2="4"
                 />
               </svg>
-              Dark Gray icon
+              Dark Grey icon
             </div>
 
             <div class="icon-primary row align-center mt-2 p-2">
