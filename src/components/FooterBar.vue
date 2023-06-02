@@ -1,5 +1,5 @@
 <template>
-  <footer class="desktop mt-auto">
+  <footer class="main-footer desktop mt-auto">
     <div class="ml-auto row align-center">
       <span class="mr-1">Created for</span>
       <img
@@ -10,7 +10,7 @@
       />
     </div>
   </footer>
-  <footer class="mobile">
+  <footer class="main-footer mobile">
     <section class="column align-center w-100">
       <div class="row">
         <div class="ml-auto row align-center">

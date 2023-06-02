@@ -109,6 +109,7 @@
   display: flex !important;
   gap: @default-distance;
   align-items: flex-start;
+  flex-wrap: wrap;
 
   @media (max-width: @sm) {
     gap: unset;
@@ -175,7 +176,7 @@
 }
 
 .overflow-horizontal {
-  overflow-x: auto;
+  overflow-x: auto !important;
 }
 
 .no-stretch {
@@ -185,14 +186,14 @@
 
 .sticky {
   position: sticky !important;
-  position: -webkit-sticky;
+  position: -webkit-sticky !important;
   top: 0 !important;
   z-index: 1000 !important;
   height: auto !important;
 }
 
 .full-height {
-  height: 100vh;
+  height: 100vh !important;
 }
 
 .stretch {

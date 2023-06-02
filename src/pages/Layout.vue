@@ -1,26 +1,27 @@
 <script setup>
 import { inject, onMounted } from "vue";
 
-const block_100 = "<section>\n    <div>Block 100% width</div>\n</section>";
+const block_100 =
+  '<section class="flex-layout">\n    <div>Block 100% width</div>\n</section>';
 const block_50 =
-  '<section class="two-columns">\n    <div>Block 50% width</div>\n    <div>Block 50% width</div>\n</section>';
+  '<section class="flex-layout two-columns">\n    <div>Block 50% width</div>\n    <div>Block 50% width</div>\n</section>';
 const block_33 =
-  '<section class="three-columns">\n    <div>Block 33.336% width</div>\n    <div>Block 33.336% width</div>\n    <div>Block 33.336% width</div>\n</section>';
+  '<section class="flex-layout three-columns">\n    <div>Block 33.336% width</div>\n    <div>Block 33.336% width</div>\n    <div>Block 33.336% width</div>\n</section>';
 const block_25 =
-  '<section class="four-columns">\n    <div>Block 25% width</div>\n</section>';
+  '<section class="flex-layout four-columns">\n    <div>Block 25% width</div>\n</section>';
 const block_20 =
-  '<section class="five-columns">\n    <div>Block 20% width</div>\n    <div>Block 20% width</div>\n    <div>Block 20% width</div>\n    <div>Block 20% width</div>\n    <div>Block 20% width</div>\n</section>';
+  '<section class="flex-layout five-columns">\n    <div>Block 20% width</div>\n    <div>Block 20% width</div>\n    <div>Block 20% width</div>\n    <div>Block 20% width</div>\n    <div>Block 20% width</div>\n</section>';
 const block_16 =
-  '<section class="six-columns">\n    <div>Block 16.667% width</div>\n    <div>Block 16.667% width</div>\n    <div>Block 16.667% width</div>\n    <div>Block 16.667% width</div>\n    <div>Block 16.667% width</div>\n    <div>Block 16.667% width</div>\n</section>';
+  '<section class="flex-layout six-columns">\n    <div>Block 16.667% width</div>\n    <div>Block 16.667% width</div>\n    <div>Block 16.667% width</div>\n    <div>Block 16.667% width</div>\n    <div>Block 16.667% width</div>\n    <div>Block 16.667% width</div>\n</section>';
 const block_8 =
-  '<section class="twelve-columns">\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n</section>';
+  '<section class="flex-layout twelve-columns">\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n    <div>Block 8.3333% width</div>\n</section>';
 const aside_layout =
-  "<main>\n    <aside>\n        Element with auto width\n    </aside>\n    <section>\n        Element that takes the remaining space\n    </section>\n</main>";
+  '<main>\n    <aside class="sidebar">\n        Element with auto width\n    </aside>\n    <section class="main">\n        Element that takes the remaining space\n    </section>\n</main>';
 const nav_layout =
-  "<body>\n    <nav>Navigation bar</nav>\n    ...\n</body>\n\n<body>\n  <nav>\n    <ul>\n      <li><a href>Link 1</a></li>\n      <li><a href>Link 2</a></li>\n      <li><a href>Link 3</a></li>\n    </ul>\n  </nav>\n  ...\n</body>\n\n<!-- or -->\n\n<body>\n  <header>\n    <nav>\n      <ul>\n        <li><a href>Link 1</a></li>\n        <li><a href>Link 2</a></li>\n        <li><a href>Link 3</a></li>\n      </ul>\n    </nav>\n  </header>\n  ...\n</body>";
-const footer_layout = "<body>\n    ...\n    <footer>Footer</footer>\n</body>";
+  '<nav class="main-navigation">\n    <ul>\n      <li><a href>Link 1</a></li>\n      <li><a href>Link 2</a></li>\n      <li><a href>Link 3</a></li>\n    </ul>\n</nav>';
+const footer_layout = '<footer class="main-footer">Footer</footer>';
 const mixed_layout =
-  '<section>\n  <div class="demo-block">Block</div>\n  <section class="p-0 two-columns">\n    <section class="five-columns">\n      <div class="demo-block">Block</div>\n      <div class="demo-block">Block</div>\n      <div class="demo-block">Block</div>\n      <div class="demo-block">Block</div>\n      <div class="demo-block">Block</div>\n    </section>\n    <div class="demo-block">Block</div>\n  </section>\n  <section class="row p-0">\n    <div class="demo-block w-75">Block</div>\n    <div class="demo-block w-25">Block</div>\n  </section>\n</section>';
+  '<section class="flex-layout">\n  <div class="demo-block">Block</div>\n  <section class="flex-layout two-columns">\n    <section class="flex-layout five-columns">\n      <div class="demo-block">Block</div>\n      <div class="demo-block">Block</div>\n      <div class="demo-block">Block</div>\n      <div class="demo-block">Block</div>\n      <div class="demo-block">Block</div>\n    </section>\n    <div class="demo-block">Block</div>\n  </section>\n  <section class="row">\n    <div class="demo-block w-75">Block</div>\n    <div class="demo-block w-25">Block</div>\n  </section>\n</section>';
 
 const scrollTo = inject("scrollTo");
 
@@ -30,9 +31,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <main>
-    <aside>
-      <nav class="sticky">
+  <main class="flex-layout pl-0 pt-3 pr-3">
+    <aside class="sidebar mr-3">
+      <nav class="sticky p-3">
         <ul>
           <li><a @click="scrollTo('single-column')">Single column</a></li>
           <li><a @click="scrollTo('two-columns')">Two columns</a></li>
@@ -55,17 +56,15 @@ onMounted(() => {
       </nav>
     </aside>
 
-    <section>
-      <article>
+    <section class="flex-layout main">
+      <article class="p-3">
         <header>
           <h1>Layout elements</h1>
         </header>
         <p>
-          The elements
-          <code class="language-html">&lt;main&gt;</code>,
-          <code class="language-html">&lt;section&gt;</code> and
-          <code class="language-html">&lt;fieldset&gt;</code> are all displayed
-          with <code class="language-css">display:flex</code>.
+          Use the class
+          <code class="language-html">flex-layout</code> as a base for an easy flex layout.
+          It will apply <code class="language-css">display:flex</code> and will unlock more classes that can be used on the child elements.
           <br />
           The child elements are all displayed by default at
           <code class="language-css">width: 100%</code> which results in a
@@ -79,7 +78,10 @@ onMounted(() => {
           <b>N.B.</b> The blue fill texture is for demonstration purpose only.
         </small>
       </article>
-      <article id="single-column">
+      <article
+        id="single-column"
+        class="p-3"
+      >
         <header>
           <h2>Single column</h2>
         </header>
@@ -99,7 +101,7 @@ onMounted(() => {
           <h2>Two columns</h2>
         </header>
         <p>
-          Add <code class="language-html">class="two-columns"</code> to get a
+          Add <code class="language-html">class="flex-layout two-columns"</code> to get a
           double column layout.
         </p>
         <ul>
@@ -108,7 +110,7 @@ onMounted(() => {
             <code class="language-css">min-width:576px;</code>
           </li>
         </ul>
-        <section class="two-columns">
+        <section class="flex-layout two-columns">
           <div class="demo-block">Block 50% width</div>
           <div class="demo-block">Block 50% width</div>
         </section>
@@ -120,7 +122,7 @@ onMounted(() => {
           <h2>Three columns</h2>
         </header>
         <p>
-          Add <code class="language-html">class="three-columns"</code> to get a
+          Add <code class="language-html">class="flex-layout three-columns"</code> to get a
           three column layout.
         </p>
         <ul>
@@ -133,7 +135,7 @@ onMounted(() => {
             <code class="language-css">min-width:576px;</code>
           </li>
         </ul>
-        <section class="three-columns">
+        <section class="flex-layout three-columns">
           <div class="demo-block">Block 33.336% width</div>
           <div class="demo-block">Block 33.336% width</div>
           <div class="demo-block">Block 33.336% width</div>
@@ -146,7 +148,7 @@ onMounted(() => {
           <h2>Four columns</h2>
         </header>
         <p>
-          Add <code class="language-html">class="four-columns"</code> to get a
+          Add <code class="language-html">class="flex-layout four-columns"</code> to get a
           four column layout.
         </p>
         <ul>
@@ -164,7 +166,7 @@ onMounted(() => {
           </li>
         </ul>
 
-        <section class="four-columns">
+        <section class="flex-layout four-columns">
           <div class="demo-block">Block 25% width</div>
           <div class="demo-block">Block 25% width</div>
           <div class="demo-block">Block 25% width</div>
@@ -178,7 +180,7 @@ onMounted(() => {
           <h2>Five columns</h2>
         </header>
         <p>
-          Add <code class="language-html">class="five-columns"</code> to get a
+          Add <code class="language-html">class="flex-layout five-columns"</code> to get a
           five column layout.
         </p>
         <ul>
@@ -199,7 +201,7 @@ onMounted(() => {
             <code class="language-css">min-width:576px;</code>
           </li>
         </ul>
-        <section class="five-columns">
+        <section class="flex-layout five-columns">
           <div class="demo-block">Block 20% width</div>
           <div class="demo-block">Block 20% width</div>
           <div class="demo-block">Block 20% width</div>
@@ -214,7 +216,7 @@ onMounted(() => {
           <h2>Six columns</h2>
         </header>
         <p>
-          Add <code class="language-html">class="six-columns"</code> to get a
+          Add <code class="language-html">class="flex-layout six-columns"</code> to get a
           six column layout.
         </p>
         <ul>
@@ -239,7 +241,7 @@ onMounted(() => {
             <code class="language-css">min-width:576px;</code>
           </li>
         </ul>
-        <section class="six-columns">
+        <section class="flex-layout six-columns">
           <div class="demo-block">Block 16.667% width</div>
           <div class="demo-block">Block 16.667% width</div>
           <div class="demo-block">Block 16.667% width</div>
@@ -280,7 +282,7 @@ onMounted(() => {
             <code class="language-css">min-width:576px;</code>
           </li>
         </ul>
-        <section class="twelve-columns">
+        <section class="flex-layout twelve-columns">
           <div class="demo-block">Block 8.3333% width</div>
           <div class="demo-block">Block 8.3333% width</div>
           <div class="demo-block">Block 8.3333% width</div>
@@ -302,16 +304,13 @@ onMounted(() => {
           <h2>Aside layout</h2>
         </header>
         <p>
-          The aside layout can be used if you want to have a small - wide
-          layout. horizontal layout. <br />
-          The aside element has a
+          The <code class="language-css">.sidebar</code> can be used if you want to have a small - wide layout or wide - small layout for that matter.
+          <br />
+          It will apply:
           <code class="language-css">width:auto;</code><br />
-          The element on the right will have
-          <code class="language-css">flex:1;</code> and take the remaining
+          The element with the <code class="language-css">.main</code> class will have
+          <code class="language-css">flex:1;</code>applied and take the remaining
           space. <br />
-          Only the first element must be
-          <code class="language-html">&lt;aside&gt;</code>, the right side can
-          be any element.
         </p>
         <pre class="border"><code class="language-html">{{ aside_layout }}</code></pre>
         <hr />
@@ -326,9 +325,8 @@ onMounted(() => {
           <h2>Nav</h2>
         </header>
         <p>
-          When you include a
-          <code class="language-html">&lt;nav&gt;</code> element directly inside
-          a <code class="language-html">&lt;body&gt;</code> element it will:
+          When you apply
+          a <code class="language-css">.main-navigation</code> to a <code class="language-html">nav</code> element it will:
         </p>
         <ul>
           <li>Have a box-shadow</li>
@@ -336,11 +334,6 @@ onMounted(() => {
           <li>Have <code class="language-css">padding: 1.5rem;</code></li>
         </ul>
         <hr />
-        <small>
-          <b>N.B</b> you can also wrap the
-          <code class="language-html">&lt;nav&gt;</code> element inside a
-          <code class="language-html">&lt;header&gt;</code> element.
-        </small>
         <section>
           <nav class="demo-navbar">Navigation bar</nav>
         </section>
@@ -367,9 +360,8 @@ onMounted(() => {
           <h2>Footer</h2>
         </header>
         <p>
-          When you include a
-          <code class="language-html">&lt;footer&gt;</code> element directly
-          inside a <code class="language-html">&lt;body&gt;</code> element it
+          When you add the class
+          <code class="language-css">.main-footer</code> to a <code class="language-html">&lt;footer&gt;</code> element it
           will:
         </p>
         <ul>
@@ -388,10 +380,10 @@ onMounted(() => {
         <header>
           <h2>Nested sections example</h2>
         </header>
-        <section>
+        <section class="flex-layout mb-0">
           <div class="demo-block">Block</div>
-          <section class="p-0 two-columns">
-            <section class="five-columns">
+          <section class="flex-layout two-columns">
+            <section class="flex-layout five-columns">
               <div class="demo-block">Block</div>
               <div class="demo-block">Block</div>
               <div class="demo-block">Block</div>
@@ -400,12 +392,12 @@ onMounted(() => {
             </section>
             <div class="demo-block">Block</div>
           </section>
-          <section class="row p-0">
+          <section class="row">
             <div class="demo-block w-75">Block</div>
             <div class="demo-block w-25">Block</div>
           </section>
         </section>
-        <pre class="border"><code class="language-html">{{ mixed_layout }}</code></pre>
+        <pre class="border mt-0"><code class="language-html">{{ mixed_layout }}</code></pre>
       </article>
     </section>
   </main>

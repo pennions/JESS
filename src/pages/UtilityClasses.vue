@@ -577,6 +577,13 @@
                 <code class="language-html">display: inline-flex;</code>
               </td>
             </tr>
+            <tr>
+              <td><code class="language-html">full-height</code></td>
+              <td>
+                Applies:
+                <code class="language-html">height: 100vh;</code>
+              </td>
+            </tr>
           </tbody>
         </table>
 

@@ -1,11 +1,11 @@
 <template>
   <nav
     id="main-nav"
-    class="py-0"
+    class="main-navigation py-0"
   >
     <ul class="desktop">
       <li>
-        <a href="/JESS/index.html">
+        <a href="/">
           <h2 class="header-padding">Jelmers Easy Style System</h2>
         </a>
       </li>
@@ -19,7 +19,7 @@
     </ul>
     <div class="mobile w-100">
       <div>
-        <a href="/JESS/index.html">
+        <a href="/">
           <h2 class="header-padding">Jelmers Easy Style System</h2>
         </a>
       </div>
