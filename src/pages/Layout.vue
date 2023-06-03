@@ -31,8 +31,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <main class="flex-layout pl-0 pt-3 pr-3">
-    <aside class="sidebar mr-3">
+  <main class="flex-layout pl-0 pt-3">
+    <aside class="sidebar">
       <nav class="sticky p-3">
         <ul>
           <li><a @click="scrollTo('single-column')">Single column</a></li>
@@ -56,7 +56,7 @@ onMounted(() => {
       </nav>
     </aside>
 
-    <section class="flex-layout main">
+    <section class="flex-layout main px-3 pb-3">
       <article class="p-3">
         <header>
           <h1>Layout elements</h1>
@@ -90,7 +90,7 @@ onMounted(() => {
           <code class="language-css">width:100%;</code> and will take up more
           space if there is room, up to their specified maximum.
         </p>
-        <section>
+        <section class="flex-layout">
           <div class="demo-block">Block 100% width</div>
         </section>
         <pre class="border"><code class="language-html">{{ block_100 }}</code></pre>
@@ -380,7 +380,7 @@ onMounted(() => {
         <header>
           <h2>Nested sections example</h2>
         </header>
-        <section class="flex-layout mb-0">
+        <section class="flex-layout">
           <div class="demo-block">Block</div>
           <section class="flex-layout two-columns">
             <section class="flex-layout five-columns">

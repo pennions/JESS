@@ -1,5 +1,5 @@
 <template>
-  <main class="pt-3 px-3">
+  <main class="p-3">
     <article>
       <h1>Welcome!</h1>
       <p>

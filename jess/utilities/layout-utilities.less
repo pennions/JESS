@@ -93,6 +93,22 @@
   }
 }
 
+.h-100 {
+  height: 100% !important;
+}
+
+.h-75 {
+  height: 75% !important;
+}
+
+.h-50 {
+  height: 75% !important;
+}
+
+.h-25 {
+  height: 25% !important;
+}
+
 .mobile {
   @media (min-width: @lg) {
     display: none !important;
@@ -212,34 +228,31 @@
   display: inline-flex !important;
 }
 
-.no-gap {
+.gap-0 {
   gap: @distance-0 !important;
 }
 
+.gap-1 {
+  gap: @distance-1 !important;
+}
+
+.gap-2 {
+  gap: @distance-2 !important;
+}
+
+.gap-3 {
+  gap: @distance-3 !important;
+}
+
+.gap-4 {
+  gap: @distance-4 !important;
+}
+
+.gap-5 {
+  gap: @distance-5 !important;
+}
+
 /** margin */
-
-.m-0 {
-  margin: @distance-0 !important;
-}
-.ml-0 {
-  margin-left: @distance-0 !important;
-}
-.mr-0 {
-  margin-right: @distance-0 !important;
-}
-.mt-0 {
-  margin-top: @distance-0 !important;
-}
-
-.mb-0 {
-  margin-bottom: @distance-0 !important;
-}
-
-.mx-0 {
-  .ml-0();
-  .mr-0();
-}
-
 .mx-auto {
   .ml-auto();
   .mr-auto();
@@ -391,34 +404,29 @@
   margin-bottom: @distance-5 !important;
 }
 
+.m-0 {
+  margin: @distance-0 !important;
+}
+.ml-0 {
+  margin-left: @distance-0 !important;
+}
+.mr-0 {
+  margin-right: @distance-0 !important;
+}
+.mt-0 {
+  margin-top: @distance-0 !important;
+}
+
+.mb-0 {
+  margin-bottom: @distance-0 !important;
+}
+
+.mx-0 {
+  .ml-0();
+  .mr-0();
+}
+
 /** padding */
-.p-0 {
-  padding: @distance-0 !important;
-}
-.pl-0 {
-  padding-left: @distance-0 !important;
-}
-.pr-0 {
-  padding-right: @distance-0 !important;
-}
-.pt-0 {
-  padding-top: @distance-0 !important;
-}
-
-.pb-0 {
-  padding-bottom: @distance-0 !important;
-}
-
-.px-0 {
-  .pl-0();
-  .pr-0();
-}
-
-.px-auto {
-  .pl-auto();
-  .pr-auto();
-}
-
 .px-1 {
   .pl-1();
   .pr-1();
@@ -563,4 +571,31 @@
 }
 .pb-5 {
   padding-bottom: @distance-5 !important;
+}
+
+.p-0 {
+  padding: @distance-0 !important;
+}
+.pl-0 {
+  padding-left: @distance-0 !important;
+}
+.pr-0 {
+  padding-right: @distance-0 !important;
+}
+.pt-0 {
+  padding-top: @distance-0 !important;
+}
+
+.pb-0 {
+  padding-bottom: @distance-0 !important;
+}
+
+.px-0 {
+  .pl-0();
+  .pr-0();
+}
+
+.px-auto {
+  .pl-auto();
+  .pr-auto();
 }

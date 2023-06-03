@@ -35,8 +35,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <main>
-    <aside>
+  <main class="flex-layout pl-0 pt-3 pb-3">
+    <aside class="sidebar">
       <nav class="sticky">
         <ul>
           <li>
@@ -73,8 +73,8 @@ onMounted(() => {
       </nav>
     </aside>
 
-    <section>
-      <article>
+    <section class="flex-layout main px-3">
+      <article class="p-3">
         <header>
           <h1>Elements</h1>
         </header>
@@ -85,11 +85,11 @@ onMounted(() => {
         </p>
       </article>
 
-      <article id="buttons">
+      <article id="buttons" class="flex-layout">
         <header>
           <h2>Buttons</h2>
         </header>
-        <section class="column no-stretch">
+        <section class="column no-stretch gap-5">
           <button>A standard button</button>
           <button disabled>A disabled standard button</button>
           <button class="no-border">A button without a border</button>
@@ -174,7 +174,7 @@ onMounted(() => {
         <header>
           <h2>Links</h2>
         </header>
-        <section class="column no-stretch">
+        <section class="column no-stretch gap-5">
           <a href>A standard link</a>
           <a
             href
@@ -250,7 +250,7 @@ onMounted(() => {
           </ul>
         </nav>
 
-        <section class="column no-stretch">
+        <section class="column no-stretch gap-5">
           <h3 id="input_checkradio">Checkbox and Radiobutton inputs</h3>
           <hr />
           <input type="checkbox" />

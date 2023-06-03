@@ -552,9 +552,30 @@
               </td>
             </tr>
             <tr>
-              <td><code class="language-html">no-gap</code></td>
+              <td><code class="language-html">gap-0</code></td>
               <td>Sets the gap of a flex container to 0.</td>
             </tr>
+            <tr>
+              <td><code class="language-html">gap-1</code></td>
+              <td>Sets the gap of a flex container the same as p-1 / m-1.</td>
+            </tr>
+            <tr>
+              <td><code class="language-html">gap-2</code></td>
+              <td>Sets the gap of a flex container the same as p-2 / m-2.</td>
+            </tr>
+            <tr>
+              <td><code class="language-html">gap-3</code></td>
+              <td>Sets the gap of a flex container the same as p-3 / m-3.</td>
+            </tr>
+            <tr>
+              <td><code class="language-html">gap-4</code></td>
+              <td>Sets the gap of a flex container the same as p-4 / m-4.</td>
+            </tr>
+            <tr>
+              <td><code class="language-html">gap-5</code></td>
+              <td>Sets the gap of a flex container the same as p-5 / m-5.</td>
+            </tr>
+
             <tr>
               <td><code class="language-html">auto-width</code></td>
               <td>Makes an element take on an auto-width.</td>
@@ -746,6 +767,41 @@
                 <td>X</td>
                 <td>X</td>
                 <td>X</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="overflow-horizontal mt-5">
+          <h3>Height classes</h3>
+          <hr />
+          <p>
+            Height classes that set the <code class="language-css">height</code> property.
+          </p>
+          <br />
+
+          <table>
+            <thead>
+              <tr>
+                <th>Class</th>
+                <th>CSS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="language-css">h-100</code></td>
+                <td>100%</td>
+              </tr>
+              <tr>
+                <td><code class="language-css">h-75</code></td>
+                <td>75%</td>
+              </tr>
+              <tr>
+                <td><code class="language-css">h-50</code></td>
+                <td>50%</td>
+              </tr>
+              <tr>
+                <td><code class="language-css">h-25</code></td>
+                <td>25%</td>
               </tr>
             </tbody>
           </table>

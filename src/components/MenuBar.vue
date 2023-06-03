@@ -1,12 +1,12 @@
 <template>
   <nav
     id="main-nav"
-    class="main-navigation py-0"
+    class="main-navigation"
   >
     <ul class="desktop">
       <li>
         <a href="/">
-          <h2 class="header-padding">Jelmers Easy Style System</h2>
+          <h2>Jelmers Easy Style System</h2>
         </a>
       </li>
       <li><router-link to="/">Home</router-link></li>
@@ -17,13 +17,13 @@
       <li><router-link to="/utility-classes">Utility classes</router-link></li>
       <li><router-link to="/icons">Icons</router-link></li>
     </ul>
-    <div class="mobile w-100">
+    <div class="mobile">
       <div>
         <a href="/">
-          <h2 class="header-padding">Jelmers Easy Style System</h2>
+          <h2 class="pb-3">Jelmers Easy Style System</h2>
         </a>
       </div>
-      <section class="pl-0 three-columns">
+      <section class="flex-layout three-columns pl-0 p-3">
         <router-link to="/">Home</router-link>
         <router-link to="/layout">Layout</router-link>
         <router-link to="/buttons-and-inputs">Buttons and Inputs</router-link>

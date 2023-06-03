@@ -10,7 +10,7 @@
       />
     </div>
   </footer>
-  <footer class="main-footer mobile">
+  <footer class="main-footer mt-auto mobile">
     <section class="column align-center w-100">
       <div class="row">
         <div class="ml-auto row align-center">

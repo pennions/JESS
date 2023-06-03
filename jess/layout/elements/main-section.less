@@ -11,8 +11,7 @@
     .w-100();
   }
 
-  & > *:not(:last-child),
-  & > *:not(footer) {
+  & > *:not(:last-child):not(footer) {
     margin-bottom: @default-distance;
   }
 
@@ -36,10 +35,10 @@
     }
   }
 
-  &[class*='-columns'] {
+  & [class*='-columns'] {
     gap: @default-distance;
     & > * {
-      margin-bottom: 0;
+      margin-bottom: 0 !important;
     }
   }
 
