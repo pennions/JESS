@@ -10,9 +10,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <main>
-    <section>
-      <article>
+  <main class="flex-layout pl-0 pt-3 pb-3">
+    <section class="px-3">
+      <article class="flex-layout px-3">
         <header>
           <h1>Typography</h1>
         </header>
@@ -21,7 +21,7 @@ onMounted(() => {
           font-size. <br />
           This translates to 0.1rem equals 1px.
         </p>
-        <section class="two-columns">
+        <section class="flex-layout two-columns">
           <div>
             <table class="table">
               <thead>
@@ -87,7 +87,7 @@ onMounted(() => {
           </div>
         </section>
 
-        <section class="my-2">
+        <section class="flex-layout  gap-3 my-2">
           <header>
             <h2>Blockquote</h2>
           </header>
@@ -123,7 +123,7 @@ onMounted(() => {
           <header>
             <h2>Text modifiers</h2>
           </header>
-          <section class="two-columns">
+          <section class="flex-layout two-columns pt-3">
             <table class="border-left">
               <thead>
                 <th>Tag</th>

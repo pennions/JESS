@@ -1,6 +1,6 @@
 <template>
   <main>
-    <section>
+    <section class="flex-layout p-3 gap-1">
       <article>
         <header>
           <h1>Utility classes</h1>
@@ -11,7 +11,7 @@
           behaviour, which are not mentioned in any of the other categories.
         </p>
 
-        <section class="two-columns">
+        <section class="flex-layout two-columns">
           <div>
             <h2 class="mb-1">Border utilities</h2>
 
@@ -60,7 +60,7 @@
             </div>
           </div>
         </section>
-        <section class="two-columns">
+        <section class="flex-layout two-columns">
           <div>
             <h2 class="mb-3">Background colour utilities</h2>
 
@@ -91,7 +91,7 @@
             </div>
           </div>
         </section>
-        <section class="two-columns">
+        <section class="flex-layout two-columns">
           <div>
             <h2 class="mb-3">Text colour utilities</h2>
             <code class="language-html"> text-black </code> <br />
@@ -113,7 +113,7 @@
             <div class="text-grey p-3">grey text</div>
           </div>
         </section>
-        <section class="two-columns">
+        <section class="flex-layout two-columns">
           <div>
             <h2 class="mb-3">Text utilities</h2>
             <table>
@@ -133,7 +133,7 @@
           </div>
         </section>
 
-        <section class="two-columns">
+        <section class="flex-layout two-columns">
           <div>
             <h2 class="mb-3">Icon colour utilities</h2>
             <code class="language-html">icon-grey </code> <br />
@@ -392,7 +392,7 @@
 
       <article id="utility-classes">
         <header>
-          <h2 class="mb-3">Layout utility classes</h2>
+          <h2>Layout utility classes</h2>
         </header>
 
         <table>
@@ -608,7 +608,7 @@
           </tbody>
         </table>
 
-        <section class="overflow-horizontal mt-5">
+        <section class="flex-layout overflow-horizontal mt-5">
           <h3>Width classes</h3>
           <hr />
           <p>
@@ -733,7 +733,7 @@
             </tbody>
           </table>
         </section>
-        <section class="overflow-horizontal mt-5">
+        <section class="flex-layout overflow-horizontal mt-5">
           <h3>Hide / show for Mobile and Desktop layout</h3>
           <hr />
 
@@ -771,7 +771,7 @@
             </tbody>
           </table>
         </section>
-        <section class="overflow-horizontal mt-5">
+        <section class="flex-layout overflow-horizontal mt-5">
           <h3>Height classes</h3>
           <hr />
           <p>
@@ -800,14 +800,30 @@
                 <td>50%</td>
               </tr>
               <tr>
+                <td><code class="language-css">h-33</code></td>
+                <td>33.333333333333333333333333333333%</td>
+              </tr>
+              <tr>
                 <td><code class="language-css">h-25</code></td>
                 <td>25%</td>
+              </tr>
+              <tr>
+                <td><code class="language-css">h-20</code></td>
+                <td>20%</td>
+              </tr>
+              <tr>
+                <td><code class="language-css">h-16</code></td>
+                <td>16.666666666666666666666666666667%%</td>
+              </tr>
+              <tr>
+                <td><code class="language-css">h-8</code></td>
+                <td>8.3333333333333333333333333333333%</td>
               </tr>
             </tbody>
           </table>
         </section>
 
-        <section class="overflow-horizontal mt-5">
+        <section class="flex-layout overflow-horizontal mt-5">
           <h3>Padding / Margin utilities</h3>
           <hr />
           <p>

@@ -1,6 +1,6 @@
 <template>
   <main>
-    <section>
+    <section class="p-3"> 
       <article>
         <header>
           <h1>Icons</h1>

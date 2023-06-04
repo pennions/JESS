@@ -28,8 +28,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <main>
-    <aside>
+  <main class="flex-layout pl-0 pt-3">
+    <aside class="sidebar">
       <nav class="sticky">
         <ul>
           <li>
@@ -60,7 +60,7 @@ onMounted(() => {
       </nav>
     </aside>
 
-    <section>
+    <section class="flex-layout main px-3 pb-3">
       <article>
         <header>
           <h1>Components</h1>
@@ -101,7 +101,7 @@ onMounted(() => {
         </article>
         <hr />
         <h4>More specialized cards:</h4>
-        <section class="four-columns no-stretch">
+        <section class="flex-layout four-columns no-stretch">
           <article class="normal">
             <header>
               <h3>Header</h3>
@@ -192,7 +192,7 @@ onMounted(() => {
           <br />
           Here are some examples:
         </p>
-        <section class="four-columns no-stretch">
+        <section class="flex-layout four-columns no-stretch">
           <article class="flip">
             <div tabindex="0">
               <section>
@@ -287,20 +287,22 @@ onMounted(() => {
                 Content will automatically create a scrollbar if contents
                 overflow and automatically wraps words, flip the card to see.
               </section>
-              <section>
-                <header>
+              <section class="flex-layout h-100">
+                <header class="h-16 flex-layout align-center">
                   <h3>Lorum ipsum text.</h3>
                 </header>
                 <div>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book. It has survived not only five centuries, but
-                  also the leap into electronic typesetting, remaining
-                  essentially unchanged.
+                  <span>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a type
+                    specimen book. It has survived not only five centuries, but
+                    also the leap into electronic typesetting, remaining
+                    essentially unchanged.
+                  </span>
                 </div>
-                <footer>(c) Someone</footer>
+                <footer class="h-16">(c) Someone</footer>
               </section>
             </div>
           </article>
