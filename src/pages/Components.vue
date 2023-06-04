@@ -1,18 +1,16 @@
 <script setup>
 import { inject, onMounted } from "vue";
 
-const components_card_normal =
-  '<article class="normal">\n    <div tabindex="0">\n        <section>\n          <header>Header</header>\n          <div>Body</div>\n          <footer>Footer</footer>\n        </section>\n    </div>\n</article>';
-const components_card_flip =
-  '<article class="flip">\n    <div tabindex="0">\n        <section>\n          <header>Header</header>\n          <div>Body</div>\n          <footer>Footer</footer>\n        </section>\n        <section>\n          <header>Back Header</header>\n          <div>Back Body</div>\n          <footer>Back Footer</footer>\n       </section>\n    </div>\n</article>';
+const components_card =
+  '<article class="card normal">\n    <header>\n      <h3>Header</h3>\n    </header>\n    <section>\n      <p>\n        <code class="language-html">class="card normal"</code>\n      </p>\n    </section>\n    <footer>Footer</footer>\n</article>';
 const components_notifications =
   '<dialog class="notification" open>\n    <span>Default notification</span>\n    <button class="close">X</button>\n</dialog>\n\n<dialog class="notification warning" open>\n    <span>Warning notification</span>\n    <button class="close">X</button>\n</dialog>\n\n<dialog class="notification success" open>\n    <span>Success notification</span>\n    <button class="close">X</button>\n</dialog>\n\n<dialog class="notification error" open>\n    <svg class="icon mr-1">\n      <use href="./icons/feather-sprite.svg#alert-triangle" />\n    </svg>\n    <span>Error notification</span> <button class="close">X</button>\n</dialog>\n';
 const components_modal =
-  "<button\n    onclick=\"document.getElementById('demo-modal').setAttribute('open', true)\"\n    >\n    Open modal\n</button>\n\n<dialog\n    id=\"demo-modal\"\n    class=\"modal\"\n    onclick=\"this.removeAttribute('open')\"\n    >\n    <article class=\"normal w-25\">\n        <header>\n            <h3>Message</h3>\n        </header>\n        <div>I am a modal.</div>\n        <footer>\n            <button\n                onclick=\"document.getElementById('demo-modal').setAttribute('open', false)\"\n            >\n                Close\n            </button>\n        </footer>\n    </article>\n</dialog>\n\n<button\n    onclick=\"document.getElementById('demo-modal-noscroll').setAttribute('open', true); \n             document.getElementsByTagName('body')[0].classList.add('no-scroll')\"\n    >\n    Open modal with no-scroll applied.\n</button>\n\n<dialog\n    id=\"demo-modal-noscroll\"\n    class=\"modal\"\n    onclick=\"this.removeAttribute('open'); \n             document.getElementsByTagName('body')[0].classList.remove('no-scroll')\"\n    >\n    <article class=\"normal w-25\">\n        <header>\n            <h3>Message</h3>\n        </header>\n        <div>I am a modal.</div>\n        <footer>\n            <button\n                onclick=\"document.getElementById('demo-modal-noscroll').setAttribute('open', false); \n                         document.getElementsByTagName('body')[0].classList.remove('no-scroll')\"\n                >\n                Close\n            </button>\n        </footer>\n    </article>\n</dialog>";
+  "<button\n    onclick=\"document.getElementById('demo-modal').setAttribute('open', true)\"\n    >\n    Open modal\n</button>\n\n<dialog\n    id=\"demo-modal\"\n    class=\"modal\"\n    onclick=\"this.removeAttribute('open')\"\n    >\n    <article class=\"card normal w-25\">\n        <header>\n            <h3>Message</h3>\n        </header>\n        <div>I am a modal.</div>\n        <footer>\n            <button\n                onclick=\"document.getElementById('demo-modal').setAttribute('open', false)\"\n            >\n                Close\n            </button>\n        </footer>\n    </article>\n</dialog>\n\n<button\n    onclick=\"document.getElementById('demo-modal-noscroll').setAttribute('open', true); \n             document.getElementsByTagName('body')[0].classList.add('no-scroll')\"\n    >\n    Open modal with no-scroll applied.\n</button>\n\n<dialog\n    id=\"demo-modal-noscroll\"\n    class=\"modal\"\n    onclick=\"this.removeAttribute('open'); \n             document.getElementsByTagName('body')[0].classList.remove('no-scroll')\"\n    >\n    <article class=\"card normal w-25\">\n        <header>\n            <h3>Message</h3>\n        </header>\n        <div>I am a modal.</div>\n        <footer>\n            <button\n                onclick=\"document.getElementById('demo-modal-noscroll').setAttribute('open', false); \n                         document.getElementsByTagName('body')[0].classList.remove('no-scroll')\"\n                >\n                Close\n            </button>\n        </footer>\n    </article>\n</dialog>";
 const components_breadcrumb =
   '<nav aria-label="Breadcrumb">\n  <ul>\n    <li><a href="">Home</a></li>\n    <li><a href="">Workshop</a></li>\n    <li><a href="" aria-current="page">Sawbench</a></li>\n  </ul>\n</nav>';
 const components_dropdowns =
-  '<details>\n  <summary>Menu 1</summary>\n  <nav class="dropdown-container">\n    <ul>\n      <li><a href>Item one</a></li>\n      <li><a href>Item two</a></li>\n      <li><a href>Item three</a></li>\n      <li><a href>Item four</a></li>\n      <li><a href>Item five</a></li>\n    </ul>\n  </nav>\n</details>\n\n<details class="align-right">\n  <summary>Right side menu</summary>\n  <nav class="dropdown-container">\n    <ul>\n      <li><a href>Item one</a></li>\n      <li><a href>Item two</a></li>\n      <li><a href>Item three</a></li>\n      <li><a href>Item four</a></li>\n      <li><a href>Item five</a></li>\n    </ul>\n  </nav>\n</details>\n\n<details class="icon-dropdown">\n  <summary>\n    <svg class="icon">\n      <use href="./icons/feather-sprite.svg#menu" />\n    </svg>\n  </summary>\n  <nav class="dropdown-container">\n    <ul>\n      <li><a href>Item one</a></li>\n      <li><a href>Item two</a></li>\n      <li><a href>Item three</a></li>\n      <li><a href>Item four</a></li>\n      <li><a href>Item five</a></li>\n    </ul>\n  </nav>\n</details>\n\n<details class="accordion">\n  <summary>Lorum ipsum story</summary>\n  Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n  Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s,\n  when an unknown printer took a galley of type and scrambled it to make a type\n  specimen book. It has survived not only five centuries, but also the leap into\n  electronic typesetting, remaining essentially unchanged.\n</details>\n\n<details class="button">\n  <summary>Button dropdown</summary>\n  <nav class="dropdown-container">\n    <ul>\n      <li><a href>Item one</a></li>\n      <li><a href>Item two</a></li>\n      <li><a href>Item three</a></li>\n      <li><a href>Item four</a></li>\n      <li><a href>Item five</a></li>\n    </ul>\n  </nav>\n</details>\n';
+  '<details>\n  <summary>Menu 1</summary>\n  <nav class=\"dropdown-container\">\n    <ul>\n      <li><a href>Item one</a></li>\n      <li><a href>Item two</a></li>\n      <li><a href>Item three</a></li>\n      <li><a href>Item four</a></li>\n      <li><a href>Item five</a></li>\n    </ul>\n  </nav>\n</details>\n\n<details class=\"align-right\">\n  <summary>Right side menu</summary>\n  <nav class=\"dropdown-container\">\n    <ul>\n      <li><a href>Item one</a></li>\n      <li><a href>Item two</a></li>\n      <li><a href>Item three</a></li>\n      <li><a href>Item four</a></li>\n      <li><a href>Item five</a></li>\n    </ul>\n  </nav>\n</details>\n\n<details class=\"icon-dropdown\">\n  <summary>\n    <svg class=\"icon\">\n      <use href=\"/icons/feather-sprite.svg#menu\" />\n    </svg>\n  </summary>\n  <nav class=\"dropdown-container\">\n    <ul>\n      <li><a href>Item one</a></li>\n      <li><a href>Item two</a></li>\n      <li><a href>Item three</a></li>\n      <li><a href>Item four</a></li>\n      <li><a href>Item five</a></li>\n    </ul>\n  </nav>\n</details>\n\n<p>With the <code class=\"language-html\">accordion</code> class:</p>\n<details class=\"accordion\">\n  <summary>Lorum ipsum story</summary>\n  <p>Lorem Ipsum is simply dummy text of the printing and typesetting\n    industry. Lorem Ipsum has been the industry\'s standard dummy text ever\n    since the 1500s, when an unknown printer took a galley of type and\n    scrambled it to make a type specimen book. It has survived not only\n    five centuries, but also the leap into electronic typesetting,\n    remaining essentially unchanged.</p>\n</details>\n\n<details class=\"button\">\n  <summary>Button dropdown</summary>\n  <nav class=\"dropdown-container\">\n    <ul>\n      <li><a href>Item one</a></li>\n      <li><a href>Item two</a></li>\n      <li><a href>Item three</a></li>\n      <li><a href>Item four</a></li>\n      <li><a href>Item five</a></li>\n    </ul>\n  </nav>\n</details>';
 const components_checkbox =
   '<label class="custom-input">\n  Custom checkbox with full color control.\n  <input type="checkbox" checked="checked" />\n  <span class="checkmark"></span>\n</label>\n\n<label class="custom-input ml-1">\n  Unchecked version.\n  <input type="checkbox" />\n  <span class="checkmark"></span>\n</label>\n\n<label class="custom-input margin">\n  Disabled version.\n  <input type="checkbox" name="custom" disabled />\n  <span class="checkmark"></span>\n</label>\n\n<label class="custom-input label-left">\n  Custom checkbox with the label on the left.\n  <input type="checkbox" checked="checked" />\n  <span class="checkmark"></span>\n</label>';
 const components_radio =
@@ -61,7 +59,7 @@ onMounted(() => {
     </aside>
 
     <section class="flex-layout main px-3 pb-3">
-      <article>
+      <article class="card">
         <header>
           <h1>Components</h1>
         </header>
@@ -71,21 +69,24 @@ onMounted(() => {
         </p>
       </article>
 
-      <article id="card">
+      <article
+        class="card"
+        id="card"
+      >
         <header>
           <h2>Card</h2>
         </header>
 
         <p>
-          Cards are a basic building block in JESS and the element for this is
-          <code class="language-html">&lt;article&gt;</code> for the examples I
-          have set a max-width of 25%. <br />
-          Only the flip cards have a fixed height and width.
+          Apply the
+          <code class="language-html">class="card"</code> to get a nice card effect which has built-in styling for header and footer. <br />
+          It also applies the default-margin distance on the bottom of each child element except the last one. <br />
+          For the examples I have set a max-width of 25%.
         </p>
 
-        <article class="w-25">This is a default card</article>
+        <article class="card w-25">This is a default card</article>
 
-        <article class="w-25">
+        <article class="card w-25">
           <header>
             <h3>Card header</h3>
           </header>
@@ -93,8 +94,7 @@ onMounted(() => {
             <p>
               This is a default card with a
               <code class="language-html">&lt;header&gt;</code> and a
-              <code class="language-html">&lt;footer&gt;</code> element and a
-              <code class="language-html">&lt;section&gt;</code> as body.
+              <code class="language-html">&lt;footer&gt;</code> element.
             </p>
           </section>
           <footer>Card footer</footer>
@@ -102,219 +102,91 @@ onMounted(() => {
         <hr />
         <h4>More specialized cards:</h4>
         <section class="flex-layout four-columns no-stretch">
-          <article class="normal">
+          <article class="card normal">
             <header>
               <h3>Header</h3>
             </header>
             <section>
               <p>
-                <code class="language-html">class="normal"</code>
+                <code class="language-html">class="card normal"</code>
               </p>
             </section>
             <footer>Footer</footer>
           </article>
 
-          <article class="primary">
+          <article class="card primary">
             <header>
               <h3>Header</h3>
             </header>
             <section>
               <p>
-                <code class="language-html">class="primary"</code>
+                <code class="language-html">class="card primary"</code>
               </p>
             </section>
             <footer>Footer</footer>
           </article>
 
-          <article class="accent">
+          <article class="card accent">
             <header>
               <h3>Header</h3>
             </header>
             <section>
-              <p><code class="language-html">class="accent"</code></p>
+              <p><code class="language-html">class="card accent"</code></p>
             </section>
             <footer>Footer</footer>
           </article>
-          <article class="danger">
+          <article class="card danger">
             <header>
               <h3>Header</h3>
             </header>
             <section>
-              <p><code class="language-html">class="danger"</code></p>
+              <p><code class="language-html">class="card danger"</code></p>
             </section>
             <footer>Footer</footer>
           </article>
 
-          <article class="primary inverse">
+          <article class="card primary inverse">
             <header>
               <h3>Header</h3>
             </header>
             <section>
               <p>
-                <code class="language-html">class="primary inverse"</code>
+                <code class="language-html">class="card primary inverse"</code>
               </p>
             </section>
             <footer>Footer</footer>
           </article>
 
-          <article class="accent inverse">
+          <article class="card accent inverse">
             <header>
               <h3>Header</h3>
             </header>
             <section>
               <p>
-                <code class="language-html">class="accent inverse"</code>
+                <code class="language-html">class="card accent inverse"</code>
               </p>
             </section>
             <footer>Footer</footer>
           </article>
 
-          <article class="danger inverse">
+          <article class="card danger inverse">
             <header>
               <h3>Header</h3>
             </header>
             <section>
-              <p><code class="language-html">class="danger inverse"</code></p>
+              <p><code class="language-html">class="card danger inverse"</code></p>
             </section>
             <footer>Footer</footer>
           </article>
         </section>
-        <pre class="border stretch mt-1"><code class="language-html">{{ components_card_normal }}</code></pre>
+        <pre class="border stretch mt-1"><code class="language-html">{{ components_card }}</code></pre>
 
-        <hr />
-        <p>
-          <b>Flip cards</b> <br />
-          The back and front of cards are sections. So they can have any card
-          layout as above.
-          <br />
-          All cards can have focus which means they can be clicked or tabbed
-          into to stay flipped.
-          <br />
-          Here are some examples:
-        </p>
-        <section class="flex-layout four-columns no-stretch">
-          <article class="flip">
-            <div tabindex="0">
-              <section>
-                <p><code class="language-html">class="flip"</code></p>
-              </section>
-              <section>Flipped!</section>
-            </div>
-          </article>
-
-          <article class="flip">
-            <div tabindex="0">
-              <section>
-                <header>Header</header>
-                <div>Body</div>
-                <footer><span>Footer</span></footer>
-              </section>
-              <section>Flipped!</section>
-            </div>
-          </article>
-
-          <article class="flip normal">
-            <div tabindex="0">
-              <section>
-                <header>
-                  <h3>Normal flip card</h3>
-                </header>
-                <div>
-                  <p>
-                    A header and
-                    <code class="language-html">class="flip normal"</code>
-                  </p>
-                </div>
-              </section>
-              <section>
-                <div>Backside of the card with a footer</div>
-                <footer>Backcard footer</footer>
-              </section>
-            </div>
-          </article>
-
-          <article class="flip primary">
-            <div tabindex="0">
-              <section>
-                <header>Header</header>
-                <div>
-                  <code class="language-html">class="flip primary"</code>
-                </div>
-                <footer><span>Footer</span></footer>
-              </section>
-              <section>
-                <div>Flipped!</div>
-              </section>
-            </div>
-          </article>
-
-          <article class="flip accent">
-            <div tabindex="0">
-              <section>
-                <header>Header</header>
-                <div>
-                  Card with a header on the back has same properties by default.
-                </div>
-                <footer><span>Footer</span></footer>
-              </section>
-              <section>
-                <header>Back Header</header>
-                <div>Back Body</div>
-                <footer><span>Back Footer</span></footer>
-              </section>
-            </div>
-          </article>
-
-          <article class="flip danger inverse">
-            <div tabindex="0">
-              <section>
-                <header>Header</header>
-                <div>
-                  Flippable card with
-                  <code class="language-html">class="flip danger inverse"</code>
-                </div>
-                <footer><span>Footer</span></footer>
-              </section>
-              <section>
-                <div>Flipped!</div>
-              </section>
-            </div>
-          </article>
-
-          <article class="flip card">
-            <div tabindex="0">
-              <section>
-                Content will automatically create a scrollbar if contents
-                overflow and automatically wraps words, flip the card to see.
-              </section>
-              <section class="flex-layout h-100">
-                <header class="h-16 flex-layout align-center">
-                  <h3>Lorum ipsum text.</h3>
-                </header>
-                <div>
-                  <span>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a type
-                    specimen book. It has survived not only five centuries, but
-                    also the leap into electronic typesetting, remaining
-                    essentially unchanged.
-                  </span>
-                </div>
-                <footer class="h-16">(c) Someone</footer>
-              </section>
-            </div>
-          </article>
-        </section>
-
-        <pre class="border stretch mt-1"><code class="language-html">{{ components_card_flip }}</code></pre>
-
-        <hr />
-        <small><b>N.B.</b> The body of the card must be a div element.</small>
       </article>
 
-      <article id="notification">
+      <article
+        id="notification"
+        class="card"
+      >
         <header>
           <h2>Notification</h2>
         </header>
@@ -376,7 +248,10 @@ onMounted(() => {
         <pre class="border stretch mt-1"><code class="language-html">{{ components_notifications }}</code></pre>
       </article>
 
-      <article id="modal">
+      <article
+        id="modal"
+        class="card"
+      >
         <header>
           <h2>Modal</h2>
         </header>
@@ -400,7 +275,7 @@ onMounted(() => {
           class="modal"
           onclick="this.removeAttribute('open')"
         >
-          <article class="normal w-25">
+          <article class="card normal w-25">
             <header>
               <h3>Message</h3>
             </header>
@@ -428,7 +303,7 @@ onMounted(() => {
           onclick="this.removeAttribute('open'); 
                    document.getElementsByTagName('body')[0].classList.remove('no-scroll')"
         >
-          <article class="normal w-25">
+          <article class="card normal w-25">
             <header>
               <h3>Message</h3>
             </header>
@@ -448,7 +323,10 @@ onMounted(() => {
           done in the example. Try it!</small>
       </article>
 
-      <article id="breadcrumb">
+      <article
+        id="breadcrumb"
+        class="card"
+      >
         <header>
           <h2>Breadcrumb</h2>
         </header>
@@ -468,7 +346,10 @@ onMounted(() => {
         <pre class="border stretch mt-1"><code class="language-html">{{ components_breadcrumb }}</code></pre>
       </article>
 
-      <article id="dropdown">
+      <article
+        id="dropdown"
+        class="card"
+      >
         <header>
           <h2>Dropdown</h2>
         </header>
@@ -541,12 +422,12 @@ onMounted(() => {
         <p>With the <code class="language-html">accordion</code> class:</p>
         <details class="accordion">
           <summary>Lorum ipsum story</summary>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged.
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text ever
+            since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only
+            five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged.</p>
         </details>
 
         <p>
@@ -570,7 +451,7 @@ onMounted(() => {
         <pre class="border stretch mt-1"><code class="language-html">{{ components_dropdowns }}</code></pre>
       </article>
 
-      <article id="custom-inputs">
+      <article id="custom-inputs" class="card">
         <header>
           <h2>Custom inputs</h2>
         </header>

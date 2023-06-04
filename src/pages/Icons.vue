@@ -1,7 +1,7 @@
 <template>
   <main>
     <section class="p-3"> 
-      <article>
+      <article class="card">
         <header>
           <h1>Icons</h1>
         </header>

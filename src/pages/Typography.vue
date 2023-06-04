@@ -2,7 +2,7 @@
 import { onMounted } from "vue";
 
 const typography_blockquote =
-  '<blockquote class="w-16">\n    A famous quote of someone, spanning multiple lines.\n    <cite>Anonymous</cite>\n  </blockquote>\n\n  <article class="p-0 w-16">\n    <blockquote>\n      A famous quote of someone, spanning multiple lines.\n      <cite>Anonymous</cite>\n    </blockquote>\n  </article>\n</section>';
+  '<blockquote class=\"w-16\">\n  A famous quote of someone, spanning multiple lines.\n  <cite>Anonymous</cite>\n</blockquote>\n\n<article class=\"p-0 w-16 card\">\n  <blockquote>\n    A famous quote of someone, spanning multiple lines.\n    <cite>Anonymous</cite>\n  </blockquote>\n</article>';
 
 onMounted(() => {
   Prism.highlightAll();
@@ -12,7 +12,7 @@ onMounted(() => {
 <template>
   <main class="flex-layout pl-0 pt-3 pb-3">
     <section class="px-3">
-      <article class="flex-layout px-3">
+      <article class="flex-layout px-3 card">
         <header>
           <h1>Typography</h1>
         </header>
@@ -102,14 +102,13 @@ onMounted(() => {
             A famous quote of someone, spanning multiple lines.
             <cite>Anonymous</cite>
           </blockquote>
-
           <p>
-            Blockquote inside an article, which has the
+            Blockquote directly inside an article, which has the
             <code class="language-html">p-0</code> class and a width utility
             class:
           </p>
 
-          <article class="p-0 w-16">
+          <article class="p-0 w-16 card">
             <blockquote>
               A famous quote of someone, spanning multiple lines.
               <cite>Anonymous</cite>

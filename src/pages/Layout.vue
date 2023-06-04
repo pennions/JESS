@@ -57,7 +57,7 @@ onMounted(() => {
     </aside>
 
     <section class="flex-layout main px-3 pb-3">
-      <article class="p-3">
+      <article class="card">
         <header>
           <h1>Layout elements</h1>
         </header>
@@ -80,7 +80,7 @@ onMounted(() => {
       </article>
       <article
         id="single-column"
-        class="p-3"
+        class="card"
       >
         <header>
           <h2>Single column</h2>
@@ -96,7 +96,7 @@ onMounted(() => {
         <pre class="border"><code class="language-html">{{ block_100 }}</code></pre>
       </article>
 
-      <article id="two-columns">
+      <article id="two-columns" class="card">
         <header>
           <h2>Two columns</h2>
         </header>
@@ -117,7 +117,7 @@ onMounted(() => {
         <pre class="border"><code class="language-html">{{ block_50 }}</code></pre>
       </article>
 
-      <article id="three-columns">
+      <article id="three-columns" class="card">
         <header>
           <h2>Three columns</h2>
         </header>
@@ -143,7 +143,7 @@ onMounted(() => {
         <pre class="border"><code class="language-html">{{ block_33 }}</code></pre>
       </article>
 
-      <article id="four-columns">
+      <article id="four-columns" class="card">
         <header>
           <h2>Four columns</h2>
         </header>
@@ -175,7 +175,7 @@ onMounted(() => {
         <pre class="border"><code class="language-html">{{ block_25 }}</code></pre>
       </article>
 
-      <article id="five-columns">
+      <article id="five-columns" class="card">
         <header>
           <h2>Five columns</h2>
         </header>
@@ -211,7 +211,7 @@ onMounted(() => {
         <pre class="border"><code class="language-html">{{ block_20 }}</code></pre>
       </article>
 
-      <article id="six-columns">
+      <article id="six-columns" class="card">
         <header>
           <h2>Six columns</h2>
         </header>
@@ -252,7 +252,7 @@ onMounted(() => {
         <pre class="border"><code class="language-html">{{ block_16 }}</code></pre>
       </article>
 
-      <article id="twelve-columns">
+      <article id="twelve-columns" class="card">
         <header>
           <h2>Twelve columns</h2>
         </header>
@@ -299,7 +299,7 @@ onMounted(() => {
         <pre class="border"><code class="language-html">{{ block_8 }}</code></pre>
       </article>
 
-      <article id="aside">
+      <article id="aside" class="card">
         <header>
           <h2>Aside layout</h2>
         </header>
@@ -320,7 +320,7 @@ onMounted(() => {
         </small>
       </article>
 
-      <article id="nav">
+      <article id="nav" class="card">
         <header>
           <h2>Nav</h2>
         </header>
@@ -355,7 +355,7 @@ onMounted(() => {
         <pre class="border"><code class="language-html">{{ nav_layout }}</code></pre>
       </article>
 
-      <article id="footer">
+      <article id="footer" class="card">
         <header>
           <h2>Footer</h2>
         </header>
@@ -376,7 +376,7 @@ onMounted(() => {
         <pre class="border"><code class="language-html">{{ footer_layout }}</code></pre>
       </article>
 
-      <article id="nested">
+      <article id="nested" class="card">
         <header>
           <h2>Nested sections example</h2>
         </header>

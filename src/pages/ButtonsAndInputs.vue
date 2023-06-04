@@ -74,7 +74,7 @@ onMounted(() => {
     </aside>
 
     <section class="flex-layout main px-3">
-      <article class="p-3">
+      <article class="p-3 card">
         <header>
           <h1>Elements</h1>
         </header>
@@ -85,7 +85,7 @@ onMounted(() => {
         </p>
       </article>
 
-      <article id="buttons" class="flex-layout">
+      <article id="buttons" class="flex-layout card">
         <header>
           <h2>Buttons</h2>
         </header>
@@ -170,7 +170,7 @@ onMounted(() => {
         <pre class="border"><code class="language-html">{{ buttons }}</code></pre>
       </article>
 
-      <article id="links">
+      <article id="links" class="card">
         <header>
           <h2>Links</h2>
         </header>
@@ -220,7 +220,7 @@ onMounted(() => {
         <pre class="border"><code class="language-html">{{ links }}</code></pre>
       </article>
 
-      <article id="input">
+      <article id="input" class="card">
         <header>
           <h2>Inputs</h2>
         </header>
@@ -466,7 +466,7 @@ onMounted(() => {
         </section>
       </article>
 
-      <article id="select">
+      <article id="select" class="card">
         <header>
           <h2>Select</h2>
         </header>
@@ -501,7 +501,7 @@ onMounted(() => {
         <a href="#input_modifiers">input modifiers section</a>
       </article>
 
-      <article id="text-area">
+      <article id="text-area" class="card">
         <header>
           <h2>Textarea</h2>
         </header>
@@ -534,7 +534,7 @@ onMounted(() => {
         <a href="#input_modifiers">input modifiers section</a>
       </article>
 
-      <article id="label">
+      <article id="label" class="card">
         <header>
           <h2>Labels</h2>
         </header>
@@ -582,7 +582,7 @@ onMounted(() => {
         <pre class="border"><code class="language-html">{{ labels }}</code></pre>
       </article>
 
-      <article id="hr">
+      <article id="hr" class="card">
         <header>
           <h1>Horizontal rule</h1>
         </header>
@@ -595,7 +595,7 @@ onMounted(() => {
         </section>
       </article>
 
-      <article id="table">
+      <article id="table" class="card">
         <header>
           <h1>Table</h1>
         </header>

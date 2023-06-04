@@ -1,6 +1,6 @@
 <template>
   <main class="p-3">
-    <article>
+    <article class="card">
       <h1>Welcome!</h1>
       <p>
         I have written this Style System so you can quickly make any webpage

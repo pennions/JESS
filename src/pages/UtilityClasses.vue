@@ -1,7 +1,7 @@
 <template>
   <main>
     <section class="flex-layout p-3 gap-1">
-      <article>
+      <article class="card">
         <header>
           <h1>Utility classes</h1>
         </header>
@@ -390,7 +390,7 @@
         </section>
       </article>
 
-      <article id="utility-classes">
+      <article id="utility-classes" class="card">
         <header>
           <h2>Layout utility classes</h2>
         </header>
@@ -813,7 +813,7 @@
               </tr>
               <tr>
                 <td><code class="language-css">h-16</code></td>
-                <td>16.666666666666666666666666666667%%</td>
+                <td>16.666666666666666666666666666667%</td>
               </tr>
               <tr>
                 <td><code class="language-css">h-8</code></td>

@@ -1,24 +1,14 @@
-article,
 .card {
   border-radius: 2px;
-
-  &:not(.flip) {
-    background-color: var(--background);
-  }
+  background-color: var(--background);
+  box-shadow: 0 6.4px 14.4px 0 rgba(var(--shadow-colour), 0.132),
+    0 1.2px 3.6px 0 rgba(var(--shadow-colour), 0.108);
 
   & header {
     border-bottom: 0.5px solid var(--hr-colour);
   }
   & footer {
     border-top: 0.5px solid var(--hr-colour);
-  }
-
-  &:not(.flip) {
-    box-shadow: 0 6.4px 14.4px 0 rgba(var(--shadow-colour), 0.132),
-      0 1.2px 3.6px 0 rgba(var(--shadow-colour), 0.108);
-  }
-
-  & > [tabindex="0"] section footer {
     box-shadow: none;
   }
 
@@ -91,18 +81,6 @@ article,
         background-color: var(--danger);
         color: var(--colour-on-danger);
       }
-    }
-  }
-}
-
-article.flip {
-  & [tabindex="0"] {
-      box-shadow: 0 6.4px 14.4px 0 rgba(var(--shadow-colour), 0.132),
-        0 1.2px 3.6px 0 rgba(var(--shadow-colour), 0.108);
-    & section {
-      background-color: var(--background);
-      /** prevent tearing on flip */
-      border: 0.1px solid var(--background);
     }
   }
 }
