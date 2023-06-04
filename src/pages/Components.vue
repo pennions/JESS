@@ -1,5 +1,6 @@
 <script setup>
-import { inject, onMounted } from "vue";
+import { computed, inject, nextTick, onMounted, onUpdated, watch } from "vue";
+const props = defineProps(["scrollToId"]);
 
 const components_card =
   '<article class="card normal">\n    <header>\n      <h3>Header</h3>\n    </header>\n    <section>\n      <p>\n        <code class="language-html">class="card normal"</code>\n      </p>\n    </section>\n    <footer>Footer</footer>\n</article>';
@@ -10,7 +11,7 @@ const components_modal =
 const components_breadcrumb =
   '<nav aria-label="Breadcrumb">\n  <ul>\n    <li><a href="">Home</a></li>\n    <li><a href="">Workshop</a></li>\n    <li><a href="" aria-current="page">Sawbench</a></li>\n  </ul>\n</nav>';
 const components_dropdowns =
-  '<details>\n  <summary>Menu 1</summary>\n  <nav class=\"dropdown-container\">\n    <ul>\n      <li><a href>Item one</a></li>\n      <li><a href>Item two</a></li>\n      <li><a href>Item three</a></li>\n      <li><a href>Item four</a></li>\n      <li><a href>Item five</a></li>\n    </ul>\n  </nav>\n</details>\n\n<details class=\"align-right\">\n  <summary>Right side menu</summary>\n  <nav class=\"dropdown-container\">\n    <ul>\n      <li><a href>Item one</a></li>\n      <li><a href>Item two</a></li>\n      <li><a href>Item three</a></li>\n      <li><a href>Item four</a></li>\n      <li><a href>Item five</a></li>\n    </ul>\n  </nav>\n</details>\n\n<details class=\"icon-dropdown\">\n  <summary>\n    <svg class=\"icon\">\n      <use href=\"/icons/feather-sprite.svg#menu\" />\n    </svg>\n  </summary>\n  <nav class=\"dropdown-container\">\n    <ul>\n      <li><a href>Item one</a></li>\n      <li><a href>Item two</a></li>\n      <li><a href>Item three</a></li>\n      <li><a href>Item four</a></li>\n      <li><a href>Item five</a></li>\n    </ul>\n  </nav>\n</details>\n\n<p>With the <code class=\"language-html\">accordion</code> class:</p>\n<details class=\"accordion\">\n  <summary>Lorum ipsum story</summary>\n  <p>Lorem Ipsum is simply dummy text of the printing and typesetting\n    industry. Lorem Ipsum has been the industry\'s standard dummy text ever\n    since the 1500s, when an unknown printer took a galley of type and\n    scrambled it to make a type specimen book. It has survived not only\n    five centuries, but also the leap into electronic typesetting,\n    remaining essentially unchanged.</p>\n</details>\n\n<details class=\"button\">\n  <summary>Button dropdown</summary>\n  <nav class=\"dropdown-container\">\n    <ul>\n      <li><a href>Item one</a></li>\n      <li><a href>Item two</a></li>\n      <li><a href>Item three</a></li>\n      <li><a href>Item four</a></li>\n      <li><a href>Item five</a></li>\n    </ul>\n  </nav>\n</details>';
+  '<details>\n  <summary>Menu 1</summary>\n  <nav class="dropdown-container">\n    <ul>\n      <li><a href>Item one</a></li>\n      <li><a href>Item two</a></li>\n      <li><a href>Item three</a></li>\n      <li><a href>Item four</a></li>\n      <li><a href>Item five</a></li>\n    </ul>\n  </nav>\n</details>\n\n<details class="align-right">\n  <summary>Right side menu</summary>\n  <nav class="dropdown-container">\n    <ul>\n      <li><a href>Item one</a></li>\n      <li><a href>Item two</a></li>\n      <li><a href>Item three</a></li>\n      <li><a href>Item four</a></li>\n      <li><a href>Item five</a></li>\n    </ul>\n  </nav>\n</details>\n\n<details class="icon-dropdown">\n  <summary>\n    <svg class="icon">\n      <use href="/icons/feather-sprite.svg#menu" />\n    </svg>\n  </summary>\n  <nav class="dropdown-container">\n    <ul>\n      <li><a href>Item one</a></li>\n      <li><a href>Item two</a></li>\n      <li><a href>Item three</a></li>\n      <li><a href>Item four</a></li>\n      <li><a href>Item five</a></li>\n    </ul>\n  </nav>\n</details>\n\n<p>With the <code class="language-html">accordion</code> class:</p>\n<details class="accordion">\n  <summary>Lorum ipsum story</summary>\n  <p>Lorem Ipsum is simply dummy text of the printing and typesetting\n    industry. Lorem Ipsum has been the industry\'s standard dummy text ever\n    since the 1500s, when an unknown printer took a galley of type and\n    scrambled it to make a type specimen book. It has survived not only\n    five centuries, but also the leap into electronic typesetting,\n    remaining essentially unchanged.</p>\n</details>\n\n<details class="button">\n  <summary>Button dropdown</summary>\n  <nav class="dropdown-container">\n    <ul>\n      <li><a href>Item one</a></li>\n      <li><a href>Item two</a></li>\n      <li><a href>Item three</a></li>\n      <li><a href>Item four</a></li>\n      <li><a href>Item five</a></li>\n    </ul>\n  </nav>\n</details>';
 const components_checkbox =
   '<label class="custom-input">\n  Custom checkbox with full color control.\n  <input type="checkbox" checked="checked" />\n  <span class="checkmark"></span>\n</label>\n\n<label class="custom-input ml-1">\n  Unchecked version.\n  <input type="checkbox" />\n  <span class="checkmark"></span>\n</label>\n\n<label class="custom-input margin">\n  Disabled version.\n  <input type="checkbox" name="custom" disabled />\n  <span class="checkmark"></span>\n</label>\n\n<label class="custom-input label-left">\n  Custom checkbox with the label on the left.\n  <input type="checkbox" checked="checked" />\n  <span class="checkmark"></span>\n</label>';
 const components_radio =
@@ -22,6 +23,14 @@ const scrollTo = inject("scrollTo");
 
 onMounted(() => {
   Prism.highlightAll();
+
+  /** added the last path as a prop in the router. Then wait for the browser to render, then scroll */
+  if (props.scrollToId) {
+    const timer = setTimeout(() => {
+      scrollTo(props.scrollToId);
+      clearTimeout(timer);
+    }, 100);
+  }
 });
 </script>
 
@@ -451,7 +460,10 @@ onMounted(() => {
         <pre class="border stretch mt-1"><code class="language-html">{{ components_dropdowns }}</code></pre>
       </article>
 
-      <article id="custom-inputs" class="card">
+      <article
+        id="custom-inputs"
+        class="card"
+      >
         <header>
           <h2>Custom inputs</h2>
         </header>

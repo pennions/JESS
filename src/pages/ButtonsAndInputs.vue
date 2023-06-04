@@ -85,7 +85,10 @@ onMounted(() => {
         </p>
       </article>
 
-      <article id="buttons" class="flex-layout card">
+      <article
+        id="buttons"
+        class="flex-layout card"
+      >
         <header>
           <h2>Buttons</h2>
         </header>
@@ -170,7 +173,10 @@ onMounted(() => {
         <pre class="border"><code class="language-html">{{ buttons }}</code></pre>
       </article>
 
-      <article id="links" class="card">
+      <article
+        id="links"
+        class="card"
+      >
         <header>
           <h2>Links</h2>
         </header>
@@ -220,32 +226,35 @@ onMounted(() => {
         <pre class="border"><code class="language-html">{{ links }}</code></pre>
       </article>
 
-      <article id="input" class="card">
+      <article
+        id="input"
+        class="card"
+      >
         <header>
           <h2>Inputs</h2>
         </header>
         <nav>
           <ul>
             <li>
-              <a href="#input_checkradio">Checkbox and Radiobutton</a>
+              <a @click="scrollTo('input_checkradio')">Checkbox and Radiobutton</a>
             </li>
             <li>
-              <a href="#input_buttons">Button inputs</a>
+              <a @click="scrollTo('input_buttons')">Button inputs</a>
             </li>
             <li>
-              <a href="#input_text">Text inputs</a>
+              <a @click="scrollTo('input_text')">Text inputs</a>
             </li>
             <li>
-              <a href="#input_numbers">Number inputs</a>
+              <a @click="scrollTo('input_numbers')">Number inputs</a>
             </li>
             <li>
-              <a href="#input_datetime">Date, Time and Datetime inputs</a>
+              <a @click="scrollTo('input_datetime')">Date, Time and Datetime inputs</a>
             </li>
             <li>
-              <a href="#input_others">Other inputs</a>
+              <a @click="scrollTo('input_others')">Other inputs</a>
             </li>
             <li>
-              <a href="#input_modifiers">Input modifiers</a>
+              <a @click="scrollTo('input_modifiers')">Input modifiers</a>
             </li>
           </ul>
         </nav>
@@ -256,7 +265,7 @@ onMounted(() => {
           <input type="checkbox" />
           <input type="radio" />
 
-          <a href="/components.html#custom-input">Click here for custom inputs for checkbox and radiobutton.</a>
+          <router-link to="/components/custom-inputs">Click here for custom inputs for checkbox and radiobutton.</router-link>
 
           <pre class="border stretch"><code class="language-html">{{ input_checkradio }}</code></pre>
 
@@ -466,7 +475,10 @@ onMounted(() => {
         </section>
       </article>
 
-      <article id="select" class="card">
+      <article
+        id="select"
+        class="card"
+      >
         <header>
           <h2>Select</h2>
         </header>
@@ -498,10 +510,13 @@ onMounted(() => {
         <pre class="border stretch"><code class="language-html">{{ input_select }}</code></pre>
 
         For modifiers checkout the
-        <a href="#input_modifiers">input modifiers section</a>
+        <a @click="scrollTo('input_modifiers')">input modifiers section</a>
       </article>
 
-      <article id="text-area" class="card">
+      <article
+        id="text-area"
+        class="card"
+      >
         <header>
           <h2>Textarea</h2>
         </header>
@@ -531,10 +546,13 @@ onMounted(() => {
         <pre class="border stretch"><code class="language-html">{{ input_textarea }}</code></pre>
 
         For modifiers checkout the
-        <a href="#input_modifiers">input modifiers section</a>
+        <a @click="scrollTo('input_modifiers')">input modifiers section</a>
       </article>
 
-      <article id="label" class="card">
+      <article
+        id="label"
+        class="card"
+      >
         <header>
           <h2>Labels</h2>
         </header>
@@ -582,7 +600,10 @@ onMounted(() => {
         <pre class="border"><code class="language-html">{{ labels }}</code></pre>
       </article>
 
-      <article id="hr" class="card">
+      <article
+        id="hr"
+        class="card"
+      >
         <header>
           <h1>Horizontal rule</h1>
         </header>
@@ -595,7 +616,10 @@ onMounted(() => {
         </section>
       </article>
 
-      <article id="table" class="card">
+      <article
+        id="table"
+        class="card"
+      >
         <header>
           <h1>Table</h1>
         </header>
