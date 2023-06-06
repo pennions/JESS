@@ -1,3 +1,4 @@
+import 'lucide-static/font/Lucide.css';
 import '../jess/jess.less';
 import '../jess/theme/default/default.less';
 import { createRouter, createWebHashHistory } from 'vue-router';

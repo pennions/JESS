@@ -20,7 +20,8 @@
             <code class="language-html"> border-top </code> <br />
             <code class="language-html"> border-left </code> <br />
             <code class="language-html"> border-right </code> <br />
-            <h3 class="my-1">Border colour classes</h3>
+
+            <h3 class="mt-4 mb-2">Border colour classes</h3>
             <code class="language-html"> border-primary </code> <br />
             <code class="language-html"> border-accent </code> <br />
             <code class="language-html"> border-danger </code> <br />
@@ -64,13 +65,13 @@
           <div>
             <h2 class="mb-3">Background colour utilities</h2>
 
-            <code class="language-html"> bg-grey </code> <br />
-            <code class="language-html"> bg-grey-dark </code> <br />
-            <code class="language-html"> bg-black </code> <br />
-            <code class="language-html"> bg-white </code> <br />
-            <code class="language-html"> bg-primary </code> <br />
-            <code class="language-html"> bg-accent </code> <br />
-            <code class="language-html"> bg-danger </code> <br />
+            <code class="language-html">bg-grey </code> <br />
+            <code class="language-html">bg-grey-dark </code> <br />
+            <code class="language-html">bg-black </code> <br />
+            <code class="language-html">bg-white </code> <br />
+            <code class="language-html">bg-primary </code> <br />
+            <code class="language-html">bg-accent </code> <br />
+            <code class="language-html">bg-danger </code> <br />
           </div>
           <div>
             <p>Examples:</p>
@@ -94,13 +95,13 @@
         <section class="flex-layout two-columns">
           <div>
             <h2 class="mb-3">Text colour utilities</h2>
-            <code class="language-html"> text-black </code> <br />
-            <code class="language-html"> text-white </code> <br />
-            <code class="language-html"> text-primary </code> <br />
-            <code class="language-html"> text-accent </code> <br />
-            <code class="language-html"> text-danger </code> <br />
-            <code class="language-html"> text-success </code> <br />
-            <code class="language-html"> text-grey </code> <br />
+            <code class="language-html">text-black </code> <br />
+            <code class="language-html">text-white </code> <br />
+            <code class="language-html">text-primary </code> <br />
+            <code class="language-html">text-accent </code> <br />
+            <code class="language-html">text-danger </code> <br />
+            <code class="language-html">text-success </code> <br />
+            <code class="language-html">text-grey </code> <br />
           </div>
           <div>
             <p>Examples:</p>
@@ -147,250 +148,60 @@
           </div>
           <div>
             <p>Examples:</p>
-            <div class="icon-grey row align-center mt-2 p-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                class="mr-5 feather feather-coffee"
-              >
-                <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
-                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
-                <line
-                  x1="6"
-                  y1="1"
-                  x2="6"
-                  y2="4"
-                />
-                <line
-                  x1="10"
-                  y1="1"
-                  x2="10"
-                  y2="4"
-                />
-                <line
-                  x1="14"
-                  y1="1"
-                  x2="14"
-                  y2="4"
-                />
-              </svg>
+            <div class="row align-center mt-2 p-2">
+              <div class="icon-coffee icon-grey">
+              </div>
               Grey icon
             </div>
 
-            <div class="icon-grey-dark row align-center mt-2 p-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                class="mr-5 feather feather-coffee"
-              >
-                <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
-                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
-                <line
-                  x1="6"
-                  y1="1"
-                  x2="6"
-                  y2="4"
-                />
-                <line
-                  x1="10"
-                  y1="1"
-                  x2="10"
-                  y2="4"
-                />
-                <line
-                  x1="14"
-                  y1="1"
-                  x2="14"
-                  y2="4"
-                />
-              </svg>
+            <div class="row align-center mt-2 p-2">
+              <div class="icon-coffee icon-grey-dark">
+              </div>
               Dark Grey icon
             </div>
 
-            <div class="icon-primary row align-center mt-2 p-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                class="mr-5 feather feather-coffee"
-              >
-                <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
-                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
-                <line
-                  x1="6"
-                  y1="1"
-                  x2="6"
-                  y2="4"
-                />
-                <line
-                  x1="10"
-                  y1="1"
-                  x2="10"
-                  y2="4"
-                />
-                <line
-                  x1="14"
-                  y1="1"
-                  x2="14"
-                  y2="4"
-                />
-              </svg>
+            <div class="row align-center mt-2 p-2">
+              <div class="icon-coffee icon-primary">
+              </div>
               Primary icon
             </div>
 
-            <div class="icon-accent row align-center mt-2 p-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                class="mr-5 feather feather-coffee"
-              >
-                <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
-                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
-                <line
-                  x1="6"
-                  y1="1"
-                  x2="6"
-                  y2="4"
-                />
-                <line
-                  x1="10"
-                  y1="1"
-                  x2="10"
-                  y2="4"
-                />
-                <line
-                  x1="14"
-                  y1="1"
-                  x2="14"
-                  y2="4"
-                />
-              </svg>
+            <div class="row align-center mt-2 p-2">
+              <div class="icon-coffee icon-accent">
+              </div>
               Accent icon
             </div>
 
-            <div class="icon-danger row align-center mt-2 p-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                class="mr-5 feather feather-coffee"
-              >
-                <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
-                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
-                <line
-                  x1="6"
-                  y1="1"
-                  x2="6"
-                  y2="4"
-                />
-                <line
-                  x1="10"
-                  y1="1"
-                  x2="10"
-                  y2="4"
-                />
-                <line
-                  x1="14"
-                  y1="1"
-                  x2="14"
-                  y2="4"
-                />
-              </svg>
+            <div class="row align-center mt-2 p-2">
+              <div class="icon-coffee icon-danger">
+              </div>
               Danger icon
             </div>
-
-            <div class="icon-success row align-center mt-2 p-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                class="mr-5 feather feather-coffee"
-              >
-                <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
-                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
-                <line
-                  x1="6"
-                  y1="1"
-                  x2="6"
-                  y2="4"
-                />
-                <line
-                  x1="10"
-                  y1="1"
-                  x2="10"
-                  y2="4"
-                />
-                <line
-                  x1="14"
-                  y1="1"
-                  x2="14"
-                  y2="4"
-                />
-              </svg>
+            <div class="row align-center mt-2 p-2">
+              <div class="icon-coffee icon-success">
+              </div>
               Success icon
             </div>
 
-            <div class="icon-black row align-center mt-2 p-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                class="mr-5 feather feather-coffee"
-              >
-                <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
-                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
-                <line
-                  x1="6"
-                  y1="1"
-                  x2="6"
-                  y2="4"
-                />
-                <line
-                  x1="10"
-                  y1="1"
-                  x2="10"
-                  y2="4"
-                />
-                <line
-                  x1="14"
-                  y1="1"
-                  x2="14"
-                  y2="4"
-                />
-              </svg>
+            <div class="row align-center mt-2 p-2">
+              <div class="icon-coffee icon-black">
+              </div>
               Black icon
             </div>
 
-            <div class="bg-black text-white icon-white row align-center mt-2 p-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                class="mr-5 feather feather-coffee"
-              >
-                <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
-                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
-                <line
-                  x1="6"
-                  y1="1"
-                  x2="6"
-                  y2="4"
-                />
-                <line
-                  x1="10"
-                  y1="1"
-                  x2="10"
-                  y2="4"
-                />
-                <line
-                  x1="14"
-                  y1="1"
-                  x2="14"
-                  y2="4"
-                />
-              </svg>
+            <div class="bg-black text-white row align-center mt-2 p-2">
+              <div class="icon-coffee icon-white">
+              </div>
               White icon
             </div>
           </div>
         </section>
       </article>
 
-      <article id="utility-classes" class="card">
+      <article
+        id="utility-classes"
+        class="card"
+      >
         <header>
           <h2>Layout utility classes</h2>
         </header>

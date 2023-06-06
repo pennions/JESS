@@ -10,12 +10,13 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build:docs": "vite build",
     "preview": "vite preview",
     "jess": "node ./node_modules/less/bin/lessc jess/jess.less dist/jess.css",
-    "build": "npm run jess && postcss ./dist/jess.css > ./dist/jess.min.css && npm run build-theme",
-    "build-theme": "node ./node_modules/less/bin/lessc ./jess/theme/default/default.less dist/default-theme.css && postcss ./dist/default-theme.css > ./dist/default-theme.min.css",
-    "publish": "npm run build && npm run build:docs && npm publish --access public"
+    "build:docs": "vite build",
+    "build:style": "npm run jess && postcss ./dist/jess.css > ./dist/jess.min.css",
+    "build:theme": "node ./node_modules/less/bin/lessc ./jess/theme/default/default.less dist/default-theme.css && postcss ./dist/default-theme.css > ./dist/default-theme.min.css",
+    "build": "npm run build:style && npm run build:theme && npm run build:docs",
+    "publish": "npm run build && npm publish --access public"
   },
   "repository": {
     "type": "git",
@@ -33,6 +34,7 @@
   },
   "homepage": "https://github.com/pennions/JESS#readme",
   "dependencies": {
+    "lucide-static": "^0.240.0",
     "vue": "^3.2.47",
     "vue-router": "^4.2.0"
   },

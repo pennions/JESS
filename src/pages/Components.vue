@@ -5,13 +5,13 @@ const props = defineProps(["scrollToId"]);
 const components_card =
   '<article class="card normal">\n    <header>\n      <h3>Header</h3>\n    </header>\n    <section>\n      <p>\n        <code class="language-html">class="card normal"</code>\n      </p>\n    </section>\n    <footer>Footer</footer>\n</article>';
 const components_notifications =
-  '<dialog class="notification" open>\n    <span>Default notification</span>\n    <button class="close">X</button>\n</dialog>\n\n<dialog class="notification warning" open>\n    <span>Warning notification</span>\n    <button class="close">X</button>\n</dialog>\n\n<dialog class="notification success" open>\n    <span>Success notification</span>\n    <button class="close">X</button>\n</dialog>\n\n<dialog class="notification error" open>\n    <svg class="icon mr-1">\n      <use href="./icons/feather-sprite.svg#alert-triangle" />\n    </svg>\n    <span>Error notification</span> <button class="close">X</button>\n</dialog>\n';
+  '<dialog class="notification" open>\n  <span>Default notification</span> <button class="close">X</button>\n</dialog>\n\n<dialog class="notification warning" open>\n  <span>Warning notification</span> <button class="close">X</button>\n</dialog>\n\n<dialog class="notification success" open>\n  <span>Success notification</span> <button class="close">X</button>\n</dialog>\n\n<dialog class="notification error" open>\n  <div class="icon icon-alert-triangle mr-3"></div>\n  <span>Error notification</span> <button class="close">X</button>\n</dialog>';
 const components_modal =
   "<button\n    onclick=\"document.getElementById('demo-modal').setAttribute('open', true)\"\n    >\n    Open modal\n</button>\n\n<dialog\n    id=\"demo-modal\"\n    class=\"modal\"\n    onclick=\"this.removeAttribute('open')\"\n    >\n    <article class=\"card normal w-25\">\n        <header>\n            <h3>Message</h3>\n        </header>\n        <div>I am a modal.</div>\n        <footer>\n            <button\n                onclick=\"document.getElementById('demo-modal').setAttribute('open', false)\"\n            >\n                Close\n            </button>\n        </footer>\n    </article>\n</dialog>\n\n<button\n    onclick=\"document.getElementById('demo-modal-noscroll').setAttribute('open', true); \n             document.getElementsByTagName('body')[0].classList.add('no-scroll')\"\n    >\n    Open modal with no-scroll applied.\n</button>\n\n<dialog\n    id=\"demo-modal-noscroll\"\n    class=\"modal\"\n    onclick=\"this.removeAttribute('open'); \n             document.getElementsByTagName('body')[0].classList.remove('no-scroll')\"\n    >\n    <article class=\"card normal w-25\">\n        <header>\n            <h3>Message</h3>\n        </header>\n        <div>I am a modal.</div>\n        <footer>\n            <button\n                onclick=\"document.getElementById('demo-modal-noscroll').setAttribute('open', false); \n                         document.getElementsByTagName('body')[0].classList.remove('no-scroll')\"\n                >\n                Close\n            </button>\n        </footer>\n    </article>\n</dialog>";
 const components_breadcrumb =
   '<nav aria-label="Breadcrumb">\n  <ul>\n    <li><a href="">Home</a></li>\n    <li><a href="">Workshop</a></li>\n    <li><a href="" aria-current="page">Sawbench</a></li>\n  </ul>\n</nav>';
 const components_dropdowns =
-  '<details>\n  <summary>Menu 1</summary>\n  <nav class="dropdown-container">\n    <ul>\n      <li><a href>Item one</a></li>\n      <li><a href>Item two</a></li>\n      <li><a href>Item three</a></li>\n      <li><a href>Item four</a></li>\n      <li><a href>Item five</a></li>\n    </ul>\n  </nav>\n</details>\n\n<details class="align-right">\n  <summary>Right side menu</summary>\n  <nav class="dropdown-container">\n    <ul>\n      <li><a href>Item one</a></li>\n      <li><a href>Item two</a></li>\n      <li><a href>Item three</a></li>\n      <li><a href>Item four</a></li>\n      <li><a href>Item five</a></li>\n    </ul>\n  </nav>\n</details>\n\n<details class="icon-dropdown">\n  <summary>\n    <svg class="icon">\n      <use href="/icons/feather-sprite.svg#menu" />\n    </svg>\n  </summary>\n  <nav class="dropdown-container">\n    <ul>\n      <li><a href>Item one</a></li>\n      <li><a href>Item two</a></li>\n      <li><a href>Item three</a></li>\n      <li><a href>Item four</a></li>\n      <li><a href>Item five</a></li>\n    </ul>\n  </nav>\n</details>\n\n<p>With the <code class="language-html">accordion</code> class:</p>\n<details class="accordion">\n  <summary>Lorum ipsum story</summary>\n  <p>Lorem Ipsum is simply dummy text of the printing and typesetting\n    industry. Lorem Ipsum has been the industry\'s standard dummy text ever\n    since the 1500s, when an unknown printer took a galley of type and\n    scrambled it to make a type specimen book. It has survived not only\n    five centuries, but also the leap into electronic typesetting,\n    remaining essentially unchanged.</p>\n</details>\n\n<details class="button">\n  <summary>Button dropdown</summary>\n  <nav class="dropdown-container">\n    <ul>\n      <li><a href>Item one</a></li>\n      <li><a href>Item two</a></li>\n      <li><a href>Item three</a></li>\n      <li><a href>Item four</a></li>\n      <li><a href>Item five</a></li>\n    </ul>\n  </nav>\n</details>';
+  "<details>\n  <summary>Menu 1</summary>\n  <nav class='dropdown-container'>\n    <ul>\n      <li><a href>Item one</a></li>\n      <li><a href>Item two</a></li>\n      <li><a href>Item three</a></li>\n      <li><a href>Item four</a></li>\n      <li><a href>Item five</a></li>\n    </ul>\n  </nav>\n</details>\n\n<details class='align-right'>\n  <summary>Right side menu</summary>\n  <nav class='dropdown-container'>\n    <ul>\n      <li><a href>Item one</a></li>\n      <li><a href>Item two</a></li>\n      <li><a href>Item three</a></li>\n      <li><a href>Item four</a></li>\n      <li><a href>Item five</a></li>\n    </ul>\n  </nav>\n</details>\n\n<details class='icon-dropdown'>\n  <summary class='icon-menu'></summary>\n  <nav class='dropdown-container'>\n    <ul>\n      <li><a href>Item one</a></li>\n      <li><a href>Item two</a></li>\n      <li><a href>Item three</a></li>\n      <li><a href>Item four</a></li>\n      <li><a href>Item five</a></li>\n    </ul>\n  </nav>\n</details>\n\n<p>With the <code class='language-html'>accordion</code> class:</p>\n<details class='accordion'>\n  <summary>Lorum ipsum story</summary>\n  <p>Lorem Ipsum is simply dummy text of the printing and typesetting\n    industry. Lorem Ipsum has been the industry's standard dummy text ever\n    since the 1500s, when an unknown printer took a galley of type and\n    scrambled it to make a type specimen book. It has survived not only\n    five centuries, but also the leap into electronic typesetting,\n    remaining essentially unchanged.</p>\n</details>\n\n<details class='button'>\n  <summary>Button dropdown</summary>\n  <nav class='dropdown-container'>\n    <ul>\n      <li><a href>Item one</a></li>\n      <li><a href>Item two</a></li>\n      <li><a href>Item three</a></li>\n      <li><a href>Item four</a></li>\n      <li><a href>Item five</a></li>\n    </ul>\n  </nav>\n</details>";
 const components_checkbox =
   '<label class="custom-input">\n  Custom checkbox with full color control.\n  <input type="checkbox" checked="checked" />\n  <span class="checkmark"></span>\n</label>\n\n<label class="custom-input ml-1">\n  Unchecked version.\n  <input type="checkbox" />\n  <span class="checkmark"></span>\n</label>\n\n<label class="custom-input margin">\n  Disabled version.\n  <input type="checkbox" name="custom" disabled />\n  <span class="checkmark"></span>\n</label>\n\n<label class="custom-input label-left">\n  Custom checkbox with the label on the left.\n  <input type="checkbox" checked="checked" />\n  <span class="checkmark"></span>\n</label>';
 const components_radio =
@@ -241,16 +241,15 @@ onMounted(() => {
         </dialog>
 
         <p>
-          If you add a feather icon, it will have a contrasting color, matching
+          If you add a lucide font icon, it will have a contrasting color, matching
           the notification:
         </p>
         <dialog
           class="notification error"
           open
         >
-          <svg class="icon mr-2 small">
-            <use href="/icons/feather-sprite.svg#alert-triangle" />
-          </svg>
+          <div class="icon icon-alert-triangle mr-3">
+          </div>
           <span>Error notification</span> <button class="close">X</button>
         </dialog>
 
@@ -412,11 +411,7 @@ onMounted(() => {
         <p>Or with an icon:</p>
 
         <details class="icon-dropdown">
-          <summary>
-            <svg class="icon">
-              <use href="/icons/feather-sprite.svg#menu" />
-            </svg>
-          </summary>
+          <summary class="icon-menu"></summary>
           <nav class="dropdown-container">
             <ul>
               <li><a href>Item one</a></li>

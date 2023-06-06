@@ -2,7 +2,7 @@
 import { inject, onMounted } from "vue";
 
 const buttons =
-  '<button>A standard button</button>\n<button disabled>A disabled standard button</button>\n<button class="no-border">A button without a border</button>\n<button class="no-border" disabled>A disabled button without a border</button>\n<button class="no-border outline-hover">A button with only an outline on hover</button>\n<button class="no-border outline-hover" disabled>A disabled button with only an outline on hover</button>\n<button class="link">A link button</button>\n<button class="link" disabled>A disabled link button</button>\n<button class="link accent">An accent colored link button</button>\n<button class="link danger">A danger colored link button</button>\n<button class="link accent" disabled>A disabled colored link button</button>\n<button class="primary">A button with primary color</button>\n<button class="accent">A button with accent color</button>\n<button class="contrast">A button with contrast color</button>\n<button class="danger">A button with danger color</button>\n<button class="danger" disabled>A disabled colored button</button>\n<button class="icon">\n  <svg\n    xmlns="htt =//www.w3.org/2000/svg"\n    width="24"\n    height="24"\n    viewBox="0 0 24 24"\n    fill="none"\n    stroke="currentColor"\n    stroke-width="1.5"\n    stroke-linecap="round"\n    stroke-linejoin="round"\n    class="feather feather-chevron-right"\n  >\n    <polyline points="9 18 15 12 9 6" />\n  </svg>\n</button>\n<button class="icon" disabled>\n  <svg\n    xmlns="htt =//www.w3.org/2000/svg"\n    width="24"\n    height="24"\n    viewBox="0 0 24 24"\n    fill="none"\n    stroke="currentColor"\n    stroke-width="1.5"\n    stroke-linecap="round"\n    stroke-linejoin="round"\n    class="feather feather-chevron-right"\n  >\n    <polyline points="9 18 15 12 9 6" />\n  </svg>\n</button>';
+  "<button>A standard button</button>\n<button disabled>A disabled standard button</button>\n<button class='no-border'>A button without a border</button>\n<button class='no-border' disabled>A disabled button without a border</button>\n<button class='no-border outline-hover'>A button with only an outline on hover</button>\n<button class='no-border outline-hover' disabled>A disabled button with only an outline on hover</button>\n<button class='link'>A link button</button>\n<button class='link' disabled>A disabled link button</button>\n<button class='link accent'>An accent colored link button</button>\n<button class='link danger'>A danger colored link button</button>\n<button class='link accent' disabled>A disabled colored link button</button>\n<button class='primary'>A button with primary color</button>\n<button class='accent'>A button with accent color</button>\n<button class='contrast'>A button with contrast color</button>\n<button class='danger'>A button with danger color</button>\n<button class='danger' disabled>A disabled colored button</button>\n<button class=\"icon icon-chevron-right\"></button>\n<button\n  class=\"icon icon-chevron-right\"\n  disabled\n></button>";
 const links =
   '<a href>A standard link</a>\n<a href class="accent">An accent colored link</a>\n<a href class="danger">A danger colored link</a>\n<a href class="contrast">A contrast colored link</a>\n<a href class="button">A link as a button</a>\n<a href class="button normal">A link as normal button</a>\n<a href class="button primary">A link as primary button</a>\n<a href class="button accent">A link as accent button</a>\n<a href class="button danger">A link as danger button</a>\n<a href class="button danger disabled">A link as button with the disabled class</a>';
 const input_buttons =
@@ -133,42 +133,12 @@ onMounted(() => {
             disabled
           >A disabled colored button</button>
           <p class="mb-0">Icon button</p>
-          <button class="icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="feather feather-chevron-right"
-            >
-              <polyline points="9 18 15 12 9 6" />
-            </svg>
-          </button>
+          <button class="icon icon-chevron-right"></button>
           <p class="mb-0">Disabled icon button</p>
           <button
-            class="icon"
+            class="icon icon-chevron-right"
             disabled
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="feather feather-chevron-right"
-            >
-              <polyline points="9 18 15 12 9 6" />
-            </svg>
-          </button>
+          ></button>
         </section>
         <pre class="border"><code class="language-html">{{ buttons }}</code></pre>
       </article>
