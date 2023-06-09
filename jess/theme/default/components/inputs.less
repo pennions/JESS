@@ -42,7 +42,6 @@ textarea {
 
   &[type='radio'],
   &[type='checkbox'] {
-
     &:focus-visible {
       outline-offset: 0.1rem;
       outline: var(--button-outline-colour) dashed 0.1rem;
@@ -287,27 +286,28 @@ textarea {
     background-color: transparent;
   }
 
-  input:checked ~ .checkmark {
+  input:checked ~ .checkmark,
+  input:indeterminate ~ .checkmark {
     background-color: var(--primary);
     border-color: var(--primary);
   }
+
   input[disabled=''] ~ .checkmark,
   input[disabled='true'] ~ .checkmark {
     background-color: var(--disabled-button-background);
     border-color: var(--disabled-button-colour);
 
-    &::after {
+    &:not(:indeterminate)::after {
       border-color: var(--disabled-button-background);
     }
   }
 
-  &:hover
-    > input:not(:checked):not([disabled='']):not([disabled='true'])
-    ~ .checkmark:after {
+  &:hover > input:not(:checked):not([disabled='']):not([disabled='true']):not(:indeterminate) ~ .checkmark:after {
     border-color: var(--input-border-colour);
   }
 
-  &:hover > input:checked ~ .checkmark {
+  &:hover > input:checked ~ .checkmark,
+  &:hover > input:indeterminate ~ .checkmark {
     background-color: var(--primary-hover);
     border-color: var(--primary-hover);
   }

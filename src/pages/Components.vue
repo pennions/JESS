@@ -24,6 +24,8 @@ const scrollTo = inject("scrollTo");
 onMounted(() => {
   Prism.highlightAll();
 
+  document.getElementById("indeterminateExample").indeterminate = true;
+
   /** added the last path as a prop in the router. Then wait for the browser to render, then scroll */
   if (props.scrollToId) {
     const timer = setTimeout(() => {
@@ -481,6 +483,17 @@ onMounted(() => {
           <span class="checkmark"></span>
         </label>
 
+        <p>You can use Javascript to add the indeterminate property to make it look indeterminate</p>
+        <label class="custom-input ml-1">
+          Indeterminate checkbox
+          <input
+            type="checkbox"
+            id="indeterminateExample"
+          />
+          <span class="checkmark"></span>
+        </label>
+        <br />
+
         <label class="custom-input m-1">
           Disabled version.
           <input
@@ -490,6 +503,7 @@ onMounted(() => {
           />
           <span class="checkmark"></span>
         </label>
+        <br />
 
         <p>Or with the <code class="language-html">label-left</code> class:</p>
 
