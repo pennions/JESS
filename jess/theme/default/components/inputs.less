@@ -287,7 +287,7 @@ textarea {
   }
 
   input:checked ~ .checkmark,
-  input:indeterminate ~ .checkmark {
+  input:not([type='radio']):indeterminate ~ .checkmark {
     background-color: var(--primary);
     border-color: var(--primary);
   }
@@ -297,24 +297,63 @@ textarea {
     background-color: var(--disabled-button-background);
     border-color: var(--disabled-button-colour);
 
-    &:not(:indeterminate)::after {
+    &::after {
       border-color: var(--disabled-button-background);
     }
   }
 
-  &:hover > input:not(:checked):not([disabled='']):not([disabled='true']):not(:indeterminate) ~ .checkmark:after {
-    border-color: var(--input-border-colour);
-  }
-
   &:hover > input:checked ~ .checkmark,
-  &:hover > input:indeterminate ~ .checkmark {
+  &:hover > input:not([type='radio']):indeterminate ~ .checkmark {
     background-color: var(--primary-hover);
     border-color: var(--primary-hover);
+  }
+
+  input[disabled='']:checked ~ .checkmark,
+  input[disabled='true']:checked ~ .checkmark {
+    background-color: var(--colour-on-disabled);
+    border-color: var(--disabled-button-colour);
+
+    &::after {
+      border-color: var(--disabled-button-background);
+    }
+
+    &:hover {
+      background-color: var(--colour-on-disabled);
+      border-color: var(--disabled-button-colour);
+    }
+  }
+
+  input[disabled='']:not([type='radio']):indeterminate ~ .checkmark,
+  input[disabled='true']:indeterminate ~ .checkmark {
+    background-color: var(--colour-on-disabled);
+    border-color: var(--disabled-button-colour);
+
+    &::after {
+      border-color: var(--disabled-button-background);
+    }
+
+    &:hover {
+      background-color: var(--colour-on-disabled);
+      border-color: var(--disabled-button-colour);
+    }
+  }
+
+  &:hover
+    > input:not(:checked):not([disabled='']):not([disabled='true']):not(
+      :indeterminate
+    )
+    ~ .checkmark:after {
+    border-color: var(--input-border-colour);
   }
 
   input[type='radio']:checked ~ .checkmark {
     background-color: var(--background);
     border-color: var(--primary);
+  }
+
+  input[type='radio']:disabled:checked ~ .checkmark {
+    background-color: var(--disabled-button-background);
+    border-color: var(--colour-on-disabled);
   }
 
   input[type='radio']:focus ~ .checkmark {

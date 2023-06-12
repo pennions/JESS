@@ -25,6 +25,7 @@ onMounted(() => {
   Prism.highlightAll();
 
   document.getElementById("indeterminateExample").indeterminate = true;
+  document.getElementById("indeterminateExampleDisabled").indeterminate = true;
 
   /** added the last path as a prop in the router. Then wait for the browser to render, then scroll */
   if (props.scrollToId) {
@@ -483,6 +484,27 @@ onMounted(() => {
           <span class="checkmark"></span>
         </label>
 
+        <label class="custom-input m-1">
+          Disabled version.
+          <input
+            type="checkbox"
+            name="custom"
+            disabled
+          />
+          <span class="checkmark"></span>
+        </label>
+
+        <label class="custom-input m-1">
+          Disabled checked version.
+          <input
+            type="checkbox"
+            name="custom"
+            disabled
+            checked
+          />
+          <span class="checkmark"></span>
+        </label>
+
         <p>You can use Javascript to add the indeterminate property to make it look indeterminate</p>
         <label class="custom-input ml-1">
           Indeterminate checkbox
@@ -492,13 +514,12 @@ onMounted(() => {
           />
           <span class="checkmark"></span>
         </label>
-        <br />
 
-        <label class="custom-input m-1">
-          Disabled version.
+        <label class="custom-input ml-1">
+          Disabled indeterminate checkbox
           <input
             type="checkbox"
-            name="custom"
+            id="indeterminateExampleDisabled"
             disabled
           />
           <span class="checkmark"></span>
@@ -523,10 +544,11 @@ onMounted(() => {
         <hr />
 
         <label class="custom-input">
-          Custom radiobutton with full color control.
+          A chekced custom radiobutton with full color control.
           <input
             type="radio"
             name="custom"
+            checked
           />
           <span class="checkmark"></span>
         </label>
@@ -546,6 +568,17 @@ onMounted(() => {
             type="radio"
             name="custom"
             disabled
+          />
+          <span class="checkmark"></span>
+        </label>
+
+        <label class="custom-input m-1">
+          Disabled checked version.
+          <input
+            type="radio"
+            name="custom-disabled"
+            disabled
+            checked
           />
           <span class="checkmark"></span>
         </label>
