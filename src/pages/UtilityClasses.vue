@@ -503,13 +503,40 @@
                 <td>mobile</td>
                 <td>X</td>
                 <td>X</td>
-                <td>X</td>
+                <td>-</td>
                 <td>-</td>
                 <td>-</td>
                 <td>-</td>
               </tr>
               <tr>
+                <td>tablet</td>
+                <td>-</td>
+                <td>-</td>
+                <td>X</td>
+                <td>X</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+              <tr>
                 <td>desktop</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>X</td>
+                <td>X</td>
+              </tr>
+               <tr>
+                <td>small-screen</td>
+                <td>X</td>
+                <td>X</td>
+                <td>X</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+               <tr>
+                <td>large-screen</td>
                 <td>-</td>
                 <td>-</td>
                 <td>-</td>
@@ -519,6 +546,12 @@
               </tr>
             </tbody>
           </table>
+          <span>Resize the screen to see it in action:</span>
+          <div class="mobile bg-danger p-3">Mobile</div>
+          <div class="tablet bg-accent p-3">Tablet</div>
+          <div class="desktop bg-primary p-3">desktop</div>
+          <div class="small-screen bg-grey p-3">small-screen</div>
+          <div class="large-screen bg-grey-dark p-3">large-screen</div>
         </section>
         <section class="flex-layout overflow-horizontal mt-5">
           <h3>Height classes</h3>
