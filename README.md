@@ -10,7 +10,7 @@ the like can be adjusted super easy.
 
 - Out-of-the-box responsive
 - A lot of layout variations
-- Semantic classes and use of HTML5 elements
+- Makes use of HTML5 elements
 - Based on Microsoft Fluent Design.
 - Allows for easy theming.
 - Built with Less, so you can easily modify inside a webbrowser.
