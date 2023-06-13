@@ -102,6 +102,7 @@
             <code class="language-html">text-danger </code> <br />
             <code class="language-html">text-success </code> <br />
             <code class="language-html">text-grey </code> <br />
+            <small>* these can also be applied on an icon</small>
           </div>
           <div>
             <p>Examples:</p>
@@ -133,75 +134,9 @@
             </table>
           </div>
         </section>
-
-        <section class="flex-layout two-columns">
-          <div>
-            <h2 class="mb-3">Icon colour utilities</h2>
-            <code class="language-html">icon-grey </code> <br />
-            <code class="language-html">icon-grey-dark </code> <br />
-            <code class="language-html">icon-primary </code><br />
-            <code class="language-html">icon-accent </code><br />
-            <code class="language-html">icon-danger </code><br />
-            <code class="language-html">icon-success </code><br />
-            <code class="language-html">icon-black </code><br />
-            <code class="language-html">icon-white </code><br />
-          </div>
-          <div>
-            <p>Examples:</p>
-            <div class="row align-center mt-2 p-2">
-              <div class="icon-coffee icon-grey">
-              </div>
-              Grey icon
-            </div>
-
-            <div class="row align-center mt-2 p-2">
-              <div class="icon-coffee icon-grey-dark">
-              </div>
-              Dark Grey icon
-            </div>
-
-            <div class="row align-center mt-2 p-2">
-              <div class="icon-coffee icon-primary">
-              </div>
-              Primary icon
-            </div>
-
-            <div class="row align-center mt-2 p-2">
-              <div class="icon-coffee icon-accent">
-              </div>
-              Accent icon
-            </div>
-
-            <div class="row align-center mt-2 p-2">
-              <div class="icon-coffee icon-danger">
-              </div>
-              Danger icon
-            </div>
-            <div class="row align-center mt-2 p-2">
-              <div class="icon-coffee icon-success">
-              </div>
-              Success icon
-            </div>
-
-            <div class="row align-center mt-2 p-2">
-              <div class="icon-coffee icon-black">
-              </div>
-              Black icon
-            </div>
-
-            <div class="bg-black text-white row align-center mt-2 p-2">
-              <div class="icon-coffee icon-white">
-              </div>
-              White icon
-            </div>
-          </div>
-        </section>
       </article>
 
-      <article
-        id="utility-classes"
-        class="card"
-      >
+      <article id="utility-classes" class="card">
         <header>
           <h2>Layout utility classes</h2>
         </header>
@@ -320,7 +255,8 @@
               </td>
               <td>
                 Applies:
-                <code class="language-html">justify-content: space-around;
+                <code class="language-html"
+                  >justify-content: space-around;
                 </code>
               </td>
             </tr>
@@ -330,7 +266,8 @@
               </td>
               <td>
                 Applies:
-                <code class="language-html">justify-content: space-evenly;
+                <code class="language-html"
+                  >justify-content: space-evenly;
                 </code>
               </td>
             </tr>
@@ -349,7 +286,8 @@
               </td>
               <td>
                 Applies:
-                <code class="language-html">justify-content: space-between;
+                <code class="language-html"
+                  >justify-content: space-between;
                 </code>
               </td>
             </tr>
@@ -586,7 +524,8 @@
           <h3>Height classes</h3>
           <hr />
           <p>
-            Height classes that set the <code class="language-css">height</code> property.
+            Height classes that set the
+            <code class="language-css">height</code> property.
           </p>
           <br />
 
