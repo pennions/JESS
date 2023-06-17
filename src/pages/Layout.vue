@@ -55,12 +55,12 @@ onMounted(() => {
       </nav>
     </aside>
 
-    <section class="flex-layout main column gap-3 mr-3">
-      <article class="card column gap-3">
+    <section class="flex-layout main column mr-3">
+      <article class="card column">
         <header>
           <h1>Layout elements</h1>
         </header>
-        <div class="body column gap-3">
+        <div class="body column">
           <p>
             Use the class
             <code class="language-html">flex-layout</code> as a base for an easy
@@ -86,11 +86,11 @@ onMounted(() => {
         </div>
       </article>
 
-      <article id="single-column" class="card column gap-3">
+      <article id="single-column" class="card column">
         <header>
           <h2>Single column</h2>
         </header>
-        <div class="body column gap-3">
+        <div class="body column">
           <p>
             All child elements start out as
             <code class="language-css">width:100%;</code> and will take up more
@@ -104,7 +104,7 @@ onMounted(() => {
           class="border"><code class="language-html">{{ block_100 }}</code></pre>
       </article>
 
-      <article id="two-columns" class="card column gap-3">
+      <article id="two-columns" class="card column">
         <header>
           <h2>Two columns</h2>
         </header>
@@ -127,7 +127,7 @@ onMounted(() => {
           class="border"><code class="language-html">{{ block_50 }}</code></pre>
       </article>
 
-      <article id="three-columns" class="card column gap-3">
+      <article id="three-columns" class="card column">
         <header>
           <h2>Three columns</h2>
         </header>
@@ -155,7 +155,7 @@ onMounted(() => {
           class="border"><code class="language-html">{{ block_33 }}</code></pre>
       </article>
 
-      <article id="four-columns" class="card column gap-3">
+      <article id="four-columns" class="card column">
         <header>
           <h2>Four columns</h2>
         </header>
@@ -189,7 +189,7 @@ onMounted(() => {
           class="border"><code class="language-html">{{ block_25 }}</code></pre>
       </article>
 
-      <article id="five-columns" class="card column gap-3">
+      <article id="five-columns" class="card column">
         <header>
           <h2>Five columns</h2>
         </header>
@@ -227,7 +227,7 @@ onMounted(() => {
           class="border"><code class="language-html">{{ block_20 }}</code></pre>
       </article>
 
-      <article id="six-columns" class="card column gap-3">
+      <article id="six-columns" class="card column">
         <header>
           <h2>Six columns</h2>
         </header>
@@ -270,7 +270,7 @@ onMounted(() => {
           class="border"><code class="language-html">{{ block_16 }}</code></pre>
       </article>
 
-      <article id="twelve-columns" class="card column gap-3">
+      <article id="twelve-columns" class="card column">
         <header>
           <h2>Twelve columns</h2>
         </header>
@@ -318,7 +318,7 @@ onMounted(() => {
           class="border"><code class="language-html">{{ block_8 }}</code></pre>
       </article>
 
-      <article id="aside" class="card column gap-3">
+      <article id="aside" class="card column">
         <header>
           <h2>Aside layout</h2>
         </header>
@@ -342,7 +342,7 @@ onMounted(() => {
         </small>
       </article>
 
-      <article id="nav" class="card column gap-3">
+      <article id="nav" class="card column">
         <header>
           <h2>Nav</h2>
         </header>
@@ -378,7 +378,7 @@ onMounted(() => {
           class="border"><code class="language-html">{{ nav_layout }}</code></pre>
       </article>
 
-      <article id="footer" class="card column gap-3">
+      <article id="footer" class="card column">
         <header>
           <h2>Footer</h2>
         </header>
@@ -400,7 +400,7 @@ onMounted(() => {
           class="border"><code class="language-html">{{ footer_layout }}</code></pre>
       </article>
 
-      <article id="nested" class="card column gap-3">
+      <article id="nested" class="card column">
         <header>
           <h2>Nested sections example</h2>
         </header>

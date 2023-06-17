@@ -16,7 +16,7 @@ onMounted(() => {
         <header>
           <h1>Typography</h1>
         </header>
-        <div class="body column gap-3">
+        <div class="body column">
           <p>
             JESS uses the following font-size, based on a 62.5% of the default
             font-size. <br />

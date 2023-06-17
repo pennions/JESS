@@ -122,7 +122,7 @@ onMounted(() => {
           class="border"><code class="language-html">{{ buttons }}</code></pre>
       </article>
 
-      <article id="links" class="card column gap-3">
+      <article id="links" class="card column">
         <header>
           <h2>Links</h2>
         </header>
@@ -147,7 +147,7 @@ onMounted(() => {
         </div>
       </article>
 
-      <article id="input" class="card column gap-3">
+      <article id="input" class="card column">
         <header>
           <h2>Inputs</h2>
         </header>
@@ -367,11 +367,11 @@ onMounted(() => {
         </div>
       </article>
 
-      <article id="select" class="card column gap-3">
+      <article id="select" class="card column">
         <header>
           <h2>Select</h2>
         </header>
-        <div class="body no-stretch column gap-3">
+        <div class="body no-stretch column">
           <p>A default select element:</p>
 
           <select name="fruits" id="fruit">
@@ -400,11 +400,11 @@ onMounted(() => {
         </div>
       </article>
 
-      <article id="text-area" class="card column gap-3">
+      <article id="text-area" class="card column">
         <header>
           <h2>Textarea</h2>
         </header>
-        <div class="body column no-stretch gap-3">
+        <div class="body column no-stretch">
           <p>A default resizable textarea element:</p>
 
           <textarea cols="30" rows="10"></textarea>
@@ -426,11 +426,11 @@ onMounted(() => {
         </div>
       </article>
 
-      <article id="label" class="card column gap-3">
+      <article id="label" class="card column">
         <header>
           <h2>Labels</h2>
         </header>
-        <div class="body column gap-3">
+        <div class="body column">
           <p>
             Labels render with a
             <code class="language-css">font-size: 1.2rem;</code> which results
@@ -477,11 +477,11 @@ onMounted(() => {
         </div>
       </article>
 
-      <article id="hr" class="card column gap-3">
+      <article id="hr" class="card column">
         <header>
           <h1>Horizontal rule</h1>
         </header>
-        <div class="body column gap-3">
+        <div class="body column">
           <p>
             A default <code class="language-html">&lt;hr&gt;</code> element will
             render with <code class="language-css">width:100%;</code>
@@ -493,7 +493,7 @@ onMounted(() => {
         </div>
       </article>
 
-      <article id="table" class="card column gap-3">
+      <article id="table" class="card column">
         <header>
           <h1>Table</h1>
         </header>

@@ -1,6 +1,6 @@
 <template>
   <main class="mx-3">
-    <article class="card column gap-3">
+    <article class="card column">
       <h1>Welcome!</h1>
       <p>
         I have written this Style System so you can quickly make any webpage

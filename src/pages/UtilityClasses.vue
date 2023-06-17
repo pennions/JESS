@@ -5,7 +5,7 @@
         <header>
           <h1>Utility classes</h1>
         </header>
-        <div class="body column gap-3">
+        <div class="body column">
           <p>
             Here are the classes you can use to modify or override default
             behaviour, which are not mentioned in any of the other categories.
@@ -151,11 +151,11 @@
         </div>
       </article>
 
-      <article id="utility-classes" class="card column gap-3">
+      <article id="utility-classes" class="card column">
         <header>
           <h2>Layout utility classes</h2>
         </header>
-        <div class="body column gap-3">
+        <div class="body column">
           <table>
             <thead>
               <tr>
@@ -564,7 +564,7 @@
                 </tr>
               </tbody>
             </table>
-            <div class="column gap-3 mt-3">
+            <div class="column mt-3">
               <span>Resize the screen to see it in action:</span>
               <div class="mobile bg-danger p-3">Mobile</div>
               <div class="tablet bg-accent p-3">Tablet</div>
@@ -574,7 +574,7 @@
             </div>
           </section>
 
-          <section class="column gap-3 overflow-horizontal mt-5">
+          <section class="column overflow-horizontal mt-5">
             <h3>Height classes</h3>
             <hr />
             <p>

@@ -90,8 +90,8 @@ onMounted(() => {
       </nav>
     </aside>
 
-    <section class="flex-layout column gap-3 main mx-3">
-      <article class="card column gap-3">
+    <section class="flex-layout column main mx-3">
+      <article class="card column">
         <header>
           <h1>Components</h1>
         </header>
@@ -101,7 +101,7 @@ onMounted(() => {
         </p>
       </article>
 
-      <article class="card gap-3 column" id="card">
+      <article class="card column" id="card">
         <header>
           <h2>Card</h2>
         </header>
@@ -223,11 +223,11 @@ onMounted(() => {
           class="border stretch mt-1"><code class="language-html">{{ components_card }}</code></pre>
       </article>
 
-      <article id="notification" class="card column gap-3">
+      <article id="notification" class="card column">
         <header>
           <h2>Notification</h2>
         </header>
-        <div class="body column gap-3">
+        <div class="body column">
           <p>
             A notification is any element that has the
             <code class="language-html">class="notification"</code> <br />
@@ -310,11 +310,11 @@ onMounted(() => {
           class="border stretch mt-1"><code class="language-js">{{ components_notifications_js }}</code></pre>
       </article>
 
-      <article id="modal" class="card column gap-3">
+      <article id="modal" class="card column">
         <header>
           <h2>Modal</h2>
         </header>
-        <div class="body column no-stretch gap-3">
+        <div class="body column no-stretch">
           <p>
             A modal is a <code class="language-html">&lt;dialog&gt;</code> with
             a <code class="language-html">class="modal"</code>. <br />
@@ -388,7 +388,7 @@ onMounted(() => {
         >
       </article>
 
-      <article id="breadcrumb" class="card column gap-3">
+      <article id="breadcrumb" class="card column">
         <header>
           <h2>Breadcrumb</h2>
         </header>
@@ -406,7 +406,7 @@ onMounted(() => {
           class="border stretch mt-1"><code class="language-html">{{ components_breadcrumb }}</code></pre>
       </article>
 
-      <article id="dropdown" class="card column gap-3">
+      <article id="dropdown" class="card column">
         <header>
           <h2>Dropdown</h2>
         </header>

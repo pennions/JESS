@@ -15,7 +15,7 @@ onMounted(() => {
 <template>
   <main>
     <section class="mx-3 column">
-      <article class="card column gap-3">
+      <article class="card column">
         <header>
           <h1>Icons</h1>
         </header>
