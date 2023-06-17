@@ -14,56 +14,58 @@ onMounted(() => {
 
 <template>
   <main>
-    <section class="p-3">
-      <article class="card">
+    <section class="mx-3 column">
+      <article class="card column gap-3">
         <header>
           <h1>Icons</h1>
         </header>
+        <div class="body">
+          <p>
+            JESS is tooled to make use of the Lucide icons font. Please check
+            their
+            <a href="https://lucide.dev/guide/packages/lucide-static"
+              >website</a
+            >
+            for a guide.
+          </p>
+          <p>
+            It has a base font-size of 2.4rem and you can use the following
+            classes to adjust it:
+          </p>
 
-        <p>
-          JESS is tooled to make use of the Lucide icons font. Please check
-          their
-          <a href="https://lucide.dev/guide/packages/lucide-static">website</a>
-          for a guide.
-        </p>
-        <p>
-          It has a base font-size of 2.4rem and you can use the following
-          classes to adjust it:
-        </p>
-
-        <table>
-          <thead>
-            <tr>
-              <th>Class</th>
-              <th>Font size</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><code class="language-html">icon-small</code></td>
-              <td>2rem</td>
-            </tr>
-            <tr>
-              <td><code class="language-html">icon-medium</code></td>
-              <td>3.6rem</td>
-            </tr>
-            <tr>
-              <td><code class="language-html">icon-large</code></td>
-              <td>4.6rem</td>
-            </tr>
-          </tbody>
-        </table>
-        <p><b>Example:</b></p>
-        <div class="icon-arrow-big-down icon-small"></div>
-        <div class="icon-arrow-big-down text-primary"></div>
-        <div class="icon-arrow-big-down icon-medium icon-success"></div>
-        <div class="icon-arrow-big-down icon-large text-danger"></div>
-
+          <table>
+            <thead>
+              <tr>
+                <th>Class</th>
+                <th>Font size</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="language-html">icon-small</code></td>
+                <td>2rem</td>
+              </tr>
+              <tr>
+                <td><code class="language-html">icon-medium</code></td>
+                <td>3.6rem</td>
+              </tr>
+              <tr>
+                <td><code class="language-html">icon-large</code></td>
+                <td>4.6rem</td>
+              </tr>
+            </tbody>
+          </table>
+          <p><b>Example:</b></p>
+          <div class="icon-arrow-big-down icon-small"></div>
+          <div class="icon-arrow-big-down text-primary"></div>
+          <div class="icon-arrow-big-down icon-medium icon-success"></div>
+          <div class="icon-arrow-big-down icon-large text-danger"></div>
+        </div>
         <pre
           class="border"><code class="language-html">{{ icon_example }}</code></pre>
       </article>
 
-      <article class="card flex-layout two-columns justify-between">
+      <article class="card flex-layout two-columns justify-between gap-3">
         <div>
           <h2 class="mb-3">Icon colour utilities</h2>
           <code class="language-html">icon-grey </code> <br />

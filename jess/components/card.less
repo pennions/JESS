@@ -3,19 +3,12 @@
 .card {
   padding: @default-distance;
 
-  & > *:last-child:not(header):not(footer) {
-    margin-bottom: 0;
-  }
-
-  & > *:not(header):not(footer):not(:last-child) {
-    min-height: auto;
-    margin-bottom: @default-distance;
-  }
-
   /** for the body */
-  & > *:nth-child(2) {
+  & .body {
     margin-top: @default-distance;
+    margin-bottom: @default-distance;
     padding: 0;
+    min-height: auto;
   }
 
   & header,
@@ -48,7 +41,7 @@
       padding: @default-distance;
     }
 
-    & > *:nth-child(2) {
+    & .body {
       margin-top: 0;
       padding: @default-distance;
     }

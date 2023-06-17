@@ -11,8 +11,9 @@
     .w-100();
   }
 
-  & > *:not(:last-child):not(footer):not(header) {
-    margin-bottom: @default-distance;
+  &.auto > * {
+    width: initial;
+    min-width: initial;
   }
 
   /** When you have a sidebar */

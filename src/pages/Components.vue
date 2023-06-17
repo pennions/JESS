@@ -1,11 +1,22 @@
 <script setup>
-import { computed, inject, nextTick, onMounted, onUpdated, watch } from "vue";
-const props = defineProps(["scrollToId"]);
+import {
+  computed,
+  inject,
+  nextTick,
+  onBeforeMount,
+  onMounted,
+  onUpdated,
+  watch,
+} from 'vue';
+import { setupNotificationTrigger } from '../assets/demoFunctions';
+const props = defineProps(['scrollToId']);
 
 const components_card =
-  '<article class="card normal">\n    <header>\n      <h3>Header</h3>\n    </header>\n    <section>\n      <p>\n        <code class="language-html">class="card normal"</code>\n      </p>\n    </section>\n    <footer>Footer</footer>\n</article>';
+  '<article class="card normal">\n    <header>\n      <h3>Header</h3>\n    </header>\n    <section class="body">\n      <p>\n        <code class="language-html">class="card normal"</code>\n      </p>\n    </section>\n    <footer>Footer</footer>\n</article>';
 const components_notifications =
-  '<dialog class="notification" open>\n  <span>Default notification</span> <button class="close">X</button>\n</dialog>\n\n<dialog class="notification warning" open>\n  <span>Warning notification</span> <button class="close">X</button>\n</dialog>\n\n<dialog class="notification success" open>\n  <span>Success notification</span> <button class="close">X</button>\n</dialog>\n\n<dialog class="notification error" open>\n  <div class="icon icon-alert-triangle mr-3"></div>\n  <span>Error notification</span> <button class="close">X</button>\n</dialog>';
+  '<button id="basic-trigger">Show basic notification top left</button>\n\n<button id="basic-center-trigger">Show basic notification top center</button>\n\n<button id="basic-center-bottom-trigger">Show basic notification bottom center</button>\n\n<button id="warning-trigger">\n  Show warning notification top right\n</button>\n\n<button id="success-trigger">\n  Show success notification bottom right\n</button>\n\n<button id="error-trigger">\n  Show error notification bottom left\n</button>\n\n<div id="basic-notification" class="notification top left">\n  <span>Basic notification</span>\n  <button class="close">X</button>\n</div>\n\n<div id="basic-notification-center" class="notification top center">\n  <span>Basic top center notification</span>\n  <button class="close">X</button>\n</div>\n\n<div id="basic-notification-bottom-center" class="notification bottom center">\n  <span>Basic bottom center notification</span>\n  <button class="close">X</button>\n</div>\n\n<div id="warning-notification" class="notification warning top right">\n  <span>Warning notification</span>\n  <button class="close">X</button>\n</div>\n\n<div id="success-notification" class="notification success bottom right">\n  <span>Success notification</span>\n  <button class="close">X</button>\n</div>\n\n<div id="error-notification" class="notification error bottom left">\n  <div class="icon icon-alert-triangle mr-3"></div>\n  <span>Error notification</span>\n  <button class="close">X</button>\n</div>';
+const components_notifications_js =
+  'function setupNotificationTrigger(buttonId, notificationId) {\n\n    document.getElementById(buttonId).addEventListener("click", () => {\n        const notificationElement = document.getElementById(notificationId);\n\n        notificationElement.querySelector(".close").addEventListener("click", (e) => {\n            e.target.parentNode.removeAttribute("open");\n        });\n\n        if (notificationElement.hasAttribute("open")) {\n            notificationElement.removeAttribute("open");\n        }\n        else {\n            notificationElement.setAttribute("open", "");\n        }\n    });\n};';
 const components_modal =
   "<button\n    onclick=\"document.getElementById('demo-modal').setAttribute('open', true)\"\n    >\n    Open modal\n</button>\n\n<dialog\n    id=\"demo-modal\"\n    class=\"modal\"\n    onclick=\"this.removeAttribute('open')\"\n    >\n    <article class=\"card normal w-25\">\n        <header>\n            <h3>Message</h3>\n        </header>\n        <div>I am a modal.</div>\n        <footer>\n            <button\n                onclick=\"document.getElementById('demo-modal').setAttribute('open', false)\"\n            >\n                Close\n            </button>\n        </footer>\n    </article>\n</dialog>\n\n<button\n    onclick=\"document.getElementById('demo-modal-noscroll').setAttribute('open', true); \n             document.getElementsByTagName('body')[0].classList.add('no-scroll')\"\n    >\n    Open modal with no-scroll applied.\n</button>\n\n<dialog\n    id=\"demo-modal-noscroll\"\n    class=\"modal\"\n    onclick=\"this.removeAttribute('open'); \n             document.getElementsByTagName('body')[0].classList.remove('no-scroll')\"\n    >\n    <article class=\"card normal w-25\">\n        <header>\n            <h3>Message</h3>\n        </header>\n        <div>I am a modal.</div>\n        <footer>\n            <button\n                onclick=\"document.getElementById('demo-modal-noscroll').setAttribute('open', false); \n                         document.getElementsByTagName('body')[0].classList.remove('no-scroll')\"\n                >\n                Close\n            </button>\n        </footer>\n    </article>\n</dialog>";
 const components_breadcrumb =
@@ -19,13 +30,23 @@ const components_radio =
 const components_switch =
   '<label class="switch">\n    <input type="checkbox" />\n    <span class="toggle"></span>\n    <span class="toggle-background"></span>\n</label>\n\n<label class="switch">\n    <input type="checkbox" disabled />\n    <span class="toggle"></span>\n    <span class="toggle-background"></span>\n</label>\n\n<label class="switch">\n    <input type="checkbox" checked disabled />\n    <span class="toggle"></span>\n    <span class="toggle-background"></span>\n</label>\n\n<label class="switch">\n    <input type="checkbox" />\n    <span class="toggle"></span>\n    <span\n        class="toggle-background"\n        data-label="Off"\n        data-label-on="On"\n    ></span>\n</label>\n\n<label class="switch">\n    <input type="checkbox" />\n    <span class="toggle"></span>\n    <span\n        class="toggle-background label-left"\n        data-label="Off"\n        data-label-on="On"\n    ></span>\n</label>\n\n<label class="switch">\n    <input type="checkbox" />\n    <span class="toggle"></span>\n    <span class="toggle-background" data-label="Off state only"></span>\n</label>\n\n<label class="switch">\n    <input type="checkbox" checked />\n    <span class="toggle"></span>\n    <span class="toggle-background" data-label-on="On state only"></span>\n</label>';
 
-const scrollTo = inject("scrollTo");
+const scrollTo = inject('scrollTo');
 
 onMounted(() => {
   Prism.highlightAll();
 
-  document.getElementById("indeterminateExample").indeterminate = true;
-  document.getElementById("indeterminateExampleDisabled").indeterminate = true;
+  document.getElementById('indeterminateExample').indeterminate = true;
+  document.getElementById('indeterminateExampleDisabled').indeterminate = true;
+
+  setupNotificationTrigger('basic-trigger', 'basic-notification');
+  setupNotificationTrigger('basic-center-trigger', 'basic-notification-center');
+  setupNotificationTrigger(
+    'basic-center-bottom-trigger',
+    'basic-notification-bottom-center'
+  );
+  setupNotificationTrigger('warning-trigger', 'warning-notification');
+  setupNotificationTrigger('success-trigger', 'success-notification');
+  setupNotificationTrigger('error-trigger', 'error-notification');
 
   /** added the last path as a prop in the router. Then wait for the browser to render, then scroll */
   if (props.scrollToId) {
@@ -38,7 +59,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <main class="flex-layout pl-0 pt-3">
+  <main class="flex-layout">
     <aside class="sidebar">
       <nav class="sticky">
         <ul>
@@ -61,17 +82,16 @@ onMounted(() => {
             <a @click="scrollTo('custom-inputs')">Custom inputs</a>
           </li>
           <li>
-            <a
-              @click="scrollTo('main-nav')"
-              class="button normal desktop"
-            >Back to top</a>
+            <a @click="scrollTo('main-nav')" class="button normal desktop"
+              >Back to top</a
+            >
           </li>
         </ul>
       </nav>
     </aside>
 
-    <section class="flex-layout main px-3 pb-3">
-      <article class="card">
+    <section class="flex-layout column gap-3 main mx-3">
+      <article class="card column gap-3">
         <header>
           <h1>Components</h1>
         </header>
@@ -81,18 +101,21 @@ onMounted(() => {
         </p>
       </article>
 
-      <article
-        class="card"
-        id="card"
-      >
+      <article class="card gap-3 column" id="card">
         <header>
           <h2>Card</h2>
         </header>
 
         <p>
           Apply the
-          <code class="language-html">class="card"</code> to get a nice card effect which has built-in styling for header and footer. <br />
-          It also applies the default-margin distance on the bottom of each child element except the last one. <br />
+          <code class="language-html">class="card"</code> to get a nice card
+          effect which has built-in styling for header and footer. <br />
+          Use the <code class="language-html">class="body"</code> class to apply
+          the body styling. <br />
+          <br />
+          If you put a <code class="language-html">nav</code> element above the
+          element with the body it will not have a box-shadow.
+          <br />
           For the examples I have set a max-width of 25%.
         </p>
 
@@ -102,7 +125,7 @@ onMounted(() => {
           <header>
             <h3>Card header</h3>
           </header>
-          <section>
+          <section class="body">
             <p>
               This is a default card with a
               <code class="language-html">&lt;header&gt;</code> and a
@@ -111,14 +134,16 @@ onMounted(() => {
           </section>
           <footer>Card footer</footer>
         </article>
-        <hr />
+
+        <hr class="mt-3" />
+
         <h4>More specialized cards:</h4>
         <section class="flex-layout four-columns no-stretch">
           <article class="card normal">
             <header>
               <h3>Header</h3>
             </header>
-            <section>
+            <section class="body">
               <p>
                 <code class="language-html">class="card normal"</code>
               </p>
@@ -130,7 +155,7 @@ onMounted(() => {
             <header>
               <h3>Header</h3>
             </header>
-            <section>
+            <section class="body">
               <p>
                 <code class="language-html">class="card primary"</code>
               </p>
@@ -142,7 +167,7 @@ onMounted(() => {
             <header>
               <h3>Header</h3>
             </header>
-            <section>
+            <section class="body">
               <p><code class="language-html">class="card accent"</code></p>
             </section>
             <footer>Footer</footer>
@@ -151,8 +176,9 @@ onMounted(() => {
             <header>
               <h3>Header</h3>
             </header>
-            <section>
+            <section class="body">
               <p><code class="language-html">class="card danger"</code></p>
+              <p>Lorum ipsum text</p>
             </section>
             <footer>Footer</footer>
           </article>
@@ -161,7 +187,7 @@ onMounted(() => {
             <header>
               <h3>Header</h3>
             </header>
-            <section>
+            <section class="body">
               <p>
                 <code class="language-html">class="card primary inverse"</code>
               </p>
@@ -173,7 +199,7 @@ onMounted(() => {
             <header>
               <h3>Header</h3>
             </header>
-            <section>
+            <section class="body">
               <p>
                 <code class="language-html">class="card accent inverse"</code>
               </p>
@@ -185,159 +211,184 @@ onMounted(() => {
             <header>
               <h3>Header</h3>
             </header>
-            <section>
-              <p><code class="language-html">class="card danger inverse"</code></p>
+            <section class="body">
+              <p>
+                <code class="language-html">class="card danger inverse"</code>
+              </p>
             </section>
             <footer>Footer</footer>
           </article>
         </section>
-        <pre class="border stretch mt-1"><code class="language-html">{{ components_card }}</code></pre>
-
+        <pre
+          class="border stretch mt-1"><code class="language-html">{{ components_card }}</code></pre>
       </article>
 
-      <article
-        id="notification"
-        class="card"
-      >
+      <article id="notification" class="card column gap-3">
         <header>
           <h2>Notification</h2>
         </header>
-        <p>
-          A notification is a
-          <code class="language-html">&lt;dialog&gt;</code> that is directly
-          inside a <code class="language-html">&lt;body&gt;</code> and under a
-          <code class="language-html">&lt;nav&gt;</code> element to make it a
-          top notification
-          <br />
-          and stick to the top when scrolling.
-          <br />
-          Or inside <code class="language-html">&lt;body&gt;</code> and above
-          the <code class="language-html">&lt;footer&gt;</code> with the
-          additional <code class="language-html">bottom</code> class to make it
-          appear above the footer and make it stick to the bottom when
-          scrolling. <br />
-          You can add or remove the
-          <code class="language-html">open</code> attribute to show / hide the
-          notification.
-        </p>
+        <div class="body column gap-3">
+          <p>
+            A notification is any element that has the
+            <code class="language-html">class="notification"</code> <br />
+            You can position the notification with the following classes: <br />
+            <br />
+            <code class="language-html">top</code> <br />
+            <code class="language-html">bottom</code> <br />
+            <code class="language-html">left</code> <br />
+            <code class="language-html">right</code> <br />
+            <code class="language-html">center</code> <br />
 
-        <p>Variants:</p>
-        <dialog
-          class="notification"
-          open
-        >
-          <span>Default notification</span> <button class="close">X</button>
-        </dialog>
+            <br />
 
-        <dialog
-          class="notification warning"
-          open
-        >
-          <span>Warning notification</span> <button class="close">X</button>
-        </dialog>
+            When you use top, it will be fixed on the top with the sticky
+            property and will slide in from above. <br />
+            When you use bottom, it will do the same but then on the bottom.
+            <br />
+            You can add or remove the
+            <code class="language-html">open</code> attribute to show / hide the
+            notification.
+          </p>
 
-        <dialog
-          class="notification success"
-          open
-        >
-          <span>Success notification</span> <button class="close">X</button>
-        </dialog>
+          <p>
+            If you add a lucide font icon, it will have a contrasting color,
+            matching the notification.
+          </p>
 
-        <p>
-          If you add a lucide font icon, it will have a contrasting color, matching
-          the notification:
-        </p>
-        <dialog
-          class="notification error"
-          open
-        >
-          <div class="icon icon-alert-triangle mr-3">
+          <section class="row">
+            <button id="basic-trigger">Show basic notification top left</button>
+            <button id="basic-center-trigger">
+              Show basic notification top center
+            </button>
+            <button id="basic-center-bottom-trigger">
+              Show basic notification bottom center
+            </button>
+            <button id="warning-trigger">
+              Show warning notification top right
+            </button>
+            <button id="success-trigger">
+              Show success notification bottom right
+            </button>
+            <button id="error-trigger">
+              Show error notification bottom left
+            </button>
+          </section>
+
+          <div id="basic-notification" class="notification top left">
+            <span>Basic notification</span> <button class="close">X</button>
           </div>
-          <span>Error notification</span> <button class="close">X</button>
-        </dialog>
+          <div id="basic-notification-center" class="notification top center">
+            <span>Basic top center notification</span>
+            <button class="close">X</button>
+          </div>
+          <div
+            id="basic-notification-bottom-center"
+            class="notification bottom center">
+            <span>Basic bottom center notification</span>
+            <button class="close">X</button>
+          </div>
+          <div id="warning-notification" class="notification warning top right">
+            <span>Warning notification</span> <button class="close">X</button>
+          </div>
+          <div
+            id="success-notification"
+            class="notification success bottom right">
+            <span>Success notification</span> <button class="close">X</button>
+          </div>
+          <div id="error-notification" class="notification error bottom left">
+            <div class="icon icon-alert-triangle mr-3"></div>
+            <span>Error notification</span> <button class="close">X</button>
+          </div>
+        </div>
 
-        <pre class="border stretch mt-1"><code class="language-html">{{ components_notifications }}</code></pre>
+        <p>Example:</p>
+        <pre
+          class="border stretch mt-1"><code class="language-html">{{ components_notifications }}</code></pre>
+
+        <p>Javascript example:</p>
+        <pre
+          class="border stretch mt-1"><code class="language-js">{{ components_notifications_js }}</code></pre>
       </article>
 
-      <article
-        id="modal"
-        class="card"
-      >
+      <article id="modal" class="card column gap-3">
         <header>
           <h2>Modal</h2>
         </header>
-        <p>
-          A modal is a <code class="language-html">&lt;dialog&gt;</code> with a
-          <code class="language-html">class="modal"</code>. <br />
-          It opens when it has a property
-          <code class="language-html">open</code> or
-          <code class="language-html">open="true"</code>.
-          <br />
-          It closes when the property is removed or set to false. <br />
-          You could use a card (article) for the modal as demonstrated below.
-        </p>
+        <div class="body column no-stretch gap-3">
+          <p>
+            A modal is a <code class="language-html">&lt;dialog&gt;</code> with
+            a <code class="language-html">class="modal"</code>. <br />
+            It opens when it has a property
+            <code class="language-html">open</code> or
+            <code class="language-html">open="true"</code>.
+            <br />
+            It closes when the property is removed or set to false. <br />
+            You could use a card (article) for the modal as demonstrated below.
+          </p>
 
-        <button onclick="document.getElementById('demo-modal').setAttribute('open', true)">
-          Open modal
-        </button>
+          <button
+            onclick="document.getElementById('demo-modal').setAttribute('open', true)">
+            Open modal
+          </button>
 
-        <dialog
-          id="demo-modal"
-          class="modal"
-          onclick="this.removeAttribute('open')"
-        >
-          <article class="card normal w-25">
-            <header>
-              <h3>Message</h3>
-            </header>
-            <div>I am a modal.</div>
-            <footer>
-              <button onclick="document.getElementById('demo-modal').setAttribute('open', false)">
-                Close
-              </button>
-            </footer>
-          </article>
-        </dialog>
+          <dialog
+            id="demo-modal"
+            class="modal"
+            onclick="this.removeAttribute('open')">
+            <article class="card normal w-25">
+              <header>
+                <h3>Message</h3>
+              </header>
+              <div>I am a modal.</div>
+              <footer>
+                <button
+                  onclick="document.getElementById('demo-modal').setAttribute('open', false)">
+                  Close
+                </button>
+              </footer>
+            </article>
+          </dialog>
 
-        <p>
-          If you want to disable scroll on the body add the
-          <code class="language-html">no-scroll</code> class on the body.
-        </p>
-        <button onclick="document.getElementById('demo-modal-noscroll').setAttribute('open', true); 
+          <p>
+            If you want to disable scroll on the body add the
+            <code class="language-html">no-scroll</code> class on the body.
+          </p>
+          <button
+            onclick="document.getElementById('demo-modal-noscroll').setAttribute('open', true); 
                    document.getElementsByTagName('body')[0].classList.add('no-scroll')">
-          Open modal with no-scroll applied.
-        </button>
+            Open modal with no-scroll applied.
+          </button>
 
-        <dialog
-          id="demo-modal-noscroll"
-          class="modal"
-          onclick="this.removeAttribute('open'); 
-                   document.getElementsByTagName('body')[0].classList.remove('no-scroll')"
-        >
-          <article class="card normal w-25">
-            <header>
-              <h3>Message</h3>
-            </header>
-            <div>I am a modal.</div>
-            <footer>
-              <button onclick="document.getElementById('demo-modal-noscroll').setAttribute('open', false); 
+          <dialog
+            id="demo-modal-noscroll"
+            class="modal"
+            onclick="this.removeAttribute('open'); 
+                   document.getElementsByTagName('body')[0].classList.remove('no-scroll')">
+            <article class="card normal w-25">
+              <header>
+                <h3>Message</h3>
+              </header>
+              <div>I am a modal.</div>
+              <footer>
+                <button
+                  onclick="document.getElementById('demo-modal-noscroll').setAttribute('open', false); 
                          document.getElementsByTagName('body')[0].classList.remove('no-scroll')">
-                Close
-              </button>
-            </footer>
-          </article>
-        </dialog>
+                  Close
+                </button>
+              </footer>
+            </article>
+          </dialog>
+        </div>
+        <pre
+          class="border stretch mt-1"><code class="language-html">{{ components_modal }}</code></pre>
 
-        <pre class="border stretch mt-1"><code class="language-html">{{ components_modal }}</code></pre>
-
-        <small><b>N.B.</b> You can also set a close on the outside of the modal. As
-          done in the example. Try it!</small>
+        <small
+          ><b>N.B.</b> You can also set a close on the outside of the modal. As
+          done in the example. Try it!</small
+        >
       </article>
 
-      <article
-        id="breadcrumb"
-        class="card"
-      >
+      <article id="breadcrumb" class="card column gap-3">
         <header>
           <h2>Breadcrumb</h2>
         </header>
@@ -347,20 +398,15 @@ onMounted(() => {
           <ul>
             <li><a href="#breadcrumb">Home</a></li>
             <li><a href="#breadcrumb">Workshop</a></li>
-            <li><a
-                href="#breadcrumb"
-                aria-current="page"
-              >Sawbench</a></li>
+            <li><a href="#breadcrumb" aria-current="page">Sawbench</a></li>
           </ul>
         </nav>
 
-        <pre class="border stretch mt-1"><code class="language-html">{{ components_breadcrumb }}</code></pre>
+        <pre
+          class="border stretch mt-1"><code class="language-html">{{ components_breadcrumb }}</code></pre>
       </article>
 
-      <article
-        id="dropdown"
-        class="card"
-      >
+      <article id="dropdown" class="card column gap-3">
         <header>
           <h2>Dropdown</h2>
         </header>
@@ -429,12 +475,14 @@ onMounted(() => {
         <p>With the <code class="language-html">accordion</code> class:</p>
         <details class="accordion">
           <summary>Lorum ipsum story</summary>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text ever
-            since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only
-            five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.</p>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged.
+          </p>
         </details>
 
         <p>
@@ -455,13 +503,11 @@ onMounted(() => {
           </nav>
         </details>
 
-        <pre class="border stretch mt-1"><code class="language-html">{{ components_dropdowns }}</code></pre>
+        <pre
+          class="border stretch mt-1"><code class="language-html">{{ components_dropdowns }}</code></pre>
       </article>
 
-      <article
-        id="custom-inputs"
-        class="card"
-      >
+      <article id="custom-inputs" class="card column no-stretch gap-3">
         <header>
           <h2>Custom inputs</h2>
         </header>
@@ -471,57 +517,41 @@ onMounted(() => {
 
         <label class="custom-input">
           Custom checkbox with full color control.
-          <input
-            type="checkbox"
-            checked="checked"
-          />
+          <input type="checkbox" checked="checked" />
           <span class="checkmark"></span>
         </label>
 
-        <label class="custom-input ml-1">
+        <label class="custom-input">
           Unchecked version.
           <input type="checkbox" />
           <span class="checkmark"></span>
         </label>
 
-        <label class="custom-input m-1">
+        <label class="custom-input">
           Disabled version.
-          <input
-            type="checkbox"
-            name="custom"
-            disabled
-          />
+          <input type="checkbox" name="custom" disabled />
           <span class="checkmark"></span>
         </label>
 
-        <label class="custom-input m-1">
+        <label class="custom-input">
           Disabled checked version.
-          <input
-            type="checkbox"
-            name="custom"
-            disabled
-            checked
-          />
+          <input type="checkbox" name="custom" disabled checked />
           <span class="checkmark"></span>
         </label>
 
-        <p>You can use Javascript to add the indeterminate property to make it look indeterminate</p>
-        <label class="custom-input ml-1">
+        <p>
+          You can use Javascript to add the indeterminate property to make it
+          look indeterminate
+        </p>
+        <label class="custom-input">
           Indeterminate checkbox
-          <input
-            type="checkbox"
-            id="indeterminateExample"
-          />
+          <input type="checkbox" id="indeterminateExample" />
           <span class="checkmark"></span>
         </label>
 
-        <label class="custom-input ml-1">
+        <label class="custom-input">
           Disabled indeterminate checkbox
-          <input
-            type="checkbox"
-            id="indeterminateExampleDisabled"
-            disabled
-          />
+          <input type="checkbox" id="indeterminateExampleDisabled" disabled />
           <span class="checkmark"></span>
         </label>
         <br />
@@ -530,56 +560,38 @@ onMounted(() => {
 
         <label class="custom-input label-left">
           Custom checkbox with the label on the left.
-          <input
-            type="checkbox"
-            checked="checked"
-          />
+          <input type="checkbox" checked="checked" />
           <span class="checkmark"></span>
         </label>
 
-        <pre class="border stretch mt-1"><code class="language-html">{{ components_checkbox }}</code></pre>
+        <pre
+          class="border stretch mt-1"><code class="language-html">{{ components_checkbox }}</code></pre>
         <br />
 
         <h3 class="pt-1">Radiobutton</h3>
         <hr />
 
         <label class="custom-input">
-          A chekced custom radiobutton with full color control.
-          <input
-            type="radio"
-            name="custom"
-            checked
-          />
+          A checked custom radiobutton with full color control.
+          <input type="radio" name="custom" checked />
           <span class="checkmark"></span>
         </label>
 
-        <label class="custom-input ml-1">
+        <label class="custom-input">
           Unchecked version.
-          <input
-            type="radio"
-            name="custom"
-          />
+          <input type="radio" name="custom" />
           <span class="checkmark"></span>
         </label>
 
-        <label class="custom-input m-1">
+        <label class="custom-input">
           Disabled version.
-          <input
-            type="radio"
-            name="custom"
-            disabled
-          />
+          <input type="radio" name="custom" disabled />
           <span class="checkmark"></span>
         </label>
 
-        <label class="custom-input m-1">
+        <label class="custom-input">
           Disabled checked version.
-          <input
-            type="radio"
-            name="custom-disabled"
-            disabled
-            checked
-          />
+          <input type="radio" name="custom-disabled" disabled checked />
           <span class="checkmark"></span>
         </label>
 
@@ -587,14 +599,12 @@ onMounted(() => {
 
         <label class="custom-input label-left">
           Custom radiobutton with label on the left.
-          <input
-            type="radio"
-            name="custom"
-          />
+          <input type="radio" name="custom" />
           <span class="checkmark"></span>
         </label>
 
-        <pre class="border stretch mt-1"><code class="language-html">{{ components_radio }}</code></pre>
+        <pre
+          class="border stretch mt-1"><code class="language-html">{{ components_radio }}</code></pre>
         <br />
 
         <h3>Switch</h3>
@@ -610,21 +620,14 @@ onMounted(() => {
 
         <p>An unchecked disabled switch:</p>
         <label class="switch">
-          <input
-            type="checkbox"
-            disabled
-          />
+          <input type="checkbox" disabled />
           <span class="toggle"></span>
           <span class="toggle-background"></span>
         </label>
 
         <p>A checked disabled switch:</p>
         <label class="switch">
-          <input
-            type="checkbox"
-            checked
-            disabled
-          />
+          <input type="checkbox" checked disabled />
           <span class="toggle"></span>
           <span class="toggle-background"></span>
         </label>
@@ -639,8 +642,7 @@ onMounted(() => {
           <span
             class="toggle-background"
             data-label="Off"
-            data-label-on="On"
-          ></span>
+            data-label-on="On"></span>
         </label>
 
         <p>
@@ -655,8 +657,7 @@ onMounted(() => {
           <span
             class="toggle-background label-left"
             data-label="Off"
-            data-label-on="On"
-          ></span>
+            data-label-on="On"></span>
         </label>
         <p>
           A switch with only
@@ -668,10 +669,7 @@ onMounted(() => {
         <label class="switch">
           <input type="checkbox" />
           <span class="toggle"></span>
-          <span
-            class="toggle-background"
-            data-label="Off state only"
-          ></span>
+          <span class="toggle-background" data-label="Off state only"></span>
         </label>
 
         <p>
@@ -681,15 +679,9 @@ onMounted(() => {
           <small>label-left can also be applied</small>
         </p>
         <label class="switch">
-          <input
-            type="checkbox"
-            checked
-          />
+          <input type="checkbox" checked />
           <span class="toggle"></span>
-          <span
-            class="toggle-background"
-            data-label-on="On state only"
-          ></span>
+          <span class="toggle-background" data-label-on="On state only"></span>
         </label>
 
         <pre class="border stretch mt-1">

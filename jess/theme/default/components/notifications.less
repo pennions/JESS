@@ -1,6 +1,11 @@
-dialog.notification {
+.notification {
+  .border();
+  background-color: var(--background);
+  border-color: var(--border-colour);
+
   &.error {
     background-color: var(--error);
+    color: var(--colour-on-error);
 
     & > .icon {
       color: var(--icon-error);
@@ -9,13 +14,16 @@ dialog.notification {
 
   &.warning {
     background-color: var(--warning);
+    color: var(--colour-on-warning);
 
     & > .icon {
       color: var(--icon-warning);
     }
   }
+
   &.success {
     background-color: var(--success);
+    color: var(--colour-on-success);
 
     & > .icon {
       color: var(--icon-success);

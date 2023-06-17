@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jess Full Test</title>
+    <link rel="stylesheet" href="../dist/jess.min.css" />
+    <link
+      rel="stylesheet"
+      href="../node_modules/lucide-static/font/lucide.css" />
+  </head>
+  <body class="flex-layout column gap-3">
+    <nav class="main-navigation">
+      <ul>
+        <li><a href>Link 1</a></li>
+        <li><a href>Link 2</a></li>
+        <li><a href>Link 3</a></li>
+        <li><button id="alert-trigger">Toggle the alert</button></li>
+      </ul>
+    </nav>
+    <div id="alert" class="notification top center success">
+      <span>Default notification</span>
+      <button formmethod="dialog" class="close">X</button>
+    </div>
+
+    <p>Flex layout test</p>
+
+    <section class="flex-layout">
+      <div class="bg-primary">Block 100% width</div>
+    </section>
+
+    <section class="flex-layout gap-3">
+      <div class="bg-accent">Block</div>
+      <section class="flex-layout two-columns">
+        <section class="flex-layout five-columns">
+          <div class="bg-accent">Block</div>
+          <div class="bg-accent">Block</div>
+          <div class="bg-accent">Block</div>
+          <div class="bg-accent">Block</div>
+          <div class="bg-accent">Block</div>
+        </section>
+        <div class="bg-accent">Block</div>
+      </section>
+      <section class="row gap-3">
+        <div class="bg-accent w-75">Block</div>
+        <div class="bg-accent w-25">Block</div>
+      </section>
+    </section>
+
+    <main class="flex-layout gap-3">
+      <aside class="sidebar bg-primary">Element with auto width</aside>
+      <section class="main bg-danger">
+        Element that takes the remaining space
+      </section>
+    </main>
+
+    <section class="flex-layout auto gap-3 px-3 align-center">
+      <button>A standard button</button>
+      <button disabled>A disabled standard button</button>
+      <button class="no-border">A button without a border</button>
+      <button class="no-border" disabled>
+        A disabled button without a border
+      </button>
+      <button class="no-border outline-hover">
+        A button with only an outline on hover
+      </button>
+      <button class="no-border outline-hover" disabled>
+        A disabled button with only an outline on hover
+      </button>
+      <button class="link">A link button</button>
+      <button class="link" disabled>A disabled link button</button>
+      <button class="link accent">An accent colored link button</button>
+      <button class="link danger">A danger colored link button</button>
+      <button class="link accent" disabled>
+        A disabled colored link button
+      </button>
+      <button class="primary">A button with primary color</button>
+      <button class="accent">A button with accent color</button>
+      <button class="contrast">A button with contrast color</button>
+      <button class="danger">A button with danger color</button>
+      <button class="danger" disabled>A disabled colored button</button>
+      <button class="icon icon-chevron-right"></button>
+      <button class="icon icon-chevron-right" disabled></button>
+    </section>
+
+    <section class="row">
+      <button
+        onclick="document.getElementById('demo-modal').setAttribute('open', true)">
+        Open modal
+      </button>
+    </section>
+
+    <div class="card row">
+      <label class="custom-input">
+        Custom checkbox with full color control.
+        <input type="checkbox" checked="checked" />
+        <span class="checkmark"></span>
+      </label>
+
+      <label class="custom-input ml-1">
+        Unchecked version.
+        <input type="checkbox" />
+        <span class="checkmark"></span>
+      </label>
+
+      <label class="custom-input margin">
+        Disabled version.
+        <input type="checkbox" name="custom" disabled />
+        <span class="checkmark"></span>
+      </label>
+
+      <label class="custom-input label-left">
+        Custom checkbox with the label on the left.
+        <input type="checkbox" checked="checked" />
+        <span class="checkmark"></span>
+      </label>
+    </div>
+
+    <dialog
+      id="demo-modal"
+      class="modal"
+      onclick="this.removeAttribute('open')">
+      <article class="card normal w-25">
+        <header>
+          <h3>Message</h3>
+        </header>
+        <div>I am a modal.</div>
+        <footer>
+          <button
+            onclick="document.getElementById('demo-modal').setAttribute('open', false)">
+            Close
+          </button>
+        </footer>
+      </article>
+    </dialog>
+
+    <article class="card normal w-20">
+      <header>
+        <h3>Header</h3>
+      </header>
+      <section class="body">
+        <p>
+          <code class="language-html">class="card normal"</code>
+        </p>
+      </section>
+      <footer>Footer</footer>
+    </article>
+
+    <footer class="main-footer">Footer</footer>
+
+    <script>
+      document.getElementById('alert-trigger').addEventListener('click', () => {
+        const alertEl = document.getElementById('alert');
+        alertEl.setAttribute('open', '');
+
+        alertEl.querySelector('.close').addEventListener('click', (e) => {
+          e.target.parentNode.removeAttribute('open');
+        });
+      });
+    </script>
+  </body>
+</html>

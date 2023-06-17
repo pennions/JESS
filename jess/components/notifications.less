@@ -1,19 +1,51 @@
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog
+
 /** traditional top or bottom notification*/
-dialog.notification {
-  top: 0;
-  width: 100%;
+.notification {
   z-index: 1040;
-  position: sticky;
-  position: --webkit-sticky;
+  position: fixed;
   padding: calc(@default-distance / 3);
   padding-left: @default-distance;
-  display: flex;
   align-items: center;
+  display: none;
+  .w-25();
 
-  & > .close {
+  &[open] {
+    display: flex;
+  }
+  &::backdrop {
+    position: absolute;
+    width: 0;
+    max-width: 0;
+    height: 0;
+  }
+
+  .close {
     margin-left: auto;
   }
-  .ms-motion-slideDownIn();
+
+  &.top {
+    .ms-motion-slideDownIn();
+    top: 0;
+  }
+
+  &.left {
+    left: 0;
+  }
+
+  &.right {
+    right: 0;
+    left: auto;
+  }
+
+  &.center {
+    .w-50();
+    left: 25.2%;
+
+    @media (max-width: @sm) {
+      left: 0;
+    }
+  }
 
   &.bottom {
     .ms-motion-slideUpIn();

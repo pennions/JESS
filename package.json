@@ -11,11 +11,18 @@
   "scripts": {
     "dev": "vite",
     "preview": "vite preview",
-    "jess": "node ./node_modules/less/bin/lessc jess/jess.less dist/jess.css",
     "build:docs": "vite build",
-    "build:style": "npm run jess && postcss ./dist/jess.css > ./dist/jess.min.css",
-    "build:theme": "node ./node_modules/less/bin/lessc ./jess/theme/default/default.less dist/default-theme.css && postcss ./dist/default-theme.css > ./dist/default-theme.min.css",
-    "build": "npm run build:style && npm run build:theme && npm run build:docs",
+    "build:jess": "node ./node_modules/less/bin/lessc jess/jess.less dist/jess.css",
+    "minify:jess": "postcss ./dist/jess.css > ./dist/jess.min.css",
+    "build:core": "node ./node_modules/less/bin/lessc jess/jess-core.less dist/jess-core.css",
+    "minify:core": "postcss ./dist/jess-core.css > ./dist/jess-core.min.css",
+    "build:theme": "node ./node_modules/less/bin/lessc ./jess/theme/default/default.less dist/jess-theme.css",
+    "minify:theme": "postcss ./dist/jess-theme.css > ./dist/jess-theme.min.css",
+    "build:layout": "node ./node_modules/less/bin/lessc jess/jess-layout.less dist/jess-layout.css",
+    "minify:layout": "postcss ./dist/jess-layout.css > ./dist/jess-layout.min.css",
+    "build:all": "npm run build:jess && npm run build:core && npm run build:theme && npm run build:layout",
+    "minify:all": "npm run minify:jess && npm run minify:core && npm run minify:theme && npm run minify:layout",
+    "build": "npm run build:all && npm run minify:all && npm run build:docs",
     "publish": "npm run build && npm publish --access public"
   },
   "repository": {
