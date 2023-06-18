@@ -35,7 +35,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <main class="flex-layout">
+  <main class="flex-layout gap-3">
     <aside class="sidebar">
       <nav class="sticky">
         <ul>
@@ -72,7 +72,7 @@ onMounted(() => {
       </nav>
     </aside>
 
-    <section class="flex-layout main px-3 gap-3">
+    <section class="flex-layout main mr-3 gap-3">
       <article class="p-3 card">
         <header>
           <h1>Elements</h1>

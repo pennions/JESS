@@ -6,9 +6,8 @@
         I have written this Style System so you can quickly make any webpage
         look consistent and good without having an overkill on features.
         <br />
-        Keeping its footprint low. And I separated theming. Which means
-        colours, borders, box-shadows, fonts and the like can be adjusted
-        super easy.
+        Keeping its footprint low. And I separated theming. Which means colours,
+        borders, box-shadows, fonts and the like can be adjusted super easy.
       </p>
       <h2>Features</h2>
 
@@ -18,15 +17,13 @@
         <li>Semantic classes and use of HTML5 elements</li>
         <li>Based on Microsoft Fluent Design.</li>
         <li>Allows for easy theming.</li>
-        <li>
-          Built with Less, so you can easily modify inside a webbrowser.
-        </li>
+        <li>Built with Less, so you can easily modify inside a webbrowser.</li>
       </ul>
-      <h2>What it is not</h2>
+      <h2>Goal</h2>
       <p>
-        It was not intended to be a 100% complete library. Just to get 80 -
-        90% of all the heavy lifting out of the way so you can add your own
-        CSS as you see fit.
+        My goal is to make the life of fullstack webapplication developers
+        easier by providing a lot of things out-of-the-box <br />
+        so they can focus on the business logic and add value instantly.
       </p>
     </article>
   </main>

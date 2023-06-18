@@ -23,7 +23,7 @@
           <h2 class="pb-3">Jelmers Easy Style System</h2>
         </a>
       </div>
-      <section class="flex-layout three-columns pl-0 p-3">
+      <section class="flex-layout three-columns gap-3">
         <router-link to="/">Home</router-link>
         <router-link to="/layout">Layout</router-link>
         <router-link to="/buttons-and-inputs">Buttons and Inputs</router-link>

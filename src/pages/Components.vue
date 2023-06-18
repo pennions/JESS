@@ -62,7 +62,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <main class="flex-layout">
+  <main class="flex-layout gap-3">
     <aside class="sidebar">
       <nav class="sticky">
         <ul>
@@ -96,7 +96,7 @@ onMounted(() => {
       </nav>
     </aside>
 
-    <section class="flex-layout column main mx-3">
+    <section class="flex-layout column main mr-3">
       <article class="card column">
         <header>
           <h1>Components</h1>
