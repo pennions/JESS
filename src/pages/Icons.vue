@@ -81,41 +81,41 @@ onMounted(() => {
         <div>
           <p>Examples:</p>
           <div class="row align-center mt-2 p-2">
-            <div class="icon-coffee icon-grey"></div>
+            <div class="icon-coffee icon-grey mr-1"></div>
             Grey icon
           </div>
 
           <div class="row align-center mt-2 p-2">
-            <div class="icon-coffee icon-grey-dark"></div>
+            <div class="icon-coffee icon-grey-dark mr-1"></div>
             Dark Grey icon
           </div>
 
           <div class="row align-center mt-2 p-2">
-            <div class="icon-coffee icon-primary"></div>
+            <div class="icon-coffee icon-primary mr-1"></div>
             Primary icon
           </div>
 
           <div class="row align-center mt-2 p-2">
-            <div class="icon-coffee icon-accent"></div>
+            <div class="icon-coffee icon-accent mr-1"></div>
             Accent icon
           </div>
 
           <div class="row align-center mt-2 p-2">
-            <div class="icon-coffee icon-danger"></div>
+            <div class="icon-coffee icon-danger mr-1"></div>
             Danger icon
           </div>
           <div class="row align-center mt-2 p-2">
-            <div class="icon-coffee icon-success"></div>
+            <div class="icon-coffee icon-success mr-1"></div>
             Success icon
           </div>
 
           <div class="row align-center mt-2 p-2">
-            <div class="icon-coffee icon-black"></div>
+            <div class="icon-coffee icon-black mr-1"></div>
             Black icon
           </div>
 
           <div class="bg-black text-white row align-center mt-2 p-2">
-            <div class="icon-coffee icon-white"></div>
+            <div class="icon-coffee icon-white mr-1"></div>
             White icon
           </div>
         </div>
