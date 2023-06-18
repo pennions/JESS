@@ -12,20 +12,16 @@
       z-index: 200;
       left: 0rem;
       bottom: 2rem;
-      padding: 0 0.5rem;
+      padding: @distance-2;
       overflow: hidden;
-    }
-    &[data-tooltip] {
-      &::before {
-        content: attr(data-tooltip);
-      }
+      content: attr(data-tooltip);
     }
 
     &:after {
       display: inline-block;
       z-index: 200;
       position: absolute;
-      content: "";
+      content: '';
       left: 0.5rem;
       bottom: 1.5rem;
       width: 0;
@@ -45,6 +41,49 @@
         left: initial;
         right: 0.5rem;
         bottom: 1.5rem;
+      }
+    }
+  }
+
+  &.tooltip-bottom {
+    &:hover,
+    &:focus {
+      &::before {
+        width: auto;
+        position: absolute;
+        z-index: 200;
+        left: 0rem;
+        bottom: -4.5rem;
+        padding: @distance-2;
+        overflow: hidden;
+      }
+
+      &:after {
+        display: inline-block;
+        z-index: 200;
+        position: absolute;
+        content: '';
+        left: 0.5rem;
+        top: 2rem;
+        width: 0;
+        height: 0;
+      }
+    }
+
+    &.tooltip-right {
+      &:hover,
+      &:focus {
+        &::before {
+          left: initial;
+          right: 0;
+          top: 2rem;
+          z-index: 200;
+          white-space: nowrap;
+        }
+        &::after {
+          left: initial;
+          top: 1.5rem;
+        }
       }
     }
   }

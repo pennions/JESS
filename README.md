@@ -15,12 +15,9 @@ the like can be adjusted super easy.
 - Allows for easy theming.
 - Built with Less, so you can easily modify inside a webbrowser.
 
-## What it is not
-
-It was not intended to be a 100% complete library. Just to get 80 -
-90% of all the heavy lifting out of the way so you can add your own CSS
-as you see fit.
-
+## Goal
+My goal is to make the life of fullstack webapplication developers easier by providing a lot of things out-of-the-box <br />
+so they can focus on the business logic and add value instantly.
 
 # Documentation
 [Go to the full documentation](https://pennions.github.io/JESS/)

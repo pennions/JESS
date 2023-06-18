@@ -30,6 +30,9 @@ const components_radio =
 const components_switch =
   '<label class="switch">\n    <input type="checkbox" />\n    <span class="toggle"></span>\n    <span class="toggle-background"></span>\n</label>\n\n<label class="switch">\n    <input type="checkbox" disabled />\n    <span class="toggle"></span>\n    <span class="toggle-background"></span>\n</label>\n\n<label class="switch">\n    <input type="checkbox" checked disabled />\n    <span class="toggle"></span>\n    <span class="toggle-background"></span>\n</label>\n\n<label class="switch">\n    <input type="checkbox" />\n    <span class="toggle"></span>\n    <span\n        class="toggle-background"\n        data-label="Off"\n        data-label-on="On"\n    ></span>\n</label>\n\n<label class="switch">\n    <input type="checkbox" />\n    <span class="toggle"></span>\n    <span\n        class="toggle-background label-left"\n        data-label="Off"\n        data-label-on="On"\n    ></span>\n</label>\n\n<label class="switch">\n    <input type="checkbox" />\n    <span class="toggle"></span>\n    <span class="toggle-background" data-label="Off state only"></span>\n</label>\n\n<label class="switch">\n    <input type="checkbox" checked />\n    <span class="toggle"></span>\n    <span class="toggle-background" data-label-on="On state only"></span>\n</label>';
 
+const components_tooltip =
+  '<label data-tooltip="Yes! I show on the top-left">\n  Hover me for a top left tooltip\n</label>\n\n<label class="tooltip-right self-auto" data-tooltip="Yes! I show on the top-right">\n  Hover me for a top right tooltip\n</label>\n\n<label class="tooltip-bottom" data-tooltip="Yes! I show on the bottom-left">\n  Hover me for a bottom left tooltip\n</label>\n\n<label class="tooltip-right tooltip-bottom self-auto" data-tooltip="Yes! I show on the bottom-right">\n  Hover me for a right tooltip\n</label>';
+
 const scrollTo = inject('scrollTo');
 
 onMounted(() => {
@@ -80,6 +83,9 @@ onMounted(() => {
           </li>
           <li>
             <a @click="scrollTo('custom-inputs')">Custom inputs</a>
+          </li>
+          <li>
+            <a @click="scrollTo('tooltips')">Tooltips</a>
           </li>
           <li>
             <a @click="scrollTo('main-nav')" class="button normal desktop"
@@ -507,7 +513,7 @@ onMounted(() => {
           class="border stretch mt-1"><code class="language-html">{{ components_dropdowns }}</code></pre>
       </article>
 
-      <article id="custom-inputs" class="card column no-stretch gap-3">
+      <article id="custom-inputs" class="card column no-stretch">
         <header>
           <h2>Custom inputs</h2>
         </header>
@@ -696,6 +702,43 @@ onMounted(() => {
           make sure it will fit by applying the correct margins around the
           switch.
         </small>
+      </article>
+
+      <article id="tooltips" class="card">
+        <header>
+          <h2>Tooltips</h2>
+        </header>
+        <div class="body column">
+          <p>
+            You can add a tooltip by using the property
+            <code class="language-html">data-tooltip</code>
+          </p>
+          then you can add the tooltip text to the data-property like so:
+          <code class="language-html">data-tooltip="I am a tooltip"</code>
+          <br />
+          <label data-tooltip="Yes! I show on the top-left"
+            >Hover me for a top left tooltip</label
+          >
+          <label
+            class="tooltip-right self-auto"
+            data-tooltip="Yes! I show on the top-right"
+            >Hover me for a top right tooltip</label
+          >
+
+          <label
+            class="tooltip-bottom"
+            data-tooltip="Yes! I show on the bottom-left"
+            >Hover me for a bottom left tooltip</label
+          >
+          <label
+            class="tooltip-right tooltip-bottom self-auto"
+            data-tooltip="Yes! I show on the bottom-right"
+            >Hover me for a right tooltip</label
+          >
+        </div>
+
+        <pre
+          class="border stretch mt-1"><code class="language-html">{{ components_tooltip }}</code></pre>
       </article>
     </section>
   </main>

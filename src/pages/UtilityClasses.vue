@@ -318,6 +318,10 @@
                 </td>
               </tr>
               <tr>
+                <td><code class="language-html">self-auto</code></td>
+                <td>Makes an element align-self and justify-self to start.</td>
+              </tr>
+              <tr>
                 <td><code class="language-html">gap-0</code></td>
                 <td>Sets the gap of a flex container to 0.</td>
               </tr>
@@ -342,10 +346,6 @@
                 <td>Sets the gap of a flex container the same as p-5 / m-5.</td>
               </tr>
 
-              <tr>
-                <td><code class="language-html">auto-width</code></td>
-                <td>Makes an element take on an auto-width.</td>
-              </tr>
               <tr>
                 <td><code class="language-html">no-wrap</code></td>
                 <td>Makes a text not wrap.</td>
@@ -497,10 +497,16 @@
                   <td>1200px</td>
                   <td>1400px</td>
                 </tr>
+                <tr>
+                  <td><code class="language-css">w-auto</code></td>
+                  <td colspan="9">Sets min-width, width to auto</td>
+                </tr>
+
+                <tr></tr>
               </tbody>
             </table>
           </section>
-          <section class="flex-layout overflow-horizontal mt-5">
+          <section class="column overflow-horizontal mt-5">
             <h3>Hide / show for Mobile and Desktop layout</h3>
             <hr />
 
