@@ -18,7 +18,7 @@ const components_notifications =
 const components_notifications_js =
   'function setupNotificationTrigger(buttonId, notificationId) {\n\n    document.getElementById(buttonId).addEventListener("click", () => {\n        const notificationElement = document.getElementById(notificationId);\n\n        notificationElement.querySelector(".close").addEventListener("click", (e) => {\n            e.target.parentNode.removeAttribute("open");\n        });\n\n        if (notificationElement.hasAttribute("open")) {\n            notificationElement.removeAttribute("open");\n        }\n        else {\n            notificationElement.setAttribute("open", "");\n        }\n    });\n};';
 const components_modal =
-  "<button\n    onclick=\"document.getElementById('demo-modal').setAttribute('open', true)\"\n    >\n    Open modal\n</button>\n\n<dialog\n    id=\"demo-modal\"\n    class=\"modal\"\n    onclick=\"this.removeAttribute('open')\"\n    >\n    <article class=\"card normal w-25\">\n        <header>\n            <h3>Message</h3>\n        </header>\n        <div>I am a modal.</div>\n        <footer>\n            <button\n                onclick=\"document.getElementById('demo-modal').setAttribute('open', false)\"\n            >\n                Close\n            </button>\n        </footer>\n    </article>\n</dialog>\n\n<button\n    onclick=\"document.getElementById('demo-modal-noscroll').setAttribute('open', true); \n             document.getElementsByTagName('body')[0].classList.add('no-scroll')\"\n    >\n    Open modal with no-scroll applied.\n</button>\n\n<dialog\n    id=\"demo-modal-noscroll\"\n    class=\"modal\"\n    onclick=\"this.removeAttribute('open'); \n             document.getElementsByTagName('body')[0].classList.remove('no-scroll')\"\n    >\n    <article class=\"card normal w-25\">\n        <header>\n            <h3>Message</h3>\n        </header>\n        <div>I am a modal.</div>\n        <footer>\n            <button\n                onclick=\"document.getElementById('demo-modal-noscroll').setAttribute('open', false); \n                         document.getElementsByTagName('body')[0].classList.remove('no-scroll')\"\n                >\n                Close\n            </button>\n        </footer>\n    </article>\n</dialog>";
+  '<button\n    onclick=\"document.getElementById("demo-modal").setAttribute("open", true)\"\n    >\n    Open modal\n</button>\n\n<dialog\n    id=\"demo-modal\"\n    class=\"modal\"\n    onclick=\"this.removeAttribute("open")\"\n    >\n    <article class=\"card normal w-25\">\n        <header>\n            <h3>Message</h3>\n        </header>\n        <div class="body">I am a modal.</div>\n        <footer>\n            <button\n                onclick=\"document.getElementById("demo-modal").setAttribute("open", false)\"\n            >\n                Close\n            </button>\n        </footer>\n    </article>\n</dialog>\n\n<button\n    onclick=\"document.getElementById("demo-modal-noscroll").setAttribute("open", true); \n             document.getElementsByTagName("body")[0].classList.add("no-scroll")\"\n    >\n    Open modal with no-scroll applied.\n</button>\n\n<dialog\n    id=\"demo-modal-noscroll\"\n    class=\"modal\"\n    onclick=\"this.removeAttribute("open"); \n             document.getElementsByTagName("body")[0].classList.remove("no-scroll")\"\n    >\n    <article class=\"card normal w-25\">\n        <header>\n            <h3>Message</h3>\n        </header>\n        <div class="body">I am a modal.</div>\n        <footer>\n            <button\n                onclick=\"document.getElementById("demo-modal-noscroll").setAttribute("open", false); \n                         document.getElementsByTagName("body")[0].classList.remove("no-scroll")\"\n                >\n                Close\n            </button>\n        </footer>\n    </article>\n</dialog>';
 const components_breadcrumb =
   '<nav aria-label="Breadcrumb">\n  <ul>\n    <li><a href="">Home</a></li>\n    <li><a href="">Workshop</a></li>\n    <li><a href="" aria-current="page">Sawbench</a></li>\n  </ul>\n</nav>';
 const components_dropdowns =
@@ -345,7 +345,7 @@ onMounted(() => {
               <header>
                 <h3>Message</h3>
               </header>
-              <div>I am a modal.</div>
+              <div class="body">I am a modal.</div>
               <footer>
                 <button
                   onclick="document.getElementById('demo-modal').setAttribute('open', false)">
@@ -374,7 +374,7 @@ onMounted(() => {
               <header>
                 <h3>Message</h3>
               </header>
-              <div>I am a modal.</div>
+              <div class="body">I am a modal.</div>
               <footer>
                 <button
                   onclick="document.getElementById('demo-modal-noscroll').setAttribute('open', false); 
