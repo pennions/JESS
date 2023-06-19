@@ -1,7 +1,7 @@
 {
   "name": "@pennions/jess",
-  "version": "3.0.1",
-  "description": "Stylesheet influenced by Pico CSS and Fluent UI from Microsoft ",
+  "version": "3.0.2",
+  "description": "Regular Stylesheet based on Fluent UI from Microsoft",
   "main": "docs/index.html",
   "files": [
     "dist",
@@ -11,6 +11,7 @@
   "scripts": {
     "dev": "vite",
     "preview": "vite preview",
+    "clean": "node ./clean-dist.js",
     "build:docs": "vite build",
     "build:jess": "node ./node_modules/less/bin/lessc jess/jess.less dist/jess-v%npm_package_version%.css",
     "minify:jess": "postcss ./dist/jess-v%npm_package_version%.css > ./dist/jess-v%npm_package_version%.min.css",
@@ -21,7 +22,7 @@
     "build:variables": "node ./node_modules/less/bin/lessc jess/jess-variables.less dist/jess-variables-v%npm_package_version%.css",
     "build:layout": "node ./node_modules/less/bin/lessc jess/jess-layout.less dist/jess-layout-v%npm_package_version%.css",
     "minify:layout": "postcss ./dist/jess-layout-v%npm_package_version%.css > ./dist/jess-layout-v%npm_package_version%.min.css",
-    "build:all": "npm run build:jess && npm run build:core && npm run build:theme && npm run build:layout && npm run build:variables",
+    "build:all": "npm run clean && npm run build:jess && npm run build:core && npm run build:theme && npm run build:layout && npm run build:variables",
     "minify:all": "npm run minify:jess && npm run minify:core && npm run minify:theme && npm run minify:layout",
     "build": "npm run build:all && npm run minify:all && npm run build:docs",
     "publish": "npm run build && npm publish --access public"
