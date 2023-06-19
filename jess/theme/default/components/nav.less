@@ -4,26 +4,25 @@ nav {
     & ul {
       & > li {
         & > * {
-          color: @default-font-color;
+          color: var(--font-colour);
         }
 
         &:not(:last-child)::after {
-          color: @default-font-color;
+          color: var(--font-colour);
         }
       }
 
       & a[aria-current='page'] {
-        color: @primary;
+        color: var(--primary);
       }
     }
   }
 }
 
-article > nav {
+.card > nav {
   box-shadow: none;
 }
 
-body > nav a,
-body > header > nav a {
-  color: @default-font-color;
+nav.main-navigation a {
+  color: var(--font-colour);
 }

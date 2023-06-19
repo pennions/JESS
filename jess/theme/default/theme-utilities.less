@@ -1,170 +1,161 @@
 /** used internally, so can not be important. */
 .border {
-  border: 0.5px solid @border-color;
+  border: 0.5px solid var(--border-colour);
 }
 
 .border-bottom {
-  border-bottom: 0.5px solid @border-color;
+  border-bottom: 0.5px solid var(--border-colour);
 }
 
 .border-top {
-  border-top: 0.5px solid @border-color;
+  border-top: 0.5px solid var(--border-colour);
 }
 
 .border-right {
-  border-right: 0.5px solid @border-color;
+  border-right: 0.5px solid var(--border-colour);
 }
 
 .border-left {
-  border-left: 0.5px solid @border-color;
+  border-left: 0.5px solid var(--border-colour);
 }
 /** */
 
-.bg-gray {
-  background-color: @gray-background !important;
-  color: @default-font-color !important;
+.bg-grey {
+  background-color: var(--grey) !important;
+  color: var(--colour-on-grey) !important;
 }
 
-.bg-gray-dark {
-  background-color: @gray-background-dark !important;
-  color: @default-font-color !important;
+.bg-grey-dark {
+  background-color: var(--grey-dark) !important;
+  color: var(--colour-on-grey-dark) !important;
 }
 
 .bg-black {
-  background-color: #000 !important;
-  color: @ms-color-gray60 !important;
+  background-color: var(--black) !important;
+  color: var(--colour-on-black) !important;
 }
 
 .bg-white {
-  background-color: #fff !important;
-  color: @default-font-color !important;
+  background-color: var(--white) !important;
+  color: var(--font-colour) !important;
 }
 
 .bg-primary {
-  background-color: @primary !important;
-  color: @color-on-primary !important;
+  background-color: var(--primary) !important;
+  color: var(--colour-on-primary) !important;
 }
 
 .bg-accent {
-  background-color: @accent !important;
-  color: @color-on-accent !important;
+  background-color: var(--accent) !important;
+  color: var(--colour-on-accent) !important;
 }
 
 .bg-danger {
-  background-color: @danger !important;
-  color: @color-on-danger !important;
+  background-color: var(--danger) !important;
+  color: var(--colour-on-danger) !important;
+}
+
+.bg-success {
+  background-color: var(--success) !important;
+  color: var(--colour-on-success) !important;
+}
+
+.bg-error {
+  background-color: var(--error) !important;
+  color: var(--colour-on-error) !important;
+}
+
+.bg-warning {
+  background-color: var(--warning) !important;
+  color: var(--colour-on-warning) !important;
 }
 
 .text-black {
-  color: #000 !important;
+  color: var(--black) !important;
 }
 
 .text-white {
-  color: #fff !important;
+  color: var(--white) !important;
 }
 
-.text-border {
-  color: @border-color !important;
+.text-grey {
+  color: var(--grey-darker) !important;
 }
 
-.icon-gray {
-  stroke: @icon-gray!important;
-  & svg {
-    stroke: @icon-gray!important;
-  }
+.icon-grey {
+  color: var(--grey) !important;
 }
 
-.icon-gray-dark {
-  stroke: @icon-gray-dark !important;
-  & svg {
-    stroke: @icon-gray-dark !important;
-  }
+.icon-grey-dark {
+  color: var(--grey-dark) !important;
 }
 
 .icon-success {
-  stroke: @ms-color-success-icon !important;
-  & svg {
-    stroke: @ms-color-success-icon !important;
-  }
+  color: var(--icon-success) !important;
 }
 
 .icon-primary {
-  stroke: @primary !important;
-  & svg {
-    stroke: @primary !important;
-  }
+  color: var(--primary) !important;
 }
 
 .icon-accent {
-  stroke: @accent !important;
-  & svg {
-    stroke: @accent !important;
-  }
+  color: var(--accent) !important;
 }
 
 .icon-danger {
-  stroke: @danger !important;
-  & svg {
-    stroke: @danger !important;
-  }
+  color: var(--danger) !important;
 }
 
 .icon-black {
-  stroke: #000 !important;
-  & svg {
-    stroke: #000 !important;
-  }
+  color: var(--black) !important;
 }
 
 .icon-white {
-  stroke: #fff !important;
-  & svg {
-    stroke: #fff !important;
-  }
+  color: var(--white) !important;
 }
 
 .text-primary {
-  color: @primary !important;
+  color: var(--primary) !important;
 }
 
 .text-accent {
-  color: @accent !important;
+  color: var(--accent) !important;
 }
 
 .text-danger {
-  color: @danger !important;
+  color: var(--danger) !important;
 }
 
 .text-success {
-  color: @ms-color-success-icon !important;
+  color: var(--icon-success) !important;
 }
 
 .border-black {
-  border-color: #000 !important;
+  border-color: var(--black) !important;
 }
 
 .border-white {
-  border-color: #fff !important;
+  border-color: var(--white) !important;
 }
 
 .border-primary {
-  border-color: @primary !important;
+  border-color: var(--primary) !important;
 }
 
 .border-accent {
-  border-color: @accent !important;
+  border-color: var(--accent) !important;
 }
 
 .border-danger {
-  border-color: @danger !important;
+  border-color: var(--danger) !important;
 }
 
 .border-light {
-  border-color: @hr-color !important;
+  border-color: var(--hr-color) !important;
 }
 
 .border-success {
-  border-color: @ms-color-success-icon !important;
+  border-color: var(--icon-success) !important;
 }
 
 .text-normal {

@@ -1,22 +1,14 @@
 /** Based on W3 schools example */
 
-article,
 .card {
   padding: @default-distance;
 
-  & > *:last-child:not(header):not(footer) {
-    margin-bottom: 0;
-  }
-
-  & > *:not(header):not(footer):not(:last-child) {
-    min-height: auto;
-    margin-bottom: @default-distance;
-  }
-
   /** for the body */
-  & > *:nth-child(2) {
+  & .body {
     margin-top: @default-distance;
+    margin-bottom: @default-distance;
     padding: 0;
+    min-height: auto;
   }
 
   & header,
@@ -34,62 +26,8 @@ article,
     padding: @default-distance 0 0 0;
   }
 
-  &.flip {
-    padding: 0;
-    position: relative;
-    width: 22rem;
-    height: 30rem;
-    perspective: 1000px; /** Remove this if you don't want the 3D effect */
-
-    &:hover > [tabindex='0'] {
-      transform: rotateY(180deg);
-    }
-
-    /** to make sure it can also stay flipped on focus */
-    & [tabindex='0'] {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      transition: transform 0.6s;
-      transform-style: preserve-3d;
-      -webkit-transform-style: preserve-3d;
-
-      &:focus {
-        transform: rotateY(180deg);
-      }
-
-      section {
-        position: absolute;
-        flex-flow: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        width: 100%;
-        height: 100%;
-        -webkit-backface-visibility: hidden; /** Safari */
-        backface-visibility: hidden;
-        box-sizing: border-box;
-
-        & div {
-          word-break: break-word;
-          white-space: normal;
-          overflow: auto;
-        }
-
-        & header {
-          padding: 0 0 @default-distance 0;
-        }
-
-        & footer {
-          margin-top: auto;
-          padding: @default-distance 0 0 0;
-          min-height: unset;
-        }
-      }
-
-      section:last-child {
-        transform: rotateY(180deg);
-      }
-    }
+  & > blockquote {
+    height: 100%;
   }
 
   &.normal,
@@ -103,7 +41,7 @@ article,
       padding: @default-distance;
     }
 
-    & > *:nth-child(2) {
+    & .body {
       margin-top: 0;
       padding: @default-distance;
     }

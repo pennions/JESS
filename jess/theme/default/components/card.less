@@ -1,24 +1,14 @@
-article,
 .card {
   border-radius: 2px;
-
-  &:not(.flip) {
-    background-color: @default-background;
-  }
+  background-color: var(--background);
+  box-shadow: 0 6.4px 14.4px 0 rgba(var(--shadow-colour), 0.132),
+    0 1.2px 3.6px 0 rgba(var(--shadow-colour), 0.108);
 
   & header {
-    border-bottom: 0.5px solid @hr-color;
+    border-bottom: 0.5px solid var(--hr-colour);
   }
   & footer {
-    border-top: 0.5px solid @hr-color;
-  }
-
-  &:not(.flip) {
-    box-shadow: 0 6.4px 14.4px 0 rgba(@shadow-color, 0.132),
-      0 1.2px 3.6px 0 rgba(@shadow-color, 0.108);
-  }
-
-  & > [tabindex="0"] section footer {
+    border-top: 0.5px solid var(--hr-colour);
     box-shadow: none;
   }
 
@@ -42,22 +32,22 @@ article,
 
       &.primary {
         & footer {
-          background-color: @primary;
-          color: @color-on-primary;
+          background-color: var(--primary);
+          color: var(--colour-on-primary);
         }
       }
 
       &.accent {
         & footer {
-          background-color: @accent;
-          color: @color-on-accent;
+          background-color: var(--accent);
+          color: var(--colour-on-accent);
         }
       }
 
       &.danger {
         & footer {
-          background-color: @danger;
-          color: @color-on-danger;
+          background-color: var(--danger);
+          color: var(--colour-on-danger);
         }
       }
     }
@@ -74,35 +64,23 @@ article,
 
     &.primary {
       & header {
-        background-color: @primary;
-        color: @color-on-primary;
+        background-color: var(--primary);
+        color: var(--colour-on-primary);
       }
     }
 
     &.accent {
       & header {
-        background-color: @accent;
-        color: @color-on-accent;
+        background-color: var(--accent);
+        color: var(--colour-on-accent);
       }
     }
 
     &.danger {
       & header {
-        background-color: @danger;
-        color: @color-on-danger;
+        background-color: var(--danger);
+        color: var(--colour-on-danger);
       }
-    }
-  }
-}
-
-article.flip {
-  & [tabindex="0"] {
-      box-shadow: 0 6.4px 14.4px 0 rgba(@shadow-color, 0.132),
-        0 1.2px 3.6px 0 rgba(@shadow-color, 0.108);
-    & section {
-      background-color: @default-background;
-      /** prevent tearing on flip */
-      border: 0.1px solid @default-background;
     }
   }
 }

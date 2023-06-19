@@ -1,3 +1,4 @@
+import 'lucide-static/font/Lucide.css';
 import '../jess/jess.less';
 import '../jess/theme/default/default.less';
 import { createRouter, createWebHashHistory } from 'vue-router';
@@ -16,6 +17,7 @@ const routes = [
     { path: '/', component: Home },
     { path: '/layout', component: Layout },
     { path: '/buttons-and-inputs', component: ButtonsAndInputs },
+    { path: '/components/:scrollToId', component: Components, props: true },
     { path: '/components', component: Components },
     { path: '/typography', component: Typography },
     { path: '/utility-classes', component: UtilityClasses },
@@ -23,6 +25,9 @@ const routes = [
 ];
 
 const router = createRouter({
+    scrollBehavior() {
+        return { top: 0 };
+    },
     history: createWebHashHistory(import.meta.env.BASE_URL),
     routes,
 });

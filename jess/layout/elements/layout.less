@@ -3,14 +3,7 @@
  *  The main content area consists of content that is directly related to or expands upon the central topic of a document, 
  *  or the central functionality of an application. ~ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main
  */
-section,
-fieldset {
-  padding: @default-distance;
-}
-
-main,
-section,
-fieldset {
+.flex-layout {
   display: flex;
   flex-wrap: wrap;
 
@@ -18,17 +11,13 @@ fieldset {
     .w-100();
   }
 
-  /** remove padding in nested childrens */
-  & > * > * {
-    padding: 0;
-  }
-
-  & > *:not(:last-child) {
-    margin-bottom: @default-distance;
+  &.auto > * {
+    width: initial;
+    min-width: initial;
   }
 
   /** When you have a sidebar */
-  & > aside {
+  & > .sidebar {
     .w-100();
 
     @media (min-width: @xl) {
@@ -37,9 +26,9 @@ fieldset {
     }
   }
 
-  & > aside + * {
+  .main {
     .w-100();
-
+    margin-bottom: 0;
     @media (min-width: @xl) {
       width: auto;
       min-width: unset;
@@ -47,20 +36,10 @@ fieldset {
     }
   }
 
-  &.column {
-    gap: @default-distance;
-
-    &
-      > *:not(.w-100):not(.w-50):not(.w-33):not(.w-25):not(.w-16):not(.w-8):not(hr) {
-      width: auto;
-      min-width: auto;
-    }
-  }
-
-  &[class*="-columns"] {
+  & [class*='-columns'] {
     gap: @default-distance;
     & > * {
-      margin-bottom: 0;
+      margin-bottom: 0 !important;
     }
   }
 

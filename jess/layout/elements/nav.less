@@ -29,15 +29,7 @@ nav {
   }
 }
 
-body > nav,
-body > header > nav {
-  min-height: @nav-max-height;
-  max-height: @nav-max-height;
-
-  @media (max-width: (@lg - 1px)) {
-    max-height: unset;
-  }
-
+nav.main-navigation {
   & > ul {
     display: flex;
     width: 100%;

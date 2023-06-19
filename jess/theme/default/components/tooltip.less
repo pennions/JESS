@@ -3,15 +3,22 @@
   &:hover,
   &:focus {
     &::before {
-      background-color: @primary;
-      color: @color-on-primary;
+      background-color: var(--primary);
+      color: var(--colour-on-primary);
       border-radius: 2px;
     }
 
     &:after {
       border-left: 0.5rem solid transparent;
       border-right: 0.5rem solid transparent;
-      border-top: 0.5rem solid @primary;
+      border-top: 0.5rem solid var(--primary);
+    }
+  }
+
+  &.tooltip-bottom {
+    &:after {
+      border-top: 0;
+      border-bottom: 0.5rem solid var(--primary);
     }
   }
 }
