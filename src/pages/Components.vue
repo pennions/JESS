@@ -733,7 +733,7 @@ onMounted(() => {
           <label
             class="tooltip-right tooltip-bottom self-auto"
             data-tooltip="Yes! I show on the bottom-right"
-            >Hover me for a right tooltip</label
+            >Hover me for a bottom right tooltip</label
           >
         </div>
 
