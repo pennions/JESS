@@ -42,12 +42,14 @@ label {
   &.required,
   &[required] {
     &[tabindex='0'] {
+      .tooltip();
       &:hover,
       &:focus {
         &::before {
           content: 'Required field';
         }
-        .tooltip();
+        /** substitute the space that the '*' takes with a padding. so that it will not move around */
+        padding-right: 1.12rem;
       }
     }
 

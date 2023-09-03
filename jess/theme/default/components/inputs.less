@@ -12,7 +12,7 @@ textarea {
     box-shadow: inset 1px 1px 0 var(--primary), inset -1px -1px 0 var(--primary);
   }
 
-  &:invalid,
+  &:invalid:not([invalid='false']),
   &[invalid]:not([invalid='false']) {
     border-color: var(--danger);
     &:hover,
@@ -252,7 +252,7 @@ textarea {
     }
 
     &:disabled,
-    &:invalid {
+    &:invalid:not([invalid='false']) {
       &:hover,
       &:focus {
         box-shadow: none;
@@ -262,7 +262,7 @@ textarea {
       }
     }
 
-    &:invalid,
+    &:invalid:not([invalid='false']),
     &[invalid]:not([invalid='false']) {
       &:hover,
       &:focus {

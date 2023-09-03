@@ -21,7 +21,7 @@ const input_datetime =
 const input_others =
   '<input type="color" />\n<input type="file" />\n<input type="image" />\n<input type="hidden" />';
 const input_modifiers =
-  '<input type="text" class="underline" placeholder="Input with underline class" />\n<input type="range" disabled />\n<input type="number" disabled />\n<input type="text" invalid />\n<input type="text" invalid="false" />\n<input type="button" value="submit" disabled>';
+  '<input type="text" class="underline" placeholder="Input with underline class" />\n<input type="range" disabled />\n<input type="number" disabled />\n<input type="text" invalid />\n<input type="text" invalid="false" />\n<input type="button" value="submit" disabled>\n<input type="text" invalid="false" required />';
 const labels =
   '<label>A standard label</label>\n\n<label class="required">Label with required class</label>\n<label required>Label with required attribute</label>\n<label required="false">Not required label</label>\n\n<label class="disabled">Label with disabled class</label>\n<label disabled>Label with disabled attribute</label>\n<label disabled="false">Not disabled label</label>\n\n<label class="required" tabindex="0">This is a required field with a tooltip</label>\n<label required tabindex="0">This is a required field with a tooltip</label>\n<label required tabindex="0" data-tooltip="Custom text">Required label with custom tooltip</label>\n';
 const table =
@@ -356,6 +356,36 @@ onMounted(() => {
             <input type="text" invalid="false" />
 
             <p>
+              When you want to use the
+              <code class="language-html">required</code> attribute on an input,
+              you need to add the
+              <code class="language-html">invalid="false"</code> attribute as
+              well <br />
+              and alter the state of the field with JavaScript when using client
+              side validation to avoid the box being marked invalid directly
+              when rendered.
+            </p>
+            <p>
+              Input with
+              <code class="language-html">required invalid="false"</code>
+              attributes:
+            </p>
+            <input type="text" invalid="false" required />
+
+            <p>
+              Input with
+              <code class="language-html">required invalid="true"</code>
+              attributes:
+            </p>
+            <input type="text" invalid="true" required />
+
+            <p>
+              Input with only
+              <code class="language-html">required</code> attribute:
+            </p>
+            <input type="text" required />
+
+            <p>
               Or type a letter in the number input to trigger the webbrowsers
               built-in invalidation:
             </p>
@@ -450,6 +480,12 @@ onMounted(() => {
           <label class="required" tabindex="0"
             >This is a required field with a tooltip</label
           ><br />
+          <div class="row">
+            <label class="required ml-auto" tabindex="0"
+              >This is a required field with a tooltip on the edge which
+              illustrates it does not move around when hovered</label
+            ><br />
+          </div>
           <p>
             You can modify the tooltip by providing
             <code class="language-html">data-tooltip="Your text"</code>
