@@ -52,12 +52,21 @@ label {
         padding-right: 1.12rem;
       }
     }
-
     &::after {
       position: relative;
       content: '*';
       color: var(--danger);
       margin-left: 0.5rem;
+    }
+
+    /** making the tooltip overridable */
+    &[data-tooltip] {
+      &:hover,
+      &:focus {
+        &::before {
+          content: attr(data-tooltip);
+        }
+      }
     }
   }
 }
