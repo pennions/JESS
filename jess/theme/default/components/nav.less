@@ -1,4 +1,5 @@
 nav {
+  &[aria-label='breadcrumb'],
   &[aria-label='Breadcrumb'] {
     box-shadow: none;
     & ul {
@@ -12,7 +13,7 @@ nav {
         }
       }
 
-      & a[aria-current='page'] {
+      & > li[aria-current='page'] {
         color: var(--primary);
       }
     }

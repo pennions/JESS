@@ -1,4 +1,10 @@
 table {
+  & tbody tr {
+    &:hover {
+      background-color: var(--table-hover);
+    }
+  }
+
   &.table {
     & thead {
       .border-bottom();
@@ -7,10 +13,6 @@ table {
     & tbody tr {
       .border-bottom();
       border-color: var(--hr-color);
-
-      &:hover {
-        background-color: var(--button-hover);
-      }
     }
 
     & tfoot {
@@ -26,6 +28,18 @@ table {
         0 1px 4px 0 rgba(var(--shadow-colour), 0.12);
       box-shadow: 0 1px 4px 0 rgba(var(--shadow-colour), 0.16),
         0 1px 4px 0 rgba(var(--shadow-colour), 0.12);
+
+      border-bottom: 0;
+    }
+  }
+
+  &.striped {
+    tbody tr:nth-child(odd) {
+      background-color: var(--table-stripe);
+    }
+
+    & tbody tr:hover {
+      background-color: var(--table-striped-hover);
     }
   }
 }

@@ -18,7 +18,10 @@ table {
 }
 
 .table-container {
-  padding-right: @scrollbar-offset;
+  /** only target mozilla, so edge won't break */
+  @-moz-document url-prefix() {
+    padding-right: @scrollbar-offset;
+  }
   display: inline-block;
   width: auto;
   overflow-x: hidden;

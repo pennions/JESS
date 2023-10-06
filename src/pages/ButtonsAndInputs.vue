@@ -24,8 +24,6 @@ const input_modifiers =
   '<input type="text" class="underline" placeholder="Input with underline class" />\n<input type="range" disabled />\n<input type="number" disabled />\n<input type="text" invalid />\n<input type="text" invalid="false" />\n<input type="button" value="submit" disabled>\n<input type="text" invalid="false" required />';
 const labels =
   '<label>A standard label</label>\n\n<label class="required">Label with required class</label>\n<label required>Label with required attribute</label>\n<label data-tooltip="Custom required text" required>Label with custom tooltip text attribute</label>\n<label required="false">Not required label</label>\n\n<label class="disabled">Label with disabled class</label>\n<label disabled>Label with disabled attribute</label>\n<label disabled="false">Not disabled label</label>\n\n<label class="required" tabindex="0">This is a required field with a tooltip</label>\n<label required tabindex="0">This is a required field with a tooltip</label>\n<label required tabindex="0" data-tooltip="Custom text">Required label with custom tooltip</label>\n';
-const table =
-  '<table class="table">\n  <thead>\n    <tr>\n      <th>Column header 1</th>\n      <th>Column header 2</th>\n      <th>Column header 3</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>A</td>\n      <td>B</td>\n      <td>C</td>\n    </tr>\n    <tr>\n      <td>D</td>\n      <td>E</td>\n      <td>F</td>\n    </tr>\n    <tr>\n      <td>G</td>\n      <td>H</td>\n      <td>I</td>\n    </tr>\n  </tbody>\n  <tfoot>\n    <tr>\n      <td colspan="3">Table footer with colspan 3</td>\n    </tr>\n  </tfoot>\n</table>\n\n<div class="table-container" style="heigh = 12vh;">\n  <table class="table sticky-header">\n    <thead>\n      <tr>\n        <th>Column 1</th>\n        <th>Column 2</th>\n        <th>Column 3</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td>A</td>\n        <td>B</td>\n        <td>C</td>\n      </tr>\n      <tr>\n        <td>D</td>\n        <td>E</td>\n        <td>F</td>\n      </tr>\n      <tr>\n        <td>G</td>\n        <td>H</td>\n        <td>I</td>\n      </tr>\n      <tr>\n        <td>J</td>\n        <td>K</td>\n        <td>L</td>\n      </tr>\n      <tr>\n        <td>M</td>\n        <td>N</td>\n        <td>O</td>\n      </tr>\n      <tr>\n        <td>P</td>\n        <td>Q</td>\n        <td>R</td>\n      </tr>\n      <tr>\n        <td>S</td>\n        <td>T</td>\n        <td>U</td>\n      </tr>\n      <tr>\n        <td>V</td>\n        <td>W</td>\n        <td>X</td>\n      </tr>\n      <tr>\n        <td>Y</td>\n        <td>Z</td>\n        <td>-</td>\n      </tr>\n    </tbody>\n    <tfoot>\n      <tr>\n        <td colspan="3">Table footer with colspan 3</td>\n      </tr>\n    </tfoot>\n  </table>\n</div>\n';
 
 const scrollTo = inject('scrollTo');
 
@@ -56,12 +54,6 @@ onMounted(() => {
           </li>
           <li>
             <a @click="scrollTo('label')">Labels</a>
-          </li>
-          <li>
-            <a @click="scrollTo('hr')">Horizontal rule</a>
-          </li>
-          <li>
-            <a @click="scrollTo('table')">Table</a>
           </li>
           <li>
             <a @click="scrollTo('main-nav')" class="button normal desktop"
@@ -516,166 +508,7 @@ onMounted(() => {
             class="border"><code class="language-html">{{ labels }}</code></pre>
         </div>
       </article>
-
-      <article id="hr" class="card column">
-        <header>
-          <h1>Horizontal rule</h1>
-        </header>
-        <div class="body column">
-          <p>
-            A default <code class="language-html">&lt;hr&gt;</code> element will
-            render with <code class="language-css">width:100%;</code>
-          </p>
-          <p>Example:</p>
-          <section>
-            <hr />
-          </section>
-        </div>
-      </article>
-
-      <article id="table" class="card column">
-        <header>
-          <h1>Table</h1>
-        </header>
-        <div class="body column no-stretch gap-3">
-          <p>Default table</p>
-
-          <table>
-            <thead>
-              <tr>
-                <th>Column header 1</th>
-                <th>Column header 2</th>
-                <th>Column header 3</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>A</td>
-                <td>B</td>
-                <td>C</td>
-              </tr>
-              <tr>
-                <td>D</td>
-                <td>E</td>
-                <td>F</td>
-              </tr>
-              <tr>
-                <td>G</td>
-                <td>H</td>
-                <td>I</td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <td colspan="3">Table footer with colspan 3</td>
-              </tr>
-            </tfoot>
-          </table>
-
-          <p>
-            A table with the <code class="language-html">table</code> class.
-          </p>
-
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Column header 1</th>
-                <th>Column header 2</th>
-                <th>Column header 3</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>A</td>
-                <td>B</td>
-                <td>C</td>
-              </tr>
-              <tr>
-                <td>D</td>
-                <td>E</td>
-                <td>F</td>
-              </tr>
-              <tr>
-                <td>G</td>
-                <td>H</td>
-                <td>I</td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <td colspan="3">Table footer with colspan 3</td>
-              </tr>
-            </tfoot>
-          </table>
-
-          <p>With a sticky header:</p>
-
-          <div class="table-container" style="height: 12vh">
-            <table class="table sticky-header">
-              <thead>
-                <tr>
-                  <th>Column 1</th>
-                  <th>Column 2</th>
-                  <th>Column 3</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>A</td>
-                  <td>B</td>
-                  <td>C</td>
-                </tr>
-                <tr>
-                  <td>D</td>
-                  <td>E</td>
-                  <td>F</td>
-                </tr>
-                <tr>
-                  <td>G</td>
-                  <td>H</td>
-                  <td>I</td>
-                </tr>
-                <tr>
-                  <td>J</td>
-                  <td>K</td>
-                  <td>L</td>
-                </tr>
-                <tr>
-                  <td>M</td>
-                  <td>N</td>
-                  <td>O</td>
-                </tr>
-                <tr>
-                  <td>P</td>
-                  <td>Q</td>
-                  <td>R</td>
-                </tr>
-                <tr>
-                  <td>S</td>
-                  <td>T</td>
-                  <td>U</td>
-                </tr>
-                <tr>
-                  <td>V</td>
-                  <td>W</td>
-                  <td>X</td>
-                </tr>
-                <tr>
-                  <td>Y</td>
-                  <td>Z</td>
-                  <td>-</td>
-                </tr>
-              </tbody>
-              <tfoot>
-                <tr>
-                  <td colspan="3">Table footer with colspan 3</td>
-                </tr>
-              </tfoot>
-            </table>
-          </div>
-        </div>
-        <pre class="border"><code class="language-html">{{ table }}</code></pre>
-      </article>
+         
     </section>
   </main>
 </template>
