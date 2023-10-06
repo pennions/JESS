@@ -38,25 +38,34 @@
         height: 40vh;
       }
 
-      #result {
+      #result,
+      #hint {
         width: 98vw;
+      }
+
+      #hint {
+        margin-top: 1rem;
+        font-size: 1rem;
       }
     </style>
   </head>
   <body>
     <textarea
       id="contents"
-      placeholder="Write or paste your code example here"
-    ></textarea>
+      placeholder="Write or paste your code example here"></textarea>
     <div class="button-bar">
       <button onclick="create()">Create</button>
       <button onclick="revert()">Convert back</button>
     </div>
 
     <input type="text" id="result" />
+    <small id="hint"
+      >When you want to parse back an example and you have a string that is inside single quotes (') add double quotes
+      around it. e.g. '...' becomes "'...'"
+    </small>
 
     <script>
-      const textarea = document.getElementById("contents");
+      const textarea = document.getElementById('contents');
 
       textarea.onkeydown = function (e) {
         if (e.keyCode == 9 || e.which == 9) {
@@ -64,20 +73,20 @@
           const s = this.selectionStart;
           this.value =
             this.value.substring(0, this.selectionStart) +
-            "  " +
+            '  ' +
             this.value.substring(this.selectionEnd);
           this.selectionEnd = s + 2;
         }
       };
 
       function create() {
-        let contents = document.getElementById("contents").value;
-        document.getElementById("result").value = JSON.stringify(contents);
+        let contents = document.getElementById('contents').value;
+        document.getElementById('result').value = JSON.stringify(contents);
       }
 
       function revert() {
-        let result = document.getElementById("result").value;
-        document.getElementById("contents").value = JSON.parse(result);
+        let result = document.getElementById('result').value;
+        document.getElementById('contents').value = JSON.parse(result);
       }
     </script>
   </body>

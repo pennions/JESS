@@ -1,6 +1,6 @@
 {
   "name": "@pennions/jess",
-  "version": "3.0.4",
+  "version": "3.1.0",
   "description": "Regular Stylesheet based on Fluent UI from Microsoft",
   "main": "docs/index.html",
   "files": [

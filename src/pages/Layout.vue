@@ -23,6 +23,9 @@ const footer_layout = '<footer class="main-footer">Footer</footer>';
 const mixed_layout =
   '<section class="flex-layout gap-3">\n  <div class="demo-block">Block</div>\n  <section class="flex-layout two-columns">\n    <section class="flex-layout five-columns">\n      <div class="demo-block">Block</div>\n      <div class="demo-block">Block</div>\n      <div class="demo-block">Block</div>\n      <div class="demo-block">Block</div>\n      <div class="demo-block">Block</div>\n    </section>\n    <div class="demo-block">Block</div>\n  </section>\n  <section class="row">\n    <div class="demo-block w-75">Block</div>\n    <div class="demo-block w-25">Block</div>\n  </section>\n</section>';
 
+const table =
+  '<table>\n  <thead>\n    <tr>\n      <th>Column header 1</th>\n      <th>Column header 2</th>\n      <th>Column header 3</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>A</td>\n      <td>B</td>\n      <td>C</td>\n    </tr>\n    <tr>\n      <td>D</td>\n      <td>E</td>\n      <td>F</td>\n    </tr>\n    <tr>\n      <td>G</td>\n      <td>H</td>\n      <td>I</td>\n    </tr>\n  </tbody>\n  <tfoot>\n    <tr>\n      <td colspan=\"3\">Table footer with colspan 3</td>\n    </tr>\n  </tfoot>\n</table>\n\n<table class=\"table\">\n  <thead>\n    <tr>\n      <th>Column header 1</th>\n      <th>Column header 2</th>\n      <th>Column header 3</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>A</td>\n      <td>B</td>\n      <td>C</td>\n    </tr>\n    <tr>\n      <td>D</td>\n      <td>E</td>\n      <td>F</td>\n    </tr>\n    <tr>\n      <td>G</td>\n      <td>H</td>\n      <td>I</td>\n    </tr>\n  </tbody>\n  <tfoot>\n    <tr>\n      <td colspan=\"3\">Table footer with colspan 3</td>\n    </tr>\n  </tfoot>\n</table>\n\n<div class=\"table-container\" style=\"height: 12vh\">\n  <table class=\"table sticky-header\">\n    <thead>\n      <tr>\n        <th>Column 1</th>\n        <th>Column 2</th>\n        <th>Column 3</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td>A</td>\n        <td>B</td>\n        <td>C</td>\n      </tr>\n      <tr>\n        <td>D</td>\n        <td>E</td>\n        <td>F</td>\n      </tr>\n      <tr>\n        <td>G</td>\n        <td>H</td>\n        <td>I</td>\n      </tr>\n      <tr>\n        <td>J</td>\n        <td>K</td>\n        <td>L</td>\n      </tr>\n      <tr>\n        <td>M</td>\n        <td>N</td>\n        <td>O</td>\n      </tr>\n      <tr>\n        <td>P</td>\n        <td>Q</td>\n        <td>R</td>\n      </tr>\n      <tr>\n        <td>S</td>\n        <td>T</td>\n        <td>U</td>\n      </tr>\n      <tr>\n        <td>V</td>\n        <td>W</td>\n        <td>X</td>\n      </tr>\n      <tr>\n        <td>Y</td>\n        <td>Z</td>\n        <td>-</td>\n      </tr>\n    </tbody>\n    <tfoot>\n      <tr>\n        <td colspan=\"3\">Table footer with colspan 3</td>\n      </tr>\n    </tfoot>\n  </table>\n</div>\n\n<table class=\"table striped\">\n  <thead>\n    <tr>\n      <th>Column header 1</th>\n      <th>Column header 2</th>\n      <th>Column header 3</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>A</td>\n      <td>B</td>\n      <td>C</td>\n    </tr>\n    <tr>\n      <td>D</td>\n      <td>E</td>\n      <td>F</td>\n    </tr>\n    <tr>\n      <td>G</td>\n      <td>H</td>\n      <td>I</td>\n    </tr>\n  </tbody>\n</table>';
+
 const scrollTo = inject('scrollTo');
 
 onMounted(() => {
@@ -46,6 +49,8 @@ onMounted(() => {
           <li><a @click="scrollTo('nav')">Nav</a></li>
           <li><a @click="scrollTo('footer')">Footer</a></li>
           <li><a @click="scrollTo('nested')">Nested sections example</a></li>
+          <li><a @click="scrollTo('hr')">Horizontal rule</a></li>
+          <li><a @click="scrollTo('table')">Table</a></li>
           <li>
             <a @click="scrollTo('main-nav')" class="button normal desktop"
               >Back to top</a
@@ -423,6 +428,198 @@ onMounted(() => {
         </section>
         <pre
           class="border mt-0"><code class="language-html">{{ mixed_layout }}</code></pre>
+      </article>
+
+      <article id="hr" class="card column">
+        <header>
+          <h1>Horizontal rule</h1>
+        </header>
+        <div class="body column">
+          <p>
+            A default <code class="language-html">&lt;hr&gt;</code> element will
+            render with <code class="language-css">width:100%;</code>
+          </p>
+          <p>Example:</p>
+          <section>
+            <hr />
+          </section>
+        </div>
+      </article>
+
+      <article id="table" class="card column">
+        <header>
+          <h1>Table</h1>
+        </header>
+        <div class="body column no-stretch gap-3">
+          <p>Default table</p>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Column header 1</th>
+                <th>Column header 2</th>
+                <th>Column header 3</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>A</td>
+                <td>B</td>
+                <td>C</td>
+              </tr>
+              <tr>
+                <td>D</td>
+                <td>E</td>
+                <td>F</td>
+              </tr>
+              <tr>
+                <td>G</td>
+                <td>H</td>
+                <td>I</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="3">Table footer with colspan 3</td>
+              </tr>
+            </tfoot>
+          </table>
+
+          <p>
+            A table with the <code class="language-html">table</code> class.
+          </p>
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Column header 1</th>
+                <th>Column header 2</th>
+                <th>Column header 3</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>A</td>
+                <td>B</td>
+                <td>C</td>
+              </tr>
+              <tr>
+                <td>D</td>
+                <td>E</td>
+                <td>F</td>
+              </tr>
+              <tr>
+                <td>G</td>
+                <td>H</td>
+                <td>I</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="3">Table footer with colspan 3</td>
+              </tr>
+            </tfoot>
+          </table>
+
+          <p>With a sticky header:</p>
+
+          <div class="table-container" style="height: 12vh">
+            <table class="table sticky-header">
+              <thead>
+                <tr>
+                  <th>Column 1</th>
+                  <th>Column 2</th>
+                  <th>Column 3</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>A</td>
+                  <td>B</td>
+                  <td>C</td>
+                </tr>
+                <tr>
+                  <td>D</td>
+                  <td>E</td>
+                  <td>F</td>
+                </tr>
+                <tr>
+                  <td>G</td>
+                  <td>H</td>
+                  <td>I</td>
+                </tr>
+                <tr>
+                  <td>J</td>
+                  <td>K</td>
+                  <td>L</td>
+                </tr>
+                <tr>
+                  <td>M</td>
+                  <td>N</td>
+                  <td>O</td>
+                </tr>
+                <tr>
+                  <td>P</td>
+                  <td>Q</td>
+                  <td>R</td>
+                </tr>
+                <tr>
+                  <td>S</td>
+                  <td>T</td>
+                  <td>U</td>
+                </tr>
+                <tr>
+                  <td>V</td>
+                  <td>W</td>
+                  <td>X</td>
+                </tr>
+                <tr>
+                  <td>Y</td>
+                  <td>Z</td>
+                  <td>-</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="3">Table footer with colspan 3</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+
+          <p>
+            A table with the <code class="language-html">table</code> and
+            <code class="language-html">striped</code> class.
+          </p>
+
+          <table class="table striped">
+            <thead>
+              <tr>
+                <th>Column header 1</th>
+                <th>Column header 2</th>
+                <th>Column header 3</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>A</td>
+                <td>B</td>
+                <td>C</td>
+              </tr>
+              <tr>
+                <td>D</td>
+                <td>E</td>
+                <td>F</td>
+              </tr>
+              <tr>
+                <td>G</td>
+                <td>H</td>
+                <td>I</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <pre class="border"><code class="language-html">{{ table }}</code></pre>
       </article>
     </section>
   </main>
