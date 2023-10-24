@@ -7,7 +7,7 @@
   & header {
     border-bottom: 0.5px solid var(--hr-colour);
   }
-  & footer {
+  & footer:not(.main-footer) {
     border-top: 0.5px solid var(--hr-colour);
     box-shadow: none;
   }
@@ -20,32 +20,32 @@
       border-radius: 2px;
     }
 
-    & footer {
+    & footer:not(.main-footer) {
       border-bottom-left-radius: 2px;
       border-bottom-right-radius: 2px;
     }
 
     &.inverse {
-      & footer {
+      & footer:not(.main-footer) {
         border: none;
       }
 
       &.primary {
-        & footer {
+        & footer:not(.main-footer) {
           background-color: var(--primary);
           color: var(--colour-on-primary);
         }
       }
 
       &.accent {
-        & footer {
+        & footer:not(.main-footer) {
           background-color: var(--accent);
           color: var(--colour-on-accent);
         }
       }
 
       &.danger {
-        & footer {
+        & footer:not(.main-footer) {
           background-color: var(--danger);
           color: var(--colour-on-danger);
         }
