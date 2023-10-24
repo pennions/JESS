@@ -12,7 +12,7 @@
   }
 
   & header,
-  & footer {
+  & footer:not(.main-footer) {
     width: 100%;
     min-height: auto;
     padding-bottom: @default-distance;
@@ -22,7 +22,7 @@
     }
   }
 
-  & footer {
+  & footer:not(.main-footer) {
     padding: @default-distance 0 0 0;
   }
 
@@ -37,7 +37,7 @@
     padding: 0;
 
     & header,
-    & footer {
+    & footer:not(.main-footer) {
       padding: @default-distance;
     }
 
@@ -55,7 +55,7 @@
         padding: @default-distance;
       }
 
-      & footer {
+      & footer:not(.main-footer) {
         padding: @default-distance;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
