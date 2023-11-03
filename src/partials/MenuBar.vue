@@ -1,6 +1,6 @@
 <template>
   <nav id="main-nav" class="main-navigation">
-    <ul class="desktop">
+    <ul class="large-screen row no-wrap align-center">
       <li>
         <router-link to="/" class="no-deco">
           <h2>Jelmers Easy Style System</h2>
@@ -16,7 +16,7 @@
       <li><router-link to="/utility-classes">Utility classes</router-link></li>
       <li><router-link to="/icons">Icons</router-link></li>
     </ul>
-    <div class="mobile">
+    <div class="small-screen">
       <div>
         <router-link to="/" class="no-deco">
           <h2 class="pb-3">Jelmers Easy Style System</h2>
